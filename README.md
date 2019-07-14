@@ -1,2 +1,5 @@
-# kipj.github.io
-Personal Site by Hugo
+# Personal Site
+
+powered by hugo, with the theme-jane.
+
+kipj.github.io

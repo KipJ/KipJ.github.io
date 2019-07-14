@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Kip&#39;s Site</title>
+    <link>https://kipj.github.io/tags/</link>
+    <description>Recent content in Tags on Kip&#39;s Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 14 Jul 2019 09:30:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://kipj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>image</title>
+      <link>https://kipj.github.io/tags/image/</link>
+      <pubDate>Sun, 14 Jul 2019 09:30:14 +0800</pubDate>
+      
+      <guid>https://kipj.github.io/tags/image/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shortcodes</title>
+      <link>https://kipj.github.io/tags/shortcodes/</link>
+      <pubDate>Sun, 14 Jul 2019 09:18:51 +0800</pubDate>
+      
+      <guid>https://kipj.github.io/tags/shortcodes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>footnote</title>
+      <link>https://kipj.github.io/tags/footnote/</link>
+      <pubDate>Sat, 13 Jul 2019 22:26:58 +0800</pubDate>
+      
+      <guid>https://kipj.github.io/tags/footnote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>highlight</title>
+      <link>https://kipj.github.io/tags/highlight/</link>
+      <pubDate>Sat, 13 Jul 2019 21:58:51 +0800</pubDate>
+      
+      <guid>https://kipj.github.io/tags/highlight/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
