@@ -2,4 +2,4 @@
 
 powered by hugo, with the theme-jane.
 
-kipj.github.io
+https://kipj.github.io
