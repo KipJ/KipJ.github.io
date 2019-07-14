@@ -6,7 +6,7 @@
     <description>Recent content on Kip&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 14 Jul 2019 09:30:14 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jul 2019 16:27:39 +0800</lastBuildDate>
     
         <atom:link href="https://kipj.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -32,6 +32,400 @@
 
 &lt;p&gt;&lt;a href=&#34;https://kipj.github.io/hugo-with-classic/&#34;&gt;blog-with-hugo-classic&lt;/a&gt;&lt;/p&gt;
 </description>
+      
+    </item>
+    
+    <item>
+      <title>使用 Hugo 搭建 Blog</title>
+      <link>https://kipj.github.io/post/2019-07-14-build-a-blog-with-hugo/</link>
+      <pubDate>Sun, 14 Jul 2019 16:27:39 +0800</pubDate>
+      
+      <guid>https://kipj.github.io/post/2019-07-14-build-a-blog-with-hugo/</guid>
+      
+        <description>&lt;h1 id=&#34;why&#34;&gt;Why?&lt;/h1&gt;
+
+&lt;p&gt;尽管现在通过微博、公众号等方式可以方便地发声、写文章，但还是想有个自己的地方，记录自己的一些随笔和思考。&lt;/p&gt;
+
+&lt;p&gt;调研了一番，最后选择使用 &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; 建立一个静态博客，方便且省心。&lt;/p&gt;
+
+&lt;p&gt;这是第一篇文章，就先写写建站的过程。&lt;/p&gt;
+
+&lt;h1 id=&#34;折腾记&#34;&gt;折腾记&lt;/h1&gt;
+
+&lt;p&gt;我使用过三种建站框架：&lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt;、&lt;a href=&#34;https://hexo.io/zh-cn/index.html&#34;&gt;Hexo&lt;/a&gt; 和 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这是 GitHub 默认支持的方式。&lt;/p&gt;
+
+&lt;p&gt;但是其各个主题的依赖都不太一样，在安装依赖环境的时候，其下载速度常常很慢，或者直接便安装失败。&lt;/p&gt;
+
+&lt;p&gt;后来就弃坑了。&lt;/p&gt;
+
+&lt;p&gt;不过还是要推荐一个它的主题 &lt;a href=&#34;https://github.com/muan/scribble&#34;&gt;jekyll-theme-scribble&lt;/a&gt;，是我个人比较喜欢的简洁主题。&lt;/p&gt;
+
+&lt;p&gt;现在使用的 Markdown 编辑器 &lt;a href=&#34;https://typora.io/&#34;&gt;Typora&lt;/a&gt;，也在使用这个主题 &lt;a href=&#34;http://theme.typora.io/theme/Scribble/&#34;&gt;Typora-scribble&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://theme.typora.io/media/theme/scribble/Snip20180503_1.png&#34; alt=&#34;typora-scribble&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hexo.io/zh-cn/index.html&#34;&gt;Hexo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hexo 由于其中文文档丰富，且主题 &lt;a href=&#34;https://github.com/theme-next/hexo-theme-next&#34;&gt;hexo-theme-NexT&lt;/a&gt; 影响很广，有很多博主使用这种方式建站。&lt;/p&gt;
+
+&lt;p&gt;我最开始建站就用的 NexT 主题，但那段时间有点忙，写了两篇文章后就没继续下去了。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;后来接触到 Hugo 框架，相比较起来 Hugo 的安装和使用最为友好，且页面的生成速度很快。&lt;/p&gt;
+
+&lt;p&gt;只要接触过 Linux 命令行应该都会使用，不用费心安装其他的依赖，测试和部署仅仅依靠一个二进制程序就够了。&lt;/p&gt;
+
+&lt;p&gt;比如在 Ubuntu 下，可以一条命令安装 Hugo。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ sudo apt install hugo&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;即使需要更高版本的 Hugo，也可以去它的 &lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;GitHub release&lt;/a&gt; 下载高版本的二进制文件，通过 &lt;code&gt;dpkg&lt;/code&gt; 安装，即：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ sudo dpkg -i hugo_0.55.6_Linux-64bit.deb&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;下面就记录下我使用 Hugo 的建站过程。&lt;/p&gt;
+
+&lt;h1 id=&#34;blog-项目&#34;&gt;Blog 项目&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;主题： &lt;a href=&#34;https://github.com/xianmin/hugo-theme-jane&#34;&gt;hugo-theme-jane&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;工具：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/windows/wsl/install-win10&#34;&gt;Windows Subsystem for Linux(WSL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/docs&#34;&gt;Visual Studio Code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;WSL 用于使用命令行管理项目，VS Code 用于编辑源码。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;blog-源码&#34;&gt;Blog 源码&lt;/h2&gt;
+
+&lt;h3 id=&#34;配置-git&#34;&gt;配置 Git&lt;/h3&gt;
+
+&lt;p&gt;Git 的使用可以参考 &lt;a href=&#34;https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf&#34;&gt;Git Cheat Sheet&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;本地 SSH 远程关联 GitHub&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;SSH，即 &lt;a href=&#34;https://baike.baidu.com/item/SSH/10407&#34;&gt;&lt;em&gt;Secure Shell&lt;/em&gt;&lt;/a&gt; 安全外壳协议，可以将本地的一个 Shell 模拟器和你的 GitHub 账户绑定在一起，免去每次在向远程代码仓库推送代码的时候输入账户和密码。&lt;/p&gt;
+
+&lt;p&gt;首先，使用命令行生成一对 &lt;code&gt;RSA&lt;/code&gt; 公私密钥对：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ ssh-keygen -t rsa&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;连续敲击 &lt;code&gt;Enter&lt;/code&gt; 键，使用默认选择即可。生成的密钥对一般在 &lt;code&gt;~/.ssh/&lt;/code&gt; 路径下。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ ls ~/.ssh/
+id_rsa  id_rsa.pub  known_hosts&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;将公钥 &lt;code&gt;id_ras.pub&lt;/code&gt; 的内容保存到 GitHub 中的 &lt;code&gt;settings — SSH and GPG keys&lt;/code&gt; 下。&lt;/p&gt;
+
+&lt;p&gt;完成后，你暂时还不能往 GitHub 的仓库推送代码，因为现在你还没有说明你的 “身份”。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;配置账号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ git config --global user.name &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;username&amp;gt;&amp;#34;&lt;/span&gt;
+$ git config --global user.email &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;email address&amp;gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;username&amp;gt;&lt;/code&gt; 和 &lt;code&gt;&amp;lt;email address&amp;gt;&lt;/code&gt; 分别是 GitHub 的账号名和注册邮箱。&lt;/p&gt;
+
+&lt;p&gt;配置完成后，你就是有 “身份” 的人了，可以向自己 GitHub 的项目仓库推送代码了。&lt;/p&gt;
+
+&lt;h3 id=&#34;代码仓库&#34;&gt;代码仓库&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;远程代码仓库&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;首先在 GitHub 上新建一个代码仓库 repository，作为远程仓库保存我们 blog 的源码。&lt;/p&gt;
+
+&lt;p&gt;比如，我的叫 &lt;a href=&#34;https://github.com/KipJ/mySite-with-jane&#34;&gt;mySite-with-jane&lt;/a&gt; 。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;本地代码仓库&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;由于要使用 Hugo 建立博客，还要先建立存放博客源码的本地仓库作为开发用，即：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ hugo new site mySite-with-jane&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Hugo 的命令说明可以参考其官方网站 &lt;a href=&#34;https://gohugo.io/commands/&#34;&gt;hugo commands&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;接着关联本地 repo 和 远程的 repo：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; mySite-with-jane
+$ git init
+// 关联本地和远程 repo。KipJ 是我的账户名，你需要换成你自己的。
+$ git remote add origin git@github.com:KipJ/mySite-with-jane.git&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;配置主题&#34;&gt;配置主题&lt;/h3&gt;
+
+&lt;p&gt;这里我使用子模块的形式添加主题代码，即：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;// blog 根目录
+$ git submodule add https://github.com/xianmin/hugo-theme-jane.git themes/jane&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;然后便是根据 &lt;a href=&#34;https://github.com/xianmin/hugo-theme-jane/blob/master/README-zh.md&#34;&gt;主题说明&lt;/a&gt; 进行配置了。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;修改 &lt;code&gt;config.toml&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;可以参考我的配置文件 &lt;a href=&#34;https://github.com/KipJ/mySite-with-jane/blob/master/config.toml&#34;&gt;config.toml&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;此时就可以输入调试命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;// 调试命令，-D 即 Debug
+$ hugo server -D&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;在浏览器中输入 &lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt; ，查看网页的效果了。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;修改主题&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;因为我以 &lt;code&gt;submodule&lt;/code&gt; 的形式使用主题，如果想对主题做一些修改，可以在自己 blog 的根目录进行覆盖式修改。&lt;/p&gt;
+
+&lt;p&gt;比如 &lt;code&gt;jane&lt;/code&gt; 主题原来是以文字的形式显示 &lt;code&gt;busuanzi&lt;/code&gt; 的 &lt;code&gt;UV/PV&lt;/code&gt; 统计值，即：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/KipJ/comments/master/images/2019-07-14/uvpv-1.PNG&#34; alt=&#34;uspv-1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我想将其修改为如下形式：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/KipJ/comments/master/images/2019-07-14/uvpv-2.PNG&#34; alt=&#34;uvps-2&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;首先，找到页脚对应的 HTML 文件，为 &lt;code&gt;theme/jane/layout/partials/footer.html&lt;/code&gt;，然后将其复制到我们 blog 根目录的 &lt;code&gt;layout/partials&lt;/code&gt;  路径下，并修改如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;  &lt;span class=&#34;c&#34;&gt;&amp;lt;!-- Counter busuanzi --&amp;gt;&lt;/span&gt;
+  {{ if .Site.Params.counter.busuanzi.enable }}
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;busuanzi_container&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+      {{ partial &amp;#34;svg/users.svg&amp;#34; }} &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;busuanzi_value_site_uv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; | {{ partial &amp;#34;svg/eye.svg&amp;#34; }} &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;busuanzi_value_site_pv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  {{ end }}&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;其次，还需要在 &lt;code&gt;partials&lt;/code&gt; 下新建文件夹 &lt;code&gt;svg&lt;/code&gt;，用于存放新添加矢量图 &lt;code&gt;users.svg&lt;/code&gt; 和 &lt;code&gt;eye.svg&lt;/code&gt;。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;矢量图可以去网站 &lt;a href=&#34;https://www.iconfont.cn/&#34;&gt;iconfont&lt;/a&gt; 免费下载，尽量选择和主题风格近似的矢量图。
+&lt;code&gt;jane&lt;/code&gt; 主题页脚矢量图&lt;/p&gt;
+
+&lt;p&gt;规格：&lt;code&gt;width=&amp;quot;16&amp;quot; height=&amp;quot;16&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;颜色：&lt;code&gt;fill=&amp;quot;#8a8a8a&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;github-pages-托管博客&#34;&gt;GitHub Pages 托管博客&lt;/h2&gt;
+
+&lt;p&gt;Hugo 支持页面的动态调试，修改代码后即可显示修改后的效果。&lt;/p&gt;
+
+&lt;p&gt;若对调试后的效果满意，就可以生成站点文件，并将其部署到 GitHub Pages 上了。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;同名 &lt;code&gt;repo&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;首先，需新建一个同名仓库，作为站点文件的托管仓库。即在 GitHub 中以 &lt;code&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt; 为名新建一个项目仓库。&lt;/p&gt;
+
+&lt;p&gt;GitHub Pages 的规则规定必须是同名仓库，不然不能解析到站点文件。&lt;/p&gt;
+
+&lt;p&gt;我的 GitHub 账户名为 &lt;code&gt;KipJ&lt;/code&gt;，那么我的 repo 的名字就是 &lt;a href=&#34;https://github.com/KipJ/kipj.github.io&#34;&gt;kipj.github.io&lt;/a&gt;。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;生成页面文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;使用命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ hugo&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;会在 blog 根目录下生成文件夹 &lt;code&gt;public&lt;/code&gt;，其中生成的便是网页的最终站点代码了。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;部署代码到 &lt;code&gt;repo&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;进行如下操作：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; public/
+$ git init
+// 本地和远程仓库关联
+$ git remote add origin https://github.com/KipJ/kipj.github.io.git
+$ git add -A
+$ git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;init blog&amp;#34;&lt;/span&gt;
+// 推送代码
+$ git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;即将站点文件上传到同名项目仓库，然后访问 &lt;code&gt;https://&amp;lt;username&amp;gt;.github.io&lt;/code&gt; 即可。&lt;/p&gt;
+
+&lt;p&gt;例如，对于我的 blog 而言，访问网址 &lt;a href=&#34;https://kipj.github.io/&#34;&gt;https://kipj.github.io/&lt;/a&gt; ，即可看到我的静态 blog。&lt;/p&gt;
+
+&lt;h1 id=&#34;项目主页&#34;&gt;项目主页&lt;/h1&gt;
+
+&lt;p&gt;我之前还使用过博客主题 &lt;a href=&#34;https://github.com/goodroot/hugo-classic&#34;&gt;hugo-classic&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;此主题风格简洁但就是不能评论，也不能展示访问量。本来打算自己进行修改，不过有点麻烦，以后有空再说。&lt;/p&gt;
+
+&lt;p&gt;后来就直接使用了一个现成的主题 &lt;a href=&#34;https://github.com/xianmin/hugo-theme-jane&#34;&gt;hugo-theme-jane&lt;/a&gt;，如上所示。&lt;/p&gt;
+
+&lt;p&gt;但是我依然想将 &lt;code&gt;hugo-theme-classic&lt;/code&gt; 主题的 blog 继续展示，怎么办呢？&lt;/p&gt;
+
+&lt;p&gt;搜索了一下，发现可以用 GitHub 提供的 &lt;a href=&#34;https://help.github.com/en/articles/user-organization-and-project-pages&#34;&gt;gh-pages&lt;/a&gt;， 可以以项目主页的形式展示网页，配置方法如下。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;生成站点文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在 &lt;code&gt;hugo-theme-classic&lt;/code&gt; 主题 blog 的根目录下生成站点文件，放置在文件夹 &lt;code&gt;demo&lt;/code&gt; 中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ hugo -d demo/&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;上传&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;可以将整个博客的源码和 &lt;code&gt;demo&lt;/code&gt; 文件夹一起上传到 GitHub 上：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ git add -A
+$ git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;add gh-pages demo.&amp;#34;&lt;/span&gt;
+$ git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;也可以不将 &lt;code&gt;demo&lt;/code&gt; 和源码放在一起，直接跳到下一步。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;创建 &lt;code&gt;gh-pages&lt;/code&gt; 分支，上传站点文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在 &lt;code&gt;demo&lt;/code&gt; 中生成站点文件后，直接在此 blog 的根目录下，输入以下命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ git subtree push --prefix&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;demo origin gh-pages&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;此命令会自动创建分支 &lt;code&gt;gh-pages&lt;/code&gt;，并上传 &lt;code&gt;demo&lt;/code&gt; 中的站点文件。&lt;/p&gt;
+
+&lt;p&gt;其以子分支的形式推送 demo 的内容到 GitHub，可以看看贤民写的这篇 &lt;a href=&#34;https://www.xianmin.org/post/git-submodule/&#34;&gt;博客&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;我这个主题的 blog 源码文件都上传到了项目 &lt;a href=&#34;https://github.com/KipJ/hugo-with-classic&#34;&gt;KipJ/hugo-with-classic&lt;/a&gt; 中，可以看到其有两个分支，分别存放了源码和站点文件。&lt;/p&gt;
+
+&lt;p&gt;最终效果： &lt;a href=&#34;https://kipj.github.io/hugo-with-classic&#34;&gt;https://kipj.github.io/hugo-with-classic&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;结语&#34;&gt;结语&lt;/h1&gt;
+
+&lt;p&gt;至此，我的整个建站过程大致叙述完了。&lt;/p&gt;
+
+&lt;p&gt;欢迎在本页留言或提问。&lt;/p&gt;</description>
       
     </item>
     

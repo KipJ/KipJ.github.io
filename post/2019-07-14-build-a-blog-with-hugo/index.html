@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Image Preview - Kip&#39;s Site</title>
+  <title>使用 Hugo 搭建 Blog - Kip&#39;s Site</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -22,9 +22,9 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="贤民" /><meta name="description" content="Always learn, sometimes write." />
+<meta name="author" content="Kip Jiang" /><meta name="description" content="Always learn, sometimes write." />
+<meta name="keywords" content="" />
 
-  <meta name="keywords" content="Linux, security, writting" />
 
 
 
@@ -34,7 +34,7 @@
 <meta name="generator" content="Hugo 0.55.6" />
 
 
-<link rel="canonical" href="https://kipj.github.io/post/image-preview/" />
+<link rel="canonical" href="https://kipj.github.io/post/2019-07-14-build-a-blog-with-hugo/" />
 
 
 
@@ -56,26 +56,26 @@
 
 
 
-<meta property="og:title" content="Image Preview" />
+<meta property="og:title" content="使用 Hugo 搭建 Blog" />
 <meta property="og:description" content="Always learn, sometimes write." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kipj.github.io/post/image-preview/" />
-<meta property="article:published_time" content="2019-07-14T09:30:14&#43;08:00"/>
-<meta property="article:modified_time" content="2019-07-14T09:30:14&#43;08:00"/>
+<meta property="og:url" content="https://kipj.github.io/post/2019-07-14-build-a-blog-with-hugo/" />
+<meta property="article:published_time" content="2019-07-14T16:27:39&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-14T16:27:39&#43;08:00"/>
 
-<meta itemprop="name" content="Image Preview">
+<meta itemprop="name" content="使用 Hugo 搭建 Blog">
 <meta itemprop="description" content="Always learn, sometimes write.">
 
 
-<meta itemprop="datePublished" content="2019-07-14T09:30:14&#43;08:00" />
-<meta itemprop="dateModified" content="2019-07-14T09:30:14&#43;08:00" />
-<meta itemprop="wordCount" content="536">
+<meta itemprop="datePublished" content="2019-07-14T16:27:39&#43;08:00" />
+<meta itemprop="dateModified" content="2019-07-14T16:27:39&#43;08:00" />
+<meta itemprop="wordCount" content="2301">
 
 
 
-<meta itemprop="keywords" content="image," />
+<meta itemprop="keywords" content="hugo,jane," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Image Preview"/>
+<meta name="twitter:title" content="使用 Hugo 搭建 Blog"/>
 <meta name="twitter:description" content="Always learn, sometimes write."/>
 
 <!--[if lte IE 9]>
@@ -312,7 +312,7 @@
 
       </li>
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           <a class="menu-item-link menu-parent" href="https://kipj.github.io/">docs</a>
@@ -361,14 +361,14 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">Image Preview</h1>
+      <h1 class="post-title">使用 Hugo 搭建 Blog</h1>
       
       <div class="post-meta">
         <time datetime="2019-07-14" class="post-time">
           2019-07-14
         </time>
         <div class="post-category">
-            <a href="https://kipj.github.io/categories/docs/"> docs </a>
+            <a href="https://kipj.github.io/categories/blog/"> blog </a>
             
           </div>
         
@@ -392,21 +392,20 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#why">Why?</a></li>
+<li><a href="#折腾记">折腾记</a></li>
+<li><a href="#blog-项目">Blog 项目</a>
 <ul>
-<li><a href="#normal-image">Normal Image</a></li>
-<li><a href="#figure-shortcode"><code>{{&lt; figure &gt;}}</code> shortcode</a>
+<li><a href="#blog-源码">Blog 源码</a>
 <ul>
-<li><a href="#figure-image-with-title">figure image with title</a></li>
-<li><a href="#figure-image-with-caption">figure image with caption</a></li>
-<li><a href="#more-figure-shortcode-usage">more <code>{{&lt; figure &gt;}}</code> shortcode usage</a></li>
+<li><a href="#配置-git">配置 Git</a></li>
+<li><a href="#代码仓库">代码仓库</a></li>
+<li><a href="#配置主题">配置主题</a></li>
 </ul></li>
-<li><a href="#gallery-shortcode"><code>{{&lt; gallery &gt;}}</code> shortcode</a>
-<ul>
-<li><a href="#simple-gallery">simple gallery</a></li>
-<li><a href="#to-specify-individual-image-files">To specify individual image files</a></li>
+<li><a href="#github-pages-托管博客">GitHub Pages 托管博客</a></li>
 </ul></li>
-</ul></li>
+<li><a href="#项目主页">项目主页</a></li>
+<li><a href="#结语">结语</a></li>
 </ul>
 </nav>
   </div>
@@ -414,138 +413,390 @@
 
     
     <div class="post-content">
-      <p>Thanks for <a href="https://github.com/liwenyip/hugo-easy-gallery">liwenyip/hugo-easy-gallery</a> &amp; <a href="https://github.com/xianmin/hugo-theme-jane/pull/48">Zebradil · Pull Request #48</a> .</p>
+      <h1 id="why">Why?</h1>
 
-<p>Now, we could use <code>{{&lt; gallery &gt;}}</code> shortcode in hugo-theme-jane.</p>
+<p>尽管现在通过微博、公众号等方式可以方便地发声、写文章，但还是想有个自己的地方，记录自己的一些随笔和思考。</p>
 
-<h2 id="normal-image">Normal Image</h2>
+<p>调研了一番，最后选择使用 <a href="https://pages.github.com/">GitHub Pages</a> 建立一个静态博客，方便且省心。</p>
 
-<p>This is an image in <code>static/image</code> folder.</p>
+<p>这是第一篇文章，就先写写建站的过程。</p>
+
+<h1 id="折腾记">折腾记</h1>
+
+<p>我使用过三种建站框架：<a href="https://jekyllrb.com/">Jekyll</a>、<a href="https://hexo.io/zh-cn/index.html">Hexo</a> 和 <a href="https://gohugo.io/">Hugo</a></p>
+
+<ul>
+<li><a href="https://jekyllrb.com/">Jekyll</a></li>
+</ul>
+
+<p>这是 GitHub 默认支持的方式。</p>
+
+<p>但是其各个主题的依赖都不太一样，在安装依赖环境的时候，其下载速度常常很慢，或者直接便安装失败。</p>
+
+<p>后来就弃坑了。</p>
+
+<p>不过还是要推荐一个它的主题 <a href="https://github.com/muan/scribble">jekyll-theme-scribble</a>，是我个人比较喜欢的简洁主题。</p>
+
+<p>现在使用的 Markdown 编辑器 <a href="https://typora.io/">Typora</a>，也在使用这个主题 <a href="http://theme.typora.io/theme/Scribble/">Typora-scribble</a>。</p>
+
+<p><img src="http://theme.typora.io/media/theme/scribble/Snip20180503_1.png" alt="typora-scribble" /></p>
+
+<ul>
+<li><a href="https://hexo.io/zh-cn/index.html">Hexo</a></li>
+</ul>
+
+<p>Hexo 由于其中文文档丰富，且主题 <a href="https://github.com/theme-next/hexo-theme-next">hexo-theme-NexT</a> 影响很广，有很多博主使用这种方式建站。</p>
+
+<p>我最开始建站就用的 NexT 主题，但那段时间有点忙，写了两篇文章后就没继续下去了。</p>
+
+<ul>
+<li><a href="https://gohugo.io/">Hugo</a></li>
+</ul>
+
+<p>后来接触到 Hugo 框架，相比较起来 Hugo 的安装和使用最为友好，且页面的生成速度很快。</p>
+
+<p>只要接触过 Linux 命令行应该都会使用，不用费心安装其他的依赖，测试和部署仅仅依靠一个二进制程序就够了。</p>
+
+<p>比如在 Ubuntu 下，可以一条命令安装 Hugo。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="lnt">1
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown">![<span class="nt">This is an image in `static/image` folder.</span>](<span class="na">/image/example.jpg</span>)</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ sudo apt install hugo</code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="figure-shortcode"><code>{{&lt; figure &gt;}}</code> shortcode</h2>
-
-<h3 id="figure-image-with-title">figure image with title</h3>
+<p>即使需要更高版本的 Hugo，也可以去它的 <a href="https://github.com/gohugoio/hugo/releases">GitHub release</a> 下载高版本的二进制文件，通过 <code>dpkg</code> 安装，即：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">{{&lt; figure src=&#34;/image/example.jpg&#34; title=&#34;figure image with title&#34; &gt;}}</pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ sudo dpkg -i hugo_0.55.6_Linux-64bit.deb</code></pre></td></tr></table>
 </div>
 </div>
-<h3 id="figure-image-with-caption">figure image with caption</h3>
+<hr />
+
+<p>下面就记录下我使用 Hugo 的建站过程。</p>
+
+<h1 id="blog-项目">Blog 项目</h1>
+
+<blockquote>
+<p>主题： <a href="https://github.com/xianmin/hugo-theme-jane">hugo-theme-jane</a></p>
+
+<p>工具：</p>
+
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows Subsystem for Linux(WSL)</a></li>
+<li><a href="https://code.visualstudio.com/docs">Visual Studio Code</a></li>
+</ul>
+
+<p>WSL 用于使用命令行管理项目，VS Code 用于编辑源码。</p>
+</blockquote>
+
+<h2 id="blog-源码">Blog 源码</h2>
+
+<h3 id="配置-git">配置 Git</h3>
+
+<p>Git 的使用可以参考 <a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf">Git Cheat Sheet</a></p>
+
+<ul>
+<li>本地 SSH 远程关联 GitHub</li>
+</ul>
+
+<p>SSH，即 <a href="https://baike.baidu.com/item/SSH/10407"><em>Secure Shell</em></a> 安全外壳协议，可以将本地的一个 Shell 模拟器和你的 GitHub 账户绑定在一起，免去每次在向远程代码仓库推送代码的时候输入账户和密码。</p>
+
+<p>首先，使用命令行生成一对 <code>RSA</code> 公私密钥对：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">{{&lt; figure src=&#34;/image/example.jpg&#34; caption=&#34;figure image with caption figure image with caption figure image with caption figure image with caption figure image with caption&#34; &gt;}}</pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ ssh-keygen -t rsa</code></pre></td></tr></table>
 </div>
 </div>
-<h3 id="more-figure-shortcode-usage">more <code>{{&lt; figure &gt;}}</code> shortcode usage</h3>
-
-<p>Specifying your image files:</p>
-
-<ul>
-<li><code>{{&lt; figure src=&quot;thumb.jpg&quot; link=&quot;image.jpg&quot; &gt;}}</code> will use <code>thumb.jpg</code> for thumbnail and <code>image.jpg</code> for lightbox</li>
-<li><code>{{&lt; figure src=&quot;image.jpg&quot; &gt;}}</code> or <code>{{&lt; figure link=&quot;image.jpg&quot; &gt;}}</code> will use <code>image.jpg</code> for both thumbnail and lightbox</li>
-<li><code>{{&lt; figure link=&quot;image.jpg&quot; thumb=&quot;-small&quot; &gt;}}</code> will use <code>image-small.jpg</code> for thumbnail and <code>image.jpg</code> for lightbox</li>
-</ul>
-
-<p>Optional parameters:</p>
-
-<ul>
-<li>All the <a href="https://gohugo.io/extras/shortcodes">features/parameters</a> of Hugo&rsquo;s built-in <code>figure</code> shortcode work as normal, i.e. src, link, title, caption, class, attr (attribution), attrlink, alt</li>
-<li><code>size</code> (e.g. <code>size=&quot;1024x768&quot;</code>) pre-defines the image size for PhotoSwipe. Use this option if you don&rsquo;t want to pre-load the linked image to determine its size.</li>
-<li><code>class</code> allows you to set any custom classes you want on the <code>&lt;figure&gt;</code> tag.</li>
-</ul>
-
-<p>Optional parameters for standalone <code>{{&lt; figure &gt;}}</code> shortcodes only (i.e. don&rsquo;t use on <code>{{&lt; figure &gt;}}</code> inside <code>{{&lt; gallery &gt;}}</code> - strange things may happen if you do):</p>
-
-<ul>
-<li><code>caption-position</code> and <code>caption-effect</code> work the same as for the <code>{{&lt; gallery &gt;}}</code> shortcode (see below).</li>
-<li><code>width</code> defines the <a href="https://www.w3schools.com/cssref/pr_dim_max-width.asp"><code>max-width</code></a> of the image displayed on the page. If using a thumbnail for a standalone figure, set this equal to your thumbnail&rsquo;s native width to make the captions behave properly (or feel free to come up with a better solution and submit a pull request :-)). Also use this option if you don&rsquo;t have a thumbnail and you don&rsquo;t want the hi-res image to take up the entire width of the screen/container.</li>
-<li><code>class=&quot;no-photoswipe&quot;</code> prevents a <code>&lt;figure&gt;</code> from being loaded into PhotoSwipe. If you click on the figure you&rsquo;ll instead a good ol&rsquo; fashioned hyperlink to a bigger image (or - if you haven&rsquo;t specified a bigger image - the same one).</li>
-</ul>
-
-<h2 id="gallery-shortcode"><code>{{&lt; gallery &gt;}}</code> shortcode</h2>
-
-<h3 id="simple-gallery">simple gallery</h3>
-
-<p>To specify a directory of image files:</p>
+<p>连续敲击 <code>Enter</code> 键，使用默认选择即可。生成的密钥对一般在 <code>~/.ssh/</code> 路径下。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">{{&lt; gallery dir=&#34;/img/your-directory-of-images/&#34; &gt;}}</pre></td></tr></table>
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ ls ~/.ssh/
+id_rsa  id_rsa.pub  known_hosts</code></pre></td></tr></table>
 </div>
 </div>
-<ul>
-<li>The images are automatically captioned with the file name.</li>
-<li><code>[image].jpg</code> is used for the hi-res image, and <code>[image]-thumb.jpg</code> is used for the thumbnails.</li>
-<li>If <code>[image]-thumb.jpg</code> doesn&rsquo;t exist, then <code>[image].jpg</code> will be used for both hi-res and thumbnail images.</li>
-<li>The default thumbnail suffix is <code>-thumb</code>, but you can specify a different one e.g. <code>thumb=&quot;-small&quot;</code> or <code>thumb=&quot;_150x150&quot;</code>.</li>
-</ul>
+<p>将公钥 <code>id_ras.pub</code> 的内容保存到 GitHub 中的 <code>settings — SSH and GPG keys</code> 下。</p>
 
-<h3 id="to-specify-individual-image-files">To specify individual image files</h3>
+<p>完成后，你暂时还不能往 GitHub 的仓库推送代码，因为现在你还没有说明你的 “身份”。</p>
+
+<ul>
+<li>配置账号</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ git config --global user.name <span class="s2">&#34;&lt;username&gt;&#34;</span>
+$ git config --global user.email <span class="s2">&#34;&lt;email address&gt;&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><code>&lt;username&gt;</code> 和 <code>&lt;email address&gt;</code> 分别是 GitHub 的账号名和注册邮箱。</p>
+
+<p>配置完成后，你就是有 “身份” 的人了，可以向自己 GitHub 的项目仓库推送代码了。</p>
+
+<h3 id="代码仓库">代码仓库</h3>
+
+<ul>
+<li>远程代码仓库</li>
+</ul>
+
+<p>首先在 GitHub 上新建一个代码仓库 repository，作为远程仓库保存我们 blog 的源码。</p>
+
+<p>比如，我的叫 <a href="https://github.com/KipJ/mySite-with-jane">mySite-with-jane</a> 。</p>
+
+<ul>
+<li>本地代码仓库</li>
+</ul>
+
+<p>由于要使用 Hugo 建立博客，还要先建立存放博客源码的本地仓库作为开发用，即：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ hugo new site mySite-with-jane</code></pre></td></tr></table>
+</div>
+</div>
+<p>Hugo 的命令说明可以参考其官方网站 <a href="https://gohugo.io/commands/">hugo commands</a>。</p>
+
+<p>接着关联本地 repo 和 远程的 repo：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ <span class="nb">cd</span> mySite-with-jane
+$ git init
+// 关联本地和远程 repo。KipJ 是我的账户名，你需要换成你自己的。
+$ git remote add origin git@github.com:KipJ/mySite-with-jane.git</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="配置主题">配置主题</h3>
+
+<p>这里我使用子模块的形式添加主题代码，即：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">// blog 根目录
+$ git submodule add https://github.com/xianmin/hugo-theme-jane.git themes/jane</code></pre></td></tr></table>
+</div>
+</div>
+<p>然后便是根据 <a href="https://github.com/xianmin/hugo-theme-jane/blob/master/README-zh.md">主题说明</a> 进行配置了。</p>
+
+<ul>
+<li>修改 <code>config.toml</code></li>
+</ul>
+
+<p>可以参考我的配置文件 <a href="https://github.com/KipJ/mySite-with-jane/blob/master/config.toml">config.toml</a></p>
+
+<p>此时就可以输入调试命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">// 调试命令，-D 即 Debug
+$ hugo server -D</code></pre></td></tr></table>
+</div>
+</div>
+<p>在浏览器中输入 <a href="http://localhost:1313/">http://localhost:1313/</a> ，查看网页的效果了。</p>
+
+<ul>
+<li>修改主题</li>
+</ul>
+
+<p>因为我以 <code>submodule</code> 的形式使用主题，如果想对主题做一些修改，可以在自己 blog 的根目录进行覆盖式修改。</p>
+
+<p>比如 <code>jane</code> 主题原来是以文字的形式显示 <code>busuanzi</code> 的 <code>UV/PV</code> 统计值，即：</p>
+
+<p><img src="https://raw.githubusercontent.com/KipJ/comments/master/images/2019-07-14/uvpv-1.PNG" alt="uspv-1" /></p>
+
+<p>我想将其修改为如下形式：</p>
+
+<p><img src="https://raw.githubusercontent.com/KipJ/comments/master/images/2019-07-14/uvpv-2.PNG" alt="uvps-2" /></p>
+
+<p>首先，找到页脚对应的 HTML 文件，为 <code>theme/jane/layout/partials/footer.html</code>，然后将其复制到我们 blog 根目录的 <code>layout/partials</code>  路径下，并修改如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span><span class="lnt">6
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">{{&lt; gallery &gt;}}
-  {{&lt; figure src=&#34;image1.jpg&#34; &gt;}}
-  {{&lt; figure src=&#34;image2.jpg&#34; &gt;}}
-  {{&lt; figure src=&#34;image3.jpg&#34; &gt;}}
-{{&lt; /gallery &gt;}}</pre></td></tr></table>
+<pre class="chroma"><code class="language-html" data-lang="html">  <span class="c">&lt;!-- Counter busuanzi --&gt;</span>
+  {{ if .Site.Params.counter.busuanzi.enable }}
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;busuanzi_container&#34;</span><span class="p">&gt;</span>
+      {{ partial &#34;svg/users.svg&#34; }} <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;busuanzi_value_site_uv&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> | {{ partial &#34;svg/eye.svg&#34; }} <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;busuanzi_value_site_pv&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  {{ end }}</code></pre></td></tr></table>
 </div>
 </div>
-<p><strong>Optional parameters:</strong></p>
+<p>其次，还需要在 <code>partials</code> 下新建文件夹 <code>svg</code>，用于存放新添加矢量图 <code>users.svg</code> 和 <code>eye.svg</code>。</p>
+
+<blockquote>
+<p>矢量图可以去网站 <a href="https://www.iconfont.cn/">iconfont</a> 免费下载，尽量选择和主题风格近似的矢量图。
+<code>jane</code> 主题页脚矢量图</p>
+
+<p>规格：<code>width=&quot;16&quot; height=&quot;16&quot;</code></p>
+
+<p>颜色：<code>fill=&quot;#8a8a8a&quot;</code></p>
+</blockquote>
+
+<h2 id="github-pages-托管博客">GitHub Pages 托管博客</h2>
+
+<p>Hugo 支持页面的动态调试，修改代码后即可显示修改后的效果。</p>
+
+<p>若对调试后的效果满意，就可以生成站点文件，并将其部署到 GitHub Pages 上了。</p>
 
 <ul>
-<li><code>caption-position</code> - determines the captions&rsquo; position over the image. Options:
-
-<ul>
-<li><code>bottom</code> (default)</li>
-<li><code>center</code></li>
-<li><code>none</code> hides captions on the page (they will only show in PhotoSwipe)</li>
-</ul></li>
-<li><code>caption-effect</code> - determines if/how captions appear upon hover. Options:
-
-<ul>
-<li><code>slide</code> (default)</li>
-<li><code>fade</code></li>
-<li><code>none</code> (captions always visible)</li>
-</ul></li>
-<li><code>hover-effect</code> - determines if/how images change upon hover. Options:
-
-<ul>
-<li><code>zoom</code> (default)</li>
-<li><code>grow</code></li>
-<li><code>shrink</code></li>
-<li><code>slideup</code></li>
-<li><code>slidedown</code></li>
-<li><code>none</code></li>
-</ul></li>
-<li><code>hover-transition</code> - determines if/how images change upon hover. Options:
-
-<ul>
-<li>not set - smooth transition (default)</li>
-<li><code>none</code> - hard transition</li>
-</ul></li>
+<li>同名 <code>repo</code></li>
 </ul>
+
+<p>首先，需新建一个同名仓库，作为站点文件的托管仓库。即在 GitHub 中以 <code>&lt;username&gt;.github.io</code> 为名新建一个项目仓库。</p>
+
+<p>GitHub Pages 的规则规定必须是同名仓库，不然不能解析到站点文件。</p>
+
+<p>我的 GitHub 账户名为 <code>KipJ</code>，那么我的 repo 的名字就是 <a href="https://github.com/KipJ/kipj.github.io">kipj.github.io</a>。</p>
+
+<ul>
+<li>生成页面文件</li>
+</ul>
+
+<p>使用命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ hugo</code></pre></td></tr></table>
+</div>
+</div>
+<p>会在 blog 根目录下生成文件夹 <code>public</code>，其中生成的便是网页的最终站点代码了。</p>
+
+<ul>
+<li>部署代码到 <code>repo</code></li>
+</ul>
+
+<p>进行如下操作：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ <span class="nb">cd</span> public/
+$ git init
+// 本地和远程仓库关联
+$ git remote add origin https://github.com/KipJ/kipj.github.io.git
+$ git add -A
+$ git commit -m <span class="s2">&#34;init blog&#34;</span>
+// 推送代码
+$ git push origin master</code></pre></td></tr></table>
+</div>
+</div>
+<p>即将站点文件上传到同名项目仓库，然后访问 <code>https://&lt;username&gt;.github.io</code> 即可。</p>
+
+<p>例如，对于我的 blog 而言，访问网址 <a href="https://kipj.github.io/">https://kipj.github.io/</a> ，即可看到我的静态 blog。</p>
+
+<h1 id="项目主页">项目主页</h1>
+
+<p>我之前还使用过博客主题 <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>。</p>
+
+<p>此主题风格简洁但就是不能评论，也不能展示访问量。本来打算自己进行修改，不过有点麻烦，以后有空再说。</p>
+
+<p>后来就直接使用了一个现成的主题 <a href="https://github.com/xianmin/hugo-theme-jane">hugo-theme-jane</a>，如上所示。</p>
+
+<p>但是我依然想将 <code>hugo-theme-classic</code> 主题的 blog 继续展示，怎么办呢？</p>
+
+<p>搜索了一下，发现可以用 GitHub 提供的 <a href="https://help.github.com/en/articles/user-organization-and-project-pages">gh-pages</a>， 可以以项目主页的形式展示网页，配置方法如下。</p>
+
+<ul>
+<li>生成站点文件</li>
+</ul>
+
+<p>在 <code>hugo-theme-classic</code> 主题 blog 的根目录下生成站点文件，放置在文件夹 <code>demo</code> 中</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ hugo -d demo/</code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li>上传</li>
+</ul>
+
+<p>可以将整个博客的源码和 <code>demo</code> 文件夹一起上传到 GitHub 上：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ git add -A
+$ git commit -m <span class="s2">&#34;add gh-pages demo.&#34;</span>
+$ git push origin master</code></pre></td></tr></table>
+</div>
+</div>
+<p>也可以不将 <code>demo</code> 和源码放在一起，直接跳到下一步。</p>
+
+<ul>
+<li>创建 <code>gh-pages</code> 分支，上传站点文件</li>
+</ul>
+
+<p>在 <code>demo</code> 中生成站点文件后，直接在此 blog 的根目录下，输入以下命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ git subtree push --prefix<span class="o">=</span>demo origin gh-pages</code></pre></td></tr></table>
+</div>
+</div>
+<p>此命令会自动创建分支 <code>gh-pages</code>，并上传 <code>demo</code> 中的站点文件。</p>
+
+<p>其以子分支的形式推送 demo 的内容到 GitHub，可以看看贤民写的这篇 <a href="https://www.xianmin.org/post/git-submodule/">博客</a>。</p>
+
+<p>我这个主题的 blog 源码文件都上传到了项目 <a href="https://github.com/KipJ/hugo-with-classic">KipJ/hugo-with-classic</a> 中，可以看到其有两个分支，分别存放了源码和站点文件。</p>
+
+<p>最终效果： <a href="https://kipj.github.io/hugo-with-classic">https://kipj.github.io/hugo-with-classic</a></p>
+
+<h1 id="结语">结语</h1>
+
+<p>至此，我的整个建站过程大致叙述完了。</p>
+
+<p>欢迎在本页留言或提问。</p>
     </div>
 
     
@@ -553,7 +804,7 @@
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">贤民</span>
+    <span class="item-content">Kip Jiang</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
@@ -572,29 +823,17 @@
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="https://kipj.github.io/tags/image/">image</a>
+          <a href="https://kipj.github.io/tags/hugo/">hugo</a>
+          <a href="https://kipj.github.io/tags/jane/">jane</a>
           
         </div>
 
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/2019-07-14-build-a-blog-with-hugo/">
-            
-            <i class="iconfont">
-              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="18" height="18">
-  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
-</svg>
-
-            </i>
-            <span class="prev-text nav-default">使用 Hugo 搭建 Blog</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
         
-          <a class="next" href="/post/shortcodes-notice-preview/">
-            <span class="next-text nav-default">Shortcodes Notice Preview</span>
+          <a class="next" href="/post/image-preview/">
+            <span class="next-text nav-default">Image Preview</span>
             <span class="prev-text nav-mobile">Next</span>
             
             <i class="iconfont">
@@ -615,6 +854,29 @@
 
   
   
+
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "KipJ/comments"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
+
+  
+
+  
+
+  
+
+    
 
         </div>
       </div>
