@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Kip&#39;s Site</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Kip&#39;s Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 14 Jul 2019 16:27:39 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hugo</title>
+      <link>http://localhost:1313/tags/hugo/</link>
+      <pubDate>Sun, 14 Jul 2019 16:27:39 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jane</title>
+      <link>http://localhost:1313/tags/jane/</link>
+      <pubDate>Sun, 14 Jul 2019 16:27:39 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/jane/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>image</title>
+      <link>http://localhost:1313/tags/image/</link>
+      <pubDate>Sun, 14 Jul 2019 09:30:14 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/image/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>footnote</title>
+      <link>http://localhost:1313/tags/footnote/</link>
+      <pubDate>Sat, 13 Jul 2019 22:26:58 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/footnote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>highlight</title>
+      <link>http://localhost:1313/tags/highlight/</link>
+      <pubDate>Sat, 13 Jul 2019 21:58:51 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/highlight/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
