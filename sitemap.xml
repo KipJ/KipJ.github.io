@@ -1,103 +1,103 @@
-<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://kipj.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://kipj.github.io/about/</loc>
     <lastmod>2019-07-13T21:38:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://kipj.github.io/categories/</loc>
     <lastmod>2019-07-14T16:27:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://kipj.github.io/</loc>
     <lastmod>2019-07-14T16:27:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://kipj.github.io/post/</loc>
     <lastmod>2019-07-14T16:27:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://kipj.github.io/tags/</loc>
     <lastmod>2019-07-14T16:27:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/blog/</loc>
+    <loc>https://kipj.github.io/categories/blog/</loc>
     <lastmod>2019-07-14T16:27:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>https://kipj.github.io/tags/hugo/</loc>
     <lastmod>2019-07-14T16:27:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/jane/</loc>
+    <loc>https://kipj.github.io/tags/jane/</loc>
     <lastmod>2019-07-14T16:27:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/2019-07-14-build-a-blog-with-hugo/</loc>
+    <loc>https://kipj.github.io/post/2019-07-14-build-a-blog-with-hugo/</loc>
     <lastmod>2019-07-14T16:27:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/image-preview/</loc>
+    <loc>https://kipj.github.io/post/image-preview/</loc>
     <lastmod>2019-07-14T09:30:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/docs/</loc>
+    <loc>https://kipj.github.io/categories/docs/</loc>
     <lastmod>2019-07-14T09:30:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/image/</loc>
+    <loc>https://kipj.github.io/tags/image/</loc>
     <lastmod>2019-07-14T09:30:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/footnote-preview/</loc>
+    <loc>https://kipj.github.io/post/footnote-preview/</loc>
     <lastmod>2019-07-14T09:19:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/footnote/</loc>
+    <loc>https://kipj.github.io/tags/footnote/</loc>
     <lastmod>2019-07-14T09:19:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/syntax-highlighting/</loc>
+    <loc>https://kipj.github.io/post/syntax-highlighting/</loc>
     <lastmod>2019-07-13T21:58:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/highlight/</loc>
+    <loc>https://kipj.github.io/tags/highlight/</loc>
     <lastmod>2019-07-13T21:58:51+08:00</lastmod>
     <priority>0</priority>
   </url>

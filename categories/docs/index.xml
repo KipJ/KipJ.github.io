@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docs on Kip&#39;s Site</title>
-    <link>http://localhost:1313/categories/docs/</link>
+    <link>https://kipj.github.io/categories/docs/</link>
     <description>Recent content in docs on Kip&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 14 Jul 2019 09:30:14 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/categories/docs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kipj.github.io/categories/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Image Preview</title>
-      <link>http://localhost:1313/post/image-preview/</link>
+      <link>https://kipj.github.io/post/image-preview/</link>
       <pubDate>Sun, 14 Jul 2019 09:30:14 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/image-preview/</guid>
+      <guid>https://kipj.github.io/post/image-preview/</guid>
       <description>&lt;p&gt;Thanks for &lt;a href=&#34;https://github.com/liwenyip/hugo-easy-gallery&#34;&gt;liwenyip/hugo-easy-gallery&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://github.com/xianmin/hugo-theme-jane/pull/48&#34;&gt;Zebradil · Pull Request #48&lt;/a&gt; .&lt;/p&gt;
 
 &lt;p&gt;Now, we could use &lt;code&gt;{{&amp;lt; gallery &amp;gt;}}&lt;/code&gt; shortcode in hugo-theme-jane.&lt;/p&gt;
@@ -36,19 +36,19 @@
     
     <item>
       <title>Footnote Preview</title>
-      <link>http://localhost:1313/post/footnote-preview/</link>
+      <link>https://kipj.github.io/post/footnote-preview/</link>
       <pubDate>Sat, 13 Jul 2019 22:26:58 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/footnote-preview/</guid>
+      <guid>https://kipj.github.io/post/footnote-preview/</guid>
       <description>&lt;p&gt;Hugo-theme-jane optimized for footnote. When you mouse hover the footnote&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:example&#34;&gt;&lt;a href=&#34;#fn:example&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; , footnote content will be displayed.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Syntax Highlighting</title>
-      <link>http://localhost:1313/post/syntax-highlighting/</link>
+      <link>https://kipj.github.io/post/syntax-highlighting/</link>
       <pubDate>Sat, 13 Jul 2019 21:58:51 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/syntax-highlighting/</guid>
+      <guid>https://kipj.github.io/post/syntax-highlighting/</guid>
       <description>&lt;p&gt;More detail: &lt;a href=&#34;https://gohugo.io/content-management/syntax-highlighting/&#34;&gt;Syntax Highlighting | Hugo&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
