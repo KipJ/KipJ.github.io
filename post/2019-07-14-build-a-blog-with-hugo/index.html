@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Kip Jiang" /><meta name="description" content="Always learn, sometimes write." /><meta name="keywords" content="" />
+<meta name="author" content="Kip Jiang" /><meta name="description" content="Always learn, sometimes write." /><meta name="keywords" content="hugo, blog, jane" />
 
 
 
@@ -43,15 +43,15 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kipj.github.io/post/2019-07-14-build-a-blog-with-hugo/" />
 <meta property="article:published_time" content="2019-07-14T16:27:39&#43;08:00"/>
-<meta property="article:modified_time" content="2019-07-14T16:27:39&#43;08:00"/>
+<meta property="article:modified_time" content="2019-08-09T19:15:53&#43;08:00"/>
 
 <meta itemprop="name" content="使用 Hugo 搭建 Blog">
 <meta itemprop="description" content="Always learn, sometimes write.">
 
 
 <meta itemprop="datePublished" content="2019-07-14T16:27:39&#43;08:00" />
-<meta itemprop="dateModified" content="2019-07-14T16:27:39&#43;08:00" />
-<meta itemprop="wordCount" content="2301">
+<meta itemprop="dateModified" content="2019-08-09T19:15:53&#43;08:00" />
+<meta itemprop="wordCount" content="2675">
 
 
 
@@ -142,10 +142,10 @@
       <div class="post-meta">
         <span class="post-time"> 2019-07-14 </span>
           <span class="more-meta"> 
-            <img src="/img/quill.svg" alt="quill"/> 2301 words 
+            <img src="/img/quill.svg" alt="quill"/> 2675 words 
           </span>
           <span class="more-meta">
-            <img src="/img/clock.svg" alt="clock"/> 5 mins 
+            <img src="/img/clock.svg" alt="clock"/> 6 mins 
           </span>
 
         <span id="busuanzi_container_page_pv" class="more-meta">
@@ -174,12 +174,20 @@
 </ul></li>
 <li><a href="#项目主页">项目主页</a></li>
 <li><a href="#结语">结语</a></li>
+<li><a href="#update">Update</a>
+<ul>
+<li><a href="#gh-pages">gh-pages</a></li>
+<li><a href="#new-blog-theme">New blog theme</a></li>
+<li><a href="#others">Others</a></li>
+</ul></li>
 </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <h1 id="why">Why?</h1>
+      <hr />
+
+<h1 id="why">Why?</h1>
 
 <p>尽管现在通过微博、公众号等方式可以方便地发声、写文章，但还是想有个自己的地方，记录自己的一些随笔和思考。</p>
 
@@ -535,7 +543,7 @@ $ git commit -m <span class="s2">&#34;add gh-pages demo.&#34;</span>
 $ git push origin master</code></pre></td></tr></table>
 </div>
 </div>
-<p>也可以不将 <code>demo</code> 和源码放在一起，直接跳到下一步。</p>
+<p><del>也可以不将 <code>demo</code> 和源码放在一起，直接跳到下一步。</del></p>
 
 <ul>
 <li>创建 <code>gh-pages</code> 分支，上传站点文件</li>
@@ -563,6 +571,72 @@ $ git push origin master</code></pre></td></tr></table>
 <p>至此，我的整个建站过程大致叙述完了。</p>
 
 <p>欢迎在本页留言或提问。</p>
+
+<hr />
+
+<h1 id="update">Update</h1>
+
+<blockquote>
+<p><em>Update at August 9th, 2019</em></p>
+</blockquote>
+
+<h2 id="gh-pages">gh-pages</h2>
+
+<p>在使用 <code>git subtree</code> 创建 <code>gh-pages</code> 分支的时候，必须先将其 commit 到主分支再运行命令。否则会报错：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ git subtree push --prefix<span class="o">=</span>demo origin gh-pages
+git push using:  origin gh-pages
+No new revisions were found</code></pre></td></tr></table>
+</div>
+</div>
+<p>其作用是告知我们的操作信息，不然 git 并不知晓 <code>demo/</code> 的相关操作，也就谈不上提交了。</p>
+
+<ul>
+<li>删除 <code>demo/</code></li>
+</ul>
+
+<p>这时我们的 git 中有 <code>demo/</code> 的提交记录，如果不想提交到本地和远程仓库，只需执行以下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># delete local firstly</span>
+$ git rm -r dev
+<span class="c1"># delete remote then</span>
+$ git push origin master</code></pre></td></tr></table>
+</div>
+</div>
+<p>或者只在远程仓库中删除，然后在 <code>.gitignore</code> 中添加 <code>demo/</code> 信息，让 git 忽略其操作信息。</p>
+
+<ul>
+<li>再次推送</li>
+</ul>
+
+<p>在创建好 <code>gh-pages</code> 分支后，下次便可以直接在 <code>demo/</code> 目录下执行 <code>git push</code> 操作了。</p>
+
+<h2 id="new-blog-theme">New blog theme</h2>
+
+<p>这两天又折腾了一个新的博客主题，还是基于 <code>hugo-theme-even</code>。</p>
+
+<p>我对其做了一些修改，就是现在看到的这个博客样式。修改后的主题在 <a href="https://github.com/KipJ/hugo-theme-even">这里</a>。</p>
+
+<p>相应的博客源码我也放到了 Github 上，点 <a href="https://github.com/KipJ/mySite-even">这里</a>。</p>
+
+<p>如果你喜欢，可以随意 <code>fork</code>，顺便点点 <code>star</code> 😄。</p>
+
+<h2 id="others">Others</h2>
+
+<p>下一篇博客我准备将我换主题过程中遇到 <code>坑</code> 写一些，以示后来者。</p>
     </div>
 
     <div class="post-copyright">
@@ -573,8 +647,8 @@ $ git push origin master</code></pre></td></tr></table>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2019-07-14
-        
+        2019-08-09
+        <a href="KipJ/kipj.github.io/commit/d9278727dab68a089c1ee5b4a9540e93d246a479" title="update my last post">(d927872)</a>
     </span>
   </p>
   
@@ -623,7 +697,7 @@ $ git push origin master</code></pre></td></tr></table>
         notify: 'true', 
         verify: 'true', 
         avatar: 'mm', 
-        placeholder: '说点什么吧...',
+        placeholder: '说点什么吧...（请填写邮件，接收回复提醒）',
         visitor: 'true'
     });
   </script>
@@ -683,7 +757,8 @@ $ git push origin master</code></pre></td></tr></table>
     var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  
-  </script>
+  </script><script></script><script src="https://cdn.jsdelivr.net/npm/raphael@2.2.7/raphael.min.js" integrity="sha256-67By+NpOtm9ka1R6xpUefeGOY8kWWHHRAKlvaTJ7ONI=" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/flowchart.js@1.8.0/release/flowchart.min.js" integrity="sha256-zNGWjubXoY6rb5MnmpBNefO0RgoVYfle9p0tvOQM+6k=" crossorigin="anonymous"></script><script></script><script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js" integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/snapsvg@0.5.1/dist/snap.svg-min.js" integrity="sha256-oI+elz+sIm+jpn8F/qEspKoKveTc5uKeFHNNVexe6d8=" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/underscore@1.8.3/underscore-min.js" integrity="sha256-obZACiHd7gkOk9iIL/pimWMTJ4W/pBsKu+oZnSeBIek=" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/gh/bramp/js-sequence-diagrams@2.0.1/dist/sequence-diagram-min.js" integrity="sha384-8748Vn52gHJYJI0XEuPB2QlPVNUkJlJn9tHqKec6J3q2r9l8fvRxrgn/E5ZHV0sP" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bramp/js-sequence-diagrams@2.0.1/dist/sequence-diagram-min.css" integrity="sha384-6QbLKJMz5dS3adWSeINZe74uSydBGFbnzaAYmp+tKyq60S7H2p6V7g1TysM5lAaF" crossorigin="anonymous">
 <script type="text/javascript" src="/dist/even.4668a3a5.min.js"></script>
   <script type="text/javascript">
     window.MathJax = {

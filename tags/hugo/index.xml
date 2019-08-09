@@ -17,7 +17,9 @@
       <pubDate>Sun, 14 Jul 2019 16:27:39 +0800</pubDate>
       
       <guid>https://kipj.github.io/post/2019-07-14-build-a-blog-with-hugo/</guid>
-      <description>&lt;h1 id=&#34;why&#34;&gt;Why?&lt;/h1&gt;
+      <description>&lt;hr /&gt;
+
+&lt;h1 id=&#34;why&#34;&gt;Why?&lt;/h1&gt;
 
 &lt;p&gt;尽管现在通过微博、公众号等方式可以方便地发声、写文章，但还是想有个自己的地方，记录自己的一些随笔和思考。&lt;/p&gt;
 
