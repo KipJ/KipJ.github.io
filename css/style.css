@@ -27,7 +27,7 @@
 .tagline {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Microsoft YaHei';
   font-style: italic;
-  text-align: left;
+  /* text-align: left; */
 }
 
 /* .menu */
@@ -131,9 +131,10 @@
 }
 
 /* article footer */
-.post-categories {
-  margin-top: .5em;
-  margin-left: .5em;
+.post-footer {
+  margin: 1em .5em 1em .5em;
+  display: flex;
+  justify-content: space-between;
 }
 
 .post-categories a {
