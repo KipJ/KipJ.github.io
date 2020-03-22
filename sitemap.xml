@@ -3,8 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://KipJiang.github.io/post/2020/03/22/2020-03-22-hello-hugo/</loc>
-    <lastmod>2020-03-22T21:49:29+08:00</lastmod>
+    <loc>https://KipJiang.github.io/note/</loc>
+    <lastmod>2020-03-23T01:20:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://KipJiang.github.io/categories/blogdev/</loc>
+    <lastmod>2020-03-23T01:15:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://KipJiang.github.io/categories/</loc>
+    <lastmod>2020-03-23T01:15:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://KipJiang.github.io/post/2020/03/22/hello-hugo/</loc>
+    <lastmod>2020-03-23T01:15:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://KipJiang.github.io/tags/hugo/</loc>
+    <lastmod>2020-03-23T01:15:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://KipJiang.github.io/tags/</loc>
+    <lastmod>2020-03-23T01:15:29+08:00</lastmod>
   </url>
   
   <url>
@@ -20,14 +45,6 @@
   <url>
     <loc>https://KipJiang.github.io/post/</loc>
     <lastmod>2020-03-22T21:39:26+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://KipJiang.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://KipJiang.github.io/tags/</loc>
   </url>
   
 </urlset>
