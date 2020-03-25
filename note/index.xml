@@ -24,10 +24,10 @@
     
     <item>
       <title>Working With Ubuntu (1) - v2ray</title>
-      <link>https://KipJiang.github.io/note/2020/02/20/working-with-ubuntu-1st/</link>
-      <pubDate>Thu, 20 Feb 2020 09:49:43 +0800</pubDate>
+      <link>https://KipJiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</link>
+      <pubDate>Sat, 15 Feb 2020 09:49:43 +0800</pubDate>
       
-      <guid>https://KipJiang.github.io/note/2020/02/20/working-with-ubuntu-1st/</guid>
+      <guid>https://KipJiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</guid>
       <description>如何在 Ubuntu 中安装一些开发软件。
  v2ray  下载并安装 v2ray 脚本  v2ray-core/release
 下载最新版的 v2ray Linux 压缩包，并通过脚本在本地安装
