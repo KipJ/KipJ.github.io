@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>v2ray on Kip Jiang</title>
+    <link>https://KipJiang.github.io/tags/v2ray/</link>
+    <description>Recent content in v2ray on Kip Jiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Feb 2020 09:49:43 +0800</lastBuildDate>
+    
+	<atom:link href="https://KipJiang.github.io/tags/v2ray/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Working With Ubuntu (1) - v2ray</title>
+      <link>https://KipJiang.github.io/note/2020/02/20/working-with-ubuntu-1st/</link>
+      <pubDate>Thu, 20 Feb 2020 09:49:43 +0800</pubDate>
+      
+      <guid>https://KipJiang.github.io/note/2020/02/20/working-with-ubuntu-1st/</guid>
+      <description>如何在 Ubuntu 中安装一些开发软件。
+ v2ray  下载并安装 v2ray 脚本  v2ray-core/release
+下载最新版的 v2ray Linux 压缩包，并通过脚本在本地安装
+$ curl https://github.com/v2ray/v2ray-core/releases/download/v4.22.1/v2ray-linux-64.zip $ curl -L -s https://install.direct/go.sh -o go.sh $ sudo su # bash go.sh --local ./v2ray-linux-64.zip 配置 Server  首先，你得有一台在境外的 VPS &amp;hellip;&amp;hellip;
+配置 Client  编辑配置文件：
+# vim /etc/v2ray/config.json 按如下示例配置：
+{ &amp;#34;inbounds&amp;#34;: [{ &amp;#34;port&amp;#34;: 1080, &amp;#34;listen&amp;#34;: &amp;#34;127.0.0.1&amp;#34;, &amp;#34;protocol&amp;#34;: &amp;#34;socks&amp;#34;, &amp;#34;tag&amp;#34;: &amp;#34;socks-inbound&amp;#34;, &amp;#34;settings&amp;#34;: { &amp;#34;auth&amp;#34;: &amp;#34;noauth&amp;#34;, &amp;#34;udp&amp;#34;: true, &amp;#34;ip&amp;#34;: &amp;#34;127.0.0.1&amp;#34; }, &amp;#34;sniffing&amp;#34;: { &amp;#34;enbale&amp;#34;: true, &amp;#34;destOverride&amp;#34;: [ &amp;#34;http&amp;#34;, &amp;#34;tls&amp;#34; ] } }], &amp;#34;outbounds&amp;#34;: [{ &amp;#34;protocol&amp;#34;: &amp;#34;vmess&amp;#34;, &amp;#34;settings&amp;#34;: { &amp;#34;vnext&amp;#34;: [{ &amp;#34;address&amp;#34;: &amp;#34;**.</description>
+    </item>
+    
+  </channel>
+</rss>

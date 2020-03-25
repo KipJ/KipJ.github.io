@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vscode on Kip Jiang</title>
+    <link>https://KipJiang.github.io/tags/vscode/</link>
+    <description>Recent content in vscode on Kip Jiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Nov 2019 12:25:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://KipJiang.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Visual Studio Code: Remote-SSH</title>
+      <link>https://KipJiang.github.io/note/2019/11/07/vscode-remote-ssh/</link>
+      <pubDate>Thu, 07 Nov 2019 12:25:16 +0800</pubDate>
+      
+      <guid>https://KipJiang.github.io/note/2019/11/07/vscode-remote-ssh/</guid>
+      <description>  第一步当然是先在 VSCode 中安装 Remote-SSH 扩展啦
+  通过 WSL 生成公私钥对
+  $ ssh-keygen -t rsa -b 4096 通过 ssh 登录服务器，将生成的公钥文件的副本 id_rsa.tmp.pub 复制到路径 ~/.ssh/ 下，执行命令  $ cat id_rsa.tmp.pub &amp;gt;&amp;gt; authorized_keys $ chmod 600 authorized_keys Note：必须执行 chmod 600 authorized_keys 命令
+配置本地的 VSCode  编辑文件 C:\Users\&amp;lt;UserName&amp;gt;\.ssh\config，按如下格式配置：
+Host arbitrary-name-you-like HostName remote-host-ip Port remote-port User user-name-to-sign-in IdentityFile C:\Users\&amp;lt;UserName&amp;gt;\.ssh\id_rsa </description>
+    </item>
+    
+  </channel>
+</rss>

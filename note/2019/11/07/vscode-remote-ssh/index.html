@@ -9,9 +9,9 @@
     
     
     <title>
-    Hello Hugo  - Kip Jiang
+    Visual Studio Code: Remote-SSH  - Kip Jiang
     </title>
-    <meta property="og:title" content="Hello Hugo - Kip Jiang">
+    <meta property="og:title" content="Visual Studio Code: Remote-SSH - Kip Jiang">
     
     
     
@@ -19,8 +19,11 @@
     
     
     
-    <meta property="description" content="It is all about this blog">
-    <meta property="og:description" content="It is all about this blog">
+    <meta property="description" content="Remote development over SSH in VSCode">
+    <meta property="og:description" content="Remote development over SSH in VSCode">
+    
+    
+    
     
     
     
@@ -33,7 +36,7 @@
 
 
   
-  <body class="post">
+  <body class="note">
 
     <div class="container" >
       <div class="main" role="main" >
@@ -89,12 +92,12 @@
           
   
     <header class="title">
-      <h1>Hello Hugo</h1>
+      <h1>Visual Studio Code: Remote-SSH</h1>
       
       <h3>
       Kip
       
-         &#183;  2020-03-22 &#183; Words: 23
+         &#183;  2019-11-07 &#183; Words: 49
       
       </h3>
       <hr>
@@ -104,23 +107,34 @@
            
           
   
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#gun">Gun</a></li>
-    <li><a href="#hello-my-blog">Hello my Blog</a></li>
-  </ul>
-</nav>  
+    <nav id="TableOfContents"></nav>  
   
   <div class="post-content" >
-    <h2 id="gun">Gun</h2>
-<p>从年后初二开始，基本就处于隔离状态，不能出去，体育锻炼也基本取消了。在这期间，重新登录好几年不用的微博，获取各种信息。</p>
-<p>然而，微博中信息和情绪交杂，疫情数据的变化，或激昂、或悲痛的感情流露，让人不能不受其影响。整个人的情绪一天会经历好几次起伏，以致于对这种信息的过载产生了一些应激反应。</p>
-<p>这是很不好的现象，需要自我调节，找一些事情让自己忙起来，再次关掉微博，「我不看，它就没有」，fxxking off nCoV-2019.</p>
-<h2 id="hello-my-blog">Hello my Blog</h2>
-<p>以前就折腾过静态主页的博客，像 <a href="https://hexo.io/">hexo</a>、<a href="https://jekyllrb.com/">Jekyll</a> 和 <a href="https://gohugo.io/">Hugo</a> 等平台，我都用来建过个人站点，但是从来没有正经写过文章。</p>
-<p>这段时间，参考 <a href="https://yihui.org/">YihuiXie</a> 和 <a href="http://blog.fungo.me/">山羊博客</a>，自己通过移植 <a href="https://github.com/yihui/hugo-ivy">hugo-ivy</a>，也写了一个 hugo 的主题 <a href="https://github.com/KipJiang/hugo-theme-OneSentence">hugo-theme-OneSentence</a>。感觉到现在为止，已经基本满足我的需求了。</p>
-<p>之后呢，希望我自己，能多一些思考，多写一些文章，将平时的一些思考保留下来，将工作和学习上的一些新知记录下来。</p>
-
+    <ol>
+<li>
+<p>第一步当然是先在 VSCode 中安装 <code>Remote-SSH</code> 扩展啦</p>
+</li>
+<li>
+<p>通过 WSL 生成公私钥对</p>
+</li>
+</ol>
+<pre><code>$ ssh-keygen -t rsa -b 4096
+</code></pre><ol start="3">
+<li>通过 ssh 登录服务器，将生成的公钥文件的副本 <code>id_rsa.tmp.pub</code> 复制到路径 <code>~/.ssh/</code> 下，执行命令</li>
+</ol>
+<pre><code>$ cat id_rsa.tmp.pub &gt;&gt; authorized_keys
+$ chmod 600 authorized_keys
+</code></pre><p><strong>Note</strong>：必须执行 <code>chmod 600 authorized_keys</code> 命令</p>
+<ol start="4">
+<li>配置本地的 VSCode</li>
+</ol>
+<p>编辑文件 <code>C:\Users\&lt;UserName&gt;\.ssh\config</code>，按如下格式配置：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cfg" data-lang="cfg"><span style="color:#a6e22e">Host arbitrary-name-you-like</span>
+    <span style="color:#a6e22e">HostName remote-host-ip</span>
+    <span style="color:#a6e22e">Port remote-port</span>
+    <span style="color:#a6e22e">User user-name-to-sign-in</span>
+    <span style="color:#a6e22e">IdentityFile C:\Users\&lt;UserName&gt;\.ssh\id_rsa</span>
+</code></pre></div>
   </div>
 
           <footer>
@@ -128,13 +142,13 @@
     <div class="post-footer" >
       
         <span class="post-categories">
-          &#9900; <a href="https://KipJiang.github.io/categories/blog/"> Blog </a>
+          &#9900; <a href="https://KipJiang.github.io/categories/linux/"> Linux </a>
             
         </span>
       
       
         <span class="lastmodified">
-          update @ 2020-03-23
+          update @ 2020-03-25
         </span>
       
     </div>
@@ -142,8 +156,8 @@
 
   
   <nav class="post-nav">
-    <span class="nav-prev">&larr; <a href="/note/2020/02/20/working-with-ubuntu-2nd/">Working With Ubuntu (2)</a></span>
-    <span class="nav-next"></span>
+    <span class="nav-prev">&larr; <a href="/note/2019/05/23/display-git-branch-name-in-bash/">Display Git Branch Name in Bash</a></span>
+    <span class="nav-next"><a href="/note/2020/02/20/working-with-ubuntu-1st/">Working With Ubuntu (1) - v2ray</a> &rarr;</span>
   </nav>
   
 
@@ -162,7 +176,7 @@
 
   <div class="commemt-item" >
     <div class="valine" >
-      <span id="/post/2020/03/22/hello-hugo/" class="leancloud_visitors" data-flag-title="Hello Hugo">
+      <span id="/note/2019/11/07/vscode-remote-ssh/" class="leancloud_visitors" data-flag-title="Visual Studio Code: Remote-SSH">
           
           <span class="leancloud-visitors-count">0</span>
           <p></p>
@@ -197,6 +211,18 @@
 
         <footer>
   
+  
+  
+
+  
+    <script src="//cdn.bootcss.com/highlight.js//highlight.min.js"></script>
+    
+    
+    
+    
+    <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+  
+
   
     <hr>
     <div class="copyright">

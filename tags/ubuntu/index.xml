@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Note on Kip Jiang</title>
-    <link>https://KipJiang.github.io/note/</link>
-    <description>Recent content in Note on Kip Jiang</description>
+    <title>Ubuntu on Kip Jiang</title>
+    <link>https://KipJiang.github.io/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Mar 2020 01:20:33 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 12:23:43 +0800</lastBuildDate>
     
-	<atom:link href="https://KipJiang.github.io/note/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://KipJiang.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -35,31 +35,6 @@ $ curl https://github.com/v2ray/v2ray-core/releases/download/v4.22.1/v2ray-linux
 配置 Client  编辑配置文件：
 # vim /etc/v2ray/config.json 按如下示例配置：
 { &amp;#34;inbounds&amp;#34;: [{ &amp;#34;port&amp;#34;: 1080, &amp;#34;listen&amp;#34;: &amp;#34;127.0.0.1&amp;#34;, &amp;#34;protocol&amp;#34;: &amp;#34;socks&amp;#34;, &amp;#34;tag&amp;#34;: &amp;#34;socks-inbound&amp;#34;, &amp;#34;settings&amp;#34;: { &amp;#34;auth&amp;#34;: &amp;#34;noauth&amp;#34;, &amp;#34;udp&amp;#34;: true, &amp;#34;ip&amp;#34;: &amp;#34;127.0.0.1&amp;#34; }, &amp;#34;sniffing&amp;#34;: { &amp;#34;enbale&amp;#34;: true, &amp;#34;destOverride&amp;#34;: [ &amp;#34;http&amp;#34;, &amp;#34;tls&amp;#34; ] } }], &amp;#34;outbounds&amp;#34;: [{ &amp;#34;protocol&amp;#34;: &amp;#34;vmess&amp;#34;, &amp;#34;settings&amp;#34;: { &amp;#34;vnext&amp;#34;: [{ &amp;#34;address&amp;#34;: &amp;#34;**.</description>
-    </item>
-    
-    <item>
-      <title>Visual Studio Code: Remote-SSH</title>
-      <link>https://KipJiang.github.io/note/2019/11/07/vscode-remote-ssh/</link>
-      <pubDate>Thu, 07 Nov 2019 12:25:16 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/note/2019/11/07/vscode-remote-ssh/</guid>
-      <description>  第一步当然是先在 VSCode 中安装 Remote-SSH 扩展啦
-  通过 WSL 生成公私钥对
-  $ ssh-keygen -t rsa -b 4096 通过 ssh 登录服务器，将生成的公钥文件的副本 id_rsa.tmp.pub 复制到路径 ~/.ssh/ 下，执行命令  $ cat id_rsa.tmp.pub &amp;gt;&amp;gt; authorized_keys $ chmod 600 authorized_keys Note：必须执行 chmod 600 authorized_keys 命令
-配置本地的 VSCode  编辑文件 C:\Users\&amp;lt;UserName&amp;gt;\.ssh\config，按如下格式配置：
-Host arbitrary-name-you-like HostName remote-host-ip Port remote-port User user-name-to-sign-in IdentityFile C:\Users\&amp;lt;UserName&amp;gt;\.ssh\id_rsa </description>
-    </item>
-    
-    <item>
-      <title>Display Git Branch Name in Bash</title>
-      <link>https://KipJiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</link>
-      <pubDate>Thu, 23 May 2019 15:38:03 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</guid>
-      <description>First  将脚本下载到 Home 目录  $ git clone https://github.com/KipJiang/git-aware-prompt.git ~/git-aware-prompt $ mv ~/git-aware-prompt ~/.git-aware-prompt 修改配置文件 .bashrc  $ vim ~/.bashrc 添加如下内容
-# git branch function export PS1=&amp;#34;\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$&amp;#34; export GITAWAREPROMPT=~/.git-aware-prompt source &amp;#34;${GITAWAREPROMPT}/main.sh&amp;#34; 使配置生效  $ source ~/.bashrc 效果  Ubuntu
-CentOS
-Second  编辑 ~/.bashrc，添加如下内容  # git branch function function git_branch { branch=&amp;#34;`git branch 2&amp;gt;/dev/null | grep &amp;#34;^\*&amp;#34; | sed -e &amp;#34;s/^\*\ //&amp;#34;`&amp;#34; if [ &amp;#34;${branch}&amp;#34; != &amp;#34;&amp;#34; ];then if [ &amp;#34;${branch}&amp;#34; = &amp;#34;(no branch)&amp;#34; ];then branch=&amp;#34;(`git rev-parse --short HEAD`.</description>
     </item>
     
   </channel>

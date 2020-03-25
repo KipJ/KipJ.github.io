@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    
+    <title>
+    Working With Ubuntu (1) - v2ray  - Kip Jiang
+    </title>
+    <meta property="og:title" content="Working With Ubuntu (1) - v2ray - Kip Jiang">
+    
+    
+    
+        
+    
+    
+    
+    <meta property="description" content="The usage log of working with ubuntu">
+    <meta property="og:description" content="The usage log of working with ubuntu">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+
+  
+  <body class="note">
+
+    <div class="container" >
+      <div class="main" role="main" >
+
+        
+  <header class="header">
+      <h1 class="author" ><a href="/">Kip Jiang</a></h1>
+  
+  
+    <p class="tagline">Do one thing, <!-- raw HTML omitted -->Do it well!</p>
+  
+    <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+    
+    
+      <li>
+        <a href="/">Home</a>
+      </li>
+    
+      <li>
+        <a href="/about/">About</a>
+      </li>
+    
+      <li>
+        <a href="/post/">Posts</a>
+      </li>
+    
+      <li>
+        <a href="/note/">Notes</a>
+      </li>
+    
+      <li>
+        <a href="/categories/">Categories</a>
+      </li>
+    
+      <li>
+        <a href="/tags/">Tags</a>
+      </li>
+    
+  </ul>
+</nav>
+
+  </header>
+
+
+        <article class="article">
+          
+  
+    <header class="title">
+      <h1>Working With Ubuntu (1) - v2ray</h1>
+      
+      <h3>
+      Kip
+      
+         &#183;  2020-02-20 &#183; Words: 182
+      
+      </h3>
+      <hr>
+    </header>
+  
+
+           
+          
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#v2ray">v2ray</a></li>
+  </ul>
+</nav>  
+  
+  <div class="post-content" >
+    <blockquote>
+<p>如何在 Ubuntu 中安装一些开发软件。</p>
+</blockquote>
+<h2 id="v2ray">v2ray</h2>
+<ol>
+<li>下载并安装 <code>v2ray</code> 脚本</li>
+</ol>
+<p><a href="https://github.com/v2ray/v2ray-core/releases">v2ray-core/release</a></p>
+<p>下载最新版的 <code>v2ray</code> Linux 压缩包，并通过脚本在本地安装</p>
+<pre><code>$ curl https://github.com/v2ray/v2ray-core/releases/download/v4.22.1/v2ray-linux-64.zip
+$ curl -L -s https://install.direct/go.sh -o go.sh
+$ sudo su
+# bash go.sh --local ./v2ray-linux-64.zip
+</code></pre><ol start="2">
+<li>配置 Server</li>
+</ol>
+<p>首先，你得有一台在境外的 VPS &hellip;&hellip;</p>
+<ol start="3">
+<li>配置 Client</li>
+</ol>
+<p>编辑配置文件：</p>
+<pre><code># vim /etc/v2ray/config.json
+</code></pre><p>按如下示例配置：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cfg" data-lang="cfg"><span style="color:#a6e22e">{</span>
+  <span style="color:#a6e22e">&#34;inbounds&#34;: [{</span>
+    <span style="color:#a6e22e">&#34;port&#34;: 1080,</span>
+    <span style="color:#a6e22e">&#34;listen&#34;: &#34;127.0.0.1&#34;,</span>
+    <span style="color:#a6e22e">&#34;protocol&#34;: &#34;socks&#34;,</span>
+    <span style="color:#a6e22e">&#34;tag&#34;: &#34;socks-inbound&#34;,</span>
+    <span style="color:#a6e22e">&#34;settings&#34;: {</span>
+      <span style="color:#a6e22e">&#34;auth&#34;: &#34;noauth&#34;,</span>
+      <span style="color:#a6e22e">&#34;udp&#34;: true,</span>
+      <span style="color:#a6e22e">&#34;ip&#34;: &#34;127.0.0.1&#34;</span>
+    <span style="color:#a6e22e">},</span>
+    <span style="color:#a6e22e">&#34;sniffing&#34;: {</span>
+        <span style="color:#a6e22e">&#34;enbale&#34;: true,</span>
+        <span style="color:#a6e22e">&#34;destOverride&#34;: [ &#34;http&#34;, &#34;tls&#34; ]</span>
+    <span style="color:#a6e22e">}</span>
+  <span style="color:#a6e22e">}],</span>
+  
+  <span style="color:#a6e22e">&#34;outbounds&#34;: [{</span>
+    <span style="color:#a6e22e">&#34;protocol&#34;: &#34;vmess&#34;,</span>
+    <span style="color:#a6e22e">&#34;settings&#34;: {</span>
+      <span style="color:#a6e22e">&#34;vnext&#34;: [{</span>
+        <span style="color:#a6e22e">&#34;address&#34;: &#34;**.**.**.**&#34;, // 服务器地址，请修改为你自己的服务器 ip 或 域名</span>
+        <span style="color:#a6e22e">&#34;port&#34;: 12345,  // 服务器配置的端口</span>
+        <span style="color:#a6e22e">&#34;users&#34;: [{ </span>
+        <span style="color:#a6e22e">&#34;id&#34;: &#34;*****-****-****-****-*********&#34;  //与服务端保持一致</span>
+        <span style="color:#a6e22e">&#34;alterId&#34;: 123  //与服务端保持一致</span>
+        <span style="color:#a6e22e">}]</span>
+      <span style="color:#a6e22e">}]</span>
+    <span style="color:#a6e22e">},</span>
+    <span style="color:#a6e22e">&#34;tag&#34;: &#34;myVPN&#34;</span>
+  <span style="color:#a6e22e">},</span>
+    <span style="color:#a6e22e">{</span>
+    <span style="color:#a6e22e">&#34;protocol&#34;: &#34;freedom&#34;,</span>
+    <span style="color:#a6e22e">&#34;settings&#34;: {},</span>
+    <span style="color:#a6e22e">&#34;tag&#34;: &#34;direct&#34;</span>
+  <span style="color:#a6e22e">}],</span>
+  
+  <span style="color:#a6e22e">&#34;routing&#34;: {</span>
+    <span style="color:#a6e22e">&#34;domainStrategy&#34;: &#34;IPOnDemand&#34;,</span>
+    <span style="color:#a6e22e">&#34;rules&#34;: [{</span>
+      <span style="color:#a6e22e">&#34;type&#34;: &#34;field&#34;,</span>
+      <span style="color:#a6e22e">&#34;ip&#34;: [&#34;geoip:private&#34;],</span>
+      <span style="color:#a6e22e">&#34;outboundTag&#34;: &#34;direct&#34;</span>
+    <span style="color:#a6e22e">}]</span>
+  <span style="color:#a6e22e">}</span>
+<span style="color:#a6e22e">}</span>
+</code></pre></div><ol start="4">
+<li>仅配置浏览器代理</li>
+</ol>
+<p>如果仅配置浏览器的代理，就只能通过浏览器访问外部网站，在命令行中依旧不能链接到外部。以 Firefox 为例，配置如下。</p>
+<p><img src="https://i.loli.net/2020/02/20/QcEm4HdrkSuTbMV.png" alt="firefox-proxy"></p>
+<ol start="5">
+<li>全局配置</li>
+</ol>
+<p>进入系统设置，选择 「Network」，设置 「Network Proxy」。</p>
+<p><img src="https://i.loli.net/2020/02/20/zdhLEXNM1kR3Uey.png" alt="global-config"></p>
+<p>但仅仅上述配置，会使得所有流量都通过 VPS 后再去访问具体网站，在访问国内的网站时也会走一遍代理，导致访问较慢。</p>
+<ol start="6">
+<li>配置 PAC(Proxy Auto Config) 模式</li>
+</ol>
+<p>见 <a href="https://github.com/JinnLynn/genpac">GenPAC</a> 和 <a href="https://github.com/gfwlist/gfwlist">gfwlist</a> 项目</p>
+<pre><code>$ pip install genpac
+
+$ sudo su
+// 从 gfwlist 生成代理信息为 SOCKS5 127.0.0.1:1080 的 PAC 文件
+# genpac --format=pac --pac-proxy=&quot;SOCKS5 127.0.0.1:1080&quot; -o /etc/v2ray/autoproxy.pac
+</code></pre><ol start="7">
+<li>可供参考文档</li>
+</ol>
+<p><a href="https://www.v2ray.com/">v2ray</a> (需代理)<br>
+<a href="https://toutyrater.github.io/">V2Ray 配置指南</a> (需代理)<br>
+<a href="https://yuan.ga/v2ray-complete-tutorial/">V2Ray完全使用教程</a><br>
+<a href="https://www.imcaviare.com/201812181245/">Linux下使用V2ray客户端以及PAC配置</a></p>
+
+  </div>
+
+          <footer>
+  
+    <div class="post-footer" >
+      
+        <span class="post-categories">
+          &#9900; <a href="https://KipJiang.github.io/categories/linux/"> Linux </a>
+            
+        </span>
+      
+      
+        <span class="lastmodified">
+          update @ 2020-03-25
+        </span>
+      
+    </div>
+  
+
+  
+  <nav class="post-nav">
+    <span class="nav-prev">&larr; <a href="/note/2019/11/07/vscode-remote-ssh/">Visual Studio Code: Remote-SSH</a></span>
+    <span class="nav-next"><a href="/note/2020/02/20/working-with-ubuntu-2nd/">Working With Ubuntu (2)</a> &rarr;</span>
+  </nav>
+  
+
+  
+    <div class="comments" >
+      
+
+
+
+
+
+
+
+
+
+
+  <div class="commemt-item" >
+    <div class="valine" >
+      <span id="/note/2020/02/20/working-with-ubuntu-1st/" class="leancloud_visitors" data-flag-title="Working With Ubuntu (1) - v2ray">
+          
+          <span class="leancloud-visitors-count">0</span>
+          <p></p>
+        </span>
+      <div id="vcomments"></div>
+      <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+      <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+      <script type="text/javascript">
+        new Valine({
+            el: '#vcomments',
+            appId: 'AhrO67kSBw2cdWp3AFKzjzI5-MdYXbMMI',
+            appKey: 'RKBIhU7j518tpSUFbaWh8D2x',
+            notify: 'true', 
+            verify: 'true', 
+            avatar: '', 
+            placeholder: 'Say something... (please fill in the email to receive the reply)',
+            visitor: 'true'
+        });
+      </script>
+    </div>
+  </div>
+
+
+    </div>
+  
+
+  <script async src="/js/center-img.js"></script>
+  <script src="/js/math-code.js"></script>
+  <script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</footer>
+        </article>
+
+        <footer>
+  
+  
+  
+
+  
+    <script src="//cdn.bootcss.com/highlight.js//highlight.min.js"></script>
+    
+    
+    
+    
+    <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+  
+
+  
+    <hr>
+    <div class="copyright">
+      &copy; 2019 - 2020
+      &#183; <a href="/">Kip Jiang</a> · <a href="https://github.com/KipJiang">Github</a> &#183; 
+      <a href="https://KipJiang.github.io/index.xml" target="_blank" title="rss">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 22 20" fill="none" 
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss">
+          <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
+        </svg>
+      </a>
+    </div>
+  
+</footer>
+        
+
+      </div>
+    </div>
+
+  </body>
+</html>

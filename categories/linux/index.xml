@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Kip Jiang</title>
-    <link>https://KipJiang.github.io/</link>
-    <description>Recent content in Home on Kip Jiang</description>
+    <title>Linux on Kip Jiang</title>
+    <link>https://KipJiang.github.io/categories/linux/</link>
+    <description>Recent content in Linux on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Mar 2019 01:01:52 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 12:23:43 +0800</lastBuildDate>
     
-	<atom:link href="https://KipJiang.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://KipJiang.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Hello Hugo</title>
-      <link>https://KipJiang.github.io/post/2020/03/22/hello-hugo/</link>
-      <pubDate>Sun, 22 Mar 2020 21:49:29 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/post/2020/03/22/hello-hugo/</guid>
-      <description>Gun 从年后初二开始，基本就处于隔离状态，不能出去，体育锻炼也基本取消了。在这期间，重新登录好几年不用的微博，获取各种信息。
-然而，微博中信息和情绪交杂，疫情数据的变化，或激昂、或悲痛的感情流露，让人不能不受其影响。整个人的情绪一天会经历好几次起伏，以致于对这种信息的过载产生了一些应激反应。
-这是很不好的现象，需要自我调节，找一些事情让自己忙起来，再次关掉微博，「我不看，它就没有」，fxxking off nCoV-2019.
-Hello my Blog 以前就折腾过静态主页的博客，像 hexo、Jekyll 和 Hugo 等平台，我都用来建过个人站点，但是从来没有正经写过文章。
-这段时间，参考 YihuiXie 和 山羊博客，自己通过移植 hugo-ivy，也写了一个 hugo 的主题 hugo-theme-OneSentence。感觉到现在为止，已经基本满足我的需求了。
-之后呢，希望我自己，能多一些思考，多写一些文章，将平时的一些思考保留下来，将工作和学习上的一些新知记录下来。</description>
-    </item>
     
     <item>
       <title>Working With Ubuntu (2)</title>
@@ -74,17 +60,6 @@ Host arbitrary-name-you-like HostName remote-host-ip Port remote-port User user-
 # git branch function export PS1=&amp;#34;\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$&amp;#34; export GITAWAREPROMPT=~/.git-aware-prompt source &amp;#34;${GITAWAREPROMPT}/main.sh&amp;#34; 使配置生效  $ source ~/.bashrc 效果  Ubuntu
 CentOS
 Second  编辑 ~/.bashrc，添加如下内容  # git branch function function git_branch { branch=&amp;#34;`git branch 2&amp;gt;/dev/null | grep &amp;#34;^\*&amp;#34; | sed -e &amp;#34;s/^\*\ //&amp;#34;`&amp;#34; if [ &amp;#34;${branch}&amp;#34; != &amp;#34;&amp;#34; ];then if [ &amp;#34;${branch}&amp;#34; = &amp;#34;(no branch)&amp;#34; ];then branch=&amp;#34;(`git rev-parse --short HEAD`.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://KipJiang.github.io/about/</link>
-      <pubDate>Wed, 06 Mar 2019 01:01:52 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/about/</guid>
-      <description>About Blog This is the blog of Kip Jiang.
-About Author 💻 📚 🏃
-I sometimes write here, you can find me on Github.</description>
     </item>
     
   </channel>

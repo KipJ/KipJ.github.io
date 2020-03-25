@@ -20,5 +20,41 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Ubuntu</title>
+      <link>https://KipJiang.github.io/tags/ubuntu/</link>
+      <pubDate>Thu, 20 Feb 2020 12:23:43 +0800</pubDate>
+      
+      <guid>https://KipJiang.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>v2ray</title>
+      <link>https://KipJiang.github.io/tags/v2ray/</link>
+      <pubDate>Thu, 20 Feb 2020 09:49:43 +0800</pubDate>
+      
+      <guid>https://KipJiang.github.io/tags/v2ray/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vscode</title>
+      <link>https://KipJiang.github.io/tags/vscode/</link>
+      <pubDate>Thu, 07 Nov 2019 12:25:16 +0800</pubDate>
+      
+      <guid>https://KipJiang.github.io/tags/vscode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://KipJiang.github.io/tags/git/</link>
+      <pubDate>Thu, 23 May 2019 15:38:03 +0800</pubDate>
+      
+      <guid>https://KipJiang.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

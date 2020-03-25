@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    
+    <title>
+    Working With Ubuntu (2)  - Kip Jiang
+    </title>
+    <meta property="og:title" content="Working With Ubuntu (2) - Kip Jiang">
+    
+    
+    
+        
+    
+    
+    
+    <meta property="description" content="The usage log of working with ubuntu">
+    <meta property="og:description" content="The usage log of working with ubuntu">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+
+  
+  <body class="note">
+
+    <div class="container" >
+      <div class="main" role="main" >
+
+        
+  <header class="header">
+      <h1 class="author" ><a href="/">Kip Jiang</a></h1>
+  
+  
+    <p class="tagline">Do one thing, <!-- raw HTML omitted -->Do it well!</p>
+  
+    <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+    
+    
+      <li>
+        <a href="/">Home</a>
+      </li>
+    
+      <li>
+        <a href="/about/">About</a>
+      </li>
+    
+      <li>
+        <a href="/post/">Posts</a>
+      </li>
+    
+      <li>
+        <a href="/note/">Notes</a>
+      </li>
+    
+      <li>
+        <a href="/categories/">Categories</a>
+      </li>
+    
+      <li>
+        <a href="/tags/">Tags</a>
+      </li>
+    
+  </ul>
+</nav>
+
+  </header>
+
+
+        <article class="article">
+          
+  
+    <header class="title">
+      <h1>Working With Ubuntu (2)</h1>
+      
+      <h3>
+      Kip
+      
+         &#183;  2020-02-20 &#183; Words: 177
+      
+      </h3>
+      <hr>
+    </header>
+  
+
+           
+          
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#vscode">VScode</a></li>
+    <li><a href="#sublime-text-3">Sublime Text 3</a></li>
+    <li><a href="#vmware-workstation-pro">VMware Workstation Pro</a></li>
+    <li><a href="#miniconda">miniconda</a></li>
+  </ul>
+</nav>  
+  
+  <div class="post-content" >
+    <blockquote>
+<p>如何在 Ubuntu 中安装一些开发软件。</p>
+</blockquote>
+<h2 id="vscode">VScode</h2>
+<ol>
+<li>VSCode 的安装非常简单</li>
+</ol>
+<pre><code>$ sudo snap install --classic code
+code a622c65b from Visual Studio Code (vscode✓) installed
+</code></pre><ol start="2">
+<li>打开</li>
+</ol>
+<pre><code>$ code
+</code></pre><h2 id="sublime-text-3">Sublime Text 3</h2>
+<p>Reference：<a href="https://www.sublimetext.com/docs/3/linux_repositories.html#apt">Linux Package Manager Repositories</a></p>
+<ol>
+<li>Install the GPG key:</li>
+</ol>
+<pre><code>wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+</code></pre><ol start="2">
+<li>Ensure apt is set up to work with https sources:</li>
+</ol>
+<pre><code>sudo apt-get install apt-transport-https
+</code></pre><ol start="3">
+<li>Select the channel to use:</li>
+</ol>
+<p><strong>Stable</strong></p>
+<pre><code>echo &quot;deb https://download.sublimetext.com/ apt/stable/&quot; | sudo tee /etc/apt/sources.list.d/sublime-text.list
+</code></pre><p><strong>Dev</strong></p>
+<pre><code>echo &quot;deb https://download.sublimetext.com/ apt/dev/&quot; | sudo tee /etc/apt/sources.list.d/sublime-text.list
+</code></pre><ol start="4">
+<li>Update apt sources and install Sublime Text</li>
+</ol>
+<pre><code>sudo apt-get update
+sudo apt-get install sublime-text
+</code></pre><h2 id="vmware-workstation-pro">VMware Workstation Pro</h2>
+<ol>
+<li>
+<p>下载安装包，<a href="https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html">VMware Workstation Pro Download</a></p>
+</li>
+<li>
+<p>安装</p>
+</li>
+</ol>
+<pre><code>$ chmod +x VMware-Workstation-Full-15.5.1-15018445.x86_64.bundle 
+$ ./VMware-Workstation-Full-15.5.1-15018445.x86_64.bundle 
+</code></pre><ol start="3">
+<li>在 Ubuntu 的 菜单中点击 VMware 的图标启动</li>
+</ol>
+<p>这时可能汇报错：</p>
+<pre><code>Build environment error! ...
+</code></pre><p>你需要安装依赖包：</p>
+<pre><code>$ sudo apt install gcc g++ make
+</code></pre><ol start="4">
+<li>license for VMware Workstation Pro 15</li>
+</ol>
+<p>任选一个输入</p>
+<pre><code>UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA
+
+VF750-4MX5Q-488DQ-9WZE9-ZY2D6
+
+UU54R-FVD91-488PP-7NNGC-ZFAX6
+
+YC74H-FGF92-081VZ-R5QNG-P6RY4
+
+YC34H-6WWDK-085MQ-JYPNX-NZRA2
+</code></pre><h2 id="miniconda">miniconda</h2>
+<ol>
+<li>
+<p>下载安装包，<a href="https://docs.conda.io/en/latest/miniconda.html">miniconda3</a></p>
+</li>
+<li>
+<p>安装</p>
+</li>
+</ol>
+<pre><code>$ sh Miniconda3-latest-Linux-x86_64.sh
+</code></pre><p>其中选择如下：</p>
+<pre><code>Do you accept the license terms? [yes|no]
+[no] &gt;&gt;&gt; yes
+Do you wish the installer to initialize Miniconda3
+by running conda init? [yes|no]
+[no] &gt;&gt;&gt; yes
+</code></pre><ol start="3">
+<li>使能</li>
+</ol>
+<p>重启终端，或者使用命令</p>
+<pre><code>$ source ~/.bashrc 
+</code></pre>
+  </div>
+
+          <footer>
+  
+    <div class="post-footer" >
+      
+        <span class="post-categories">
+          &#9900; <a href="https://KipJiang.github.io/categories/linux/"> Linux </a>
+            
+        </span>
+      
+      
+        <span class="lastmodified">
+          update @ 2020-03-25
+        </span>
+      
+    </div>
+  
+
+  
+  <nav class="post-nav">
+    <span class="nav-prev">&larr; <a href="/note/2020/02/20/working-with-ubuntu-1st/">Working With Ubuntu (1) - v2ray</a></span>
+    <span class="nav-next"><a href="/post/2020/03/22/hello-hugo/">Hello Hugo</a> &rarr;</span>
+  </nav>
+  
+
+  
+    <div class="comments" >
+      
+
+
+
+
+
+
+
+
+
+
+  <div class="commemt-item" >
+    <div class="valine" >
+      <span id="/note/2020/02/20/working-with-ubuntu-2nd/" class="leancloud_visitors" data-flag-title="Working With Ubuntu (2)">
+          
+          <span class="leancloud-visitors-count">0</span>
+          <p></p>
+        </span>
+      <div id="vcomments"></div>
+      <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+      <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+      <script type="text/javascript">
+        new Valine({
+            el: '#vcomments',
+            appId: 'AhrO67kSBw2cdWp3AFKzjzI5-MdYXbMMI',
+            appKey: 'RKBIhU7j518tpSUFbaWh8D2x',
+            notify: 'true', 
+            verify: 'true', 
+            avatar: '', 
+            placeholder: 'Say something... (please fill in the email to receive the reply)',
+            visitor: 'true'
+        });
+      </script>
+    </div>
+  </div>
+
+
+    </div>
+  
+
+  <script async src="/js/center-img.js"></script>
+  <script src="/js/math-code.js"></script>
+  <script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</footer>
+        </article>
+
+        <footer>
+  
+  
+  
+
+  
+    <script src="//cdn.bootcss.com/highlight.js//highlight.min.js"></script>
+    
+    
+    
+    
+    <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+  
+
+  
+    <hr>
+    <div class="copyright">
+      &copy; 2019 - 2020
+      &#183; <a href="/">Kip Jiang</a> · <a href="https://github.com/KipJiang">Github</a> &#183; 
+      <a href="https://KipJiang.github.io/index.xml" target="_blank" title="rss">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 22 20" fill="none" 
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss">
+          <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
+        </svg>
+      </a>
+    </div>
+  
+</footer>
+        
+
+      </div>
+    </div>
+
+  </body>
+</html>
