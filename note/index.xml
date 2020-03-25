@@ -12,6 +12,20 @@
     
     
     <item>
+      <title>Create Virtual Machine With vTPM in Ubuntu</title>
+      <link>https://KipJiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
+      <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
+      
+      <guid>https://KipJiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
+      <description>Reference Paper
+Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.
+Environment
+ Host: Ubuntu 18.04 Guest: Ubuntu 14.04  Source Code
+ seabios-tpm 2. libtpms 3. swtpm 4. qemu-tpm   SeaBIOS SeaBIOS 包含 vTPM 支持的分支 seabios-tpm 最开始由 Stefan 维护，而现在已经成功将其合并到主分支 SeaBIOS。因此，下面的实验中我们使用其主分支。
+ 下载  $ mkdir workspace $ cd workspace $ git clone https://git.</description>
+    </item>
+    
+    <item>
       <title>Working With Ubuntu (2)</title>
       <link>https://KipJiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</link>
       <pubDate>Thu, 20 Feb 2020 12:23:43 +0800</pubDate>
