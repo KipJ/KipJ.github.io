@@ -97,7 +97,7 @@
       <h3>
       Kip
       
-         &#183;  2020-03-11 &#183; Words: 905
+         &#183;  2020-03-11 &#183; Words: 924
       
       </h3>
       <hr>
@@ -136,9 +136,17 @@
 <ol>
 <li><a href="https://github.com/stefanberger/seabios-tpm">seabios-tpm</a> 2. <a href="https://github.com/stefanberger/libtpms">libtpms</a> 3. <a href="https://github.com/stefanberger/swtpm">swtpm</a> 4. <a href="https://github.com/stefanberger/qemu-tpm">qemu-tpm</a></li>
 </ol>
-</blockquote>
+<p><strong>Tree of Path</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">kip
+└── workspace  
+  ├── libtpms  
+  ├── qemu-tpm  
+  ├── seabios  
+  ├── swtpm  
+  └── test
+</code></pre></div></blockquote>
 <h2 id="seabios">SeaBIOS</h2>
-<p>SeaBIOS 包含 vTPM 支持的分支 <a href="https://github.com/stefanberger/seabios-tpm">seabios-tpm</a> 最开始由 <a href="https://github.com/stefanberger">Stefan</a> 维护，而现在已经成功将其合并到主分支 <a href="https://seabios.org/SeaBIOS">SeaBIOS</a>。因此，下面的实验中我们使用其主分支。</p>
+<p>SeaBIOS 包含 vTPM 支持的分支 <a href="https://github.com/stefanberger/seabios-tpm">seabios-tpm</a> 最开始由 <a href="https://github.com/stefanberger">Stefan</a> 维护，现在已经成功将其合并到主分支 <a href="https://seabios.org/SeaBIOS">SeaBIOS</a>。因此，下面的实验中我们使用其主分支。</p>
 <ol>
 <li>下载</li>
 </ol>
@@ -197,7 +205,7 @@ Use openssl crypto <span style="color:#66d9ef">for</span>  : symmetric <span sty
 <li>生成安装包</li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ make dist
-$ dpkg-buildpackage -us -uc -j4
+$ dpkg-buildpackage -us -uc -j<span style="color:#66d9ef">$(</span>nproc<span style="color:#66d9ef">)</span>
 &lt;snip&gt;
 make<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/kip/workspace/libtpms/tests&#39;</span>
 make  check-TESTS
@@ -340,14 +348,14 @@ TCG interpreter   no
 </code></pre></div><ol start="2">
 <li>编译</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ make -j<span style="color:#f92672">(</span>$nproc
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ make -j<span style="color:#66d9ef">$(</span>nproc<span style="color:#66d9ef">)</span>
 &lt;snip&gt;
   GEN     trace/generated-helpers.c
   CC      x86_64-softmmu/trace/control-target.o
   CC      x86_64-softmmu/gdbstub-xml.o
   CC      x86_64-softmmu/trace/generated-helpers.o
   LINK    x86_64-softmmu/qemu-system-x86_64
-rm tests/qemu-iotests/socket_scm_helper.o<span style="color:#f92672">)</span>
+rm tests/qemu-iotests/socket_scm_helper.o
 </code></pre></div><ol start="3">
 <li>安装</li>
 </ol>
@@ -359,7 +367,7 @@ rm tests/qemu-iotests/socket_scm_helper.o<span style="color:#f92672">)</span>
 <p>下面我们以 socket 的模拟方式举例说明。</p>
 <h3 id="preparation">Preparation</h3>
 <ol>
-<li>安装 VNCViewer</li>
+<li>安装 VNC-Viewer</li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo apt install tigervnc-viewer
 </code></pre></div><ol start="2">
@@ -375,7 +383,10 @@ Formatting <span style="color:#e6db74">&#39;ubuntu14.04.qcow2&#39;</span>, fmt<s
 <p>新开一个终端：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo mkdir /tmp/mytpm2
 $ sudo chown tss:root /tmp/mytpm2
-$ sudo swtpm_setup --tpmstate /tmp/mytpm2 --create-ek-cert --create-platform-cert --allow-signing --tpm2
+$ sudo swtpm_setup --tpmstate /tmp/mytpm2 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--create-ek-cert <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--create-platform-cert <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--allow-signing --tpm2
 $ sudo swtpm socket --tpmstate dir<span style="color:#f92672">=</span>/tmp/mytpm2 <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>--ctrl type<span style="color:#f92672">=</span>unixio,path<span style="color:#f92672">=</span>/tmp/mytpm2/swtpm-sock <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>--tpm2 <span style="color:#ae81ff">\
@@ -403,11 +414,11 @@ VNC server running on 127.0.0.1:5900
 <li>测试</li>
 </ol>
 <p>重新启动模拟设备：</p>
-<pre><code>$ sudo swtpm socket --tpmstate dir=/tmp/mytpm2 \
---ctrl type=unixio,path=/tmp/mytpm2/swtpm-sock \
---tpm2 \
---log level=20
-</code></pre><p>重新运行虚拟机：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo swtpm socket --tpmstate dir<span style="color:#f92672">=</span>/tmp/mytpm2 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--ctrl type<span style="color:#f92672">=</span>unixio,path<span style="color:#f92672">=</span>/tmp/mytpm2/swtpm-sock <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--tpm2 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--log level<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>
+</code></pre></div><p>重新运行虚拟机：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">~/workspace/test $ sudo ../qemu-tpm/build/x86_64-softmmu/qemu-system-x86_64 <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>-accel kvm -m <span style="color:#ae81ff">2048</span> -smp <span style="color:#ae81ff">4</span> -hda ubuntu14.04.qcow2 <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>-boot menu<span style="color:#f92672">=</span>on -bios ../seabios/out/bios.bin <span style="color:#ae81ff">\
@@ -416,7 +427,7 @@ VNC server running on 127.0.0.1:5900
 </span><span style="color:#ae81ff"></span>-chardev socket,id<span style="color:#f92672">=</span>chrtpm,path<span style="color:#f92672">=</span>/tmp/mytpm2/swtpm-sock <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>-d unimp
 VNC server running on 127.0.0.1:5900
-</code></pre></div><p>再次打开 VNCViewer：</p>
+</code></pre></div><p>再次打开 VNC-Viewer：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vncviewer :5900
 </code></pre></div><p>测试：</p>
 <p><img src="/img/2020-03-11/ubuntu14.04.png" alt="ubuntu14.04"></p>

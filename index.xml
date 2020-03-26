@@ -17,7 +17,7 @@
       <pubDate>Sun, 22 Mar 2020 21:49:29 +0800</pubDate>
       
       <guid>https://KipJiang.github.io/post/2020/03/22/hello-hugo/</guid>
-      <description>Hello my Blog 以前折腾过其他静态主页的生成器，像 hexo 和 Jekyll 等，我都用来建过个人站点，但是从来没有正经写过文章。
+      <description>Hello my Blog 以前折腾过其他静态主页的生成器，像 hexo 和 Jekyll 等，都用来建过站点，但是从来没有正经写过文章。
 这段时间，使用 Hugo，参考 YihuiXie 和 山羊博客，通过移植 hugo-ivy，也写了一个 hugo 的主题 hugo-theme-OneSentence。
 感觉到现在为止，已经基本满足我的需求了。</description>
     </item>
@@ -32,8 +32,8 @@
 Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.
 Environment
  Host: Ubuntu 18.04 Guest: Ubuntu 14.04  Source Code
- seabios-tpm 2. libtpms 3. swtpm 4. qemu-tpm   SeaBIOS SeaBIOS 包含 vTPM 支持的分支 seabios-tpm 最开始由 Stefan 维护，而现在已经成功将其合并到主分支 SeaBIOS。因此，下面的实验中我们使用其主分支。
- 下载  $ mkdir workspace $ cd workspace $ git clone https://git.</description>
+ seabios-tpm 2. libtpms 3. swtpm 4. qemu-tpm  Tree of Path
+kip └── workspace ├── libtpms ├── qemu-tpm ├── seabios ├── swtpm └── test  SeaBIOS SeaBIOS 包含 vTPM 支持的分支 seabios-tpm 最开始由 Stefan 维护，现在已经成功将其合并到主分支 SeaBIOS。因此，下面的实验中我们使用其主分支。</description>
     </item>
     
     <item>
