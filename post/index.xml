@@ -17,12 +17,9 @@
       <pubDate>Sun, 22 Mar 2020 21:49:29 +0800</pubDate>
       
       <guid>https://KipJiang.github.io/post/2020/03/22/hello-hugo/</guid>
-      <description>Gun 从年后初二开始，基本就处于隔离状态，不能出去，体育锻炼也基本取消了。在这期间，重新登录好几年不用的微博，获取各种信息。
-然而，微博中信息和情绪交杂，疫情数据的变化，或激昂、或悲痛的感情流露，让人不能不受其影响。整个人的情绪一天会经历好几次起伏，以致于对这种信息的过载产生了一些应激反应。
-这是很不好的现象，需要自我调节，找一些事情让自己忙起来，再次关掉微博，「我不看，它就没有」，fxxking off nCoV-2019.
-Hello my Blog 以前就折腾过静态主页的博客，像 hexo、Jekyll 和 Hugo 等平台，我都用来建过个人站点，但是从来没有正经写过文章。
-这段时间，参考 YihuiXie 和 山羊博客，自己通过移植 hugo-ivy，也写了一个 hugo 的主题 hugo-theme-OneSentence。感觉到现在为止，已经基本满足我的需求了。
-之后呢，希望我自己，能多一些思考，多写一些文章，将平时的一些思考保留下来，将工作和学习上的一些新知记录下来。</description>
+      <description>Hello my Blog 以前折腾过其他静态主页的生成器，像 hexo 和 Jekyll 等，我都用来建过个人站点，但是从来没有正经写过文章。
+这段时间，使用 Hugo，参考 YihuiXie 和 山羊博客，通过移植 hugo-ivy，也写了一个 hugo 的主题 hugo-theme-OneSentence。
+感觉到现在为止，已经基本满足我的需求了。</description>
     </item>
     
   </channel>
