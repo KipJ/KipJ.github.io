@@ -97,7 +97,7 @@
       <h3>
       Kip
       
-         &#183;  2020-03-11 &#183; Words: 924
+         &#183;  2020-03-11 &#183; Words: 929
       
       </h3>
       <hr>
@@ -177,7 +177,7 @@ f-segment var size:   <span style="color:#ae81ff">1248</span>
 Total size: <span style="color:#ae81ff">172352</span>  Fixed: <span style="color:#ae81ff">81216</span>  Free: <span style="color:#ae81ff">89792</span> <span style="color:#f92672">(</span>used 65.7% of 256KiB rom<span style="color:#f92672">)</span>
   Creating out/bios.bin
 </code></pre></div><h2 id="libtpms">libtpms</h2>
-<p>libtpms 是对 <a href="https://trustedcomputinggroup.org/">TCG(Trusted Computing Group)</a> 发布的可信平台模块（TPM，<a href="https://en.wikipedia.org/wiki/Trusted_Platform_Module">Trusted Platform Module</a>）标准 <a href="https://trustedcomputinggroup.org/resource/tpm-main-specification/">TPM1.2 Main Specification</a> 和 <a href="https://trustedcomputinggroup.org/specifications-public-review/">TPM2.0 Specifications in Public Review</a> 的软件模拟库，在 Linux 上以 「shared object (dynamic) library」 的形式存在，即：</p>
+<p>libtpms 是对 <a href="https://trustedcomputinggroup.org/">TCG(Trusted Computing Group)</a> 发布的可信平台模块（TPM，<a href="https://en.wikipedia.org/wiki/Trusted_Platform_Module">Trusted Platform Module</a>）标准 <a href="https://trustedcomputinggroup.org/resource/tpm-main-specification/">TPM1.2 Main Specification</a> 和 <a href="https://trustedcomputinggroup.org/resource/tpm-library-specification/">TPM 2.0 Library Specification</a> 及 <a href="https://trustedcomputinggroup.org/specifications-public-review/">TPM2.0 Specifications in Public Review</a> 的软件模拟库，在 Linux 上以 「shared object (dynamic) library」 的形式存在，即：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">kip@ubu:/usr/lib/x86_64-linux-gnu $ ls -hl | grep libtpms
 lrwxrwxrwx  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">16</span> Jul <span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">2019</span> libtpms.so -&gt; libtpms.so.0.8.0
 lrwxrwxrwx  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">16</span> Jul <span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">2019</span> libtpms.so.0 -&gt; libtpms.so.0.8.0
@@ -433,7 +433,7 @@ VNC server running on 127.0.0.1:5900
 <p><img src="/img/2020-03-11/ubuntu14.04.png" alt="ubuntu14.04"></p>
 <h2 id="summary">Summary</h2>
 <p>综上，我们成功创建了一个具备 vTPM 模拟设备的可信虚拟机。</p>
-<p>和 TPM 设备交互，需要安装可信软件栈（TSS, <a href="https://tpm2-software.github.io/">TCG Software Stack</a>）。</p>
+<p>和 TPM 设备交互，需要安装可信软件栈（TSS, <a href="https://tpm2-software.github.io/">TPM Software Stack</a>）。</p>
 <p>可以通过下载 <a href="https://github.com/tpm2-software/tpm2-tss">tpm2-software/tpm2-tss</a> 编译安装，或者直接安装 IBM 维护的命令行工具 <code>tss2</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo apt install tss2
 </code></pre></div><p>不过 Ubuntu 14.04 并不支持 <code>tss2</code>， 可以在 Ubuntu 16.04 上尝试。</p>
@@ -451,7 +451,7 @@ VNC server running on 127.0.0.1:5900
       
       
         <span class="lastmodified">
-          update @ 2020-03-25
+          update @ 2020-03-27
         </span>
       
     </div>
