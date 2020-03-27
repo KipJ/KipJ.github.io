@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    
+    <title>
+    Working With Ubuntu (3)  - Kip Jiang
+    </title>
+    <meta property="og:title" content="Working With Ubuntu (3) - Kip Jiang">
+    
+    
+    
+        
+    
+    
+    
+    <meta property="description" content="The usage log of working with ubuntu - useful softwares">
+    <meta property="og:description" content="The usage log of working with ubuntu - useful softwares">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+
+  
+  <body class="note">
+
+    <div class="container" >
+      <div class="main" role="main" >
+
+        
+  <header class="header">
+      <h1 class="author" ><a href="/">Kip Jiang</a></h1>
+  
+  
+    <p class="tagline">Do one thing, <!-- raw HTML omitted -->Do it well!</p>
+  
+    <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+    
+    
+      <li>
+        <a href="/">Home</a>
+      </li>
+    
+      <li>
+        <a href="/about/">About</a>
+      </li>
+    
+      <li>
+        <a href="/post/">Posts</a>
+      </li>
+    
+      <li>
+        <a href="/note/">Notes</a>
+      </li>
+    
+      <li>
+        <a href="/categories/">Categories</a>
+      </li>
+    
+      <li>
+        <a href="/tags/">Tags</a>
+      </li>
+    
+  </ul>
+</nav>
+
+  </header>
+
+
+        <article class="article">
+          
+  
+    <header class="title">
+      <h1>Working With Ubuntu (3)</h1>
+      
+      <h3>
+      Kip
+      
+         &#183;  2020-03-27 &#183; Words: 346
+      
+      </h3>
+      <hr>
+    </header>
+  
+
+           
+          
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#browser">Browser</a>
+      <ul>
+        <li><a href="#firefox">Firefox</a></li>
+        <li><a href="#chrome">Chrome</a></li>
+      </ul>
+    </li>
+    <li><a href="#some-useful-software">Some Useful Software</a>
+      <ul>
+        <li><a href="#坚果云">坚果云</a></li>
+        <li><a href="#云笔记">云笔记</a></li>
+        <li><a href="#sougou-拼音">sougou 拼音</a></li>
+        <li><a href="#wps-linux-version">WPS Linux Version</a></li>
+        <li><a href="#netease-cloud-music">Netease Cloud Music</a></li>
+        <li><a href="#typora-for-linux">Typora for Linux</a></li>
+      </ul>
+    </li>
+    <li><a href="#issues">Issues</a>
+      <ul>
+        <li><a href="#disable-suspend">disable suspend</a></li>
+        <li><a href="#ruijie-vs-vmware">ruijie V.S. VMware</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>  
+  
+  <div class="post-content" >
+    <blockquote>
+<p>如何在 Ubuntu 中安装一些日常使用的软件。</p>
+</blockquote>
+<h2 id="browser">Browser</h2>
+<h3 id="firefox">Firefox</h3>
+<p>Ubuntu 自带的 Firefox 的账号服务属于国际区，如果你之前是通过 Windows 安装的中文版 Firefox 并注册的账号，在从 Ubuntu 中登录会提示你账号不存在。</p>
+<p>你可以注册使用国际区的账号；也可以通过使用中文版的 Firefox 可执行文件替换 Ubuntu 默认的版本，从而达到登录中国区账号的目的。</p>
+<p>下面讲讲如何替换为中国区 Firefox。</p>
+<ol>
+<li>下载中国区 localized Firefox</li>
+</ol>
+<p>点击 <a href="https://www.firefox.com.cn/download/">https://www.firefox.com.cn/download/</a>，选择 「下载其他语言版本」 下载。</p>
+<ol start="2">
+<li>替换可执行文件</li>
+</ol>
+<p>将 <code>/usr/lib</code> 下的默认版本的 Firefox 备份</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># mv /usr/lib/firefox /usr/lib/firefox_bak</span>
+</code></pre></div><p>将下载的 localized 版解压，替换默认版本</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># tar -jxvf firefox-latest-x86_64.tar.bz2</span>
+<span style="color:#75715e"># mv firefox/ /usr/lib/</span>
+</code></pre></div><ol start="3">
+<li>添加启动图标</li>
+</ol>
+<p>但是，经上述操作后我们并不能从 「Favorites」中的图标启动 Firefox，需要将默认版本中的启动脚本拷贝过来</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># cp /usr/lib/firefox_bak/firefox.sh /usr/lib/firefox</span>
+</code></pre></div><p>这时，我们就可以点击图标，启动 Firefox 了。</p>
+<h3 id="chrome">Chrome</h3>
+<p>有两种安装方式：（1）通过设置 <code>apt</code> 源的方式安装；（2）直接下载 <code>.deb</code> 文件本地安装。</p>
+<p><strong>Note:</strong> 这两种方式默认已经设置好代理。</p>
+<ul>
+<li>源方式</li>
+</ul>
+<ol>
+<li>添加 Key</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+</code></pre></div><ol start="2">
+<li>添加源信息</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ echo <span style="color:#e6db74">&#39;deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main&#39;</span> | sudo tee /etc/apt/sources.list.d/google-chrome.list
+</code></pre></div><ol start="3">
+<li>更新并安装</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo apt-get update 
+$ sudo apt-get install google-chrome-stable
+</code></pre></div><ul>
+<li>本地安装</li>
+</ul>
+<ol>
+<li>下载 <code>.deb</code> 文件</li>
+</ol>
+<p>参考文章 <a href="https://www.omgubuntu.co.uk/how-to-install-google-chrome-on-ubuntu">How to Install Google Chrome in Ubuntu</a>。这里直接点击下载链接 <a href="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb">google-chrome-stable_current_amd64.deb</a> 下载，或着执行命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+</code></pre></div><ol start="2">
+<li>安装</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo dpkg -i google-chrome-stable_current_amd64.deb
+</code></pre></div><ol start="3">
+<li>卸载</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo dpkg -r google-chrome-stable
+</code></pre></div><p>或者</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo dpkg -P google-chrome-stable
+</code></pre></div><h2 id="some-useful-software">Some Useful Software</h2>
+<h3 id="坚果云">坚果云</h3>
+<ol>
+<li>下载</li>
+</ol>
+<p>点击 <a href="https://www.jianguoyun.com/s/downloads">downloads</a>。</p>
+<ol start="2">
+<li>安装</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo dpkg -i nautilus-nutstore_amd64.deb
+$ sudo apt-get install -f
+</code></pre></div><p><strong>Note:</strong> 坚果云的账号名对大小写是敏感的，在登录时需注意。</p>
+<h3 id="云笔记">云笔记</h3>
+<ul>
+<li>
+<p>印象笔记、有道云笔记都没有 Linux 版，只能通过网页使用，不是很方便。</p>
+</li>
+<li>
+<p>可以直接在 Ubuntu 软件中心安装 <a href="https://simplenote.com/">SimpleNote</a></p>
+</li>
+</ul>
+<p>这是一个跨平台的云笔记软件，支持 iOS, Android, macOS, Windows 和 Linux。</p>
+<ul>
+<li>也可以下载 <a href="https://www.wiz.cn/wiznote-linux.html">为知笔记 Linux 版</a></li>
+</ul>
+<p><strong>Note:</strong> 为知笔记有试用期，使用完后需要付费。</p>
+<p>为知笔记的 Linux 版是通过 AppImage 打包的免安装版。因此，只需下载后，通过鼠标右键，修改文件属性，赋予可运权限，运行即可。</p>
+<p><img src="/img/2020-03-27/wiz-note.png" alt="wiz"></p>
+<p>另，按如下步骤给为知笔记在 Linux 中添加启动图标。</p>
+<ol>
+<li>进入目录 <code>/usr/share/applications/</code>，创建配置文件</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vim wiznote.desktop
+</code></pre></div><p>配置如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cfg" data-lang="cfg"><span style="color:#66d9ef">[Desktop Entry]</span>
+<span style="color:#a6e22e">Name</span><span style="color:#f92672">=</span><span style="color:#e6db74">wiznote</span>
+<span style="color:#a6e22e">Name[zh_CN]</span><span style="color:#f92672">=</span><span style="color:#e6db74">为知笔记</span>
+<span style="color:#a6e22e">Comment</span><span style="color:#f92672">=</span><span style="color:#e6db74">wiznote</span>
+<span style="color:#a6e22e">Comment[zh_CN]</span><span style="color:#f92672">=</span><span style="color:#e6db74">为知笔记</span>
+<span style="color:#a6e22e">Exec</span><span style="color:#f92672">=</span><span style="color:#e6db74">/home/kip/Downloads/WizNote-2.7.9-x86_64-ubuntu-18.04.AppImage</span>
+<span style="color:#a6e22e">Icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">/home/kip/.wiznote/icons/wiznote_76x76.png</span>
+<span style="color:#a6e22e">Terminal</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span>
+<span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">Application</span>
+<span style="color:#a6e22e">Categories</span><span style="color:#f92672">=</span><span style="color:#e6db74">Application;</span>
+<span style="color:#a6e22e">Encoding</span><span style="color:#f92672">=</span><span style="color:#e6db74">UTF-8</span>
+<span style="color:#a6e22e">StartupNotify</span><span style="color:#f92672">=</span><span style="color:#e6db74">true</span>
+</code></pre></div><p>其中的 icon，可以从官网上 <a href="https://wcdn.wiz.cn/apple-icon.png">获取</a>，然后放在 wiznote 的配置文件路径下。</p>
+<ol start="2">
+<li>配置完成后，进入 Launcher 启动器，搜索名字便能显示程序图标了，然后右键添加到侧边栏即可。</li>
+</ol>
+<h3 id="sougou-拼音">sougou 拼音</h3>
+<ol>
+<li>下载</li>
+</ol>
+<p>点击 <a href="https://pinyin.sogou.com/linux/?r=pinyin">搜狗输入法 for linux</a></p>
+<ol start="2">
+<li>安装</li>
+</ol>
+<p>参考 <a href="https://pinyin.sogou.com/linux/help.php">搜狗输入法 for linux 安装指南</a>，需要先将输入法框架切换为 Fcitx。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo dpkg -i sogoupinyin_2.3.1.0112_amd64.deb
+$ sudo apt-get install -f
+</code></pre></div><p><a href="https://wiki.ubuntu.org.cn/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95">Read More About <em>chinese input method</em></a></p>
+<h3 id="wps-linux-version">WPS Linux Version</h3>
+<ol>
+<li>下载</li>
+</ol>
+<p><a href="https://www.wps.cn/product/wpslinux">WPS Office 2019 for Linux Download</a></p>
+<ol start="2">
+<li>安装</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo dpkg -i wps-office_11.1.0.9080_amd64.deb
+</code></pre></div><h3 id="netease-cloud-music">Netease Cloud Music</h3>
+<ol>
+<li>下载</li>
+</ol>
+<p><a href="https://music.163.com/#/download">网易云音乐下载</a>，网页右上角，点击 &ldquo;下载全部客户端&rdquo;，选择下载 Linux 版。</p>
+<ol start="2">
+<li>安装</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo dpkg -i netease-cloud-music_1.2.1_amd64_ubuntu_20190428.deb
+</code></pre></div><h3 id="typora-for-linux">Typora for Linux</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># add Key</span>
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+<span style="color:#75715e"># add Typora&#39;s repository</span>
+sudo add-apt-repository <span style="color:#e6db74">&#39;deb https://typora.io/linux ./&#39;</span>
+sudo apt-get update
+<span style="color:#75715e"># install typora</span>
+sudo apt-get install typora
+</code></pre></div><h2 id="issues">Issues</h2>
+<h3 id="disable-suspend">disable suspend</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo vim /etc/systemd/logind.conf
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cfg" data-lang="cfg"><span style="color:#a6e22e">HandleLidSwitch</span><span style="color:#f92672">=</span><span style="color:#e6db74">suspend --&gt; HandleLidSwitch=ignore</span>
+</code></pre></div><h3 id="ruijie-vs-vmware">ruijie V.S. VMware</h3>
+<p>校园网下启动 VMware 报错：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Client Prompt:
+    You install multi-NIC, please make all non-authentication ad
+    apters disable, and <span style="color:#66d9ef">do</span> authentication.
+</code></pre></div><p>打开 VMware 的虚拟网络编辑器，关掉 VMnet8 的主机连接。</p>
+
+  </div>
+
+          <footer>
+  
+    <div class="post-footer" >
+      
+        <span class="post-categories">
+          &#9900; <a href="https://KipJiang.github.io/categories/linux/"> Linux </a>
+            
+        </span>
+      
+      
+    </div>
+  
+
+  
+  <nav class="post-nav">
+    <span class="nav-prev">&larr; <a href="/post/2020/03/22/hello-hugo/">Hello Hugo</a></span>
+    <span class="nav-next"></span>
+  </nav>
+  
+
+  
+    <div class="comments" >
+      
+
+
+
+
+
+
+
+
+
+
+  <div class="commemt-item" >
+    <div class="valine" >
+      <span id="/note/2020/03/27/working-with-ubuntu-3rd/" class="leancloud_visitors" data-flag-title="Working With Ubuntu (3)">
+          
+          <span class="leancloud-visitors-count">0</span>
+          <p></p>
+        </span>
+      <div id="vcomments"></div>
+      <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+      <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+      <script type="text/javascript">
+        new Valine({
+            el: '#vcomments',
+            appId: 'AhrO67kSBw2cdWp3AFKzjzI5-MdYXbMMI',
+            appKey: 'RKBIhU7j518tpSUFbaWh8D2x',
+            notify: 'true', 
+            verify: 'true', 
+            avatar: '', 
+            placeholder: 'Say something... (please fill in the email to receive the reply)',
+            visitor: 'true'
+        });
+      </script>
+    </div>
+  </div>
+
+
+    </div>
+  
+
+  <script async src="/js/center-img.js"></script>
+  <script src="/js/math-code.js"></script>
+  <script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</footer>
+        </article>
+
+        <footer>
+  
+  
+  
+
+  
+    <script src="//cdn.bootcss.com/highlight.js//highlight.min.js"></script>
+    
+    
+    
+    
+    <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+  
+
+  
+    <hr>
+    <div class="copyright">
+      &copy; 2019 - 2020
+      &#183; <a href="/">Kip Jiang</a> · <a href="https://github.com/KipJiang">Github</a> · Theme <a href="https://github.com/KipJiang/hugo-theme-OneSentence">OneSentence</a> &#183; 
+      <a href="https://KipJiang.github.io/index.xml" target="_blank" title="rss">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 22 20" fill="none" 
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss">
+          <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
+        </svg>
+      </a>
+    </div>
+  
+</footer>
+        
+
+      </div>
+    </div>
+
+  </body>
+</html>

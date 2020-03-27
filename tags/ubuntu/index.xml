@@ -6,10 +6,28 @@
     <description>Recent content in Ubuntu on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Feb 2020 12:23:43 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2020 19:33:47 +0800</lastBuildDate>
     
 	<atom:link href="https://KipJiang.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Working With Ubuntu (3)</title>
+      <link>https://KipJiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</link>
+      <pubDate>Fri, 27 Mar 2020 19:33:47 +0800</pubDate>
+      
+      <guid>https://KipJiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</guid>
+      <description>如何在 Ubuntu 中安装一些日常使用的软件。
+ Browser Firefox Ubuntu 自带的 Firefox 的账号服务属于国际区，如果你之前是通过 Windows 安装的中文版 Firefox 并注册的账号，在从 Ubuntu 中登录会提示你账号不存在。
+你可以注册使用国际区的账号；也可以通过使用中文版的 Firefox 可执行文件替换 Ubuntu 默认的版本，从而达到登录中国区账号的目的。
+下面讲讲如何替换为中国区 Firefox。
+ 下载中国区 localized Firefox  点击 https://www.firefox.com.cn/download/，选择 「下载其他语言版本」 下载。
+替换可执行文件  将 /usr/lib 下的默认版本的 Firefox 备份
+# mv /usr/lib/firefox /usr/lib/firefox_bak 将下载的 localized 版解压，替换默认版本
+# tar -jxvf firefox-latest-x86_64.tar.bz2 # mv firefox/ /usr/lib/ 添加启动图标  但是，经上述操作后我们并不能从 「Favorites」中的图标启动 Firefox，需要将默认版本中的启动脚本拷贝过来
+# cp /usr/lib/firefox_bak/firefox.sh /usr/lib/firefox 这时，我们就可以点击图标，启动 Firefox 了。
+Chrome 有两种安装方式：（1）通过设置 apt 源的方式安装；（2）直接下载 .</description>
+    </item>
     
     <item>
       <title>Working With Ubuntu (2)</title>

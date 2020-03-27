@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://KipJiang.github.io/categories/</loc>
+    <lastmod>2020-03-27T19:33:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://KipJiang.github.io/categories/linux/</loc>
+    <lastmod>2020-03-27T19:33:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://KipJiang.github.io/tags/</loc>
+    <lastmod>2020-03-27T19:33:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://KipJiang.github.io/tags/ubuntu/</loc>
+    <lastmod>2020-03-27T19:33:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://KipJiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</loc>
+    <lastmod>2020-03-27T19:33:47+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://KipJiang.github.io/note/</loc>
     <lastmod>2020-03-23T01:20:33+08:00</lastmod>
   </url>
@@ -13,11 +38,6 @@
   </url>
   
   <url>
-    <loc>https://KipJiang.github.io/categories/</loc>
-    <lastmod>2020-03-25T19:14:44+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://KipJiang.github.io/post/2020/03/22/hello-hugo/</loc>
     <lastmod>2020-03-23T13:34:29+08:00</lastmod>
   </url>
@@ -25,11 +45,6 @@
   <url>
     <loc>https://KipJiang.github.io/tags/hugo/</loc>
     <lastmod>2020-03-23T13:34:29+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://KipJiang.github.io/tags/</loc>
-    <lastmod>2020-03-25T19:14:44+08:00</lastmod>
   </url>
   
   <url>
@@ -50,16 +65,6 @@
   <url>
     <loc>https://KipJiang.github.io/tags/vtpm/</loc>
     <lastmod>2020-03-25T19:14:44+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://KipJiang.github.io/categories/linux/</loc>
-    <lastmod>2020-03-22T17:43:57+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://KipJiang.github.io/tags/ubuntu/</loc>
-    <lastmod>2020-03-22T17:43:57+08:00</lastmod>
   </url>
   
   <url>
