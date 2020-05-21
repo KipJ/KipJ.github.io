@@ -97,7 +97,7 @@
       <h3>
       Kip
       
-         &#183;  2020-03-11 &#183; Words: 931
+         &#183;  2020-03-11 &#183; Words: 932
       
       </h3>
       <hr>
@@ -188,7 +188,7 @@ lrwxrwxrwx  <span style="color:#ae81ff">1</span> root root    <span style="color
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git clone https://github.com/stefanberger/libtpms.git
 $ cd libtpms
 $ sudo apt-get -y install automake autoconf libtool gcc build-essential libssl-dev dh-exec pkg-config gwak
-$ ./autogen.sh --with-openssl
+$ ./autogen.sh --with-openssl --with-tpm2
 &lt;snip&gt;
 CFLAGS<span style="color:#f92672">=</span>-g -O2 -DUSE_OPENSSL_FUNCTIONS_SYMMETRIC<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DUSE_OPENSSL_FUNCTIONS_EC<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DUSE_OPENSSL_FUNCTIONS_ECDSA<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DUSE_OPENSSL_FUNCTIONS_RSA<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>  -Wall -Werror -Wreturn-type -Wsign-compare -Wno-self-assign
 HARDENING_CFLAGS<span style="color:#f92672">=</span>-fstack-protector-strong 
@@ -198,7 +198,7 @@ LDFLAGS<span style="color:#f92672">=</span>
 Version to build        : 0.8.0
 Crypto library          : openssl
 Debug build             : no
-With TPM2 support       : no
+With TPM2 support       : yes
 HAVE_VERSION_SCRIPT     : yes
 Use openssl crypto <span style="color:#66d9ef">for</span>  : symmetric <span style="color:#f92672">(</span>AES, TDES<span style="color:#f92672">)</span> general elliptic curve <span style="color:#f92672">(</span>EC<span style="color:#f92672">)</span> elliptic curve <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span> RSA
 </code></pre></div><ol start="2">
