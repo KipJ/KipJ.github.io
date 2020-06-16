@@ -24,7 +24,7 @@ Configure Jypyter  Note: 通过 ssh 远程链接到服务器操作。
     </item>
     
     <item>
-      <title>Working With Ubuntu (3)</title>
+      <title>Working with Ubuntu (3)</title>
       <link>https://rainerchiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</link>
       <pubDate>Fri, 27 Mar 2020 19:33:47 +0800</pubDate>
       
@@ -42,7 +42,7 @@ Chrome 有两种安装方式：（1）通过设置 apt 源的方式安装；（2
     </item>
     
     <item>
-      <title>Create Virtual Machine With vTPM in Ubuntu</title>
+      <title>Create Virtual Machine with vTPM in Ubuntu</title>
       <link>https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
       <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
       
@@ -56,7 +56,7 @@ kip └── workspace ├── libtpms ├── qemu-tpm ├── seabios �
     </item>
     
     <item>
-      <title>Working With Ubuntu (2)</title>
+      <title>Working with Ubuntu (2)</title>
       <link>https://rainerchiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</link>
       <pubDate>Thu, 20 Feb 2020 12:23:43 +0800</pubDate>
       
@@ -67,7 +67,7 @@ kip └── workspace ├── libtpms ├── qemu-tpm ├── seabios �
     </item>
     
     <item>
-      <title>Working With Ubuntu (1)</title>
+      <title>Working with Ubuntu (1)</title>
       <link>https://rainerchiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</link>
       <pubDate>Sat, 15 Feb 2020 09:49:43 +0800</pubDate>
       

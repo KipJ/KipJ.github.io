@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019-2020 &amp;#183; [Rainer Chiang](/)</copyright>
-    <lastBuildDate>Sat, 07 Mar 2020 21:49:29 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2020 22:01:13 +0800</lastBuildDate>
     
 	<atom:link href="https://rainerchiang.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Change to New Theme</title>
+      <link>https://rainerchiang.github.io/post/2020/06/16/change-to-new-theme/</link>
+      <pubDate>Tue, 16 Jun 2020 22:01:13 +0800</pubDate>
+      
+      <guid>https://rainerchiang.github.io/post/2020/06/16/change-to-new-theme/</guid>
+      <description>Hugo Theme Diary I change my blog to a new hugo theme hugo-theme-diary which is pretty concise.
+To meet my taste I am adding some new features to it.
+You can switch to the new branch rainer to check the changes.
+TODO List   Markdownify the copyright string.
+  Display the theme info implicitly.
+  Add some common Font Awesome icons to sidebar.
+  Enable the visitor counter leancloud-visitor of valine and move the enablevaline to params.</description>
+    </item>
     
     <item>
       <title>Hello Hugo</title>
@@ -18,7 +33,7 @@
       <pubDate>Sat, 07 Mar 2020 21:49:29 +0800</pubDate>
       
       <guid>https://rainerchiang.github.io/post/2020/03/07/hello-hugo/</guid>
-      <description>It is out of time.
+      <description>This post is out of time.
  Hello my Blog 以前折腾过其他静态主页的生成器，像 hexo 和 Jekyll 等，都用来建过站点，但是从来没有正经写过文章。
 这段时间，使用 Hugo，参考 YihuiXie 和 山羊博客，通过移植 hugo-ivy，也写了一个 hugo 的主题 hugo-theme-OneSentence。
 感觉到现在为止，已经基本满足我的需求了。</description>

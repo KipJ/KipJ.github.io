@@ -6,9 +6,63 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019-2020 &amp;#183; [Rainer Chiang](/)</copyright>
-    <lastBuildDate>Tue, 31 Mar 2020 21:29:36 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2020 22:01:13 +0800</lastBuildDate>
     
         <atom:link href="https://rainerchiang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Change to New Theme</title>
+        <link>https://rainerchiang.github.io/post/2020/06/16/change-to-new-theme/</link>
+        <pubDate>Tue, 16 Jun 2020 22:01:13 +0800</pubDate>
+        
+        <guid>https://rainerchiang.github.io/post/2020/06/16/change-to-new-theme/</guid>
+        <description>Rainer Chiang https://rainerchiang.github.io/post/2020/06/16/change-to-new-theme/ -&lt;h2 id=&#34;hugo-theme-diary&#34;&gt;Hugo Theme Diary&lt;/h2&gt;
+&lt;p&gt;I change my blog to a new hugo theme &lt;a href=&#34;https://github.com/RainerChiang/hugo-theme-diary&#34;&gt;hugo-theme-diary&lt;/a&gt; which is pretty concise.&lt;/p&gt;
+&lt;p&gt;To meet my taste I am adding some new features to it.&lt;/p&gt;
+&lt;p&gt;You can switch to the new branch &lt;a href=&#34;https://github.com/RainerChiang/hugo-theme-diary/tree/rainer&#34;&gt;rainer&lt;/a&gt; to check the changes.&lt;/p&gt;
+&lt;h2 id=&#34;todo-list&#34;&gt;TODO List&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Markdownify the copyright string.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Display the theme info implicitly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add some common Font Awesome icons to sidebar.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Enable the visitor counter &lt;code&gt;leancloud-visitor&lt;/code&gt; of valine and move the &lt;code&gt;enablevaline&lt;/code&gt; to &lt;code&gt;params.valine&lt;/code&gt; in configuration.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Enable &lt;code&gt;disableHome&lt;/code&gt; parameter in &lt;code&gt;FrontMatter&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the style of ToC.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Split the layout of categories and tags, show statistics of each tag.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the style of footer and navigator title.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Move the tags info  to the bottom of a post.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the hover &lt;code&gt;underline&lt;/code&gt; to &lt;code&gt;dashed&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the color of hyperlink in post.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; New archive page. Reference page &lt;a href=&#34;https://byvoid.com/zhs/blog/archive/&#34;&gt;https://byvoid.com/zhs/blog/archive/&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+- https://rainerchiang.github.io/post/2020/06/16/change-to-new-theme/ - 2019-2020 &amp;#183; [Rainer Chiang](/)</description>
+        </item>
     
     
     
@@ -106,7 +160,7 @@ public &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;active&lt;span st
     
     
         <item>
-        <title>Working With Ubuntu (3)</title>
+        <title>Working with Ubuntu (3)</title>
         <link>https://rainerchiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</link>
         <pubDate>Fri, 27 Mar 2020 19:33:47 +0800</pubDate>
         
@@ -278,7 +332,7 @@ sudo apt-get install typora
     
     
         <item>
-        <title>Create Virtual Machine With vTPM in Ubuntu</title>
+        <title>Create Virtual Machine with vTPM in Ubuntu</title>
         <link>https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
         <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
         
@@ -608,7 +662,7 @@ VNC server running on 127.0.0.1:5900
         
         <guid>https://rainerchiang.github.io/post/2020/03/07/hello-hugo/</guid>
         <description>Rainer Chiang https://rainerchiang.github.io/post/2020/03/07/hello-hugo/ -&lt;blockquote&gt;
-&lt;p&gt;It is out of time.&lt;/p&gt;
+&lt;p&gt;This post is out of time.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;hello-my-blog&#34;&gt;Hello my Blog&lt;/h2&gt;
 &lt;p&gt;以前折腾过其他静态主页的生成器，像 &lt;a href=&#34;https://hexo.io/&#34;&gt;hexo&lt;/a&gt; 和 &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; 等，都用来建过站点，但是从来没有正经写过文章。&lt;/p&gt;
@@ -654,7 +708,7 @@ VNC server running on 127.0.0.1:5900
     
     
         <item>
-        <title>Working With Ubuntu (2)</title>
+        <title>Working with Ubuntu (2)</title>
         <link>https://rainerchiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</link>
         <pubDate>Thu, 20 Feb 2020 12:23:43 +0800</pubDate>
         
@@ -756,7 +810,7 @@ by running conda init? &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;y
     
     
         <item>
-        <title>Working With Ubuntu (1)</title>
+        <title>Working with Ubuntu (1)</title>
         <link>https://rainerchiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</link>
         <pubDate>Sat, 15 Feb 2020 09:49:43 +0800</pubDate>
         
