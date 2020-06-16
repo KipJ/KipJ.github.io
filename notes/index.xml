@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on Kip Jiang</title>
-    <link>https://kipjiang.github.io/notes/</link>
+    <link>https://rainerchiang.github.io/notes/</link>
     <description>Recent content in Notes on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
     <lastBuildDate>Tue, 31 Mar 2020 21:29:36 +0800</lastBuildDate>
     
-	<atom:link href="https://kipjiang.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rainerchiang.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jupyter Notebook on Remote Server</title>
-      <link>https://kipjiang.github.io/note/2020/03/31/remote-jupyter-notebook/</link>
+      <link>https://rainerchiang.github.io/note/2020/03/31/remote-jupyter-notebook/</link>
       <pubDate>Tue, 31 Mar 2020 21:29:36 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/note/2020/03/31/remote-jupyter-notebook/</guid>
+      <guid>https://rainerchiang.github.io/note/2020/03/31/remote-jupyter-notebook/</guid>
       <description>Install miniconda 参考 Working With Ubuntu (2)
 Configure Jypyter  Note: 通过 ssh 远程链接到服务器操作。
   安装 jupyter notebook  $ conda install jupyter notebook  生成配置文件  $ jupyter notebook --generate-config Writing default config to: /home/kip/.jupyter/jupyter_notebook_config.py  通过 ipython 生成密码的 Hash  $ ipython Python 3.6.9 |Anaconda, Inc.| (default, Mar 31 2020, 19:07:31) Type &amp;#39;copyright&amp;#39;, &amp;#39;credits&amp;#39; or &amp;#39;license&amp;#39; for more information IPython 7.7.0 -- An enhanced Interactive Python. Type &amp;#39;?</description>
@@ -25,10 +25,10 @@ Configure Jypyter  Note: 通过 ssh 远程链接到服务器操作。
     
     <item>
       <title>Working With Ubuntu (3)</title>
-      <link>https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</link>
+      <link>https://rainerchiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</link>
       <pubDate>Fri, 27 Mar 2020 19:33:47 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</guid>
+      <guid>https://rainerchiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</guid>
       <description>如何在 Ubuntu 中安装一些日常使用的软件。
  Browser Firefox Ubuntu 自带的 Firefox 的账号服务属于国际区，如果你之前是通过 Windows 安装的中文版 Firefox 并注册的账号，在从 Ubuntu 中登录会提示你账号不存在。
 你可以注册使用国际区的账号；也可以通过使用中文版的 Firefox 可执行文件替换 Ubuntu 默认的版本，从而达到登录中国区账号的目的。
@@ -43,10 +43,10 @@ Chrome 有两种安装方式：（1）通过设置 apt 源的方式安装；（2
     
     <item>
       <title>Create Virtual Machine With vTPM in Ubuntu</title>
-      <link>https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
+      <link>https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
       <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
+      <guid>https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
       <description>Reference Paper
 Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.
 Environment
@@ -57,10 +57,10 @@ kip └── workspace ├── libtpms ├── qemu-tpm ├── seabios �
     
     <item>
       <title>Working With Ubuntu (2)</title>
-      <link>https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</link>
+      <link>https://rainerchiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</link>
       <pubDate>Thu, 20 Feb 2020 12:23:43 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</guid>
+      <guid>https://rainerchiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</guid>
       <description>如何在 Ubuntu 中安装一些开发软件。
  VScode  VSCode 的安装非常简单  $ sudo snap install --classic code code a622c65b from Visual Studio Code (vscode✓) installed 打开  $ code Sublime Text 3 Reference：Linux Package Manager Repositories
  Install the GPG key:  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - Ensure apt is set up to work with https sources:  sudo apt-get install apt-transport-https Select the channel to use:  Stable</description>
@@ -68,10 +68,10 @@ kip └── workspace ├── libtpms ├── qemu-tpm ├── seabios �
     
     <item>
       <title>Working With Ubuntu (1)</title>
-      <link>https://kipjiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</link>
+      <link>https://rainerchiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</link>
       <pubDate>Sat, 15 Feb 2020 09:49:43 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</guid>
+      <guid>https://rainerchiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</guid>
       <description>如何在 Ubuntu 中安装一些开发软件。
  v2ray  下载并安装 v2ray 脚本  v2ray-core/release
 下载最新版的 v2ray Linux 压缩包，并通过脚本在本地安装
@@ -83,10 +83,10 @@ $ curl https://github.com/v2ray/v2ray-core/releases/download/v4.22.1/v2ray-linux
     
     <item>
       <title>Visual Studio Code: Remote-SSH</title>
-      <link>https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/</link>
+      <link>https://rainerchiang.github.io/note/2019/11/07/vscode-remote-ssh/</link>
       <pubDate>Thu, 07 Nov 2019 12:25:16 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/</guid>
+      <guid>https://rainerchiang.github.io/note/2019/11/07/vscode-remote-ssh/</guid>
       <description>  第一步当然是先在 VSCode 中安装 Remote-SSH 扩展啦
   通过 WSL 生成公私钥对
   $ ssh-keygen -t rsa -b 4096 通过 ssh 登录服务器，将生成的公钥文件的副本 id_rsa.tmp.pub 复制到路径 ~/.ssh/ 下，执行命令  $ cat id_rsa.tmp.pub &amp;gt;&amp;gt; authorized_keys $ chmod 600 authorized_keys Note：必须执行 chmod 600 authorized_keys 命令
@@ -96,10 +96,10 @@ Host arbitrary-name-you-like HostName remote-host-ip Port remote-port User user-
     
     <item>
       <title>Display Git Branch Name in Bash</title>
-      <link>https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</link>
+      <link>https://rainerchiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</link>
       <pubDate>Thu, 23 May 2019 15:38:03 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</guid>
+      <guid>https://rainerchiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</guid>
       <description>First  将脚本下载到 Home 目录  $ git clone https://github.com/KipJiang/git-aware-prompt.git ~/git-aware-prompt $ mv ~/git-aware-prompt ~/.git-aware-prompt 修改配置文件 .bashrc  $ vim ~/.bashrc 添加如下内容
 # source .git-aware-prompt export PS1=&amp;#34;\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ &amp;#34; export GITAWAREPROMPT=~/.git-aware-prompt source &amp;#34;${GITAWAREPROMPT}/main.sh&amp;#34; 使配置生效  $ source ~/.bashrc 效果  Ubuntu
 CentOS

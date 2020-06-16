@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Theme on Kip Jiang</title>
-    <link>https://kipjiang.github.io/tags/theme/</link>
+    <link>https://rainerchiang.github.io/tags/theme/</link>
     <description>Recent content in Theme on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
     <lastBuildDate>Sat, 07 Mar 2020 21:49:29 +0800</lastBuildDate>
     
-	<atom:link href="https://kipjiang.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rainerchiang.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hello Hugo</title>
-      <link>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</link>
+      <link>https://rainerchiang.github.io/post/2020/03/07/hello-hugo/</link>
       <pubDate>Sat, 07 Mar 2020 21:49:29 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</guid>
+      <guid>https://rainerchiang.github.io/post/2020/03/07/hello-hugo/</guid>
       <description>It is out of time.
  Hello my Blog 以前折腾过其他静态主页的生成器，像 hexo 和 Jekyll 等，都用来建过站点，但是从来没有正经写过文章。
 这段时间，使用 Hugo，参考 YihuiXie 和 山羊博客，通过移植 hugo-ivy，也写了一个 hugo 的主题 hugo-theme-OneSentence。

@@ -1,24 +1,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kip Jiang</title>
-    <link>https://kipjiang.github.io/</link>
+    <link>https://rainerchiang.github.io/</link>
     <description>Recent content on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
     <lastBuildDate>Tue, 31 Mar 2020 21:29:36 +0800</lastBuildDate>
     
-        <atom:link href="https://kipjiang.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://rainerchiang.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>Jupyter Notebook on Remote Server</title>
-        <link>https://kipjiang.github.io/note/2020/03/31/remote-jupyter-notebook/</link>
+        <link>https://rainerchiang.github.io/note/2020/03/31/remote-jupyter-notebook/</link>
         <pubDate>Tue, 31 Mar 2020 21:29:36 +0800</pubDate>
         
-        <guid>https://kipjiang.github.io/note/2020/03/31/remote-jupyter-notebook/</guid>
-        <description>Kip Jiang https://kipjiang.github.io/note/2020/03/31/remote-jupyter-notebook/ -&lt;h2 id=&#34;install-miniconda&#34;&gt;Install miniconda&lt;/h2&gt;
+        <guid>https://rainerchiang.github.io/note/2020/03/31/remote-jupyter-notebook/</guid>
+        <description>Kip Jiang https://rainerchiang.github.io/note/2020/03/31/remote-jupyter-notebook/ -&lt;h2 id=&#34;install-miniconda&#34;&gt;Install miniconda&lt;/h2&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/#miniconda&#34;&gt;Working With Ubuntu (2)&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;configure-jypyter&#34;&gt;Configure Jypyter&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -90,7 +90,7 @@ public &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;active&lt;span st
 &lt;li&gt;本地浏览器打开&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;在本地浏览器中输入 &lt;code&gt;server_ip:8888&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://kipjiang.github.io/img/2020-06-05/jupyter_notebook_login.png&#34; alt=&#34;jupyter-remote&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://rainerchiang.github.io/img/2020-06-05/jupyter_notebook_login.png&#34; alt=&#34;jupyter-remote&#34;&gt;&lt;/p&gt;
 &lt;p&gt;再输入之前设置的密码即可。&lt;/p&gt;
 &lt;h2 id=&#34;using-notebook-without-permanent-configuration&#34;&gt;Using notebook without permanent configuration&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -100,18 +100,18 @@ public &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;active&lt;span st
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ jupyter notebook --no-browser --port&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;8888&lt;/span&gt; --ip&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0.0.0.0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中 &lt;code&gt;--ip=0.0.0.0&lt;/code&gt; 表示 &lt;code&gt;jupyter notebook&lt;/code&gt; 侦听所有的 IP 地址。&lt;/p&gt;
 &lt;p&gt;但这也需要配置防火墙，开放 8888 端口。&lt;/p&gt;
-- https://kipjiang.github.io/note/2020/03/31/remote-jupyter-notebook/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+- https://rainerchiang.github.io/note/2020/03/31/remote-jupyter-notebook/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
         </item>
     
     
     
         <item>
         <title>Working With Ubuntu (3)</title>
-        <link>https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</link>
+        <link>https://rainerchiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</link>
         <pubDate>Fri, 27 Mar 2020 19:33:47 +0800</pubDate>
         
-        <guid>https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</guid>
-        <description>Kip Jiang https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/ -&lt;blockquote&gt;
+        <guid>https://rainerchiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</guid>
+        <description>Kip Jiang https://rainerchiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/ -&lt;blockquote&gt;
 &lt;p&gt;如何在 Ubuntu 中安装一些日常使用的软件。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;browser&#34;&gt;Browser&lt;/h2&gt;
@@ -201,7 +201,7 @@ $ sudo apt-get install -f
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 为知笔记有试用期，使用完后需要付费。&lt;/p&gt;
 &lt;p&gt;为知笔记的 Linux 版是通过 AppImage 打包的免安装版。因此，只需下载后，通过鼠标右键，修改文件属性，赋予可运权限，运行即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://kipjiang.github.io/img/2020-03-27/wiz-note.png&#34; alt=&#34;wiz&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://rainerchiang.github.io/img/2020-03-27/wiz-note.png&#34; alt=&#34;wiz&#34;&gt;&lt;/p&gt;
 &lt;p&gt;另，按如下步骤给为知笔记在 Linux 中添加启动图标。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;进入目录 &lt;code&gt;/usr/share/applications/&lt;/code&gt;，创建配置文件&lt;/li&gt;
@@ -272,20 +272,20 @@ sudo apt-get install typora
     You install multi-NIC, please make all non-authentication ad
     apters disable, and &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; authentication.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打开 VMware 的虚拟网络编辑器，关掉 VMnet8 的主机连接。&lt;/p&gt;
-- https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+- https://rainerchiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
         </item>
     
     
     
         <item>
         <title>Create Virtual Machine With vTPM in Ubuntu</title>
-        <link>https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
+        <link>https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
         <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
         
-        <guid>https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
-        <description>Kip Jiang https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/ -&lt;blockquote&gt;
+        <guid>https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
+        <description>Kip Jiang https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/ -&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Reference Paper&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://kipjiang.github.io/pdf/Scalable_Attestation-A_Step_toward_Secure_and_Trusted_Clouds_Stefan.pdf&#34;&gt;Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rainerchiang.github.io/pdf/Scalable_Attestation-A_Step_toward_Secure_and_Trusted_Clouds_Stefan.pdf&#34;&gt;Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Environment&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Host: &lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/18.04/&#34;&gt;Ubuntu 18.04&lt;/a&gt;&lt;/li&gt;
@@ -589,43 +589,43 @@ VNC server running on 127.0.0.1:5900
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再次打开 VNC-Viewer：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ vncviewer :5900
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://kipjiang.github.io/img/2020-03-11/ubuntu14.04.png&#34; alt=&#34;ubuntu14.04&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://rainerchiang.github.io/img/2020-03-11/ubuntu14.04.png&#34; alt=&#34;ubuntu14.04&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 &lt;p&gt;综上，我们成功创建了一个具备 vTPM 模拟设备的可信虚拟机。&lt;/p&gt;
 &lt;p&gt;和 TPM 设备交互，需要安装可信软件栈（TSS, &lt;a href=&#34;https://tpm2-software.github.io/&#34;&gt;TPM Software Stack&lt;/a&gt;）。&lt;/p&gt;
 &lt;p&gt;可以通过下载 &lt;a href=&#34;https://github.com/tpm2-software/tpm2-tss&#34;&gt;tpm2-software/tpm2-tss&lt;/a&gt; 编译安装，或者直接安装 IBM 维护的命令行工具 &lt;code&gt;tss2&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo apt install tss2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;不过 Ubuntu 14.04 并不支持 &lt;code&gt;tss2&lt;/code&gt;， 可以在 Ubuntu 16.04 上尝试。&lt;/p&gt;
-- https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+- https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
         </item>
     
     
     
         <item>
         <title>Hello Hugo</title>
-        <link>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</link>
+        <link>https://rainerchiang.github.io/post/2020/03/07/hello-hugo/</link>
         <pubDate>Sat, 07 Mar 2020 21:49:29 +0800</pubDate>
         
-        <guid>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</guid>
-        <description>Kip Jiang https://kipjiang.github.io/post/2020/03/07/hello-hugo/ -&lt;blockquote&gt;
+        <guid>https://rainerchiang.github.io/post/2020/03/07/hello-hugo/</guid>
+        <description>Kip Jiang https://rainerchiang.github.io/post/2020/03/07/hello-hugo/ -&lt;blockquote&gt;
 &lt;p&gt;It is out of time.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;hello-my-blog&#34;&gt;Hello my Blog&lt;/h2&gt;
 &lt;p&gt;以前折腾过其他静态主页的生成器，像 &lt;a href=&#34;https://hexo.io/&#34;&gt;hexo&lt;/a&gt; 和 &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; 等，都用来建过站点，但是从来没有正经写过文章。&lt;/p&gt;
 &lt;p&gt;这段时间，使用 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;，参考 &lt;a href=&#34;https://yihui.org/&#34;&gt;YihuiXie&lt;/a&gt; 和 &lt;a href=&#34;http://blog.fungo.me/&#34;&gt;山羊博客&lt;/a&gt;，通过移植 &lt;a href=&#34;https://github.com/yihui/hugo-ivy&#34;&gt;hugo-ivy&lt;/a&gt;，也写了一个 hugo 的主题 &lt;a href=&#34;https://github.com/KipJiang/hugo-theme-OneSentence&#34;&gt;hugo-theme-OneSentence&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;感觉到现在为止，已经基本满足我的需求了。&lt;/p&gt;
-- https://kipjiang.github.io/post/2020/03/07/hello-hugo/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+- https://rainerchiang.github.io/post/2020/03/07/hello-hugo/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
         </item>
     
     
     
         <item>
         <title>About</title>
-        <link>https://kipjiang.github.io/about/</link>
+        <link>https://rainerchiang.github.io/about/</link>
         <pubDate>Mon, 02 Mar 2020 20:59:41 +0800</pubDate>
         
-        <guid>https://kipjiang.github.io/about/</guid>
-        <description>Kip Jiang https://kipjiang.github.io/about/ -&lt;h2 id=&#34;about-author&#34;&gt;About Author&lt;/h2&gt;
+        <guid>https://rainerchiang.github.io/about/</guid>
+        <description>Kip Jiang https://rainerchiang.github.io/about/ -&lt;h2 id=&#34;about-author&#34;&gt;About Author&lt;/h2&gt;
 &lt;p&gt;💻   📚   🏃&lt;/p&gt;
 &lt;p&gt;I sometimes write here.&lt;/p&gt;
 &lt;h2 id=&#34;my-projects&#34;&gt;My Projects&lt;/h2&gt;
@@ -648,18 +648,18 @@ VNC server running on 127.0.0.1:5900
 &lt;li&gt;&lt;a href=&#34;https://github.com/KipJiang/hugo-theme-even&#34;&gt;hugo-theme-even&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This one is similar to the blog &lt;a href=&#34;https://nusr.github.io/&#34;&gt;Brave New World&lt;/a&gt; of &lt;a href=&#34;https://github.com/nusr&#34;&gt;Steve Xu&lt;/a&gt;.&lt;/p&gt;
-- https://kipjiang.github.io/about/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+- https://rainerchiang.github.io/about/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
         </item>
     
     
     
         <item>
         <title>Working With Ubuntu (2)</title>
-        <link>https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</link>
+        <link>https://rainerchiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</link>
         <pubDate>Thu, 20 Feb 2020 12:23:43 +0800</pubDate>
         
-        <guid>https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</guid>
-        <description>Kip Jiang https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/ -&lt;blockquote&gt;
+        <guid>https://rainerchiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</guid>
+        <description>Kip Jiang https://rainerchiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/ -&lt;blockquote&gt;
 &lt;p&gt;如何在 Ubuntu 中安装一些开发软件。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;vscode&#34;&gt;VScode&lt;/h2&gt;
@@ -750,18 +750,18 @@ by running conda init? &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;y
 &lt;/ol&gt;
 &lt;p&gt;重启终端，或者使用命令&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ source ~/.bashrc 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://rainerchiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
         </item>
     
     
     
         <item>
         <title>Working With Ubuntu (1)</title>
-        <link>https://kipjiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</link>
+        <link>https://rainerchiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</link>
         <pubDate>Sat, 15 Feb 2020 09:49:43 +0800</pubDate>
         
-        <guid>https://kipjiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</guid>
-        <description>Kip Jiang https://kipjiang.github.io/note/2020/02/15/working-with-ubuntu-1st/ -&lt;blockquote&gt;
+        <guid>https://rainerchiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</guid>
+        <description>Kip Jiang https://rainerchiang.github.io/note/2020/02/15/working-with-ubuntu-1st/ -&lt;blockquote&gt;
 &lt;p&gt;如何在 Ubuntu 中安装一些开发软件。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;v2ray&#34;&gt;v2ray&lt;/h2&gt;
@@ -857,18 +857,18 @@ $ sudo su
 &lt;a href=&#34;https://toutyrater.github.io/&#34;&gt;V2Ray 配置指南&lt;/a&gt; (需代理)&lt;br&gt;
 &lt;a href=&#34;https://yuan.ga/v2ray-complete-tutorial/&#34;&gt;V2Ray完全使用教程&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.imcaviare.com/201812181245/&#34;&gt;Linux下使用V2ray客户端以及PAC配置&lt;/a&gt;&lt;/p&gt;
-- https://kipjiang.github.io/note/2020/02/15/working-with-ubuntu-1st/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+- https://rainerchiang.github.io/note/2020/02/15/working-with-ubuntu-1st/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
         </item>
     
     
     
         <item>
         <title>Visual Studio Code: Remote-SSH</title>
-        <link>https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/</link>
+        <link>https://rainerchiang.github.io/note/2019/11/07/vscode-remote-ssh/</link>
         <pubDate>Thu, 07 Nov 2019 12:25:16 +0800</pubDate>
         
-        <guid>https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/</guid>
-        <description>Kip Jiang https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/ -&lt;ol&gt;
+        <guid>https://rainerchiang.github.io/note/2019/11/07/vscode-remote-ssh/</guid>
+        <description>Kip Jiang https://rainerchiang.github.io/note/2019/11/07/vscode-remote-ssh/ -&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;第一步当然是先在 VSCode 中安装 &lt;code&gt;Remote-SSH&lt;/code&gt; 扩展啦&lt;/p&gt;
 &lt;/li&gt;
@@ -892,18 +892,18 @@ $ chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;600&lt;/span&gt; authorized_ke
     &lt;span style=&#34;color:#a6e22e&#34;&gt;Port remote-port&lt;/span&gt;
     &lt;span style=&#34;color:#a6e22e&#34;&gt;User user-name-to-sign-in&lt;/span&gt;
     &lt;span style=&#34;color:#a6e22e&#34;&gt;IdentityFile C:\Users\&amp;lt;UserName&amp;gt;\.ssh\id_rsa&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://rainerchiang.github.io/note/2019/11/07/vscode-remote-ssh/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
         </item>
     
     
     
         <item>
         <title>Display Git Branch Name in Bash</title>
-        <link>https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</link>
+        <link>https://rainerchiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</link>
         <pubDate>Thu, 23 May 2019 15:38:03 +0800</pubDate>
         
-        <guid>https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</guid>
-        <description>Kip Jiang https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/ -&lt;h2 id=&#34;first&#34;&gt;First&lt;/h2&gt;
+        <guid>https://rainerchiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</guid>
+        <description>Kip Jiang https://rainerchiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/ -&lt;h2 id=&#34;first&#34;&gt;First&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;将脚本下载到 Home 目录&lt;/li&gt;
 &lt;/ol&gt;
@@ -926,9 +926,9 @@ $ mv ~/git-aware-prompt ~/.git-aware-prompt
 &lt;li&gt;效果&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Ubuntu&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://kipjiang.github.io/img/2019-05-23/ubuntu-git-color.png&#34; alt=&#34;ubuntu-git-color&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://rainerchiang.github.io/img/2019-05-23/ubuntu-git-color.png&#34; alt=&#34;ubuntu-git-color&#34;&gt;&lt;/p&gt;
 &lt;p&gt;CentOS&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://kipjiang.github.io/img/2019-05-23/centos-git-color.png&#34; alt=&#34;centos-git&amp;ndash;color&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://rainerchiang.github.io/img/2019-05-23/centos-git-color.png&#34; alt=&#34;centos-git&amp;ndash;color&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;second&#34;&gt;Second&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;编辑 &lt;code&gt;~/.bashrc&lt;/code&gt;，添加如下内容&lt;/li&gt;
@@ -962,7 +962,7 @@ $ mv ~/git-aware-prompt ~/.git-aware-prompt
 &lt;li&gt;使配置生效&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ source ~/.profile
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://rainerchiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
         </item>
     
     
