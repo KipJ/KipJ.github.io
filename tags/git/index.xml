@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Git on Kip Jiang</title>
+    <title>Git on Rainer Chiang</title>
     <link>https://rainerchiang.github.io/tags/git/</link>
-    <description>Recent content in Git on Kip Jiang</description>
+    <description>Recent content in Git on Rainer Chiang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
+    <copyright>2019-2020 &amp;#183; [Rainer Chiang](/)</copyright>
     <lastBuildDate>Thu, 23 May 2019 15:38:03 +0800</lastBuildDate>
     
 	<atom:link href="https://rainerchiang.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
