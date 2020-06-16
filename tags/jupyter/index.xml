@@ -2,21 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jupyter on Kip Jiang</title>
-    <link>https://KipJiang.github.io/tags/jupyter/</link>
+    <link>https://kipjiang.github.io/tags/jupyter/</link>
     <description>Recent content in Jupyter on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
     <lastBuildDate>Tue, 31 Mar 2020 21:29:36 +0800</lastBuildDate>
     
-	<atom:link href="https://KipJiang.github.io/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kipjiang.github.io/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jupyter Notebook on Remote Server</title>
-      <link>https://KipJiang.github.io/note/2020/03/31/remote-jupyter-notebook/</link>
+      <link>https://kipjiang.github.io/note/2020/03/31/remote-jupyter-notebook/</link>
       <pubDate>Tue, 31 Mar 2020 21:29:36 +0800</pubDate>
       
-      <guid>https://KipJiang.github.io/note/2020/03/31/remote-jupyter-notebook/</guid>
+      <guid>https://kipjiang.github.io/note/2020/03/31/remote-jupyter-notebook/</guid>
       <description>Install miniconda 参考 Working With Ubuntu (2)
 Configure Jypyter  Note: 通过 ssh 远程链接到服务器操作。
   安装 jupyter notebook  $ conda install jupyter notebook  生成配置文件  $ jupyter notebook --generate-config Writing default config to: /home/kip/.jupyter/jupyter_notebook_config.py  通过 ipython 生成密码的 Hash  $ ipython Python 3.6.9 |Anaconda, Inc.| (default, Mar 31 2020, 19:07:31) Type &amp;#39;copyright&amp;#39;, &amp;#39;credits&amp;#39; or &amp;#39;license&amp;#39; for more information IPython 7.7.0 -- An enhanced Interactive Python. Type &amp;#39;?</description>

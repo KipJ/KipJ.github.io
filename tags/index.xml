@@ -2,75 +2,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kip Jiang</title>
-    <link>https://KipJiang.github.io/tags/</link>
+    <link>https://kipjiang.github.io/tags/</link>
     <description>Recent content in Tags on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
     <lastBuildDate>Tue, 31 Mar 2020 21:29:36 +0800</lastBuildDate>
     
-	<atom:link href="https://KipJiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kipjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jupyter</title>
-      <link>https://KipJiang.github.io/tags/jupyter/</link>
+      <link>https://kipjiang.github.io/tags/jupyter/</link>
       <pubDate>Tue, 31 Mar 2020 21:29:36 +0800</pubDate>
       
-      <guid>https://KipJiang.github.io/tags/jupyter/</guid>
+      <guid>https://kipjiang.github.io/tags/jupyter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ubuntu</title>
-      <link>https://KipJiang.github.io/tags/ubuntu/</link>
+      <link>https://kipjiang.github.io/tags/ubuntu/</link>
       <pubDate>Fri, 27 Mar 2020 19:33:47 +0800</pubDate>
       
-      <guid>https://KipJiang.github.io/tags/ubuntu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Theme</title>
-      <link>https://KipJiang.github.io/tags/theme/</link>
-      <pubDate>Sun, 22 Mar 2020 21:49:29 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/tags/theme/</guid>
+      <guid>https://kipjiang.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vTPM</title>
-      <link>https://KipJiang.github.io/tags/vtpm/</link>
+      <link>https://kipjiang.github.io/tags/vtpm/</link>
       <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
       
-      <guid>https://KipJiang.github.io/tags/vtpm/</guid>
+      <guid>https://kipjiang.github.io/tags/vtpm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme</title>
+      <link>https://kipjiang.github.io/tags/theme/</link>
+      <pubDate>Sat, 07 Mar 2020 21:49:29 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/tags/theme/</guid>
       <description></description>
     </item>
     
     <item>
       <title>v2ray</title>
-      <link>https://KipJiang.github.io/tags/v2ray/</link>
+      <link>https://kipjiang.github.io/tags/v2ray/</link>
       <pubDate>Sat, 15 Feb 2020 09:49:43 +0800</pubDate>
       
-      <guid>https://KipJiang.github.io/tags/v2ray/</guid>
+      <guid>https://kipjiang.github.io/tags/v2ray/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vscode</title>
-      <link>https://KipJiang.github.io/tags/vscode/</link>
+      <link>https://kipjiang.github.io/tags/vscode/</link>
       <pubDate>Thu, 07 Nov 2019 12:25:16 +0800</pubDate>
       
-      <guid>https://KipJiang.github.io/tags/vscode/</guid>
+      <guid>https://kipjiang.github.io/tags/vscode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git</title>
-      <link>https://KipJiang.github.io/tags/git/</link>
+      <link>https://kipjiang.github.io/tags/git/</link>
       <pubDate>Thu, 23 May 2019 15:38:03 +0800</pubDate>
       
-      <guid>https://KipJiang.github.io/tags/git/</guid>
+      <guid>https://kipjiang.github.io/tags/git/</guid>
       <description></description>
     </item>
     

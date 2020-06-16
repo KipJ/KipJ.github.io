@@ -1,131 +1,970 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Kip Jiang</title>
-    <link>https://KipJiang.github.io/</link>
-    <description>Recent content in Home on Kip Jiang</description>
+    <title>Kip Jiang</title>
+    <link>https://kipjiang.github.io/</link>
+    <description>Recent content on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Mar 2019 01:01:52 +0800</lastBuildDate>
+    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
+    <lastBuildDate>Tue, 31 Mar 2020 21:29:36 +0800</lastBuildDate>
     
-	<atom:link href="https://KipJiang.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://kipjiang.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Jupyter Notebook on Remote Server</title>
-      <link>https://KipJiang.github.io/note/2020/03/31/remote-jupyter-notebook/</link>
-      <pubDate>Tue, 31 Mar 2020 21:29:36 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/note/2020/03/31/remote-jupyter-notebook/</guid>
-      <description>Install miniconda 参考 Working With Ubuntu (2)
-Configure Jypyter  Note: 通过 ssh 远程链接到服务器操作。
-  安装 jupyter notebook  $ conda install jupyter notebook  生成配置文件  $ jupyter notebook --generate-config Writing default config to: /home/kip/.jupyter/jupyter_notebook_config.py  通过 ipython 生成密码的 Hash  $ ipython Python 3.6.9 |Anaconda, Inc.| (default, Mar 31 2020, 19:07:31) Type &amp;#39;copyright&amp;#39;, &amp;#39;credits&amp;#39; or &amp;#39;license&amp;#39; for more information IPython 7.7.0 -- An enhanced Interactive Python. Type &amp;#39;?</description>
-    </item>
     
-    <item>
-      <title>Working With Ubuntu (3)</title>
-      <link>https://KipJiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</link>
-      <pubDate>Fri, 27 Mar 2020 19:33:47 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</guid>
-      <description>如何在 Ubuntu 中安装一些日常使用的软件。
- Browser Firefox Ubuntu 自带的 Firefox 的账号服务属于国际区，如果你之前是通过 Windows 安装的中文版 Firefox 并注册的账号，在从 Ubuntu 中登录会提示你账号不存在。
-你可以注册使用国际区的账号；也可以通过使用中文版的 Firefox 可执行文件替换 Ubuntu 默认的版本，从而达到登录中国区账号的目的。
-下面讲讲如何替换为中国区 Firefox。
- 下载中国区 localized Firefox  点击 https://www.firefox.com.cn/download/，选择 「下载其他语言版本」 下载。
-替换可执行文件  将 /usr/lib 下的默认版本的 Firefox 备份
-# mv /usr/lib/firefox /usr/lib/firefox_bak 将下载的 localized 版解压，替换默认版本
-# tar -jxvf firefox-latest-x86_64.tar.bz2 # mv firefox/ /usr/lib/ 添加启动图标  但是，经上述操作后我们并不能从 「Favorites」中的图标启动 Firefox，需要将默认版本中的启动脚本拷贝过来
-# cp /usr/lib/firefox_bak/firefox.sh /usr/lib/firefox 这时，我们就可以点击图标，启动 Firefox 了。
-Chrome 有两种安装方式：（1）通过设置 apt 源的方式安装；（2）直接下载 .</description>
-    </item>
+        <item>
+        <title>Jupyter Notebook on Remote Server</title>
+        <link>https://kipjiang.github.io/note/2020/03/31/remote-jupyter-notebook/</link>
+        <pubDate>Tue, 31 Mar 2020 21:29:36 +0800</pubDate>
+        
+        <guid>https://kipjiang.github.io/note/2020/03/31/remote-jupyter-notebook/</guid>
+        <description>Kip Jiang https://kipjiang.github.io/note/2020/03/31/remote-jupyter-notebook/ -&lt;h2 id=&#34;install-miniconda&#34;&gt;Install miniconda&lt;/h2&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/#miniconda&#34;&gt;Working With Ubuntu (2)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;configure-jypyter&#34;&gt;Configure Jypyter&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 通过 &lt;code&gt;ssh&lt;/code&gt; 远程链接到服务器操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;安装 &lt;code&gt;jupyter notebook&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ conda install jupyter notebook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;生成配置文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ jupyter notebook --generate-config
+Writing default config to: /home/kip/.jupyter/jupyter_notebook_config.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;通过 &lt;code&gt;ipython&lt;/code&gt; 生成密码的 Hash&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ ipython
+Python 3.6.9 |Anaconda, Inc.| &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;default, Mar &lt;span style=&#34;color:#ae81ff&#34;&gt;31&lt;/span&gt; 2020, 19:07:31&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; 
+Type &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;copyright&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;credits&amp;#39;&lt;/span&gt; or &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;license&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; more information
+IPython 7.7.0 -- An enhanced Interactive Python. Type &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;?&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; help.
+
+In &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: from notebook.auth import passwd
+
+In &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;2&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: passwd&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
+Enter password: 
+Verify password: 
+Out&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;2&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;sha1:9df4178e51d1:6ea6f2567edf49ffdf216fb20fe424dc4329a924&amp;#39;&lt;/span&gt;
+
+In &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;3&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: quit&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;编辑配置文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ vim /home/kip/.jupyter/jupyter_notebook_config.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# configuration manully&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;c.NotebookApp.ip&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;c.NotebookApp.password&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;u&amp;#39;sha1:9df4178e51d1:6ea6f2567edf49ffdf216fb20fe424dc4329a924&amp;#39; # 你的 Hash&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;c.NotebookApp.open_browser&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;False # 禁止自动打开浏览器&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;c.NotebookApp.port&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;8888 # 随意指定一个端口&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中 &lt;code&gt;c.NotebookApp.password&lt;/code&gt; 的 Hash 值就是刚才使用 &lt;code&gt;ipython&lt;/code&gt; 生成的 Hash。&lt;/p&gt;
+&lt;h2 id=&#34;configure-firewall&#34;&gt;Configure Firewall&lt;/h2&gt;
+&lt;p&gt;经上述配置，我们在本地浏览器中输入 &lt;code&gt;server_ip:8888&lt;/code&gt; 还不能成功连接，因为防火墙还没将端口 8888 开放出来。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开放端口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo firewall-cmd --zone&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;public --add-port&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;8888/tcp --permanent
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中 &lt;code&gt;--permannet&lt;/code&gt; 表示永久有效，不会因为重启主机而失效。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重启防火墙，使规则生效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo firewall-cmd --reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过命令 &lt;code&gt;firewall-cmd --list-all&lt;/code&gt; 查看规则信息，即：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt; $ sudo firewall-cmd --list-all
+public &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;active&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+  target: default
+  icmp-block-inversion: no
+  interfaces: ******
+  sources: 
+  services: ssh dhcpv6-client
+  ports: 8888/tcp
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;本地浏览器打开&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在本地浏览器中输入 &lt;code&gt;server_ip:8888&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kipjiang.github.io/img/2020-06-05/jupyter_notebook_login.png&#34; alt=&#34;jupyter-remote&#34;&gt;&lt;/p&gt;
+&lt;p&gt;再输入之前设置的密码即可。&lt;/p&gt;
+&lt;h2 id=&#34;using-notebook-without-permanent-configuration&#34;&gt;Using notebook without permanent configuration&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;也可以不生成配置文件，直接在命令行打开。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装好 &lt;code&gt;jupyter notebook&lt;/code&gt; 后，运行命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ jupyter notebook --no-browser --port&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;8888&lt;/span&gt; --ip&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0.0.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中 &lt;code&gt;--ip=0.0.0.0&lt;/code&gt; 表示 &lt;code&gt;jupyter notebook&lt;/code&gt; 侦听所有的 IP 地址。&lt;/p&gt;
+&lt;p&gt;但这也需要配置防火墙，开放 8888 端口。&lt;/p&gt;
+- https://kipjiang.github.io/note/2020/03/31/remote-jupyter-notebook/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+        </item>
     
-    <item>
-      <title>Hello Hugo</title>
-      <link>https://KipJiang.github.io/post/2020/03/22/hello-hugo/</link>
-      <pubDate>Sun, 22 Mar 2020 21:49:29 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/post/2020/03/22/hello-hugo/</guid>
-      <description>Hello my Blog 以前折腾过其他静态主页的生成器，像 hexo 和 Jekyll 等，都用来建过站点，但是从来没有正经写过文章。
-这段时间，使用 Hugo，参考 YihuiXie 和 山羊博客，通过移植 hugo-ivy，也写了一个 hugo 的主题 hugo-theme-OneSentence。
-感觉到现在为止，已经基本满足我的需求了。</description>
-    </item>
     
-    <item>
-      <title>Create Virtual Machine With vTPM in Ubuntu</title>
-      <link>https://KipJiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
-      <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
-      <description>Reference Paper
-Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.
-Environment
- Host: Ubuntu 18.04 Guest: Ubuntu 14.04  Source Code
- seabios-tpm 2. libtpms 3. swtpm 4. qemu-tpm  Tree of Path
-kip └── workspace ├── libtpms ├── qemu-tpm ├── seabios ├── swtpm └── test  SeaBIOS SeaBIOS 包含 vTPM 支持的分支 seabios-tpm 最开始由 Stefan 维护，现在已经成功将其合并到主分支 SeaBIOS。因此，下面的实验中我们使用其主分支。</description>
-    </item>
     
-    <item>
-      <title>Working With Ubuntu (2)</title>
-      <link>https://KipJiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</link>
-      <pubDate>Thu, 20 Feb 2020 12:23:43 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</guid>
-      <description>如何在 Ubuntu 中安装一些开发软件。
- VScode  VSCode 的安装非常简单  $ sudo snap install --classic code code a622c65b from Visual Studio Code (vscode✓) installed 打开  $ code Sublime Text 3 Reference：Linux Package Manager Repositories
- Install the GPG key:  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - Ensure apt is set up to work with https sources:  sudo apt-get install apt-transport-https Select the channel to use:  Stable</description>
-    </item>
+        <item>
+        <title>Working With Ubuntu (3)</title>
+        <link>https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</link>
+        <pubDate>Fri, 27 Mar 2020 19:33:47 +0800</pubDate>
+        
+        <guid>https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</guid>
+        <description>Kip Jiang https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/ -&lt;blockquote&gt;
+&lt;p&gt;如何在 Ubuntu 中安装一些日常使用的软件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;browser&#34;&gt;Browser&lt;/h2&gt;
+&lt;h3 id=&#34;firefox&#34;&gt;Firefox&lt;/h3&gt;
+&lt;p&gt;Ubuntu 自带的 Firefox 的账号服务属于国际区，如果你之前是通过 Windows 安装的中文版 Firefox 并注册的账号，在从 Ubuntu 中登录会提示你账号不存在。&lt;/p&gt;
+&lt;p&gt;你可以注册使用国际区的账号；也可以通过使用中文版的 Firefox 可执行文件替换 Ubuntu 默认的版本，从而达到登录中国区账号的目的。&lt;/p&gt;
+&lt;p&gt;下面讲讲如何替换为中国区 Firefox。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载中国区 localized Firefox&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;点击 &lt;a href=&#34;https://www.firefox.com.cn/download/&#34;&gt;https://www.firefox.com.cn/download/&lt;/a&gt;，选择 「下载其他语言版本」 下载。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;替换可执行文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将 &lt;code&gt;/usr/lib&lt;/code&gt; 下的默认版本的 Firefox 备份&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# mv /usr/lib/firefox /usr/lib/firefox_bak&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将下载的 localized 版解压，替换默认版本&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# tar -jxvf firefox-latest-x86_64.tar.bz2&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# mv firefox/ /usr/lib/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;添加启动图标&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;但是，经上述操作后我们并不能从 「Favorites」中的图标启动 Firefox，需要将默认版本中的启动脚本拷贝过来&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# cp /usr/lib/firefox_bak/firefox.sh /usr/lib/firefox&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这时，我们就可以点击图标，启动 Firefox 了。&lt;/p&gt;
+&lt;h3 id=&#34;chrome&#34;&gt;Chrome&lt;/h3&gt;
+&lt;p&gt;有两种安装方式：（1）通过设置 &lt;code&gt;apt&lt;/code&gt; 源的方式安装；（2）直接下载 &lt;code&gt;.deb&lt;/code&gt; 文件本地安装。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 这两种方式默认已经设置好代理。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;源方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;添加 Key&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;添加源信息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main&amp;#39;&lt;/span&gt; | sudo tee /etc/apt/sources.list.d/google-chrome.list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;更新并安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo apt-get update 
+$ sudo apt-get install google-chrome-stable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;本地安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;下载 &lt;code&gt;.deb&lt;/code&gt; 文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;参考文章 &lt;a href=&#34;https://www.omgubuntu.co.uk/how-to-install-google-chrome-on-ubuntu&#34;&gt;How to Install Google Chrome in Ubuntu&lt;/a&gt;。这里直接点击下载链接 &lt;a href=&#34;https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb&#34;&gt;google-chrome-stable_current_amd64.deb&lt;/a&gt; 下载，或着执行命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo dpkg -i google-chrome-stable_current_amd64.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;卸载&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo dpkg -r google-chrome-stable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或者&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo dpkg -P google-chrome-stable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;some-useful-software&#34;&gt;Some Useful Software&lt;/h2&gt;
+&lt;h3 id=&#34;nutstore&#34;&gt;Nutstore&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;下载&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;点击 &lt;a href=&#34;https://www.jianguoyun.com/s/downloads&#34;&gt;downloads&lt;/a&gt;。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo dpkg -i nautilus-nutstore_amd64.deb
+$ sudo apt-get install -f
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 坚果云的账号名对大小写是敏感的，在登录时需注意。&lt;/p&gt;
+&lt;h3 id=&#34;cloud-note&#34;&gt;Cloud Note&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;印象笔记、有道云笔记都没有 Linux 版，只能通过网页使用，不是很方便。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以直接在 Ubuntu 软件中心安装 &lt;a href=&#34;https://simplenote.com/&#34;&gt;SimpleNote&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这是一个跨平台的云笔记软件，支持 iOS, Android, macOS, Windows 和 Linux。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;也可以下载 &lt;a href=&#34;https://www.wiz.cn/wiznote-linux.html&#34;&gt;为知笔记 Linux 版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 为知笔记有试用期，使用完后需要付费。&lt;/p&gt;
+&lt;p&gt;为知笔记的 Linux 版是通过 AppImage 打包的免安装版。因此，只需下载后，通过鼠标右键，修改文件属性，赋予可运权限，运行即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kipjiang.github.io/img/2020-03-27/wiz-note.png&#34; alt=&#34;wiz&#34;&gt;&lt;/p&gt;
+&lt;p&gt;另，按如下步骤给为知笔记在 Linux 中添加启动图标。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;进入目录 &lt;code&gt;/usr/share/applications/&lt;/code&gt;，创建配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo vim wiznote.desktop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;[Desktop Entry]&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;wiznote&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Name[zh_CN]&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;为知笔记&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Comment&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;wiznote&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Comment[zh_CN]&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;为知笔记&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Exec&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/home/kip/Downloads/WizNote-2.7.9-x86_64-ubuntu-18.04.AppImage&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Icon&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/home/kip/.wiznote/icons/wiznote_76x76.png&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Terminal&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;false&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Application&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Categories&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Application;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Encoding&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;UTF-8&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;StartupNotify&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中的 icon，可以从官网上 &lt;a href=&#34;https://wcdn.wiz.cn/apple-icon.png&#34;&gt;获取&lt;/a&gt;，然后放在 wiznote 的配置文件路径下。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;配置完成后，进入 Launcher 启动器，搜索名字便能显示程序图标了，然后右键添加到侧边栏即可。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;sougou-pinyin&#34;&gt;Sougou Pinyin&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;下载&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;点击 &lt;a href=&#34;https://pinyin.sogou.com/linux/?r=pinyin&#34;&gt;搜狗输入法 for linux&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://pinyin.sogou.com/linux/help.php&#34;&gt;搜狗输入法 for linux 安装指南&lt;/a&gt;，需要先将输入法框架切换为 Fcitx。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo dpkg -i sogoupinyin_2.3.1.0112_amd64.deb
+$ sudo apt-get install -f
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://wiki.ubuntu.org.cn/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95&#34;&gt;Read More About &lt;em&gt;chinese input method&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;wps&#34;&gt;WPS&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;下载&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.wps.cn/product/wpslinux&#34;&gt;WPS Office 2019 for Linux Download&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo dpkg -i wps-office_11.1.0.9080_amd64.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;netease-cloud-music&#34;&gt;Netease Cloud Music&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;下载&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://music.163.com/#/download&#34;&gt;网易云音乐下载&lt;/a&gt;，网页右上角，点击 &amp;ldquo;下载全部客户端&amp;rdquo;，选择下载 Linux 版。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo dpkg -i netease-cloud-music_1.2.1_amd64_ubuntu_20190428.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;typora&#34;&gt;Typora&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# add Key&lt;/span&gt;
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+&lt;span style=&#34;color:#75715e&#34;&gt;# add Typora&amp;#39;s repository&lt;/span&gt;
+sudo add-apt-repository &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;deb https://typora.io/linux ./&amp;#39;&lt;/span&gt;
+sudo apt-get update
+&lt;span style=&#34;color:#75715e&#34;&gt;# install typora&lt;/span&gt;
+sudo apt-get install typora
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;issues&#34;&gt;Issues&lt;/h2&gt;
+&lt;h3 id=&#34;disable-suspend&#34;&gt;disable suspend&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo vim /etc/systemd/logind.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;HandleLidSwitch&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;suspend --&amp;gt; HandleLidSwitch=ignore&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ruijie-vs-vmware&#34;&gt;ruijie V.S. VMware&lt;/h3&gt;
+&lt;p&gt;校园网下启动 VMware 报错：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Client Prompt:
+    You install multi-NIC, please make all non-authentication ad
+    apters disable, and &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; authentication.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打开 VMware 的虚拟网络编辑器，关掉 VMnet8 的主机连接。&lt;/p&gt;
+- https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+        </item>
     
-    <item>
-      <title>Working With Ubuntu (1)</title>
-      <link>https://KipJiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</link>
-      <pubDate>Sat, 15 Feb 2020 09:49:43 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</guid>
-      <description>如何在 Ubuntu 中安装一些开发软件。
- v2ray  下载并安装 v2ray 脚本  v2ray-core/release
-下载最新版的 v2ray Linux 压缩包，并通过脚本在本地安装
-$ curl https://github.com/v2ray/v2ray-core/releases/download/v4.22.1/v2ray-linux-64.zip $ curl -L -s https://install.direct/go.sh -o go.sh $ sudo su # bash go.sh --local ./v2ray-linux-64.zip 配置 Server  首先，你得有一台在境外的 VPS &amp;hellip;&amp;hellip;
-配置 Client  编辑配置文件：
-# vim /etc/v2ray/config.json 按如下示例配置：
-{ &amp;#34;inbounds&amp;#34;: [{ &amp;#34;port&amp;#34;: 1080, &amp;#34;listen&amp;#34;: &amp;#34;127.0.0.1&amp;#34;, &amp;#34;protocol&amp;#34;: &amp;#34;socks&amp;#34;, &amp;#34;tag&amp;#34;: &amp;#34;socks-inbound&amp;#34;, &amp;#34;settings&amp;#34;: { &amp;#34;auth&amp;#34;: &amp;#34;noauth&amp;#34;, &amp;#34;udp&amp;#34;: true, &amp;#34;ip&amp;#34;: &amp;#34;127.0.0.1&amp;#34; }, &amp;#34;sniffing&amp;#34;: { &amp;#34;enbale&amp;#34;: true, &amp;#34;destOverride&amp;#34;: [ &amp;#34;http&amp;#34;, &amp;#34;tls&amp;#34; ] } }], &amp;#34;outbounds&amp;#34;: [{ &amp;#34;protocol&amp;#34;: &amp;#34;vmess&amp;#34;, &amp;#34;settings&amp;#34;: { &amp;#34;vnext&amp;#34;: [{ &amp;#34;address&amp;#34;: &amp;#34;**.</description>
-    </item>
     
-    <item>
-      <title>Visual Studio Code: Remote-SSH</title>
-      <link>https://KipJiang.github.io/note/2019/11/07/vscode-remote-ssh/</link>
-      <pubDate>Thu, 07 Nov 2019 12:25:16 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/note/2019/11/07/vscode-remote-ssh/</guid>
-      <description>  第一步当然是先在 VSCode 中安装 Remote-SSH 扩展啦
-  通过 WSL 生成公私钥对
-  $ ssh-keygen -t rsa -b 4096 通过 ssh 登录服务器，将生成的公钥文件的副本 id_rsa.tmp.pub 复制到路径 ~/.ssh/ 下，执行命令  $ cat id_rsa.tmp.pub &amp;gt;&amp;gt; authorized_keys $ chmod 600 authorized_keys Note：必须执行 chmod 600 authorized_keys 命令
-配置本地的 VSCode  编辑文件 C:\Users\&amp;lt;UserName&amp;gt;\.ssh\config，按如下格式配置：
-Host arbitrary-name-you-like HostName remote-host-ip Port remote-port User user-name-to-sign-in IdentityFile C:\Users\&amp;lt;UserName&amp;gt;\.ssh\id_rsa </description>
-    </item>
     
-    <item>
-      <title>Display Git Branch Name in Bash</title>
-      <link>https://KipJiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</link>
-      <pubDate>Thu, 23 May 2019 15:38:03 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</guid>
-      <description>First  将脚本下载到 Home 目录  $ git clone https://github.com/KipJiang/git-aware-prompt.git ~/git-aware-prompt $ mv ~/git-aware-prompt ~/.git-aware-prompt 修改配置文件 .bashrc  $ vim ~/.bashrc 添加如下内容
-# source .git-aware-prompt export PS1=&amp;#34;\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ &amp;#34; export GITAWAREPROMPT=~/.git-aware-prompt source &amp;#34;${GITAWAREPROMPT}/main.sh&amp;#34; 使配置生效  $ source ~/.bashrc 效果  Ubuntu
-CentOS
-Second  编辑 ~/.bashrc，添加如下内容  # git branch function function git_branch { branch=&amp;#34;`git branch 2&amp;gt;/dev/null | grep &amp;#34;^\*&amp;#34; | sed -e &amp;#34;s/^\*\ //&amp;#34;`&amp;#34; if [ &amp;#34;${branch}&amp;#34; != &amp;#34;&amp;#34; ];then if [ &amp;#34;${branch}&amp;#34; = &amp;#34;(no branch)&amp;#34; ];then branch=&amp;#34;(`git rev-parse --short HEAD`.</description>
-    </item>
+        <item>
+        <title>Create Virtual Machine With vTPM in Ubuntu</title>
+        <link>https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
+        <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
+        
+        <guid>https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
+        <description>Kip Jiang https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/ -&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Reference Paper&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kipjiang.github.io/pdf/Scalable_Attestation-A_Step_toward_Secure_and_Trusted_Clouds_Stefan.pdf&#34;&gt;Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Environment&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Host: &lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/18.04/&#34;&gt;Ubuntu 18.04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Guest: &lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/14.04/&#34;&gt;Ubuntu 14.04&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Source Code&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/stefanberger/seabios-tpm&#34;&gt;seabios-tpm&lt;/a&gt; 2. &lt;a href=&#34;https://github.com/stefanberger/libtpms&#34;&gt;libtpms&lt;/a&gt; 3. &lt;a href=&#34;https://github.com/stefanberger/swtpm&#34;&gt;swtpm&lt;/a&gt; 4. &lt;a href=&#34;https://github.com/stefanberger/qemu-tpm&#34;&gt;qemu-tpm&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Tree of Path&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;kip
+└── workspace  
+  ├── libtpms  
+  ├── qemu-tpm  
+  ├── seabios  
+  ├── swtpm  
+  └── test
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;h1 id=&#34;seabios&#34;&gt;SeaBIOS&lt;/h1&gt;
+&lt;p&gt;SeaBIOS 包含 vTPM 支持的分支 &lt;a href=&#34;https://github.com/stefanberger/seabios-tpm&#34;&gt;seabios-tpm&lt;/a&gt; 最开始由 &lt;a href=&#34;https://github.com/stefanberger&#34;&gt;Stefan&lt;/a&gt; 维护，现在已经成功将其合并到主分支 &lt;a href=&#34;https://seabios.org/SeaBIOS&#34;&gt;SeaBIOS&lt;/a&gt;。因此，下面的实验中我们使用其主分支。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ mkdir workspace
+$ cd workspace
+$ git clone https://git.seabios.org/seabios.git
+$ cd seabios
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;编译&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo apt install python2
+$ make
+Building ld scripts
+Version: rel-1.13.0-5-g7655185
+Fixed space: 0xe05b-0x10000  total: &lt;span style=&#34;color:#ae81ff&#34;&gt;8101&lt;/span&gt;  slack: &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;  Percent slack: 0.1%
+16bit size:           &lt;span style=&#34;color:#ae81ff&#34;&gt;37920&lt;/span&gt;
+32bit segmented size: &lt;span style=&#34;color:#ae81ff&#34;&gt;2194&lt;/span&gt;
+32bit flat size:      &lt;span style=&#34;color:#ae81ff&#34;&gt;39854&lt;/span&gt;
+32bit flat init size: &lt;span style=&#34;color:#ae81ff&#34;&gt;83168&lt;/span&gt;
+Lowmem size:          &lt;span style=&#34;color:#ae81ff&#34;&gt;2240&lt;/span&gt;
+f-segment var size:   &lt;span style=&#34;color:#ae81ff&#34;&gt;1248&lt;/span&gt;
+  Linking out/rom16.o
+  Stripping out/rom16.strip.o
+  Linking out/rom32seg.o
+  Stripping out/rom32seg.strip.o
+  Linking out/rom.o
+  Prepping out/bios.bin.prep
+Total size: &lt;span style=&#34;color:#ae81ff&#34;&gt;172352&lt;/span&gt;  Fixed: &lt;span style=&#34;color:#ae81ff&#34;&gt;81216&lt;/span&gt;  Free: &lt;span style=&#34;color:#ae81ff&#34;&gt;89792&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;used 65.7% of 256KiB rom&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+  Creating out/bios.bin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;libtpms&#34;&gt;libtpms&lt;/h1&gt;
+&lt;p&gt;libtpms 是对 &lt;a href=&#34;https://trustedcomputinggroup.org/&#34;&gt;TCG(Trusted Computing Group)&lt;/a&gt; 发布的可信平台模块（TPM，&lt;a href=&#34;https://en.wikipedia.org/wiki/Trusted_Platform_Module&#34;&gt;Trusted Platform Module&lt;/a&gt;）标准 &lt;a href=&#34;https://trustedcomputinggroup.org/resource/tpm-main-specification/&#34;&gt;TPM1.2 Main Specification&lt;/a&gt; 和 &lt;a href=&#34;https://trustedcomputinggroup.org/resource/tpm-library-specification/&#34;&gt;TPM 2.0 Library Specification&lt;/a&gt; 及 &lt;a href=&#34;https://trustedcomputinggroup.org/specifications-public-review/&#34;&gt;TPM2.0 Specifications in Public Review&lt;/a&gt; 的软件模拟库，在 Linux 上以 「shared object (dynamic) library」 的形式存在，即：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;kip@ubu:/usr/lib/x86_64-linux-gnu $ ls -hl | grep libtpms
+lrwxrwxrwx  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root    &lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;2019&lt;/span&gt; libtpms.so -&amp;gt; libtpms.so.0.8.0
+lrwxrwxrwx  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root    &lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;2019&lt;/span&gt; libtpms.so.0 -&amp;gt; libtpms.so.0.8.0
+-rw-r--r--  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root  883K Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;2019&lt;/span&gt; libtpms.so.0.8.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;安装依赖&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ git clone https://github.com/stefanberger/libtpms.git
+$ cd libtpms
+$ sudo apt-get -y install automake autoconf libtool gcc build-essential libssl-dev dh-exec pkg-config gawk
+$ ./autogen.sh --with-openssl --with-tpm2
+&amp;lt;snip&amp;gt;
+CFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;-g -O2 -DUSE_OPENSSL_FUNCTIONS_SYMMETRIC&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; -DUSE_OPENSSL_FUNCTIONS_EC&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; -DUSE_OPENSSL_FUNCTIONS_ECDSA&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; -DUSE_OPENSSL_FUNCTIONS_RSA&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;  -Wall -Werror -Wreturn-type -Wsign-compare -Wno-self-assign
+HARDENING_CFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;-fstack-protector-strong 
+HARDENING_LDFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; -Wl,-z,relro  -Wl,-z,now 
+LDFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 
+
+Version to build        : 0.8.0
+Crypto library          : openssl
+Debug build             : no
+With TPM2 support       : yes
+HAVE_VERSION_SCRIPT     : yes
+Use openssl crypto &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;  : symmetric &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;AES, TDES&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; general elliptic curve &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;EC&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; elliptic curve &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ECDSA&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; RSA
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;生成安装包&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ make dist
+$ dpkg-buildpackage -us -uc -j&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;nproc&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&amp;lt;snip&amp;gt;
+make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;3&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Leaving directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/kip/workspace/libtpms/tests&amp;#39;&lt;/span&gt;
+make  check-TESTS
+make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;3&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Entering directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/kip/workspace/libtpms/tests&amp;#39;&lt;/span&gt;
+make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;4&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Entering directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/kip/workspace/libtpms/tests&amp;#39;&lt;/span&gt;
+PASS: nvram_offsets
+PASS: tpm2_createprimary.sh
+PASS: tpm2_pcr_read.sh
+PASS: tpm2_selftest.sh
+PASS: base64decode.sh
+PASS: fuzz.sh
+&lt;span style=&#34;color:#f92672&#34;&gt;============================================================================&lt;/span&gt;
+Testsuite summary &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; libtpms 0.8.0
+&lt;span style=&#34;color:#f92672&#34;&gt;============================================================================&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# TOTAL: 6&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# PASS:  6&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# SKIP:  0&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# XFAIL: 0&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# FAIL:  0&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# XPASS: 0&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# ERROR: 0&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;============================================================================&lt;/span&gt;
+&amp;lt;snip&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行完上述命令，可以看到生成了 &lt;code&gt;.deb&lt;/code&gt; 安装包：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ cd .. &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; ls
+libtpms0_0.8.0~dev1_amd64.deb  libtpms-dev_0.8.0~dev1_amd64.deb  libtpms_0.8.0~dev1.tar.xz  ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;安装 libtpms&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo dpkg -i libtpms0_0.8.0~dev1_amd64.deb   libtpms-dev_0.8.0~dev1_amd64.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;swtpm&#34;&gt;swtpm&lt;/h1&gt;
+&lt;p&gt;swtpm 基于 libtpms 以不同的方式实现对 TPM 的模拟，包括：「passthrough」、「character device」、「socket」和「CUSE」。&lt;/p&gt;
+&lt;p&gt;因此，安装 swtpm 之前，必须先安装 libtpms。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安装依赖&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ git clone https://github.com/stefanberger/swtpm.git
+$ cd swtpm
+$ sudo su
+&lt;span style=&#34;color:#75715e&#34;&gt;# ln -s /dev/null /etc/systemd/system/trousers.service&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# exit&lt;/span&gt;
+$ sudo apt-get -y install  libfuse-dev libglib2.0-dev libgmp-dev expect libtasn1-dev socat tpm-tools python3-twisted gnutls-dev gnutls-bin softhsm2 libseccomp-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;code&gt;trousers&lt;/code&gt; 是 TPM1.2 的依赖软件，&lt;code&gt;tpm-tools&lt;/code&gt; 是 TPM2.0 的依赖软件，Ubuntu 默认安装 &lt;code&gt;tpm-tools&lt;/code&gt; 必须先安装 &lt;code&gt;trousers&lt;/code&gt;。如果你不需要模拟 TPM1.2，这便不是必须的。Stefan 提了 report，不过社区并没有回应。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;生成安装包&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ dpkg-buildpackage -us -uc -j&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;nproc&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&amp;lt;snip&amp;gt;
+make  check-TESTS
+make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;4&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Entering directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/kip/workspace/swtpm/tests&amp;#39;&lt;/span&gt;
+make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;5&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Entering directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/kip/workspace/swtpm/tests&amp;#39;&lt;/span&gt;
+SKIP: test_tpm2_vtpm_proxy
+SKIP: test_vtpm_proxy
+PASS: test_ctrlchannel4
+PASS: test_ctrlchannel3
+PASS: test_tpm2_ctrlchannel2
+PASS: test_ctrlchannel2
+PASS: test_ctrlchannel
+PASS: test_getcap
+PASS: test_hashing
+PASS: test_locality
+PASS: test_encrypted_state
+PASS: test_hashing2
+PASS: test_resume_volatile
+PASS: test_migration_key
+PASS: test_setbuffersize
+PASS: test_save_load_state
+PASS: test_save_load_encrypted_state
+PASS: test_init
+SKIP: test_tpm12
+PASS: test_volatilestate
+PASS: test_print_capabilities
+PASS: test_tpm_probe
+PASS: test_wrongorder
+PASS: test_tpm2_derived_keys
+PASS: test_tpm2_encrypted_state
+PASS: test_tpm2_getcap
+PASS: test_tpm2_locality
+PASS: test_swtpm_bios
+PASS: test_tpm2_hashing
+PASS: test_tpm2_hashing3
+PASS: test_tpm2_resume_volatile
+PASS: test_tpm2_migration_key
+PASS: test_tpm2_hashing2
+SKIP: test_tpm2_save_load_state_3
+PASS: test_tpm2_savestate
+PASS: test_tpm2_init
+PASS: test_tpm2_setbuffersize
+PASS: test_tpm2_wrongorder
+PASS: test_tpm2_volatilestate
+PASS: test_tpm2_probe
+SKIP: test_tpm2_ibmtss2
+PASS: test_commandline
+SKIP: test_parameters
+PASS: test_swtpm_cert
+SKIP: test_tpm2_parameters
+PASS: test_tpm2_samples_swtpm_localca
+SKIP: test_tpm2_samples_swtpm_localca_pkcs11
+PASS: test_tpm2_swtpm_cert
+PASS: test_tpm2_swtpm_cert_ecc
+PASS: test_tpm2_swtpm_setup_create_cert
+SKIP: test_swtpm_setup_create_cert
+SKIP: test_samples_create_tpmca
+PASS: test_tpm2_save_load_encrypted_state
+PASS: test_tpm2_swtpm_bios
+PASS: test_tpm2_save_load_state_da_timeout
+&lt;span style=&#34;color:#f92672&#34;&gt;============================================================================&lt;/span&gt;
+Testsuite summary &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; swtpm 0.3.0
+&lt;span style=&#34;color:#f92672&#34;&gt;============================================================================&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# TOTAL: 55&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# PASS:  45&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# SKIP:  10&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# XFAIL: 0&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# FAIL:  0&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# XPASS: 0&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# ERROR: 0&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;============================================================================&lt;/span&gt;
+&amp;lt;snip&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;同样，可以看到生成了几个 &lt;code&gt;.deb&lt;/code&gt; 安装包&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ cd .. &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; ls
+swtpm_0.3.0-1_amd64.deb  swtpm-dev_0.3.0-1_amd64.deb  swtpm-libs_0.3.0-1_amd64.deb  swtpm-tools_0.3.0-1_amd64.deb  ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo dpkg -i swtpm_0.3.0-1_amd64.deb swtpm-dev_0.3.0-1_amd64.deb swtpm-libs_0.3.0-1_amd64.deb swtpm-tools_0.3.0-1_amd64.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;qemu-tpm&#34;&gt;qemu-tpm&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;下载并配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ git clone https://github.com/stefanberger/qemu-tpm.git
+$ cd qemu-tpm
+$ mkdir build
+$ cd build
+$ ../configure --enable-debug --enable-tpm --enable-kvm --enable-vnc --target-list&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;x86_64-softmmu
+&amp;lt;snip&amp;gt;
+TCG support       yes
+TCG debug enabled yes
+TCG interpreter   no
+&amp;lt;snip&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;编译&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ make -j&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;nproc&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&amp;lt;snip&amp;gt;
+  GEN     trace/generated-helpers.c
+  CC      x86_64-softmmu/trace/control-target.o
+  CC      x86_64-softmmu/gdbstub-xml.o
+  CC      x86_64-softmmu/trace/generated-helpers.o
+  LINK    x86_64-softmmu/qemu-system-x86_64
+rm tests/qemu-iotests/socket_scm_helper.o
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo su
+&lt;span style=&#34;color:#75715e&#34;&gt;# make install&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;create-virtual-machine-with-vtpm&#34;&gt;Create Virtual Machine with vTPM&lt;/h1&gt;
+&lt;p&gt;上面我们完成了试验环境的安装，下面我们开始创建可信虚拟机，即具备 vTPM 设备的虚拟机。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 为了避免破坏 Host 主机上的实验环境，我这里没有执行 qemu-tpm 的安装操作，而是直接使用源路径下的可执行文件。&lt;/p&gt;
+&lt;p&gt;下面我们以 socket 的模拟方式举例说明。&lt;/p&gt;
+&lt;h2 id=&#34;preparation&#34;&gt;Preparation&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;安装 VNC-Viewer&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo apt install tigervnc-viewer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;生成磁盘镜像&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ mkdir ~/workspace/test
+$ cd ~/workspace/test
+$ ../qemu-tpm/build/qemu-img create -f qcow2 ubuntu14.04.qcow2 20G
+Formatting &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ubuntu14.04.qcow2&amp;#39;&lt;/span&gt;, fmt&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;qcow2 size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;21474836480&lt;/span&gt; cluster_size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;65536&lt;/span&gt; lazy_refcounts&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;off refcount_bits&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;在 Host 创建 vTPM 模拟设备&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;新开一个终端：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo mkdir /tmp/mytpm2
+$ sudo chown tss:root /tmp/mytpm2
+$ sudo swtpm_setup --tpmstate /tmp/mytpm2 &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--create-ek-cert &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--create-platform-cert &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--allow-signing --tpm2
+$ sudo swtpm socket --tpmstate dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/tmp/mytpm2 &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--ctrl type&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;unixio,path&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/tmp/mytpm2/swtpm-sock &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--tpm2 &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--log level&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;test&#34;&gt;test&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;安装操作系统&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;事先已将 Ubuntu 14.04 的镜像下载到了路径 &lt;code&gt;~/Downloads&lt;/code&gt; 下。&lt;/p&gt;
+&lt;p&gt;安装：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;~/workspace/test $ sudo ../qemu-tpm/build/x86_64-softmmu/qemu-system-x86_64 &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-accel kvm -m &lt;span style=&#34;color:#ae81ff&#34;&gt;2048&lt;/span&gt; -smp &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; -hda ubuntu14.04.qcow2 &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-boot menu&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;on -bios ../seabios/out/bios.bin &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-device tpm-tis,tpmdev&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;tpm0 &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-tpmdev emulator,id&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;tpm0,chardev&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;chrtpm &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-chardev socket,id&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;chrtpm,path&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/tmp/mytpm2/swtpm-sock &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-d unimp &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-cdrom ~/Downloads/ubuntu-14.04.6-desktop-amd64.iso
+VNC server running on 127.0.0.1:5900
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再新开一个终端：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ vncviewer :5900
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后会跳出操作系统的安装界面，将 Ubuntu 14.04 按照正常步骤安装即可。&lt;/p&gt;
+&lt;p&gt;当安装完成，提示重启时，直接关闭 VNCViewer 窗口即可。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;测试&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;重新启动模拟设备：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo swtpm socket --tpmstate dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/tmp/mytpm2 &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--ctrl type&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;unixio,path&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/tmp/mytpm2/swtpm-sock &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--tpm2 &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--log level&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重新运行虚拟机：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;~/workspace/test $ sudo ../qemu-tpm/build/x86_64-softmmu/qemu-system-x86_64 &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-accel kvm -m &lt;span style=&#34;color:#ae81ff&#34;&gt;2048&lt;/span&gt; -smp &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; -hda ubuntu14.04.qcow2 &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-boot menu&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;on -bios ../seabios/out/bios.bin &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-device tpm-tis,tpmdev&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;tpm0 &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-tpmdev emulator,id&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;tpm0,chardev&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;chrtpm &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-chardev socket,id&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;chrtpm,path&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/tmp/mytpm2/swtpm-sock &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;-d unimp
+VNC server running on 127.0.0.1:5900
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再次打开 VNC-Viewer：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ vncviewer :5900
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kipjiang.github.io/img/2020-03-11/ubuntu14.04.png&#34; alt=&#34;ubuntu14.04&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;综上，我们成功创建了一个具备 vTPM 模拟设备的可信虚拟机。&lt;/p&gt;
+&lt;p&gt;和 TPM 设备交互，需要安装可信软件栈（TSS, &lt;a href=&#34;https://tpm2-software.github.io/&#34;&gt;TPM Software Stack&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;可以通过下载 &lt;a href=&#34;https://github.com/tpm2-software/tpm2-tss&#34;&gt;tpm2-software/tpm2-tss&lt;/a&gt; 编译安装，或者直接安装 IBM 维护的命令行工具 &lt;code&gt;tss2&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo apt install tss2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;不过 Ubuntu 14.04 并不支持 &lt;code&gt;tss2&lt;/code&gt;， 可以在 Ubuntu 16.04 上尝试。&lt;/p&gt;
+- https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+        </item>
     
-    <item>
-      <title>About</title>
-      <link>https://KipJiang.github.io/about/</link>
-      <pubDate>Wed, 06 Mar 2019 01:01:52 +0800</pubDate>
-      
-      <guid>https://KipJiang.github.io/about/</guid>
-      <description>About Blog This is the blog of Kip Jiang.
-About Author 💻 📚 🏃
-I sometimes write here, you can find me on Github.</description>
-    </item>
+    
+    
+        <item>
+        <title>Hello Hugo</title>
+        <link>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</link>
+        <pubDate>Sat, 07 Mar 2020 21:49:29 +0800</pubDate>
+        
+        <guid>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</guid>
+        <description>Kip Jiang https://kipjiang.github.io/post/2020/03/07/hello-hugo/ -&lt;blockquote&gt;
+&lt;p&gt;It is out of time.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;hello-my-blog&#34;&gt;Hello my Blog&lt;/h2&gt;
+&lt;p&gt;以前折腾过其他静态主页的生成器，像 &lt;a href=&#34;https://hexo.io/&#34;&gt;hexo&lt;/a&gt; 和 &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; 等，都用来建过站点，但是从来没有正经写过文章。&lt;/p&gt;
+&lt;p&gt;这段时间，使用 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;，参考 &lt;a href=&#34;https://yihui.org/&#34;&gt;YihuiXie&lt;/a&gt; 和 &lt;a href=&#34;http://blog.fungo.me/&#34;&gt;山羊博客&lt;/a&gt;，通过移植 &lt;a href=&#34;https://github.com/yihui/hugo-ivy&#34;&gt;hugo-ivy&lt;/a&gt;，也写了一个 hugo 的主题 &lt;a href=&#34;https://github.com/KipJiang/hugo-theme-OneSentence&#34;&gt;hugo-theme-OneSentence&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;感觉到现在为止，已经基本满足我的需求了。&lt;/p&gt;
+- https://kipjiang.github.io/post/2020/03/07/hello-hugo/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>About</title>
+        <link>https://kipjiang.github.io/about/</link>
+        <pubDate>Mon, 02 Mar 2020 20:59:41 +0800</pubDate>
+        
+        <guid>https://kipjiang.github.io/about/</guid>
+        <description>Kip Jiang https://kipjiang.github.io/about/ -&lt;h2 id=&#34;about-author&#34;&gt;About Author&lt;/h2&gt;
+&lt;p&gt;💻   📚   🏃&lt;/p&gt;
+&lt;p&gt;I sometimes write here.&lt;/p&gt;
+&lt;h2 id=&#34;my-projects&#34;&gt;My Projects&lt;/h2&gt;
+&lt;h2 id=&#34;os-by-diy&#34;&gt;OS by DIY&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/KipJiang/hellos&#34;&gt;hellos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It will be a rough OS, but I haven&amp;rsquo;t finished it yet. 😂&lt;/p&gt;
+&lt;h3 id=&#34;hugo-themes&#34;&gt;Hugo Themes&lt;/h3&gt;
+&lt;p&gt;Play with hugo themes, it&amp;rsquo;s a waste of time.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/KipJiang/hugo-theme-diary&#34;&gt;hugo-theme-diary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What I use now.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/KipJiang/hugo-theme-OneSentence&#34;&gt;hugo-theme-OneSentence&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It is inspired by &lt;a href=&#34;http://blog.fungo.me/&#34;&gt;山羊博客&lt;/a&gt; and ported from &lt;a href=&#34;https://github.com/yihui/hugo-ivy&#34;&gt;hugo-ivy&lt;/a&gt; which is designed by &lt;a href=&#34;https://yihui.org/&#34;&gt;Yihui Xie&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/KipJiang/hugo-theme-even&#34;&gt;hugo-theme-even&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This one is similar to the blog &lt;a href=&#34;https://nusr.github.io/&#34;&gt;Brave New World&lt;/a&gt; of &lt;a href=&#34;https://github.com/nusr&#34;&gt;Steve Xu&lt;/a&gt;.&lt;/p&gt;
+- https://kipjiang.github.io/about/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Working With Ubuntu (2)</title>
+        <link>https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</link>
+        <pubDate>Thu, 20 Feb 2020 12:23:43 +0800</pubDate>
+        
+        <guid>https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</guid>
+        <description>Kip Jiang https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/ -&lt;blockquote&gt;
+&lt;p&gt;如何在 Ubuntu 中安装一些开发软件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;vscode&#34;&gt;VScode&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;VSCode 的安装非常简单&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo snap install --classic code
+code a622c65b from Visual Studio Code &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;vscode✓&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; installed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;打开&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ code
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;sublime-text-3&#34;&gt;Sublime Text 3&lt;/h2&gt;
+&lt;p&gt;Reference：&lt;a href=&#34;https://www.sublimetext.com/docs/3/linux_repositories.html#apt&#34;&gt;Linux Package Manager Repositories&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install the GPG key:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Ensure apt is set up to work with https sources:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo apt-get install apt-transport-https
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Select the channel to use:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Stable&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deb https://download.sublimetext.com/ apt/stable/&amp;#34;&lt;/span&gt; | sudo tee /etc/apt/sources.list.d/sublime-text.list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Dev&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deb https://download.sublimetext.com/ apt/dev/&amp;#34;&lt;/span&gt; | sudo tee /etc/apt/sources.list.d/sublime-text.list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Update apt sources and install Sublime Text&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo apt-get update
+sudo apt-get install sublime-text
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Open&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ subl
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;vmware-workstation-pro&#34;&gt;VMware Workstation Pro&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载安装包，&lt;a href=&#34;https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html&#34;&gt;VMware Workstation Pro Download&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ chmod +x VMware-Workstation-Full-15.5.1-15018445.x86_64.bundle 
+$ ./VMware-Workstation-Full-15.5.1-15018445.x86_64.bundle 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;在 Ubuntu 的 菜单中点击 VMware 的图标启动&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这时可能汇报错：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Build environment error! ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你需要安装依赖包：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo apt install gcc g++ make
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;license for VMware Workstation Pro 15&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;任选一个输入&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA
+
+VF750-4MX5Q-488DQ-9WZE9-ZY2D6
+
+UU54R-FVD91-488PP-7NNGC-ZFAX6
+
+YC74H-FGF92-081VZ-R5QNG-P6RY4
+
+YC34H-6WWDK-085MQ-JYPNX-NZRA2
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;miniconda&#34;&gt;miniconda&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载安装包，&lt;a href=&#34;https://docs.conda.io/en/latest/miniconda.html&#34;&gt;miniconda3&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sh Miniconda3-latest-Linux-x86_64.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中选择如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Do you accept the license terms? &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;yes|no&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;no&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &amp;gt;&amp;gt;&amp;gt; yes
+Do you wish the installer to initialize Miniconda3
+by running conda init? &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;yes|no&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;no&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &amp;gt;&amp;gt;&amp;gt; yes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;使能&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;重启终端，或者使用命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ source ~/.bashrc 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Working With Ubuntu (1)</title>
+        <link>https://kipjiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</link>
+        <pubDate>Sat, 15 Feb 2020 09:49:43 +0800</pubDate>
+        
+        <guid>https://kipjiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</guid>
+        <description>Kip Jiang https://kipjiang.github.io/note/2020/02/15/working-with-ubuntu-1st/ -&lt;blockquote&gt;
+&lt;p&gt;如何在 Ubuntu 中安装一些开发软件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;v2ray&#34;&gt;v2ray&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;下载并安装 &lt;code&gt;v2ray&lt;/code&gt; 脚本&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/v2ray/v2ray-core/releases&#34;&gt;v2ray-core/release&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载最新版的 &lt;code&gt;v2ray&lt;/code&gt; Linux 压缩包，并通过脚本在本地安装&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ curl https://github.com/v2ray/v2ray-core/releases/download/v4.22.1/v2ray-linux-64.zip
+$ curl -L -s https://install.direct/go.sh -o go.sh
+$ sudo su
+&lt;span style=&#34;color:#75715e&#34;&gt;# bash go.sh --local ./v2ray-linux-64.zip&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;配置 Server&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;首先，你得有一台在境外的 VPS &amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;配置 Client&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;编辑配置文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# vim /etc/v2ray/config.json&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;按如下示例配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;inbounds&amp;#34;: [{&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;port&amp;#34;: 1080,&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;listen&amp;#34;: &amp;#34;127.0.0.1&amp;#34;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;protocol&amp;#34;: &amp;#34;socks&amp;#34;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;tag&amp;#34;: &amp;#34;socks-inbound&amp;#34;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;settings&amp;#34;: {&lt;/span&gt;
+      &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;auth&amp;#34;: &amp;#34;noauth&amp;#34;,&lt;/span&gt;
+      &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;udp&amp;#34;: true,&lt;/span&gt;
+      &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;ip&amp;#34;: &amp;#34;127.0.0.1&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;sniffing&amp;#34;: {&lt;/span&gt;
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;enbale&amp;#34;: true,&lt;/span&gt;
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;destOverride&amp;#34;: [ &amp;#34;http&amp;#34;, &amp;#34;tls&amp;#34; ]&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;}&lt;/span&gt;
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;}],&lt;/span&gt;
+  
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;outbounds&amp;#34;: [{&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;protocol&amp;#34;: &amp;#34;vmess&amp;#34;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;settings&amp;#34;: {&lt;/span&gt;
+      &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;vnext&amp;#34;: [{&lt;/span&gt;
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;address&amp;#34;: &amp;#34;**.**.**.**&amp;#34;, // 服务器地址，请修改为你自己的服务器 ip 或 域名&lt;/span&gt;
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;port&amp;#34;: 12345,  // 服务器配置的端口&lt;/span&gt;
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;users&amp;#34;: [{ &lt;/span&gt;
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;id&amp;#34;: &amp;#34;*****-****-****-****-*********&amp;#34;  //与服务端保持一致&lt;/span&gt;
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;alterId&amp;#34;: 123  //与服务端保持一致&lt;/span&gt;
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;}]&lt;/span&gt;
+      &lt;span style=&#34;color:#a6e22e&#34;&gt;}]&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;tag&amp;#34;: &amp;#34;myVPN&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;protocol&amp;#34;: &amp;#34;freedom&amp;#34;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;settings&amp;#34;: {},&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;tag&amp;#34;: &amp;#34;direct&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;}],&lt;/span&gt;
+  
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;routing&amp;#34;: {&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;domainStrategy&amp;#34;: &amp;#34;IPOnDemand&amp;#34;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;rules&amp;#34;: [{&lt;/span&gt;
+      &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;type&amp;#34;: &amp;#34;field&amp;#34;,&lt;/span&gt;
+      &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;ip&amp;#34;: [&amp;#34;geoip:private&amp;#34;],&lt;/span&gt;
+      &lt;span style=&#34;color:#a6e22e&#34;&gt;&amp;#34;outboundTag&amp;#34;: &amp;#34;direct&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;}]&lt;/span&gt;
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;仅配置浏览器代理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果仅配置浏览器的代理，就只能通过浏览器访问外部网站，在命令行中依旧不能链接到外部。以 Firefox 为例，配置如下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/02/20/QcEm4HdrkSuTbMV.png&#34; alt=&#34;firefox-proxy&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;全局配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;进入系统设置，选择 「Network」，设置 「Network Proxy」。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/02/20/zdhLEXNM1kR3Uey.png&#34; alt=&#34;global-config&#34;&gt;&lt;/p&gt;
+&lt;p&gt;但仅仅上述配置，会使得所有流量都通过 VPS 后再去访问具体网站，在访问国内的网站时也会走一遍代理，导致访问较慢。&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;配置 PAC(Proxy Auto Config) 模式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;见 &lt;a href=&#34;https://github.com/JinnLynn/genpac&#34;&gt;GenPAC&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/gfwlist/gfwlist&#34;&gt;gfwlist&lt;/a&gt; 项目&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ pip install genpac
+
+$ sudo su
+// 从 gfwlist 生成代理信息为 SOCKS5 127.0.0.1:1080 的 PAC 文件
+&lt;span style=&#34;color:#75715e&#34;&gt;# genpac --format=pac --pac-proxy=&amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; -o /etc/v2ray/autoproxy.pac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;可供参考文档&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.v2ray.com/&#34;&gt;v2ray&lt;/a&gt; (需代理)&lt;br&gt;
+&lt;a href=&#34;https://toutyrater.github.io/&#34;&gt;V2Ray 配置指南&lt;/a&gt; (需代理)&lt;br&gt;
+&lt;a href=&#34;https://yuan.ga/v2ray-complete-tutorial/&#34;&gt;V2Ray完全使用教程&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.imcaviare.com/201812181245/&#34;&gt;Linux下使用V2ray客户端以及PAC配置&lt;/a&gt;&lt;/p&gt;
+- https://kipjiang.github.io/note/2020/02/15/working-with-ubuntu-1st/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Visual Studio Code: Remote-SSH</title>
+        <link>https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/</link>
+        <pubDate>Thu, 07 Nov 2019 12:25:16 +0800</pubDate>
+        
+        <guid>https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/</guid>
+        <description>Kip Jiang https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/ -&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;第一步当然是先在 VSCode 中安装 &lt;code&gt;Remote-SSH&lt;/code&gt; 扩展啦&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过 WSL 生成公私钥对&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ ssh-keygen -t rsa -b &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;通过 ssh 登录服务器，将生成的公钥文件的副本 &lt;code&gt;id_rsa.tmp.pub&lt;/code&gt; 复制到路径 &lt;code&gt;~/.ssh/&lt;/code&gt; 下，执行命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ cat id_rsa.tmp.pub &amp;gt;&amp;gt; authorized_keys
+$ chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;600&lt;/span&gt; authorized_keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;：必须执行 &lt;code&gt;chmod 600 authorized_keys&lt;/code&gt; 命令&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;配置本地的 VSCode&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;编辑文件 &lt;code&gt;C:\Users\&amp;lt;UserName&amp;gt;\.ssh\config&lt;/code&gt;，按如下格式配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Host arbitrary-name-you-like&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;HostName remote-host-ip&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;Port remote-port&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;User user-name-to-sign-in&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;IdentityFile C:\Users\&amp;lt;UserName&amp;gt;\.ssh\id_rsa&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Display Git Branch Name in Bash</title>
+        <link>https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</link>
+        <pubDate>Thu, 23 May 2019 15:38:03 +0800</pubDate>
+        
+        <guid>https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</guid>
+        <description>Kip Jiang https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/ -&lt;h2 id=&#34;first&#34;&gt;First&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将脚本下载到 Home 目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ git clone https://github.com/KipJiang/git-aware-prompt.git ~/git-aware-prompt
+$ mv ~/git-aware-prompt ~/.git-aware-prompt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;修改配置文件 &lt;code&gt;.bashrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ vim ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加如下内容&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# source .git-aware-prompt&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;export PS1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ &amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;export GITAWAREPROMPT&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;~/.git-aware-prompt&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;source &amp;#34;${GITAWAREPROMPT}/main.sh&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;使配置生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ source ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;效果&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Ubuntu&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kipjiang.github.io/img/2019-05-23/ubuntu-git-color.png&#34; alt=&#34;ubuntu-git-color&#34;&gt;&lt;/p&gt;
+&lt;p&gt;CentOS&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kipjiang.github.io/img/2019-05-23/centos-git-color.png&#34; alt=&#34;centos-git&amp;ndash;color&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;second&#34;&gt;Second&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;编辑 &lt;code&gt;~/.bashrc&lt;/code&gt;，添加如下内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git branch function&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;function git_branch {&lt;/span&gt;
+   &lt;span style=&#34;color:#a6e22e&#34;&gt;branch&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;`git branch 2&amp;gt;/dev/null | grep &amp;#34;^\*&amp;#34; | sed -e &amp;#34;s/^\*\ //&amp;#34;`&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;   if [ &amp;#34;${branch}&amp;#34; != &amp;#34;&amp;#34; ];then
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       if [ &amp;#34;${branch}&amp;#34; = &amp;#34;(no branch)&amp;#34; ];then
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;           branch=&amp;#34;(`git rev-parse --short HEAD`...)&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       fi
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       echo &amp;#34; ($branch)&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;   fi&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#a6e22e&#34;&gt;export PS1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\u@\h \[\033[01;36m\]\W\[\033[01;32m\]$(git_branch)\[\033[00m\] \$ &amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;使配置生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ source ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;third&#34;&gt;Third&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;编辑 &lt;code&gt;~/.profile&lt;/code&gt;，添加如下内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git branch function&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;parse_git_branch() {&lt;/span&gt;
+     &lt;span style=&#34;color:#a6e22e&#34;&gt;git branch 2&amp;gt; /dev/null | sed -e &amp;#39;/^[^*]/d&amp;#39; -e &amp;#39;s/* \(.*\)/ (\1)/&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;export PS1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ &amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;使配置生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ source ~/.profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+        </item>
+    
     
   </channel>
-</rss>
+</rss> 
