@@ -337,28 +337,39 @@ sudo apt-get install typora
         <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
         
         <guid>https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
-        <description>Rainer Chiang https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/ -&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Reference Paper&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://rainerchiang.github.io/pdf/Scalable_Attestation-A_Step_toward_Secure_and_Trusted_Clouds_Stefan.pdf&#34;&gt;Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Environment&lt;/strong&gt;&lt;/p&gt;
+        <description>Rainer Chiang https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/ -&lt;h2 id=&#34;preparation&#34;&gt;Preparation&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Host: &lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/18.04/&#34;&gt;Ubuntu 18.04&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Guest: &lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/14.04/&#34;&gt;Ubuntu 14.04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reference Paper&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Source Code&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rainerchiang.github.io/pdf/Scalable_Attestation-A_Step_toward_Secure_and_Trusted_Clouds_Stefan.pdf&#34;&gt;Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Environment&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Host: &lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/18.04/&#34;&gt;Ubuntu 18.04&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Guest: &lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/14.04/&#34;&gt;Ubuntu 14.04&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Source Code&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/stefanberger/seabios-tpm&#34;&gt;seabios-tpm&lt;/a&gt; 2. &lt;a href=&#34;https://github.com/stefanberger/libtpms&#34;&gt;libtpms&lt;/a&gt; 3. &lt;a href=&#34;https://github.com/stefanberger/swtpm&#34;&gt;swtpm&lt;/a&gt; 4. &lt;a href=&#34;https://github.com/stefanberger/qemu-tpm&#34;&gt;qemu-tpm&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Tree of Path&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;kip
+&lt;ul&gt;
+&lt;li&gt;Tree of Path&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;rainer
 └── workspace  
   ├── libtpms  
   ├── qemu-tpm  
   ├── seabios  
   ├── swtpm  
   └── test
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;h1 id=&#34;seabios&#34;&gt;SeaBIOS&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;seabios&#34;&gt;SeaBIOS&lt;/h2&gt;
 &lt;p&gt;SeaBIOS 包含 vTPM 支持的分支 &lt;a href=&#34;https://github.com/stefanberger/seabios-tpm&#34;&gt;seabios-tpm&lt;/a&gt; 最开始由 &lt;a href=&#34;https://github.com/stefanberger&#34;&gt;Stefan&lt;/a&gt; 维护，现在已经成功将其合并到主分支 &lt;a href=&#34;https://seabios.org/SeaBIOS&#34;&gt;SeaBIOS&lt;/a&gt;。因此，下面的实验中我们使用其主分支。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;下载&lt;/li&gt;
@@ -389,11 +400,11 @@ f-segment var size:   &lt;span style=&#34;color:#ae81ff&#34;&gt;1248&lt;/span&gt
   Prepping out/bios.bin.prep
 Total size: &lt;span style=&#34;color:#ae81ff&#34;&gt;172352&lt;/span&gt;  Fixed: &lt;span style=&#34;color:#ae81ff&#34;&gt;81216&lt;/span&gt;  Free: &lt;span style=&#34;color:#ae81ff&#34;&gt;89792&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;used 65.7% of 256KiB rom&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
   Creating out/bios.bin
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;libtpms&#34;&gt;libtpms&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;libtpms&#34;&gt;libtpms&lt;/h2&gt;
 &lt;p&gt;libtpms 是对 &lt;a href=&#34;https://trustedcomputinggroup.org/&#34;&gt;TCG(Trusted Computing Group)&lt;/a&gt; 发布的可信平台模块（TPM，&lt;a href=&#34;https://en.wikipedia.org/wiki/Trusted_Platform_Module&#34;&gt;Trusted Platform Module&lt;/a&gt;）标准 &lt;a href=&#34;https://trustedcomputinggroup.org/resource/tpm-main-specification/&#34;&gt;TPM1.2 Main Specification&lt;/a&gt; 和 &lt;a href=&#34;https://trustedcomputinggroup.org/resource/tpm-library-specification/&#34;&gt;TPM 2.0 Library Specification&lt;/a&gt; 及 &lt;a href=&#34;https://trustedcomputinggroup.org/specifications-public-review/&#34;&gt;TPM2.0 Specifications in Public Review&lt;/a&gt; 的软件模拟库，在 Linux 上以 「shared object (dynamic) library」 的形式存在，即：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;kip@ubu:/usr/lib/x86_64-linux-gnu $ ls -hl | grep libtpms
-lrwxrwxrwx  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root    &lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;2019&lt;/span&gt; libtpms.so -&amp;gt; libtpms.so.0.8.0
-lrwxrwxrwx  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root    &lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;2019&lt;/span&gt; libtpms.so.0 -&amp;gt; libtpms.so.0.8.0
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;rainer@ubu:/usr/lib/x86_64-linux-gnu $ ls -hl | grep libtpms
+lrwxrwxrwx  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root    &lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;2019&lt;/span&gt; libtpms.so - libtpms.so.0.8.0
+lrwxrwxrwx  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root    &lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;2019&lt;/span&gt; libtpms.so.0 - libtpms.so.0.8.0
 -rw-r--r--  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root  883K Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;2019&lt;/span&gt; libtpms.so.0.8.0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;
 &lt;li&gt;安装依赖&lt;/li&gt;
@@ -402,7 +413,7 @@ lrwxrwxrwx  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root  
 $ cd libtpms
 $ sudo apt-get -y install automake autoconf libtool gcc build-essential libssl-dev dh-exec pkg-config gawk
 $ ./autogen.sh --with-openssl --with-tpm2
-&amp;lt;snip&amp;gt;
+&amp;lt;snip
 CFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;-g -O2 -DUSE_OPENSSL_FUNCTIONS_SYMMETRIC&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; -DUSE_OPENSSL_FUNCTIONS_EC&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; -DUSE_OPENSSL_FUNCTIONS_ECDSA&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; -DUSE_OPENSSL_FUNCTIONS_RSA&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;  -Wall -Werror -Wreturn-type -Wsign-compare -Wno-self-assign
 HARDENING_CFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;-fstack-protector-strong 
 HARDENING_LDFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; -Wl,-z,relro  -Wl,-z,now 
@@ -419,11 +430,11 @@ Use openssl crypto &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;  :
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ make dist
 $ dpkg-buildpackage -us -uc -j&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;nproc&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
-&amp;lt;snip&amp;gt;
-make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;3&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Leaving directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/kip/workspace/libtpms/tests&amp;#39;&lt;/span&gt;
+&amp;lt;snip
+make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;3&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Leaving directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/rainer/workspace/libtpms/tests&amp;#39;&lt;/span&gt;
 make  check-TESTS
-make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;3&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Entering directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/kip/workspace/libtpms/tests&amp;#39;&lt;/span&gt;
-make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;4&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Entering directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/kip/workspace/libtpms/tests&amp;#39;&lt;/span&gt;
+make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;3&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Entering directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/rainer/workspace/libtpms/tests&amp;#39;&lt;/span&gt;
+make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;4&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Entering directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/rainer/workspace/libtpms/tests&amp;#39;&lt;/span&gt;
 PASS: nvram_offsets
 PASS: tpm2_createprimary.sh
 PASS: tpm2_pcr_read.sh
@@ -441,7 +452,7 @@ Testsuite summary &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; lib
 &lt;span style=&#34;color:#75715e&#34;&gt;# XPASS: 0&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;# ERROR: 0&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;============================================================================&lt;/span&gt;
-&amp;lt;snip&amp;gt;
+&amp;lt;snip
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行完上述命令，可以看到生成了 &lt;code&gt;.deb&lt;/code&gt; 安装包：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ cd .. &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; ls
 libtpms0_0.8.0~dev1_amd64.deb  libtpms-dev_0.8.0~dev1_amd64.deb  libtpms_0.8.0~dev1.tar.xz  ...
@@ -449,7 +460,7 @@ libtpms0_0.8.0~dev1_amd64.deb  libtpms-dev_0.8.0~dev1_amd64.deb  libtpms_0.8.0~d
 &lt;li&gt;安装 libtpms&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo dpkg -i libtpms0_0.8.0~dev1_amd64.deb   libtpms-dev_0.8.0~dev1_amd64.deb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;swtpm&#34;&gt;swtpm&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;swtpm&#34;&gt;swtpm&lt;/h2&gt;
 &lt;p&gt;swtpm 基于 libtpms 以不同的方式实现对 TPM 的模拟，包括：「passthrough」、「character device」、「socket」和「CUSE」。&lt;/p&gt;
 &lt;p&gt;因此，安装 swtpm 之前，必须先安装 libtpms。&lt;/p&gt;
 &lt;ol&gt;
@@ -466,10 +477,10 @@ $ sudo apt-get -y install  libfuse-dev libglib2.0-dev libgmp-dev expect libtasn1
 &lt;li&gt;生成安装包&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ dpkg-buildpackage -us -uc -j&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;nproc&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
-&amp;lt;snip&amp;gt;
+&amp;lt;snip
 make  check-TESTS
-make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;4&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Entering directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/kip/workspace/swtpm/tests&amp;#39;&lt;/span&gt;
-make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;5&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Entering directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/kip/workspace/swtpm/tests&amp;#39;&lt;/span&gt;
+make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;4&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Entering directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/rainer/workspace/swtpm/tests&amp;#39;&lt;/span&gt;
+make&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;5&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: Entering directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/rainer/workspace/swtpm/tests&amp;#39;&lt;/span&gt;
 SKIP: test_tpm2_vtpm_proxy
 SKIP: test_vtpm_proxy
 PASS: test_ctrlchannel4
@@ -536,7 +547,7 @@ Testsuite summary &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; swt
 &lt;span style=&#34;color:#75715e&#34;&gt;# XPASS: 0&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;# ERROR: 0&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;============================================================================&lt;/span&gt;
-&amp;lt;snip&amp;gt;
+&amp;lt;snip
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;同样，可以看到生成了几个 &lt;code&gt;.deb&lt;/code&gt; 安装包&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ cd .. &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; ls
 swtpm_0.3.0-1_amd64.deb  swtpm-dev_0.3.0-1_amd64.deb  swtpm-libs_0.3.0-1_amd64.deb  swtpm-tools_0.3.0-1_amd64.deb  ...
@@ -544,7 +555,7 @@ swtpm_0.3.0-1_amd64.deb  swtpm-dev_0.3.0-1_amd64.deb  swtpm-libs_0.3.0-1_amd64.d
 &lt;li&gt;安装&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo dpkg -i swtpm_0.3.0-1_amd64.deb swtpm-dev_0.3.0-1_amd64.deb swtpm-libs_0.3.0-1_amd64.deb swtpm-tools_0.3.0-1_amd64.deb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;qemu-tpm&#34;&gt;qemu-tpm&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;qemu-tpm&#34;&gt;qemu-tpm&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;下载并配置&lt;/li&gt;
 &lt;/ol&gt;
@@ -553,16 +564,16 @@ $ cd qemu-tpm
 $ mkdir build
 $ cd build
 $ ../configure --enable-debug --enable-tpm --enable-kvm --enable-vnc --target-list&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;x86_64-softmmu
-&amp;lt;snip&amp;gt;
+&amp;lt;snip
 TCG support       yes
 TCG debug enabled yes
 TCG interpreter   no
-&amp;lt;snip&amp;gt;
+&amp;lt;snip
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;编译&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ make -j&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;nproc&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
-&amp;lt;snip&amp;gt;
+&amp;lt;snip
   GEN     trace/generated-helpers.c
   CC      x86_64-softmmu/trace/control-target.o
   CC      x86_64-softmmu/gdbstub-xml.o
@@ -574,11 +585,11 @@ rm tests/qemu-iotests/socket_scm_helper.o
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo su
 &lt;span style=&#34;color:#75715e&#34;&gt;# make install&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;create-virtual-machine-with-vtpm&#34;&gt;Create Virtual Machine with vTPM&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-vm-with-vtpm&#34;&gt;Create VM with vTPM&lt;/h2&gt;
 &lt;p&gt;上面我们完成了试验环境的安装，下面我们开始创建可信虚拟机，即具备 vTPM 设备的虚拟机。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 为了避免破坏 Host 主机上的实验环境，我这里没有执行 qemu-tpm 的安装操作，而是直接使用源路径下的可执行文件。&lt;/p&gt;
 &lt;p&gt;下面我们以 socket 的模拟方式举例说明。&lt;/p&gt;
-&lt;h2 id=&#34;preparation&#34;&gt;Preparation&lt;/h2&gt;
+&lt;h3 id=&#34;vtpm-emulator&#34;&gt;vTPM Emulator&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;安装 VNC-Viewer&lt;/li&gt;
 &lt;/ol&gt;
@@ -604,7 +615,7 @@ $ sudo swtpm socket --tpmstate dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt
 &lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--ctrl type&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;unixio,path&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/tmp/mytpm2/swtpm-sock &lt;span style=&#34;color:#ae81ff&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--tpm2 &lt;span style=&#34;color:#ae81ff&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--log level&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;test&#34;&gt;test&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;guest-os&#34;&gt;Guest OS&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;安装操作系统&lt;/li&gt;
 &lt;/ol&gt;
@@ -644,7 +655,7 @@ VNC server running on 127.0.0.1:5900
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ vncviewer :5900
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://rainerchiang.github.io/img/2020-03-11/ubuntu14.04.png&#34; alt=&#34;ubuntu14.04&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 &lt;p&gt;综上，我们成功创建了一个具备 vTPM 模拟设备的可信虚拟机。&lt;/p&gt;
 &lt;p&gt;和 TPM 设备交互，需要安装可信软件栈（TSS, &lt;a href=&#34;https://tpm2-software.github.io/&#34;&gt;TPM Software Stack&lt;/a&gt;）。&lt;/p&gt;
 &lt;p&gt;可以通过下载 &lt;a href=&#34;https://github.com/tpm2-software/tpm2-tss&#34;&gt;tpm2-software/tpm2-tss&lt;/a&gt; 编译安装，或者直接安装 IBM 维护的命令行工具 &lt;code&gt;tss2&lt;/code&gt;:&lt;/p&gt;
@@ -680,14 +691,14 @@ VNC server running on 127.0.0.1:5900
         
         <guid>https://rainerchiang.github.io/about/</guid>
         <description>Rainer Chiang https://rainerchiang.github.io/about/ -&lt;h2 id=&#34;about-author&#34;&gt;About Author&lt;/h2&gt;
-&lt;p&gt;💻   📚   🏃&lt;/p&gt;
+&lt;p&gt;:computer:   :books:   :running:&lt;/p&gt;
 &lt;p&gt;I sometimes write here.&lt;/p&gt;
 &lt;h2 id=&#34;my-projects&#34;&gt;My Projects&lt;/h2&gt;
 &lt;h2 id=&#34;os-by-diy&#34;&gt;OS by DIY&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/KipJiang/hellos&#34;&gt;hellos&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;It will be a rough OS, but I haven&amp;rsquo;t finished it yet. 😂&lt;/p&gt;
+&lt;p&gt;It will be a rough OS, but I haven&amp;rsquo;t finished it yet. :joy:&lt;/p&gt;
 &lt;h3 id=&#34;hugo-themes&#34;&gt;Hugo Themes&lt;/h3&gt;
 &lt;p&gt;Play with hugo themes, it&amp;rsquo;s a waste of time.&lt;/p&gt;
 &lt;ul&gt;

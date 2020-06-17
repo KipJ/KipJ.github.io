@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html><head>
 <title>About</title>
-
-
-
-
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
+
+
+
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
@@ -65,6 +63,44 @@ if (!doNotTrack) {
 <script>
   loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
 </script>
+
+
+  
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script"
+async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+MathJax.Hub.Queue(function() {
+
+
+
+var all = MathJax.Hub.getAllJax(), i;
+for(i = 0; i < all.length; i += 1) {
+all[i].SourceElement().parentNode.className += ' has-jax';
+}
+});
+</script>
+
+<style>
+code.has-jax {
+font: inherit;
+font-size: 100%;
+background: inherit;
+border: inherit;
+color: #515151;
+}
+</style>
+
 
 
 
@@ -567,14 +603,14 @@ if (!doNotTrack) {
                 <div class="post-body" v-pre>
                 
                     <h2 id="about-author">About Author</h2>
-<p>💻   📚   🏃</p>
+<p>:computer:   :books:   :running:</p>
 <p>I sometimes write here.</p>
 <h2 id="my-projects">My Projects</h2>
 <h2 id="os-by-diy">OS by DIY</h2>
 <ul>
 <li><a href="https://github.com/KipJiang/hellos">hellos</a></li>
 </ul>
-<p>It will be a rough OS, but I haven&rsquo;t finished it yet. 😂</p>
+<p>It will be a rough OS, but I haven&rsquo;t finished it yet. :joy:</p>
 <h3 id="hugo-themes">Hugo Themes</h3>
 <p>Play with hugo themes, it&rsquo;s a waste of time.</p>
 <ul>
@@ -752,7 +788,7 @@ app = new Vue({
                 el: '#vcomments',
                 appId: "AhrO67kSBw2cdWp3AFKzjzI5-MdYXbMMI",
                 appKey: "RKBIhU7j518tpSUFbaWh8D2x",
-                placeholder: "Say something... (please fill in the email to receive the reply)",
+                placeholder: "Say something... (Please fill in your email to receive the reply)",
                 requiredFields: ["nick","mail"],
                 visitor:  true ,
                 enableQQ: true,

@@ -18,12 +18,12 @@
       <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
       
       <guid>https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
-      <description>Reference Paper
-Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.
-Environment
- Host: Ubuntu 18.04 Guest: Ubuntu 14.04  Source Code
- seabios-tpm 2. libtpms 3. swtpm 4. qemu-tpm  Tree of Path
-kip └── workspace ├── libtpms ├── qemu-tpm ├── seabios ├── swtpm └── test  SeaBIOS SeaBIOS 包含 vTPM 支持的分支 seabios-tpm 最开始由 Stefan 维护，现在已经成功将其合并到主分支 SeaBIOS。因此，下面的实验中我们使用其主分支。</description>
+      <description>Preparation  Reference Paper  Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.
+  Environment
+  Host: Ubuntu 18.04
+  Guest: Ubuntu 14.04
+  Source Code
+   seabios-tpm 2. libtpms 3. swtpm 4. qemu-tpm   Tree of Path  rainer └── workspace ├── libtpms ├── qemu-tpm ├── seabios ├── swtpm └── test SeaBIOS SeaBIOS 包含 vTPM 支持的分支 seabios-tpm 最开始由 Stefan 维护，现在已经成功将其合并到主分支 SeaBIOS。因此，下面的实验中我们使用其主分支。</description>
     </item>
     
   </channel>

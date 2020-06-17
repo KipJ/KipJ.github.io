@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html><head>
 <title>Create Virtual Machine with vTPM in Ubuntu</title>
-
-
-
-
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
+
 <meta name="description" content="Using QEMU-KMV to create VMs with vTPM">
+<meta name="keywords" content="vTPM">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
@@ -65,6 +63,44 @@ if (!doNotTrack) {
 <script>
   loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
 </script>
+
+
+  
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script"
+async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+MathJax.Hub.Queue(function() {
+
+
+
+var all = MathJax.Hub.getAllJax(), i;
+for(i = 0; i < all.length; i += 1) {
+all[i].SourceElement().parentNode.className += ' has-jax';
+}
+});
+</script>
+
+<style>
+code.has-jax {
+font: inherit;
+font-size: 100%;
+background: inherit;
+border: inherit;
+color: #515151;
+}
+</style>
+
 
 
 
@@ -222,6 +258,28 @@ if (!doNotTrack) {
 						
 						
 						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#preparation" onclick="collapseOthers(`#preparation-nav`)" id="preparation-nav">
+									Preparation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
 						
 							<li>
 								<a href="#seabios" onclick="collapseOthers(`#seabios-nav`)" id="seabios-nav">
@@ -296,8 +354,8 @@ if (!doNotTrack) {
 						
 						
 							<li>
-								<a href="#create-virtual-machine-with-vtpm" onclick="collapseOthers(`#create-virtual-machine-with-vtpm-nav`)" id="create-virtual-machine-with-vtpm-nav">
-									Create Virtual Machine with vTPM
+								<a href="#create-vm-with-vtpm" onclick="collapseOthers(`#create-vm-with-vtpm-nav`)" id="create-vm-with-vtpm-nav">
+									Create VM with vTPM
 								</a>
 							</li>
 						
@@ -318,8 +376,8 @@ if (!doNotTrack) {
 						
 						
 							<li>
-								<a href="#preparation" onclick="collapseOthers(`#preparation-nav`)" id="preparation-nav">
-									Preparation
+								<a href="#vtpm-emulator" onclick="collapseOthers(`#vtpm-emulator-nav`)" id="vtpm-emulator-nav">
+									vTPM Emulator
 								</a>
 							</li>
 						
@@ -336,8 +394,8 @@ if (!doNotTrack) {
 						
 						
 							<li>
-								<a href="#test" onclick="collapseOthers(`#test-nav`)" id="test-nav">
-									test
+								<a href="#guest-os" onclick="collapseOthers(`#guest-os-nav`)" id="guest-os-nav">
+									Guest OS
 								</a>
 							</li>
 						
@@ -468,6 +526,28 @@ if (!doNotTrack) {
 						
 						
 						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#preparation" onclick="collapseOthers(`#preparation-nav`)" id="preparation-nav">
+									Preparation
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
 						
 							<li>
 								<a href="#seabios" onclick="collapseOthers(`#seabios-nav`)" id="seabios-nav">
@@ -542,8 +622,8 @@ if (!doNotTrack) {
 						
 						
 							<li>
-								<a href="#create-virtual-machine-with-vtpm" onclick="collapseOthers(`#create-virtual-machine-with-vtpm-nav`)" id="create-virtual-machine-with-vtpm-nav">
-									Create Virtual Machine with vTPM
+								<a href="#create-vm-with-vtpm" onclick="collapseOthers(`#create-vm-with-vtpm-nav`)" id="create-vm-with-vtpm-nav">
+									Create VM with vTPM
 								</a>
 							</li>
 						
@@ -564,8 +644,8 @@ if (!doNotTrack) {
 						
 						
 							<li>
-								<a href="#preparation" onclick="collapseOthers(`#preparation-nav`)" id="preparation-nav">
-									Preparation
+								<a href="#vtpm-emulator" onclick="collapseOthers(`#vtpm-emulator-nav`)" id="vtpm-emulator-nav">
+									vTPM Emulator
 								</a>
 							</li>
 						
@@ -582,8 +662,8 @@ if (!doNotTrack) {
 						
 						
 							<li>
-								<a href="#test" onclick="collapseOthers(`#test-nav`)" id="test-nav">
-									test
+								<a href="#guest-os" onclick="collapseOthers(`#guest-os-nav`)" id="guest-os-nav">
+									Guest OS
 								</a>
 							</li>
 						
@@ -712,7 +792,7 @@ if (!doNotTrack) {
                             
                             7 min
                             
-                            5 s.
+                            6 s.
                         
                     </div>
                 </div>
@@ -722,28 +802,39 @@ if (!doNotTrack) {
                 
                 <div class="post-body" v-pre>
                 
-                    <blockquote>
-<p><strong>Reference Paper</strong></p>
-<p><a href="/pdf/Scalable_Attestation-A_Step_toward_Secure_and_Trusted_Clouds_Stefan.pdf">Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.</a></p>
-<p><strong>Environment</strong></p>
+                    <h2 id="preparation">Preparation</h2>
 <ul>
-<li>Host: <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/18.04/">Ubuntu 18.04</a></li>
-<li>Guest: <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/14.04/">Ubuntu 14.04</a></li>
+<li>Reference Paper</li>
 </ul>
-<p><strong>Source Code</strong></p>
+<p><a href="/pdf/Scalable_Attestation-A_Step_toward_Secure_and_Trusted_Clouds_Stefan.pdf">Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.</a></p>
+<ul>
+<li>
+<p>Environment</p>
+</li>
+<li>
+<p>Host: <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/18.04/">Ubuntu 18.04</a></p>
+</li>
+<li>
+<p>Guest: <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/14.04/">Ubuntu 14.04</a></p>
+</li>
+<li>
+<p>Source Code</p>
+</li>
+</ul>
 <ol>
 <li><a href="https://github.com/stefanberger/seabios-tpm">seabios-tpm</a> 2. <a href="https://github.com/stefanberger/libtpms">libtpms</a> 3. <a href="https://github.com/stefanberger/swtpm">swtpm</a> 4. <a href="https://github.com/stefanberger/qemu-tpm">qemu-tpm</a></li>
 </ol>
-<p><strong>Tree of Path</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">kip
+<ul>
+<li>Tree of Path</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rainer
 └── workspace  
   ├── libtpms  
   ├── qemu-tpm  
   ├── seabios  
   ├── swtpm  
   └── test
-</code></pre></div></blockquote>
-<h1 id="seabios">SeaBIOS</h1>
+</code></pre></div><h2 id="seabios">SeaBIOS</h2>
 <p>SeaBIOS 包含 vTPM 支持的分支 <a href="https://github.com/stefanberger/seabios-tpm">seabios-tpm</a> 最开始由 <a href="https://github.com/stefanberger">Stefan</a> 维护，现在已经成功将其合并到主分支 <a href="https://seabios.org/SeaBIOS">SeaBIOS</a>。因此，下面的实验中我们使用其主分支。</p>
 <ol>
 <li>下载</li>
@@ -774,11 +865,11 @@ f-segment var size:   <span style="color:#ae81ff">1248</span>
   Prepping out/bios.bin.prep
 Total size: <span style="color:#ae81ff">172352</span>  Fixed: <span style="color:#ae81ff">81216</span>  Free: <span style="color:#ae81ff">89792</span> <span style="color:#f92672">(</span>used 65.7% of 256KiB rom<span style="color:#f92672">)</span>
   Creating out/bios.bin
-</code></pre></div><h1 id="libtpms">libtpms</h1>
+</code></pre></div><h2 id="libtpms">libtpms</h2>
 <p>libtpms 是对 <a href="https://trustedcomputinggroup.org/">TCG(Trusted Computing Group)</a> 发布的可信平台模块（TPM，<a href="https://en.wikipedia.org/wiki/Trusted_Platform_Module">Trusted Platform Module</a>）标准 <a href="https://trustedcomputinggroup.org/resource/tpm-main-specification/">TPM1.2 Main Specification</a> 和 <a href="https://trustedcomputinggroup.org/resource/tpm-library-specification/">TPM 2.0 Library Specification</a> 及 <a href="https://trustedcomputinggroup.org/specifications-public-review/">TPM2.0 Specifications in Public Review</a> 的软件模拟库，在 Linux 上以 「shared object (dynamic) library」 的形式存在，即：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">kip@ubu:/usr/lib/x86_64-linux-gnu $ ls -hl | grep libtpms
-lrwxrwxrwx  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">16</span> Jul <span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">2019</span> libtpms.so -&gt; libtpms.so.0.8.0
-lrwxrwxrwx  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">16</span> Jul <span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">2019</span> libtpms.so.0 -&gt; libtpms.so.0.8.0
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rainer@ubu:/usr/lib/x86_64-linux-gnu $ ls -hl | grep libtpms
+lrwxrwxrwx  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">16</span> Jul <span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">2019</span> libtpms.so - libtpms.so.0.8.0
+lrwxrwxrwx  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">16</span> Jul <span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">2019</span> libtpms.so.0 - libtpms.so.0.8.0
 -rw-r--r--  <span style="color:#ae81ff">1</span> root root  883K Jul <span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">2019</span> libtpms.so.0.8.0
 </code></pre></div><ol>
 <li>安装依赖</li>
@@ -787,7 +878,7 @@ lrwxrwxrwx  <span style="color:#ae81ff">1</span> root root    <span style="color
 $ cd libtpms
 $ sudo apt-get -y install automake autoconf libtool gcc build-essential libssl-dev dh-exec pkg-config gawk
 $ ./autogen.sh --with-openssl --with-tpm2
-&lt;snip&gt;
+&lt;snip
 CFLAGS<span style="color:#f92672">=</span>-g -O2 -DUSE_OPENSSL_FUNCTIONS_SYMMETRIC<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DUSE_OPENSSL_FUNCTIONS_EC<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DUSE_OPENSSL_FUNCTIONS_ECDSA<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DUSE_OPENSSL_FUNCTIONS_RSA<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>  -Wall -Werror -Wreturn-type -Wsign-compare -Wno-self-assign
 HARDENING_CFLAGS<span style="color:#f92672">=</span>-fstack-protector-strong 
 HARDENING_LDFLAGS<span style="color:#f92672">=</span> -Wl,-z,relro  -Wl,-z,now 
@@ -804,11 +895,11 @@ Use openssl crypto <span style="color:#66d9ef">for</span>  : symmetric <span sty
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ make dist
 $ dpkg-buildpackage -us -uc -j<span style="color:#66d9ef">$(</span>nproc<span style="color:#66d9ef">)</span>
-&lt;snip&gt;
-make<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/kip/workspace/libtpms/tests&#39;</span>
+&lt;snip
+make<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/rainer/workspace/libtpms/tests&#39;</span>
 make  check-TESTS
-make<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/kip/workspace/libtpms/tests&#39;</span>
-make<span style="color:#f92672">[</span>4<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/kip/workspace/libtpms/tests&#39;</span>
+make<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/rainer/workspace/libtpms/tests&#39;</span>
+make<span style="color:#f92672">[</span>4<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/rainer/workspace/libtpms/tests&#39;</span>
 PASS: nvram_offsets
 PASS: tpm2_createprimary.sh
 PASS: tpm2_pcr_read.sh
@@ -826,7 +917,7 @@ Testsuite summary <span style="color:#66d9ef">for</span> libtpms 0.8.0
 <span style="color:#75715e"># XPASS: 0</span>
 <span style="color:#75715e"># ERROR: 0</span>
 <span style="color:#f92672">============================================================================</span>
-&lt;snip&gt;
+&lt;snip
 </code></pre></div><p>执行完上述命令，可以看到生成了 <code>.deb</code> 安装包：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cd .. <span style="color:#f92672">&amp;&amp;</span> ls
 libtpms0_0.8.0~dev1_amd64.deb  libtpms-dev_0.8.0~dev1_amd64.deb  libtpms_0.8.0~dev1.tar.xz  ...
@@ -834,7 +925,7 @@ libtpms0_0.8.0~dev1_amd64.deb  libtpms-dev_0.8.0~dev1_amd64.deb  libtpms_0.8.0~d
 <li>安装 libtpms</li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo dpkg -i libtpms0_0.8.0~dev1_amd64.deb   libtpms-dev_0.8.0~dev1_amd64.deb
-</code></pre></div><h1 id="swtpm">swtpm</h1>
+</code></pre></div><h2 id="swtpm">swtpm</h2>
 <p>swtpm 基于 libtpms 以不同的方式实现对 TPM 的模拟，包括：「passthrough」、「character device」、「socket」和「CUSE」。</p>
 <p>因此，安装 swtpm 之前，必须先安装 libtpms。</p>
 <ol>
@@ -851,10 +942,10 @@ $ sudo apt-get -y install  libfuse-dev libglib2.0-dev libgmp-dev expect libtasn1
 <li>生成安装包</li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ dpkg-buildpackage -us -uc -j<span style="color:#66d9ef">$(</span>nproc<span style="color:#66d9ef">)</span>
-&lt;snip&gt;
+&lt;snip
 make  check-TESTS
-make<span style="color:#f92672">[</span>4<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/kip/workspace/swtpm/tests&#39;</span>
-make<span style="color:#f92672">[</span>5<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/kip/workspace/swtpm/tests&#39;</span>
+make<span style="color:#f92672">[</span>4<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/rainer/workspace/swtpm/tests&#39;</span>
+make<span style="color:#f92672">[</span>5<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/rainer/workspace/swtpm/tests&#39;</span>
 SKIP: test_tpm2_vtpm_proxy
 SKIP: test_vtpm_proxy
 PASS: test_ctrlchannel4
@@ -921,7 +1012,7 @@ Testsuite summary <span style="color:#66d9ef">for</span> swtpm 0.3.0
 <span style="color:#75715e"># XPASS: 0</span>
 <span style="color:#75715e"># ERROR: 0</span>
 <span style="color:#f92672">============================================================================</span>
-&lt;snip&gt;
+&lt;snip
 </code></pre></div><p>同样，可以看到生成了几个 <code>.deb</code> 安装包</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cd .. <span style="color:#f92672">&amp;&amp;</span> ls
 swtpm_0.3.0-1_amd64.deb  swtpm-dev_0.3.0-1_amd64.deb  swtpm-libs_0.3.0-1_amd64.deb  swtpm-tools_0.3.0-1_amd64.deb  ...
@@ -929,7 +1020,7 @@ swtpm_0.3.0-1_amd64.deb  swtpm-dev_0.3.0-1_amd64.deb  swtpm-libs_0.3.0-1_amd64.d
 <li>安装</li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo dpkg -i swtpm_0.3.0-1_amd64.deb swtpm-dev_0.3.0-1_amd64.deb swtpm-libs_0.3.0-1_amd64.deb swtpm-tools_0.3.0-1_amd64.deb
-</code></pre></div><h1 id="qemu-tpm">qemu-tpm</h1>
+</code></pre></div><h2 id="qemu-tpm">qemu-tpm</h2>
 <ol>
 <li>下载并配置</li>
 </ol>
@@ -938,16 +1029,16 @@ $ cd qemu-tpm
 $ mkdir build
 $ cd build
 $ ../configure --enable-debug --enable-tpm --enable-kvm --enable-vnc --target-list<span style="color:#f92672">=</span>x86_64-softmmu
-&lt;snip&gt;
+&lt;snip
 TCG support       yes
 TCG debug enabled yes
 TCG interpreter   no
-&lt;snip&gt;
+&lt;snip
 </code></pre></div><ol start="2">
 <li>编译</li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ make -j<span style="color:#66d9ef">$(</span>nproc<span style="color:#66d9ef">)</span>
-&lt;snip&gt;
+&lt;snip
   GEN     trace/generated-helpers.c
   CC      x86_64-softmmu/trace/control-target.o
   CC      x86_64-softmmu/gdbstub-xml.o
@@ -959,11 +1050,11 @@ rm tests/qemu-iotests/socket_scm_helper.o
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo su
 <span style="color:#75715e"># make install</span>
-</code></pre></div><h1 id="create-virtual-machine-with-vtpm">Create Virtual Machine with vTPM</h1>
+</code></pre></div><h2 id="create-vm-with-vtpm">Create VM with vTPM</h2>
 <p>上面我们完成了试验环境的安装，下面我们开始创建可信虚拟机，即具备 vTPM 设备的虚拟机。</p>
 <p><strong>Note:</strong> 为了避免破坏 Host 主机上的实验环境，我这里没有执行 qemu-tpm 的安装操作，而是直接使用源路径下的可执行文件。</p>
 <p>下面我们以 socket 的模拟方式举例说明。</p>
-<h2 id="preparation">Preparation</h2>
+<h3 id="vtpm-emulator">vTPM Emulator</h3>
 <ol>
 <li>安装 VNC-Viewer</li>
 </ol>
@@ -989,7 +1080,7 @@ $ sudo swtpm socket --tpmstate dir<span style="color:#f92672">=</span>/tmp/mytpm
 </span><span style="color:#ae81ff"></span>--ctrl type<span style="color:#f92672">=</span>unixio,path<span style="color:#f92672">=</span>/tmp/mytpm2/swtpm-sock <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>--tpm2 <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>--log level<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>
-</code></pre></div><h2 id="test">test</h2>
+</code></pre></div><h3 id="guest-os">Guest OS</h3>
 <ol>
 <li>安装操作系统</li>
 </ol>
@@ -1029,7 +1120,7 @@ VNC server running on 127.0.0.1:5900
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vncviewer :5900
 </code></pre></div><p>测试：</p>
 <p><img src="/img/2020-03-11/ubuntu14.04.png" alt="ubuntu14.04"></p>
-<h1 id="summary">Summary</h1>
+<h2 id="summary">Summary</h2>
 <p>综上，我们成功创建了一个具备 vTPM 模拟设备的可信虚拟机。</p>
 <p>和 TPM 设备交互，需要安装可信软件栈（TSS, <a href="https://tpm2-software.github.io/">TPM Software Stack</a>）。</p>
 <p>可以通过下载 <a href="https://github.com/tpm2-software/tpm2-tss">tpm2-software/tpm2-tss</a> 编译安装，或者直接安装 IBM 维护的命令行工具 <code>tss2</code>:</p>
@@ -1198,7 +1289,7 @@ app = new Vue({
                 el: '#vcomments',
                 appId: "AhrO67kSBw2cdWp3AFKzjzI5-MdYXbMMI",
                 appKey: "RKBIhU7j518tpSUFbaWh8D2x",
-                placeholder: "Say something... (please fill in the email to receive the reply)",
+                placeholder: "Say something... (Please fill in your email to receive the reply)",
                 requiredFields: ["nick","mail"],
                 visitor:  true ,
                 enableQQ: true,
