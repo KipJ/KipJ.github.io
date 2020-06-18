@@ -73,7 +73,7 @@
         
         <guid>https://rainerchiang.github.io/note/2020/03/31/remote-jupyter-notebook/</guid>
         <description>Rainer Chiang https://rainerchiang.github.io/note/2020/03/31/remote-jupyter-notebook/ -&lt;h2 id=&#34;install-miniconda&#34;&gt;Install miniconda&lt;/h2&gt;
-&lt;p&gt;参考 &lt;a href=&#34;https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/#miniconda&#34;&gt;Working With Ubuntu (2)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://RainerChiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/#miniconda&#34;&gt;Working With Ubuntu (2)&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;configure-jypyter&#34;&gt;Configure Jypyter&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 通过 &lt;code&gt;ssh&lt;/code&gt; 远程链接到服务器操作。&lt;/p&gt;
@@ -86,7 +86,7 @@
 &lt;li&gt;生成配置文件&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ jupyter notebook --generate-config
-Writing default config to: /home/kip/.jupyter/jupyter_notebook_config.py
+Writing default config to: /home/rainer/.jupyter/jupyter_notebook_config.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;通过 &lt;code&gt;ipython&lt;/code&gt; 生成密码的 Hash&lt;/li&gt;
 &lt;/ul&gt;
@@ -106,7 +106,7 @@ In &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;3&lt;span style=&#34;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;编辑配置文件&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ vim /home/kip/.jupyter/jupyter_notebook_config.py
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ vim /home/rainer/.jupyter/jupyter_notebook_config.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# configuration manully&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;c.NotebookApp.ip&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*&amp;#39;&lt;/span&gt;
@@ -267,8 +267,8 @@ $ sudo apt-get install -f
 &lt;span style=&#34;color:#a6e22e&#34;&gt;Name[zh_CN]&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;为知笔记&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;Comment&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;wiznote&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;Comment[zh_CN]&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;为知笔记&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;Exec&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/home/kip/Downloads/WizNote-2.7.9-x86_64-ubuntu-18.04.AppImage&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;Icon&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/home/kip/.wiznote/icons/wiznote_76x76.png&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Exec&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/home/rainer/Downloads/WizNote-2.7.9-x86_64-ubuntu-18.04.AppImage&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Icon&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/home/rainer/.wiznote/icons/wiznote_76x76.png&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;Terminal&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;false&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;Type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Application&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;Categories&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Application;&lt;/span&gt;
@@ -677,7 +677,7 @@ VNC server running on 127.0.0.1:5900
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;hello-my-blog&#34;&gt;Hello my Blog&lt;/h2&gt;
 &lt;p&gt;以前折腾过其他静态主页的生成器，像 &lt;a href=&#34;https://hexo.io/&#34;&gt;hexo&lt;/a&gt; 和 &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; 等，都用来建过站点，但是从来没有正经写过文章。&lt;/p&gt;
-&lt;p&gt;这段时间，使用 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;，参考 &lt;a href=&#34;https://yihui.org/&#34;&gt;YihuiXie&lt;/a&gt; 和 &lt;a href=&#34;http://blog.fungo.me/&#34;&gt;山羊博客&lt;/a&gt;，通过移植 &lt;a href=&#34;https://github.com/yihui/hugo-ivy&#34;&gt;hugo-ivy&lt;/a&gt;，也写了一个 hugo 的主题 &lt;a href=&#34;https://github.com/KipJiang/hugo-theme-OneSentence&#34;&gt;hugo-theme-OneSentence&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;这段时间，使用 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;，参考 &lt;a href=&#34;https://yihui.org/&#34;&gt;YihuiXie&lt;/a&gt; 和 &lt;a href=&#34;http://blog.fungo.me/&#34;&gt;山羊博客&lt;/a&gt;，通过移植 &lt;a href=&#34;https://github.com/yihui/hugo-ivy&#34;&gt;hugo-ivy&lt;/a&gt;，也写了一个 hugo 的主题 &lt;a href=&#34;https://github.com/RainerChiang/hugo-theme-OneSentence&#34;&gt;hugo-theme-OneSentence&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;感觉到现在为止，已经基本满足我的需求了。&lt;/p&gt;
 - https://rainerchiang.github.io/post/2020/03/07/hello-hugo/ - 2019-2020 &amp;#183; [Rainer Chiang](/)</description>
         </item>
@@ -972,7 +972,7 @@ $ chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;600&lt;/span&gt; authorized_ke
 &lt;ol&gt;
 &lt;li&gt;将脚本下载到 Home 目录&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ git clone https://github.com/KipJiang/git-aware-prompt.git ~/git-aware-prompt
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ git clone https://github.com/RainerChiang/git-aware-prompt.git ~/git-aware-prompt
 $ mv ~/git-aware-prompt ~/.git-aware-prompt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;修改配置文件 &lt;code&gt;.bashrc&lt;/code&gt;&lt;/li&gt;
