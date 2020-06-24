@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Git on Rainer Chiang</title>
-    <link>https://rainerchiang.github.io/tags/git/</link>
-    <description>Recent content in Git on Rainer Chiang</description>
+    <title>Git on Kip Jiang</title>
+    <link>https://kipjiang.github.io/tags/git/</link>
+    <description>Recent content in Git on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2019-2020 &amp;#183; [Rainer Chiang](/)</copyright>
+    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
     <lastBuildDate>Thu, 23 May 2019 15:38:03 +0800</lastBuildDate>
     
-	<atom:link href="https://rainerchiang.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kipjiang.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Display Git Branch Name in Bash</title>
-      <link>https://rainerchiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</link>
+      <link>https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</link>
       <pubDate>Thu, 23 May 2019 15:38:03 +0800</pubDate>
       
-      <guid>https://rainerchiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</guid>
+      <guid>https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</guid>
       <description>First  将脚本下载到 Home 目录  $ git clone https://github.com/RainerChiang/git-aware-prompt.git ~/git-aware-prompt $ mv ~/git-aware-prompt ~/.git-aware-prompt 修改配置文件 .bashrc  $ vim ~/.bashrc 添加如下内容
 # source .git-aware-prompt export PS1=&amp;#34;\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ &amp;#34; export GITAWAREPROMPT=~/.git-aware-prompt source &amp;#34;${GITAWAREPROMPT}/main.sh&amp;#34; 使配置生效  $ source ~/.bashrc 效果  Ubuntu
 CentOS

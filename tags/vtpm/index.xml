@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vTPM on Rainer Chiang</title>
-    <link>https://rainerchiang.github.io/tags/vtpm/</link>
-    <description>Recent content in vTPM on Rainer Chiang</description>
+    <title>vTPM on Kip Jiang</title>
+    <link>https://kipjiang.github.io/tags/vtpm/</link>
+    <description>Recent content in vTPM on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2019-2020 &amp;#183; [Rainer Chiang](/)</copyright>
+    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
     <lastBuildDate>Wed, 11 Mar 2020 20:34:44 +0800</lastBuildDate>
     
-	<atom:link href="https://rainerchiang.github.io/tags/vtpm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kipjiang.github.io/tags/vtpm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Create Virtual Machine with vTPM in Ubuntu</title>
-      <link>https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
+      <link>https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
       <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
       
-      <guid>https://rainerchiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
+      <guid>https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
       <description>Preparation  Reference Paper  Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.
   Environment
   Host: Ubuntu 18.04
