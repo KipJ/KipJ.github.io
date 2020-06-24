@@ -607,7 +607,7 @@ color: #515151;
                 <div class="post-body" v-pre>
                 
                     <h2 id="install-miniconda">Install miniconda</h2>
-<p>参考 <a href="https://RainerChiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/#miniconda">Working With Ubuntu (2)</a></p>
+<p>参考 <a href="https://KipJiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/#miniconda">Working With Ubuntu (2)</a></p>
 <h2 id="configure-jypyter">Configure Jypyter</h2>
 <blockquote>
 <p><strong>Note:</strong> 通过 <code>ssh</code> 远程链接到服务器操作。</p>
@@ -620,7 +620,7 @@ color: #515151;
 <li>生成配置文件</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ jupyter notebook --generate-config
-Writing default config to: /home/rainer/.jupyter/jupyter_notebook_config.py
+Writing default config to: /home/kip/.jupyter/jupyter_notebook_config.py
 </code></pre></div><ul>
 <li>通过 <code>ipython</code> 生成密码的 Hash</li>
 </ul>
@@ -640,7 +640,7 @@ In <span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>: qu
 </code></pre></div><ul>
 <li>编辑配置文件</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vim /home/rainer/.jupyter/jupyter_notebook_config.py
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vim /home/kip/.jupyter/jupyter_notebook_config.py
 </code></pre></div><p>配置如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cfg" data-lang="cfg"><span style="color:#75715e"># configuration manully</span>
 <span style="color:#a6e22e">c.NotebookApp.ip</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;*&#39;</span>

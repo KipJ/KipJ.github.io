@@ -23,7 +23,7 @@
   Host: Ubuntu 18.04
   Guest: Ubuntu 14.04
   Source Code
-   seabios-tpm 2. libtpms 3. swtpm 4. qemu-tpm   Tree of Path  rainer └── workspace ├── libtpms ├── qemu-tpm ├── seabios ├── swtpm └── test SeaBIOS SeaBIOS 包含 vTPM 支持的分支 seabios-tpm 最开始由 Stefan 维护，现在已经成功将其合并到主分支 SeaBIOS。因此，下面的实验中我们使用其主分支。</description>
+   seabios-tpm 2. libtpms 3. swtpm 4. qemu-tpm   Tree of Path  kip └── workspace ├── libtpms ├── qemu-tpm ├── seabios ├── swtpm └── test SeaBIOS SeaBIOS 包含 vTPM 支持的分支 seabios-tpm 最开始由 Stefan 维护，现在已经成功将其合并到主分支 SeaBIOS。因此，下面的实验中我们使用其主分支。</description>
     </item>
     
   </channel>

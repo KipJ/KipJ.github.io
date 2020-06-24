@@ -827,7 +827,7 @@ color: #515151;
 <ul>
 <li>Tree of Path</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rainer
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">kip
 └── workspace  
   ├── libtpms  
   ├── qemu-tpm  
@@ -867,7 +867,7 @@ Total size: <span style="color:#ae81ff">172352</span>  Fixed: <span style="color
   Creating out/bios.bin
 </code></pre></div><h2 id="libtpms">libtpms</h2>
 <p>libtpms 是对 <a href="https://trustedcomputinggroup.org/">TCG(Trusted Computing Group)</a> 发布的可信平台模块（TPM，<a href="https://en.wikipedia.org/wiki/Trusted_Platform_Module">Trusted Platform Module</a>）标准 <a href="https://trustedcomputinggroup.org/resource/tpm-main-specification/">TPM1.2 Main Specification</a> 和 <a href="https://trustedcomputinggroup.org/resource/tpm-library-specification/">TPM 2.0 Library Specification</a> 及 <a href="https://trustedcomputinggroup.org/specifications-public-review/">TPM2.0 Specifications in Public Review</a> 的软件模拟库，在 Linux 上以 「shared object (dynamic) library」 的形式存在，即：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rainer@ubu:/usr/lib/x86_64-linux-gnu $ ls -hl | grep libtpms
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">kip@ubu:/usr/lib/x86_64-linux-gnu $ ls -hl | grep libtpms
 lrwxrwxrwx  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">16</span> Jul <span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">2019</span> libtpms.so - libtpms.so.0.8.0
 lrwxrwxrwx  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">16</span> Jul <span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">2019</span> libtpms.so.0 - libtpms.so.0.8.0
 -rw-r--r--  <span style="color:#ae81ff">1</span> root root  883K Jul <span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">2019</span> libtpms.so.0.8.0
@@ -896,10 +896,10 @@ Use openssl crypto <span style="color:#66d9ef">for</span>  : symmetric <span sty
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ make dist
 $ dpkg-buildpackage -us -uc -j<span style="color:#66d9ef">$(</span>nproc<span style="color:#66d9ef">)</span>
 &lt;snip
-make<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/rainer/workspace/libtpms/tests&#39;</span>
+make<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/kip/workspace/libtpms/tests&#39;</span>
 make  check-TESTS
-make<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/rainer/workspace/libtpms/tests&#39;</span>
-make<span style="color:#f92672">[</span>4<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/rainer/workspace/libtpms/tests&#39;</span>
+make<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/kip/workspace/libtpms/tests&#39;</span>
+make<span style="color:#f92672">[</span>4<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/kip/workspace/libtpms/tests&#39;</span>
 PASS: nvram_offsets
 PASS: tpm2_createprimary.sh
 PASS: tpm2_pcr_read.sh
@@ -944,8 +944,8 @@ $ sudo apt-get -y install  libfuse-dev libglib2.0-dev libgmp-dev expect libtasn1
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ dpkg-buildpackage -us -uc -j<span style="color:#66d9ef">$(</span>nproc<span style="color:#66d9ef">)</span>
 &lt;snip
 make  check-TESTS
-make<span style="color:#f92672">[</span>4<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/rainer/workspace/swtpm/tests&#39;</span>
-make<span style="color:#f92672">[</span>5<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/rainer/workspace/swtpm/tests&#39;</span>
+make<span style="color:#f92672">[</span>4<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/kip/workspace/swtpm/tests&#39;</span>
+make<span style="color:#f92672">[</span>5<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/kip/workspace/swtpm/tests&#39;</span>
 SKIP: test_tpm2_vtpm_proxy
 SKIP: test_vtpm_proxy
 PASS: test_ctrlchannel4

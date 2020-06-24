@@ -20,7 +20,7 @@
       <guid>https://kipjiang.github.io/post/2020/06/16/change-to-new-theme/</guid>
       <description>Hugo Theme Diary I change my blog to a new hugo theme hugo-theme-diary which is pretty concise.
 To meet my taste I am adding some new features to it.
-You can switch to the new branch rainer to check the changes.
+You can switch to the new branch kipjiang to check the changes.
 TODO List   Markdownify the copyright string.
   Display the theme info implicitly.
   Add some common Font Awesome icons to sidebar.
