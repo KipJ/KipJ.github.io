@@ -146,7 +146,7 @@ public &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;active&lt;span st
 &lt;p&gt;在本地浏览器中输入 &lt;code&gt;server_ip:8888&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://kipjiang.github.io/img/2020-06-05/jupyter_notebook_login.png&#34; alt=&#34;jupyter-remote&#34;&gt;&lt;/p&gt;
 &lt;p&gt;再输入之前设置的密码即可。&lt;/p&gt;
-&lt;h2 id=&#34;using-notebook-without-permanent-configuration&#34;&gt;Using notebook without permanent configuration&lt;/h2&gt;
+&lt;h2 id=&#34;permanent-configuration&#34;&gt;Permanent Configuration&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;也可以不生成配置文件，直接在命令行打开。&lt;/p&gt;
 &lt;/blockquote&gt;
