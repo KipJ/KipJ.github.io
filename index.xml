@@ -672,13 +672,50 @@ VNC server running on 127.0.0.1:5900
         <pubDate>Sat, 07 Mar 2020 21:49:29 +0800</pubDate>
         
         <guid>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</guid>
-        <description>Kip Jiang https://kipjiang.github.io/post/2020/03/07/hello-hugo/ -&lt;blockquote&gt;
-&lt;p&gt;This post is out of time.&lt;/p&gt;
+        <description>Kip Jiang https://kipjiang.github.io/post/2020/03/07/hello-hugo/ -&lt;h2 id=&#34;hugo-onesentence&#34;&gt;Hugo OneSentence&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Here is out of time.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;hello-my-blog&#34;&gt;Hello my Blog&lt;/h2&gt;
 &lt;p&gt;以前折腾过其他静态主页的生成器，像 &lt;a href=&#34;https://hexo.io/&#34;&gt;hexo&lt;/a&gt; 和 &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; 等，都用来建过站点，但是从来没有正经写过文章。&lt;/p&gt;
 &lt;p&gt;这段时间，使用 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;，参考 &lt;a href=&#34;https://yihui.org/&#34;&gt;YihuiXie&lt;/a&gt; 和 &lt;a href=&#34;http://blog.fungo.me/&#34;&gt;山羊博客&lt;/a&gt;，通过移植 &lt;a href=&#34;https://github.com/yihui/hugo-ivy&#34;&gt;hugo-ivy&lt;/a&gt;，也写了一个 hugo 的主题 &lt;a href=&#34;https://github.com/KipJiang/hugo-theme-OneSentence&#34;&gt;hugo-theme-OneSentence&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;感觉到现在为止，已经基本满足我的需求了。&lt;/p&gt;
+&lt;h2 id=&#34;themes-i-have-used&#34;&gt;Themes I have used&lt;/h2&gt;
+&lt;p&gt;之前试过一些 hexo 和 Jekyll 的主题，就不再赘述了，这里仅展示一些符合我 taste 的 hugo 的主题，以作为我曾经浪费的时间的见证。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/KipJiang/hugo-with-classic&#34;&gt;hugo-theme-classic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;原始版本是 &lt;a href=&#34;https://goodroot.ca/&#34;&gt;googroot&lt;/a&gt; 修改自 &lt;a href=&#34;https://yihui.org/&#34;&gt;YihuiXie&lt;/a&gt; 的主题，我又做了一些小小的改动，当时看中的就是它非常简单直白。&lt;/p&gt;
+&lt;p&gt;可以查看我重新生成的展示页面：&lt;a href=&#34;https://kipjiang.github.io/hugo-with-classic&#34;&gt;classic-demo&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/xianmin/hugo-theme-jane&#34;&gt;hugo-theme-jane&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kipjiang.github.io/mySite-with-jane&#34;&gt;jane-demo&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;主题 Jane 是 &lt;a href=&#34;http://www.xianmin.org/&#34;&gt;贤民&lt;/a&gt; 制作的主题，它对各种 &lt;code&gt;shortcode&lt;/code&gt; 的支持都比较完善。&lt;/p&gt;
+&lt;p&gt;虽然，我已经不再使用这个主题了，但是我还是会常常去看下贤民的个人网站 &lt;a href=&#34;https://www.xianmin.org/&#34;&gt;贤民的比特记忆&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;贤民说他是丽江白沙一个国际青年旅舍的掌柜，但和我印象中的掌柜却不太一样。他经常码代码、学英语、读书爬上，开心的和来自五湖四海的游客交流。&lt;/p&gt;
+&lt;p&gt;而我，一直困在一个地方，逃脱不得，这种自由是我向往却不可及的。&lt;/p&gt;
+&lt;p&gt;也许，哪天闲下来了或者逃离这种困境了，我会专程去丽江看看他。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/KipJiang/hugo-theme-even&#34;&gt;hugo-theme-even&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://kipjiang.github.io/hugo-theme-even&#34;&gt;even-demo&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这个不是 &lt;a href=&#34;https://github.com/olOwOlo&#34;&gt;olOwOlo&lt;/a&gt; 原本的那个 &lt;a href=&#34;https://github.com/olOwOlo/hugo-theme-even&#34;&gt;even&lt;/a&gt; 主题了，是我在看到 &lt;a href=&#34;https://github.com/nusr&#34;&gt;@nusr(Steve Xu)&lt;/a&gt; 的个人站 &lt;a href=&#34;https://nusr.github.io/&#34;&gt;Brave New World&lt;/a&gt; 后，又从他改动的版本再作修改得到的，当然现在也没有再用了。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://kipjiang.github.io/hugo-theme-OneSentence&#34;&gt;hugo-theme-OneSentence&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kipjiang.github.io/hugo-theme-OneSentence&#34;&gt;OneSentence-demo&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;好了，终于到主题 &lt;a href=&#34;https://kipjiang.github.io/hugo-theme-OneSentence&#34;&gt;OneSentence&lt;/a&gt;，这个才是我真真正正的完全自己修改得到的主题，可以看出和别人的已经很不一样了。&lt;/p&gt;
+&lt;p&gt;这个主题受 &lt;a href=&#34;http://blog.fungo.me/&#34;&gt;山羊博客&lt;/a&gt; 的启发，通过移植 &lt;a href=&#34;https://yihui.org/&#34;&gt;YihuiXie&lt;/a&gt;  的主题 &lt;a href=&#34;https://github.com/yihui/hugo-ivy&#34;&gt;hugo-ivy&lt;/a&gt; 而最终得到的，也是费了我一番功夫。主要的时间都花在了调整 css 样式，而我并不擅长这部分内容，感觉到了这个地步已经超出我自己的预期了 🤣。&lt;/p&gt;
+&lt;h2 id=&#34;give-up&#34;&gt;Give up&lt;/h2&gt;
+&lt;p&gt;但是！我现在还是放弃了，不想再耗费时间在这些我不擅长的地方，还是直接使用一个别人做好的主题算了。现在我已经转为使用 &lt;a href=&#34;https://github.com/KipJiang/hugo-theme-diary&#34;&gt;hugo-theme-diary&lt;/a&gt;，我对其做了一些修改，应该不会再折腾了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;OK! That&amp;rsquo;s all.&lt;/strong&gt;&lt;/p&gt;
 - https://kipjiang.github.io/post/2020/03/07/hello-hugo/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
         </item>
     

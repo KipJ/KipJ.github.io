@@ -33,10 +33,23 @@ TODO List   Markdownify the copyright string.
       <pubDate>Sat, 07 Mar 2020 21:49:29 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</guid>
-      <description>This post is out of time.
- Hello my Blog 以前折腾过其他静态主页的生成器，像 hexo 和 Jekyll 等，都用来建过站点，但是从来没有正经写过文章。
+      <description>Hugo OneSentence  Here is out of time.
+ 以前折腾过其他静态主页的生成器，像 hexo 和 Jekyll 等，都用来建过站点，但是从来没有正经写过文章。
 这段时间，使用 Hugo，参考 YihuiXie 和 山羊博客，通过移植 hugo-ivy，也写了一个 hugo 的主题 hugo-theme-OneSentence。
-感觉到现在为止，已经基本满足我的需求了。</description>
+感觉到现在为止，已经基本满足我的需求了。
+Themes I have used 之前试过一些 hexo 和 Jekyll 的主题，就不再赘述了，这里仅展示一些符合我 taste 的 hugo 的主题，以作为我曾经浪费的时间的见证。
+ hugo-theme-classic  原始版本是 googroot 修改自 YihuiXie 的主题，我又做了一些小小的改动，当时看中的就是它非常简单直白。
+可以查看我重新生成的展示页面：classic-demo
+  hugo-theme-jane
+jane-demo
+  主题 Jane 是 贤民 制作的主题，它对各种 shortcode 的支持都比较完善。
+虽然，我已经不再使用这个主题了，但是我还是会常常去看下贤民的个人网站 贤民的比特记忆。
+贤民说他是丽江白沙一个国际青年旅舍的掌柜，但和我印象中的掌柜却不太一样。他经常码代码、学英语、读书爬上，开心的和来自五湖四海的游客交流。
+而我，一直困在一个地方，逃脱不得，这种自由是我向往却不可及的。
+也许，哪天闲下来了或者逃离这种困境了，我会专程去丽江看看他。
+  hugo-theme-even
+even-demo
+  这个不是 olOwOlo 原本的那个 even 主题了，是我在看到 @nusr(Steve Xu) 的个人站 Brave New World 后，又从他改动的版本再作修改得到的，当然现在也没有再用了。</description>
     </item>
     
   </channel>
