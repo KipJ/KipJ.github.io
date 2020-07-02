@@ -12,6 +12,42 @@
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+<link rel="stylesheet" href="https://kipjiang.github.io/scss/style.min.59edd566b84cc061456f0219e6802cae15ac5106334a05a83f7ae7d764f60542.css" integrity="sha256-We3VZrhMwGFFbwIZ5oAsrhWsUQYzSgWoP3rn12T2BUI=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://kipjiang.github.io/scss/dark-mode.min.6b3a43bf768344cf19618531d175a48c3a4761ee61cac366eb8644ce5c7badd6.css" integrity="sha256-azpDv3aDRM8ZYYUx0XWkjDpHYe5hysNm64ZEzlx7rdY=" media="screen">
+
+
+<script src="https://kipjiang.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+
+
 
 
 
@@ -36,33 +72,6 @@ if (!doNotTrack) {
 </script>
 
 
-
-<script src="/vendor/js/jquery.min.js" ></script>
-<script src="/vendor/js/popper.min.js" ></script>
-<script src="/vendor/js/bootstrap.min.js" ></script>
-<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
-<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-<script src="/vendor/js/vue.min.js" ></script>
-
-
-
-
-<link rel="icon" href="favicon.ico">
-
-
-
-
-<link rel="stylesheet" href="https://kipjiang.github.io/scss/journal.min.47aa1ffb60880ad8c72feecd6962a14331eca7a7a30e08354a1ca91009b8bc5b.css" integrity="sha256-R6of&#43;2CICtjHL&#43;7NaWKhQzHsp6ejDgg1ShypEAm4vFs=" media="screen">
-
-
-
-<link rel="stylesheet" href="https://kipjiang.github.io/scss/dark-mode.min.b13808e7c98cd5aa981a3822fd3421e26f1015876bb15a3fbf8ed5991c382367.css" integrity="sha256-sTgI58mM1aqYGjgi/TQh4m8QFYdrsVo/v47VmRw4I2c=" media="screen">
-
-
-<script src="https://kipjiang.github.io//js/loadCSS.js"></script>
-<script>
-  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
-</script>
 
 
   
@@ -106,27 +115,14 @@ color: #515151;
 
 
   
-    <script src="https://kipjiang.github.io//js/toc-collapse.js"></script>
+    <script src="https://kipjiang.github.io//js/toc.js"></script>
   
 
 
 
+<link rel="icon" href="favicon.ico">
 
 
-
-
-<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-
-
-
-
-
-
-
-
-
-<script src="//cdn1.lncld.net/static/js/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 
 
@@ -294,6 +290,46 @@ color: #515151;
 					
 				
 			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#changelog" onclick="collapseOthers(`#changelog-nav`)" id="changelog-nav">
+									Changelog
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#font-awesome" onclick="collapseOthers(`#font-awesome-nav`)" id="font-awesome-nav">
+									Font Awesome
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -428,6 +464,46 @@ color: #515151;
 					
 				
 			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#changelog" onclick="collapseOthers(`#changelog-nav`)" id="changelog-nav">
+									Changelog
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#font-awesome" onclick="collapseOthers(`#font-awesome-nav`)" id="font-awesome-nav">
+									Font Awesome
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -525,7 +601,7 @@ color: #515151;
                             
 
                             
-                            36 s.
+                            58 s.
                         
                     </div>
                 </div>
@@ -541,44 +617,38 @@ color: #515151;
 <p>You can switch to the new branch <a href="https://github.com/KipJiang/hugo-theme-diary/tree/kipjiang">kipjiang</a> to check the changes.</p>
 <h2 id="todo-list">TODO List</h2>
 <ul>
-<li>
-<p><input checked="" disabled="" type="checkbox"> Markdownify the copyright string.</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox"> Display the theme info implicitly.</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox"> Add some common Font Awesome icons to sidebar.</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox"> Enable the visitor counter <code>leancloud-visitor</code> of valine and move the <code>enablevaline</code> to <code>params.valine</code> in configuration.</p>
-</li>
-<li>
-<p><input disabled="" type="checkbox"> Enable <code>disableHome</code> parameter in <code>FrontMatter</code>.</p>
-</li>
-<li>
-<p><input disabled="" type="checkbox"> Change the style of ToC.</p>
-</li>
-<li>
-<p><input disabled="" type="checkbox"> Split the layout of categories and tags, show statistics of each tag.</p>
-</li>
-<li>
-<p><input disabled="" type="checkbox"> Change the style of footer and navigator title.</p>
-</li>
-<li>
-<p><input disabled="" type="checkbox"> Move the tags info  to the bottom of a post.</p>
-</li>
-<li>
-<p><input disabled="" type="checkbox"> Change the hover <code>underline</code> to <code>dashed</code>.</p>
-</li>
-<li>
-<p><input disabled="" type="checkbox"> Change the color of hyperlink in post.</p>
-</li>
-<li>
-<p><input disabled="" type="checkbox"> New archive page. Reference page <a href="https://byvoid.com/zhs/blog/archive/">https://byvoid.com/zhs/blog/archive/</a>.</p>
-</li>
+<li><input checked="" disabled="" type="checkbox"> Markdownify the copyright string.</li>
+<li><input checked="" disabled="" type="checkbox"> Display the theme info implicitly.</li>
+<li><input checked="" disabled="" type="checkbox"> Add some common Font Awesome icons to sidebar.</li>
+<li><input checked="" disabled="" type="checkbox"> Enable the visitor counter <code>leancloud-visitor</code> of valine and move the <code>enablevaline</code> to <code>params.valine</code> in configuration.</li>
+<li><input disabled="" type="checkbox"> Enable <code>disableHome</code> parameter in <code>FrontMatter</code>.</li>
+<li><input disabled="" type="checkbox"> Change the style of ToC.</li>
+<li><input disabled="" type="checkbox"> Split the layout of categories and tags, show statistics of each tag.</li>
+<li><input disabled="" type="checkbox"> Change the style of footer and navigator title.</li>
+<li><input disabled="" type="checkbox"> Move the tags info  to the bottom of a post.</li>
+<li><input disabled="" type="checkbox"> Change the hover <code>underline</code> to <code>dashed</code>.</li>
+<li><input disabled="" type="checkbox"> Change the color of hyperlink in post.</li>
+<li><input disabled="" type="checkbox"> New archive page. Reference page <a href="https://byvoid.com/zhs/blog/archive/">https://byvoid.com/zhs/blog/archive/</a>.</li>
 </ul>
-
+<h2 id="changelog">Changelog</h2>
+<h3 id="font-awesome">Font Awesome</h3>
+<p>You can find many <a href="https://www.bootcdn.cn/font-awesome/">Font Awesome CDN</a> resources of kinds of  versions on <a href="https://www.bootcdn.cn/font-awesome/">BootCDN</a>.</p>
+<p>First, add the script to <code>head.html</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- Font Awesome --&gt;</span>
+&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span>&gt;
+</code></pre></div><p>Then, add any <a href="https://fontawesome.com/cheatsheet">icons</a>  you want in your code, like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- in sidebar.html --&gt;</span>
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link-item&#34;</span> &gt;
+    {{ if .Site.Params.social.github }}
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.Params.social.github }}&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;
+        &lt;<span style="color:#f92672">i</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;GitHub&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fab fa-github&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font-size: 24px&#34;</span>&gt;&lt;/<span style="color:#f92672">i</span>&gt;
+    &lt;/<span style="color:#f92672">a</span>&gt;
+    {{ end }}
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ &#34;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">xml</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">absLangURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;
+        &lt;<span style="color:#f92672">i</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;RSS&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fa fa-rss&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font-size: 24px&#34;</span>&gt;&lt;/<span style="color:#f92672">i</span>&gt;
+    &lt;/<span style="color:#f92672">a</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div>
                     
                     <HR width="100%" id="EOF">
 		    <p style="color:#777;">Last modified on 2020-06-16</p>
@@ -605,8 +675,6 @@ color: #515151;
                 
 
 
-
-
 <div id="valineVisitor">
     
     
@@ -617,8 +685,6 @@ color: #515151;
     
 </div>
 <div id="vcomments"></div>
-
-
 
 
 

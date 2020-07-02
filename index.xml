@@ -24,44 +24,38 @@
 &lt;p&gt;You can switch to the new branch &lt;a href=&#34;https://github.com/KipJiang/hugo-theme-diary/tree/kipjiang&#34;&gt;kipjiang&lt;/a&gt; to check the changes.&lt;/p&gt;
 &lt;h2 id=&#34;todo-list&#34;&gt;TODO List&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Markdownify the copyright string.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Display the theme info implicitly.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add some common Font Awesome icons to sidebar.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Enable the visitor counter &lt;code&gt;leancloud-visitor&lt;/code&gt; of valine and move the &lt;code&gt;enablevaline&lt;/code&gt; to &lt;code&gt;params.valine&lt;/code&gt; in configuration.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Enable &lt;code&gt;disableHome&lt;/code&gt; parameter in &lt;code&gt;FrontMatter&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the style of ToC.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Split the layout of categories and tags, show statistics of each tag.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the style of footer and navigator title.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Move the tags info  to the bottom of a post.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the hover &lt;code&gt;underline&lt;/code&gt; to &lt;code&gt;dashed&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the color of hyperlink in post.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; New archive page. Reference page &lt;a href=&#34;https://byvoid.com/zhs/blog/archive/&#34;&gt;https://byvoid.com/zhs/blog/archive/&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Markdownify the copyright string.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Display the theme info implicitly.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add some common Font Awesome icons to sidebar.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Enable the visitor counter &lt;code&gt;leancloud-visitor&lt;/code&gt; of valine and move the &lt;code&gt;enablevaline&lt;/code&gt; to &lt;code&gt;params.valine&lt;/code&gt; in configuration.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Enable &lt;code&gt;disableHome&lt;/code&gt; parameter in &lt;code&gt;FrontMatter&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the style of ToC.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Split the layout of categories and tags, show statistics of each tag.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the style of footer and navigator title.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Move the tags info  to the bottom of a post.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the hover &lt;code&gt;underline&lt;/code&gt; to &lt;code&gt;dashed&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the color of hyperlink in post.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; New archive page. Reference page &lt;a href=&#34;https://byvoid.com/zhs/blog/archive/&#34;&gt;https://byvoid.com/zhs/blog/archive/&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-- https://kipjiang.github.io/post/2020/06/16/change-to-new-theme/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+&lt;h2 id=&#34;changelog&#34;&gt;Changelog&lt;/h2&gt;
+&lt;h3 id=&#34;font-awesome&#34;&gt;Font Awesome&lt;/h3&gt;
+&lt;p&gt;You can find many &lt;a href=&#34;https://www.bootcdn.cn/font-awesome/&#34;&gt;Font Awesome CDN&lt;/a&gt; resources of kinds of  versions on &lt;a href=&#34;https://www.bootcdn.cn/font-awesome/&#34;&gt;BootCDN&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;First, add the script to &lt;code&gt;head.html&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- Font Awesome --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;rel&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then, add any &lt;a href=&#34;https://fontawesome.com/cheatsheet&#34;&gt;icons&lt;/a&gt;  you want in your code, like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- in sidebar.html --&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;nav-link-item&amp;#34;&lt;/span&gt; &amp;gt;
+    {{ if .Site.Params.social.github }}
+    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{{ .Site.Params.social.github }}&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;target&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_blank&amp;#34;&lt;/span&gt;&amp;gt;
+        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;GitHub&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fab fa-github&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;font-size: 24px&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;i&lt;/span&gt;&amp;gt;
+    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt;&amp;gt;
+    {{ end }}
+    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{{ &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;index&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;xml&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;absLangURL&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}}&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;target&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_blank&amp;#34;&lt;/span&gt;&amp;gt;
+        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;RSS&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fa fa-rss&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;font-size: 24px&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;i&lt;/span&gt;&amp;gt;
+    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://kipjiang.github.io/post/2020/06/16/change-to-new-theme/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
         </item>
     
     
@@ -674,7 +668,7 @@ VNC server running on 127.0.0.1:5900
         <guid>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</guid>
         <description>Kip Jiang https://kipjiang.github.io/post/2020/03/07/hello-hugo/ -&lt;h2 id=&#34;hugo-onesentence&#34;&gt;Hugo OneSentence&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Here is out of time.&lt;/p&gt;
+&lt;p&gt;It is out of time.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;以前折腾过其他静态主页的生成器，像 &lt;a href=&#34;https://hexo.io/&#34;&gt;hexo&lt;/a&gt; 和 &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; 等，都用来建过站点，但是从来没有正经写过文章。&lt;/p&gt;
 &lt;p&gt;这段时间，使用 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;，参考 &lt;a href=&#34;https://yihui.org/&#34;&gt;YihuiXie&lt;/a&gt; 和 &lt;a href=&#34;http://blog.fungo.me/&#34;&gt;山羊博客&lt;/a&gt;，通过移植 &lt;a href=&#34;https://github.com/yihui/hugo-ivy&#34;&gt;hugo-ivy&lt;/a&gt;，也写了一个 hugo 的主题 &lt;a href=&#34;https://github.com/KipJiang/hugo-theme-OneSentence&#34;&gt;hugo-theme-OneSentence&lt;/a&gt;。&lt;/p&gt;

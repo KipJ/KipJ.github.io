@@ -21,10 +21,7 @@
       <description>Hugo Theme Diary I change my blog to a new hugo theme hugo-theme-diary which is pretty concise.
 To meet my taste I am adding some new features to it.
 You can switch to the new branch kipjiang to check the changes.
-TODO List   Markdownify the copyright string.
-  Display the theme info implicitly.
-  Add some common Font Awesome icons to sidebar.
-  Enable the visitor counter leancloud-visitor of valine and move the enablevaline to params.</description>
+TODO List  Markdownify the copyright string. Display the theme info implicitly. Add some common Font Awesome icons to sidebar. Enable the visitor counter leancloud-visitor of valine and move the enablevaline to params.</description>
     </item>
     
     <item>
@@ -33,7 +30,7 @@ TODO List   Markdownify the copyright string.
       <pubDate>Sat, 07 Mar 2020 21:49:29 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</guid>
-      <description>Hugo OneSentence  Here is out of time.
+      <description>Hugo OneSentence  It is out of time.
  以前折腾过其他静态主页的生成器，像 hexo 和 Jekyll 等，都用来建过站点，但是从来没有正经写过文章。
 这段时间，使用 Hugo，参考 YihuiXie 和 山羊博客，通过移植 hugo-ivy，也写了一个 hugo 的主题 hugo-theme-OneSentence。
 感觉到现在为止，已经基本满足我的需求了。
