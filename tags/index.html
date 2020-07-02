@@ -34,8 +34,8 @@
 </script>
 
 
+<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 
 
 
@@ -205,7 +205,7 @@ color: #515151;
             
             
             <a href="https://kipjiang.github.io/index.xml" target="_blank">
-                <i title="RSS" class="fa fa-rss" style="font-size: 24px"></i>
+                <i title="RSS" class="fas fa-rss" style="font-size: 24px"></i>
             </a>
         </div>
     </div>
@@ -237,18 +237,16 @@ color: #515151;
     
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
+            
+            <i class="fas fa-chevron-up pagination-action-icon" style=""></i>
+            
         </a>
         
         <a class="pagination-action" v-on:click="toggleDarkMode">
-            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
-                brightness_4
-            </i>
-            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
-                brightness_7
-            </i>
+            
+            <i class="fas fa-moon pagination-action-icon" v-if="isDarkMode" style=""></i>
+            
+            <i class="fas fa-sun pagination-action-icon" v-else="isDarkMode" style=""></i>
         </a>
         
         
@@ -325,21 +323,18 @@ color: #515151;
     <div ref="navBackground" class="nav-background"></div>
     <div class="container container-narrow nav-content">
         <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <i class="material-icons">
-                menu
-            </i>
+            
+            <i class="fas fa-bars"></i>
         </button>
         <a ref="navTitle" class="navbar-brand" href="https://kipjiang.github.io/">
             Kip Jiang
         </a>
         
         <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
-            <i class="material-icons" v-if="isDarkMode">
-                brightness_4
-            </i>
-            <i class="material-icons" v-else="isDarkMode">
-                brightness_7
-            </i>
+            
+            <i class="fas fa-moon pagination-action-icon" v-if="isDarkMode" style=""></i>
+            
+            <i class="fas fa-sun pagination-action-icon" v-else="isDarkMode" style=""></i>
         </button>
         
     </div>
