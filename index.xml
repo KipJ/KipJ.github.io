@@ -28,6 +28,7 @@
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Display the theme info implicitly.&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add some common Font Awesome icons to sidebar.&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Enable the visitor counter &lt;code&gt;leancloud-visitor&lt;/code&gt; of valine and move the &lt;code&gt;enablevaline&lt;/code&gt; to &lt;code&gt;params.valine&lt;/code&gt; in configuration.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the resource of all icons from googleapi to font awesome.&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Enable &lt;code&gt;disableHome&lt;/code&gt; parameter in &lt;code&gt;FrontMatter&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the style of ToC.&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Split the layout of categories and tags, show statistics of each tag.&lt;/li&gt;
