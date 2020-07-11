@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
-    <lastBuildDate>Fri, 27 Mar 2020 19:33:47 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2020 20:19:58 +0800</lastBuildDate>
     
 	<atom:link href="https://kipjiang.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Install Ubuntu as A Second OS</title>
+      <link>https://kipjiang.github.io/post/2020/07/11/dual-os/</link>
+      <pubDate>Sat, 11 Jul 2020 20:19:58 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/post/2020/07/11/dual-os/</guid>
+      <description>A New Computer I got a new Dell computer several weeks ago, which installed the Windows 10. The computer has 2 disks, a 120Gb SSD and a 1T HDD.
+I reserved 430G of HDD space and installed a ubuntu 20.04 as my second os, but I met some troubles because of the new UEFI system.
+Deal with It  New Tool  At the beginning, I used an old version of UltraISO to make the USB boot system, but the UEFI system even can not recognize it.</description>
+    </item>
     
     <item>
       <title>Working with Ubuntu (3)</title>

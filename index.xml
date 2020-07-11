@@ -6,9 +6,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
-    <lastBuildDate>Tue, 16 Jun 2020 22:01:13 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2020 20:19:58 +0800</lastBuildDate>
     
         <atom:link href="https://kipjiang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Install Ubuntu as A Second OS</title>
+        <link>https://kipjiang.github.io/post/2020/07/11/dual-os/</link>
+        <pubDate>Sat, 11 Jul 2020 20:19:58 +0800</pubDate>
+        
+        <guid>https://kipjiang.github.io/post/2020/07/11/dual-os/</guid>
+        <description>Kip Jiang https://kipjiang.github.io/post/2020/07/11/dual-os/ -&lt;h2 id=&#34;a-new-computer&#34;&gt;A New Computer&lt;/h2&gt;
+&lt;p&gt;I got a new Dell computer several weeks ago, which installed the Windows 10. The computer has 2 disks, a 120Gb SSD and a 1T HDD.&lt;/p&gt;
+&lt;p&gt;I reserved 430G of HDD space and installed a ubuntu 20.04 as my second os, but I met some troubles  because of the new UEFI system.&lt;/p&gt;
+&lt;h2 id=&#34;deal-with-it&#34;&gt;Deal with It&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;New Tool&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At the beginning, I used an old version of  &lt;a href=&#34;https://cn.ultraiso.net/&#34;&gt;UltraISO&lt;/a&gt; to make the USB boot system, but the UEFI system even can not recognize it.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been stuck here for a long time and found a useful tool &lt;a href=&#34;https://rufus.ie/&#34;&gt;Rufus&lt;/a&gt; that can deal with the UEFI firmware.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Boot Loader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The bootloader of ubuntu was installed in the UEFI partition where the Windows Boot Manager is located, although I chose to install it at the root partition of ubuntu during installation.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/07/11/QjtcmVr3f2pRxUq.png&#34; alt=&#34;install.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally, I learned that the UltraISO can also make USB boot media compatible with UEFI. 😂&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;It wasted my whole day, really!&lt;/p&gt;
+- https://kipjiang.github.io/post/2020/07/11/dual-os/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+        </item>
     
     
     
@@ -327,7 +358,7 @@ sudo apt-get install typora
     
     
         <item>
-        <title>Create Virtual Machine with vTPM in Ubuntu</title>
+        <title>Virtual Machine with vTPM in Ubuntu</title>
         <link>https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
         <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
         
@@ -817,16 +848,10 @@ $ ./VMware-Workstation-Full-15.5.1-15018445.x86_64.bundle
 &lt;li&gt;license for VMware Workstation Pro 15&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;任选一个输入&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA
-
-VF750-4MX5Q-488DQ-9WZE9-ZY2D6
-
-UU54R-FVD91-488PP-7NNGC-ZFAX6
-
-YC74H-FGF92-081VZ-R5QNG-P6RY4
-
-YC34H-6WWDK-085MQ-JYPNX-NZRA2
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;miniconda&#34;&gt;miniconda&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.dogedoge.com/results?q=VMware+Workstation+Pro+15+%E6%BF%80%E6%B4%BB%E8%AE%B8%E5%8F%AF%E8%AF%81&#34;&gt;go ahead&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;miniconda&#34;&gt;miniconda&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;下载安装包，&lt;a href=&#34;https://docs.conda.io/en/latest/miniconda.html&#34;&gt;miniconda3&lt;/a&gt;&lt;/p&gt;
@@ -990,76 +1015,6 @@ $ chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;600&lt;/span&gt; authorized_ke
     &lt;span style=&#34;color:#a6e22e&#34;&gt;User user-name-to-sign-in&lt;/span&gt;
     &lt;span style=&#34;color:#a6e22e&#34;&gt;IdentityFile C:\Users\&amp;lt;UserName&amp;gt;\.ssh\id_rsa&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Display Git Branch Name in Bash</title>
-        <link>https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</link>
-        <pubDate>Thu, 23 May 2019 15:38:03 +0800</pubDate>
-        
-        <guid>https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</guid>
-        <description>Kip Jiang https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/ -&lt;h2 id=&#34;first&#34;&gt;First&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;将脚本下载到 Home 目录&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ git clone https://github.com/KipJiang/git-aware-prompt.git ~/git-aware-prompt
-$ mv ~/git-aware-prompt ~/.git-aware-prompt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;修改配置文件 &lt;code&gt;.bashrc&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ vim ~/.bashrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加如下内容&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# source .git-aware-prompt&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;export PS1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ &amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;export GITAWAREPROMPT&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;~/.git-aware-prompt&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;source &amp;#34;${GITAWAREPROMPT}/main.sh&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;使配置生效&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ source ~/.bashrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;效果&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Ubuntu&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://kipjiang.github.io/img/2019-05-23/ubuntu-git-color.png&#34; alt=&#34;ubuntu-git-color&#34;&gt;&lt;/p&gt;
-&lt;p&gt;CentOS&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://kipjiang.github.io/img/2019-05-23/centos-git-color.png&#34; alt=&#34;centos-git&amp;ndash;color&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;second&#34;&gt;Second&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;编辑 &lt;code&gt;~/.bashrc&lt;/code&gt;，添加如下内容&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git branch function&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;function git_branch {&lt;/span&gt;
-   &lt;span style=&#34;color:#a6e22e&#34;&gt;branch&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;`git branch 2&amp;gt;/dev/null | grep &amp;#34;^\*&amp;#34; | sed -e &amp;#34;s/^\*\ //&amp;#34;`&amp;#34;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;   if [ &amp;#34;${branch}&amp;#34; != &amp;#34;&amp;#34; ];then
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       if [ &amp;#34;${branch}&amp;#34; = &amp;#34;(no branch)&amp;#34; ];then
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;           branch=&amp;#34;(`git rev-parse --short HEAD`...)&amp;#34;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       fi
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;       echo &amp;#34; ($branch)&amp;#34;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;   fi&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;}&lt;/span&gt;
-
-&lt;span style=&#34;color:#a6e22e&#34;&gt;export PS1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\u@\h \[\033[01;36m\]\W\[\033[01;32m\]$(git_branch)\[\033[00m\] \$ &amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;使配置生效&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ source ~/.bashrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;third&#34;&gt;Third&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;编辑 &lt;code&gt;~/.profile&lt;/code&gt;，添加如下内容&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git branch function&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;parse_git_branch() {&lt;/span&gt;
-     &lt;span style=&#34;color:#a6e22e&#34;&gt;git branch 2&amp;gt; /dev/null | sed -e &amp;#39;/^[^*]/d&amp;#39; -e &amp;#39;s/* \(.*\)/ (\1)/&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;export PS1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ &amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;使配置生效&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ source ~/.profile
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
         </item>
     
     

@@ -42,7 +42,7 @@ Chrome 有两种安装方式：（1）通过设置 apt 源的方式安装；（2
     </item>
     
     <item>
-      <title>Create Virtual Machine with vTPM in Ubuntu</title>
+      <title>Virtual Machine with vTPM in Ubuntu</title>
       <link>https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
       <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
       
