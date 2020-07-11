@@ -6,9 +6,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
-    <lastBuildDate>Sat, 11 Jul 2020 20:19:58 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2020 22:20:12 +0800</lastBuildDate>
     
         <atom:link href="https://kipjiang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Visual Studio Code: Remote-SSH</title>
+        <link>https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/</link>
+        <pubDate>Thu, 07 Nov 2019 12:25:16 +0800</pubDate>
+        
+        <guid>https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/</guid>
+        <description>Kip Jiang https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/ -&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;第一步当然是先在 VSCode 中安装 &lt;code&gt;Remote-SSH&lt;/code&gt; 扩展啦&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过 WSL 生成公私钥对&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ ssh-keygen -t rsa -b &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;通过 ssh 登录服务器，将生成的公钥文件的副本 &lt;code&gt;id_rsa.tmp.pub&lt;/code&gt; 复制到路径 &lt;code&gt;~/.ssh/&lt;/code&gt; 下，执行命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ cat id_rsa.tmp.pub &amp;gt;&amp;gt; authorized_keys
+$ chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;600&lt;/span&gt; authorized_keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;：必须执行 &lt;code&gt;chmod 600 authorized_keys&lt;/code&gt; 命令&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;配置本地的 VSCode&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;编辑文件 &lt;code&gt;C:\Users\&amp;lt;UserName&amp;gt;\.ssh\config&lt;/code&gt;，按如下格式配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Host arbitrary-name-you-like&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;HostName remote-host-ip&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;Port remote-port&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;User user-name-to-sign-in&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;IdentityFile C:\Users\&amp;lt;UserName&amp;gt;\.ssh\id_rsa&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
+        </item>
     
     
     
