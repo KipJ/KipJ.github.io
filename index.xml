@@ -18,7 +18,65 @@
         <pubDate>Sat, 11 Jul 2020 22:20:12 +0800</pubDate>
         
         <guid>https://kipjiang.github.io/note/2020/07/11/qv2ray-in-ubuntu/</guid>
-        <description>Kip Jiang https://kipjiang.github.io/note/2020/07/11/qv2ray-in-ubuntu/ -&lt;h2 id=&#34;to-be-completed-&#34;&gt;To be completed &amp;hellip;&lt;/h2&gt;
+        <description>Kip Jiang https://kipjiang.github.io/note/2020/07/11/qv2ray-in-ubuntu/ -&lt;h2 id=&#34;ssr&#34;&gt;SSR&lt;/h2&gt;
+&lt;p&gt;之前用的 VPS 到期，而重新搭建服务太麻烦，就直接购买别人已经搭建好的 SSR 服务。&lt;/p&gt;
+&lt;p&gt;但是，服务商提供的小飞机 ShadowsocksR 不好用，我将它换成了 &lt;a href=&#34;https://qv2ray.github.io/&#34;&gt;Qv2ray&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;已经使用几周，体验还不错。&lt;/p&gt;
+&lt;h2 id=&#34;qv2ray&#34;&gt;Qv2ray&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://qv2ray.github.io/&#34;&gt;Qv2ray&lt;/a&gt; 运行在 &lt;a href=&#34;https://www.v2ray.com/&#34;&gt;v2ray&lt;/a&gt; 内核基础上，通过插件的形式提供对 SSR 的支持。&lt;/p&gt;
+&lt;h3 id=&#34;download-softwares&#34;&gt;Download Softwares&lt;/h3&gt;
+&lt;p&gt;需要下载三样东西：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Qv2ray/Qv2ray/releases&#34;&gt;Qv2ray&lt;/a&gt; 客户端，我为 Ubuntu 下载的是 &lt;a href=&#34;https://github.com/Qv2ray/Qv2ray/releases/tag/v2.6.0&#34;&gt;Qv2ray.v2.6.0.linux-x64.AppImage&lt;/a&gt;。AppImage 格式的文件，只需为其添加运行权限即可，免去安装各种依赖的痛苦。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/v2ray/v2ray-core/releases&#34;&gt;v2ray-core&lt;/a&gt; 内核，我这里下载 &lt;a href=&#34;https://github.com/v2ray/v2ray-core/releases/tag/v4.26.0&#34;&gt;v2ray-linux-64 v4.26.0&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Qv2ray/QvPlugin-SSR&#34;&gt;QvPlugin-SSR&lt;/a&gt; 插件，下载 &lt;a href=&#34;https://github.com/Qv2ray/QvPlugin-SSR/releases/tag/v2.0.0&#34;&gt;QvSSRPlugin.v2.0.0.linux-x64.so&lt;/a&gt; 正式版，其刚好适配 Qv2ray v2.6.0 正式版。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;configure-qv2ray&#34;&gt;Configure Qv2ray&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可执行权限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;将 Qv2ray.v2.6.0.linux-x64.AppImage 放置在 &lt;code&gt;~/.config/qv2ray/&lt;/code&gt; 路径下，并赋予其可执行权限：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ chmod +x Qv2ray.v2.6.0.linux-x64.AppImage
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Add to Launcher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;编辑应用配置文件：&lt;code&gt;/usr/share/applications/qv2ray.desktop&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo vim /usr/share/applications/qv2ray.desktop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;[Desktop Entry]&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Qv2ray&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Name[zh_CN]&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Qv2ray&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Comment&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;VPN&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Comment[zh_CN]&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;VPN&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Exec&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/home/kip/.config/qv2ray/Qv2ray.v2.6.0.linux-x64.AppImage&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Icon&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/home/kip/.config/qv2ray/qv2ray.png&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Terminal&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;false&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Application&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Categories&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Application;VPN;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;Encoding&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;UTF-8&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;StartupNotify&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;其中的 &amp;lsquo;Icon&amp;rsquo;，可以去其 GitHub 主页下载。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;保存退出后，就可以在 Dash 中搜索 qv2ray 并将之添加到快速启动栏。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/07/12/gq4AlkJvpBxiWdU.png&#34; alt=&#34;qv2ray-1.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;configure-v2ray-core&#34;&gt;Configure v2ray-core&lt;/h3&gt;
+&lt;p&gt;将 v2ray-linux-64.zip 加压到 &lt;code&gt;~/.config/qv2ray/vcore/&lt;/code&gt; 路径下，并在 「Preferences &amp;ndash;&amp;gt; Kernel Settings」下，点击 「Check V2ray Core Settings」 检查是否通过。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/07/12/mTunoFz9SIdYseK.png&#34; alt=&#34;v2ray-passed.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;configure-ssr-plugin&#34;&gt;Configure SSR Plugin&lt;/h3&gt;
+&lt;p&gt;将插件 QvSSRPlugin.v2.0.0.linux-x64.so 复制到路径 &lt;code&gt;~/.config/qv2ray/plugins/&lt;/code&gt; 下。&lt;/p&gt;
+&lt;p&gt;重新启动 Qv2ray 客户端，点击 「Plugins」，可以看到 SSR 插件已经被识别到了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/07/12/UjZ5wRv27qnEfGI.png&#34; alt=&#34;SSR.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;add-subscription&#34;&gt;Add Subscription&lt;/h3&gt;
+&lt;p&gt;点击 Qv2ray 主界面的 「Groups/Subscription」，将你的订阅地址填入并点击更新。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/07/12/xaYlULtcCKHZy2B.png&#34; alt=&#34;subscription.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;待更新完成后，在主界面双击相应的节点，即可启动代理。&lt;/p&gt;
 - https://kipjiang.github.io/note/2020/07/11/qv2ray-in-ubuntu/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>
         </item>
     

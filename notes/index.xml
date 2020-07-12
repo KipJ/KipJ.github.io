@@ -18,7 +18,17 @@
       <pubDate>Sat, 11 Jul 2020 22:20:12 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/note/2020/07/11/qv2ray-in-ubuntu/</guid>
-      <description>To be completed &amp;hellip; </description>
+      <description>SSR 之前用的 VPS 到期，而重新搭建服务太麻烦，就直接购买别人已经搭建好的 SSR 服务。
+但是，服务商提供的小飞机 ShadowsocksR 不好用，我将它换成了 Qv2ray。
+已经使用几周，体验还不错。
+Qv2ray Qv2ray 运行在 v2ray 内核基础上，通过插件的形式提供对 SSR 的支持。
+Download Softwares 需要下载三样东西：
+  Qv2ray 客户端，我为 Ubuntu 下载的是 Qv2ray.v2.6.0.linux-x64.AppImage。AppImage 格式的文件，只需为其添加运行权限即可，免去安装各种依赖的痛苦。
+  v2ray-core 内核，我这里下载 v2ray-linux-64 v4.26.0.
+  QvPlugin-SSR 插件，下载 QvSSRPlugin.v2.0.0.linux-x64.so 正式版，其刚好适配 Qv2ray v2.6.0 正式版。
+  Configure Qv2ray  可执行权限  将 Qv2ray.v2.6.0.linux-x64.AppImage 放置在 ~/.config/qv2ray/ 路径下，并赋予其可执行权限：
+$ chmod +x Qv2ray.v2.6.0.linux-x64.AppImage  Add to Launcher  编辑应用配置文件：/usr/share/applications/qv2ray.desktop：
+$ sudo vim /usr/share/applications/qv2ray.desktop 配置如下：</description>
     </item>
     
     <item>
