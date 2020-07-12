@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on Kip Jiang</title>
+    <link>https://kipjiang.github.io/tags/bash/</link>
+    <description>Recent content in Bash on Kip Jiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
+    <lastBuildDate>Thu, 23 May 2019 15:38:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://kipjiang.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Display Git Branch Name in Bash</title>
+      <link>https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</link>
+      <pubDate>Thu, 23 May 2019 15:38:03 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/note/2019/05/23/display-git-branch-name-in-bash/</guid>
+      <description>First  将脚本下载到 Home 目录  $ git clone https://github.com/KipJiang/git-aware-prompt.git ~/git-aware-prompt $ mv ~/git-aware-prompt ~/.git-aware-prompt 修改配置文件 .bashrc  $ vim ~/.bashrc 添加如下内容
+# source .git-aware-prompt export PS1=&amp;#34;\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ &amp;#34; export GITAWAREPROMPT=~/.git-aware-prompt source &amp;#34;${GITAWAREPROMPT}/main.sh&amp;#34; 使配置生效  $ source ~/.bashrc 效果  Ubuntu
+CentOS
+Second  编辑 ~/.bashrc，添加如下内容  # git branch function function git_branch { branch=&amp;#34;`git branch 2&amp;gt;/dev/null | grep &amp;#34;^\*&amp;#34; | sed -e &amp;#34;s/^\*\ //&amp;#34;`&amp;#34; if [ &amp;#34;${branch}&amp;#34; != &amp;#34;&amp;#34; ];then if [ &amp;#34;${branch}&amp;#34; = &amp;#34;(no branch)&amp;#34; ];then branch=&amp;#34;(`git rev-parse --short HEAD`.</description>
+    </item>
+    
+  </channel>
+</rss>

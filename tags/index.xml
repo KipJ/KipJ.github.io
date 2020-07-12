@@ -22,6 +22,15 @@
     </item>
     
     <item>
+      <title>Ubuntu</title>
+      <link>https://kipjiang.github.io/tags/ubuntu/</link>
+      <pubDate>Sat, 11 Jul 2020 22:20:12 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>VPN</title>
       <link>https://kipjiang.github.io/tags/vpn/</link>
       <pubDate>Sat, 11 Jul 2020 22:20:12 +0800</pubDate>
@@ -31,11 +40,11 @@
     </item>
     
     <item>
-      <title>Ubuntu</title>
-      <link>https://kipjiang.github.io/tags/ubuntu/</link>
+      <title>UEFI</title>
+      <link>https://kipjiang.github.io/tags/uefi/</link>
       <pubDate>Sat, 11 Jul 2020 20:19:58 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/tags/ubuntu/</guid>
+      <guid>https://kipjiang.github.io/tags/uefi/</guid>
       <description></description>
     </item>
     
@@ -67,11 +76,56 @@
     </item>
     
     <item>
+      <title>Miniconda</title>
+      <link>https://kipjiang.github.io/tags/miniconda/</link>
+      <pubDate>Tue, 31 Mar 2020 21:29:36 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/tags/miniconda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chrome</title>
+      <link>https://kipjiang.github.io/tags/chrome/</link>
+      <pubDate>Fri, 27 Mar 2020 19:33:47 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Libtpms</title>
+      <link>https://kipjiang.github.io/tags/libtpms/</link>
+      <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/tags/libtpms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QEMU</title>
+      <link>https://kipjiang.github.io/tags/qemu/</link>
+      <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/tags/qemu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>vTPM</title>
       <link>https://kipjiang.github.io/tags/vtpm/</link>
       <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/tags/vtpm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VSCode</title>
+      <link>https://kipjiang.github.io/tags/vscode/</link>
+      <pubDate>Thu, 20 Feb 2020 12:23:43 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/tags/vscode/</guid>
       <description></description>
     </item>
     
@@ -85,11 +139,20 @@
     </item>
     
     <item>
-      <title>VSCode</title>
-      <link>https://kipjiang.github.io/tags/vscode/</link>
+      <title>SSH</title>
+      <link>https://kipjiang.github.io/tags/ssh/</link>
       <pubDate>Thu, 07 Nov 2019 12:25:16 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/tags/vscode/</guid>
+      <guid>https://kipjiang.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bash</title>
+      <link>https://kipjiang.github.io/tags/bash/</link>
+      <pubDate>Thu, 23 May 2019 15:38:03 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/tags/bash/</guid>
       <description></description>
     </item>
     

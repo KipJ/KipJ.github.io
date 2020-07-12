@@ -4,42 +4,47 @@
   
   <url>
     <loc>https://kipjiang.github.io/categories/</loc>
-    <lastmod>2020-07-11T22:20:12+08:00</lastmod>
+    <lastmod>2020-07-12T10:17:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kipjiang.github.io/note/2020/07/11/qv2ray-in-ubuntu/</loc>
-    <lastmod>2020-07-11T22:20:12+08:00</lastmod>
+    <lastmod>2020-07-12T10:17:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kipjiang.github.io/</loc>
-    <lastmod>2020-07-11T22:20:12+08:00</lastmod>
+    <lastmod>2020-07-12T10:17:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kipjiang.github.io/categories/linux/</loc>
-    <lastmod>2020-07-11T22:20:12+08:00</lastmod>
+    <lastmod>2020-07-12T10:17:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kipjiang.github.io/notes/</loc>
-    <lastmod>2020-07-11T22:20:12+08:00</lastmod>
+    <lastmod>2020-07-12T10:17:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kipjiang.github.io/tags/qv2ray/</loc>
-    <lastmod>2020-07-11T22:20:12+08:00</lastmod>
+    <lastmod>2020-07-12T10:17:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kipjiang.github.io/tags/</loc>
-    <lastmod>2020-07-11T22:20:12+08:00</lastmod>
+    <lastmod>2020-07-12T10:17:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/ubuntu/</loc>
+    <lastmod>2020-07-12T10:17:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kipjiang.github.io/tags/vpn/</loc>
-    <lastmod>2020-07-11T22:20:12+08:00</lastmod>
+    <lastmod>2020-07-12T10:17:31+08:00</lastmod>
   </url>
   
   <url>
@@ -53,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://kipjiang.github.io/tags/ubuntu/</loc>
+    <loc>https://kipjiang.github.io/tags/uefi/</loc>
     <lastmod>2020-07-11T20:19:58+08:00</lastmod>
   </url>
   
@@ -93,8 +98,28 @@
   </url>
   
   <url>
+    <loc>https://kipjiang.github.io/tags/miniconda/</loc>
+    <lastmod>2020-06-16T11:50:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/chrome/</loc>
+    <lastmod>2020-06-16T11:44:59+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</loc>
     <lastmod>2020-06-16T11:44:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/libtpms/</loc>
+    <lastmod>2020-06-16T13:10:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/qemu/</loc>
+    <lastmod>2020-06-16T13:10:34+08:00</lastmod>
   </url>
   
   <url>
@@ -123,6 +148,11 @@
   </url>
   
   <url>
+    <loc>https://kipjiang.github.io/tags/vscode/</loc>
+    <lastmod>2020-06-16T12:21:43+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</loc>
     <lastmod>2020-06-16T11:50:57+08:00</lastmod>
   </url>
@@ -138,13 +168,18 @@
   </url>
   
   <url>
+    <loc>https://kipjiang.github.io/tags/ssh/</loc>
+    <lastmod>2020-06-16T12:21:43+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kipjiang.github.io/note/2019/11/07/vscode-remote-ssh/</loc>
     <lastmod>2020-06-16T12:21:43+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kipjiang.github.io/tags/vscode/</loc>
-    <lastmod>2020-06-16T12:21:43+08:00</lastmod>
+    <loc>https://kipjiang.github.io/tags/bash/</loc>
+    <lastmod>2020-06-16T12:40:43+08:00</lastmod>
   </url>
   
   <url>

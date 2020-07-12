@@ -8,7 +8,7 @@
 <meta content="telephone=no" name="format-detection">
 
 <meta name="description" content="Create VMs with vTPM using QEMU-KVM">
-<meta name="keywords" content="vTPM">
+<meta name="keywords" content="vTPM, QEMU, Libtpms">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
@@ -770,6 +770,12 @@ color: #515151;
                                 <a href="/tags/vtpm">vTPM</a>
                                 &nbsp;
                             
+                                <a href="/tags/qemu">QEMU</a>
+                                &nbsp;
+                            
+                                <a href="/tags/libtpms">Libtpms</a>
+                                &nbsp;
+                            
                         
                         
                         
@@ -877,7 +883,7 @@ lrwxrwxrwx  <span style="color:#ae81ff">1</span> root root    <span style="color
 $ cd libtpms
 $ sudo apt-get -y install automake autoconf libtool gcc build-essential libssl-dev dh-exec pkg-config gawk
 $ ./autogen.sh --with-openssl --with-tpm2
-&lt;snip
+&lt;snip&gt;
 CFLAGS<span style="color:#f92672">=</span>-g -O2 -DUSE_OPENSSL_FUNCTIONS_SYMMETRIC<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DUSE_OPENSSL_FUNCTIONS_EC<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DUSE_OPENSSL_FUNCTIONS_ECDSA<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DUSE_OPENSSL_FUNCTIONS_RSA<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>  -Wall -Werror -Wreturn-type -Wsign-compare -Wno-self-assign
 HARDENING_CFLAGS<span style="color:#f92672">=</span>-fstack-protector-strong 
 HARDENING_LDFLAGS<span style="color:#f92672">=</span> -Wl,-z,relro  -Wl,-z,now 

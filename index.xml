@@ -129,7 +129,7 @@
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Display the theme info implicitly.&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add some common Font Awesome icons to sidebar.&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Enable the visitor counter &lt;code&gt;leancloud-visitor&lt;/code&gt; of valine and move the &lt;code&gt;enablevaline&lt;/code&gt; to &lt;code&gt;params.valine&lt;/code&gt; in configuration.&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the resource of all icons from googleapi to font awesome.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the resource of all icons from googleapi to Font Awesome.&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Enable &lt;code&gt;disableHome&lt;/code&gt; parameter in &lt;code&gt;FrontMatter&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Change the style of ToC.&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Split the layout of categories and tags, show statistics of each tag.&lt;/li&gt;
@@ -509,7 +509,7 @@ lrwxrwxrwx  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root  
 $ cd libtpms
 $ sudo apt-get -y install automake autoconf libtool gcc build-essential libssl-dev dh-exec pkg-config gawk
 $ ./autogen.sh --with-openssl --with-tpm2
-&amp;lt;snip
+&amp;lt;snip&amp;gt;
 CFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;-g -O2 -DUSE_OPENSSL_FUNCTIONS_SYMMETRIC&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; -DUSE_OPENSSL_FUNCTIONS_EC&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; -DUSE_OPENSSL_FUNCTIONS_ECDSA&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; -DUSE_OPENSSL_FUNCTIONS_RSA&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;  -Wall -Werror -Wreturn-type -Wsign-compare -Wno-self-assign
 HARDENING_CFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;-fstack-protector-strong 
 HARDENING_LDFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; -Wl,-z,relro  -Wl,-z,now 
@@ -809,7 +809,8 @@ VNC server running on 127.0.0.1:5900
 &lt;p&gt;好了，终于到主题 &lt;a href=&#34;https://kipjiang.github.io/hugo-theme-OneSentence&#34;&gt;OneSentence&lt;/a&gt;，这个才是我真真正正的完全自己修改得到的主题，可以看出和别人的已经很不一样了。&lt;/p&gt;
 &lt;p&gt;这个主题受 &lt;a href=&#34;http://blog.fungo.me/&#34;&gt;山羊博客&lt;/a&gt; 的启发，通过移植 &lt;a href=&#34;https://yihui.org/&#34;&gt;YihuiXie&lt;/a&gt;  的主题 &lt;a href=&#34;https://github.com/yihui/hugo-ivy&#34;&gt;hugo-ivy&lt;/a&gt; 而最终得到的，也是费了我一番功夫。主要的时间都花在了调整 css 样式，而我并不擅长这部分内容，感觉到了这个地步已经超出我自己的预期了 🤣。&lt;/p&gt;
 &lt;h2 id=&#34;give-up&#34;&gt;Give up&lt;/h2&gt;
-&lt;p&gt;但是！我现在还是放弃了，不想再耗费时间在这些我不擅长的地方，还是直接使用一个别人做好的主题算了。现在我已经转为使用 &lt;a href=&#34;https://github.com/KipJiang/hugo-theme-diary&#34;&gt;hugo-theme-diary&lt;/a&gt;，我对其做了一些修改，应该不会再折腾了。&lt;/p&gt;
+&lt;p&gt;但是！我现在还是放弃折腾了，不想再耗费时间在这些不擅长的地方，直接使用一款别人做好的主题。&lt;/p&gt;
+&lt;p&gt;现在已经转为使用 &lt;a href=&#34;https://github.com/KipJiang/hugo-theme-diary&#34;&gt;hugo-theme-diary&lt;/a&gt;，我对其做了一些修改，应该不会再折腾了。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;OK! That&amp;rsquo;s all.&lt;/strong&gt;&lt;/p&gt;
 - https://kipjiang.github.io/post/2020/03/07/hello-hugo/ - 2019-2020 &amp;#183; [Kip Jiang](/)</description>

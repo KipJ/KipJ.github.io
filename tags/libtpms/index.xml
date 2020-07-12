@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Libtpms on Kip Jiang</title>
+    <link>https://kipjiang.github.io/tags/libtpms/</link>
+    <description>Recent content in Libtpms on Kip Jiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
+    <lastBuildDate>Wed, 11 Mar 2020 20:34:44 +0800</lastBuildDate>
+    
+	<atom:link href="https://kipjiang.github.io/tags/libtpms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Virtual Machine with vTPM in Ubuntu</title>
+      <link>https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
+      <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/note/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
+      <description>Preparation  Reference Paper  Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.
+  Environment
+  Host: Ubuntu 18.04
+  Guest: Ubuntu 14.04
+  Source Code
+   seabios-tpm 2. libtpms 3. swtpm 4. qemu-tpm   Tree of Path  kip └── workspace ├── libtpms ├── qemu-tpm ├── seabios ├── swtpm └── test SeaBIOS SeaBIOS 包含 vTPM 支持的分支 seabios-tpm 最开始由 Stefan 维护，现在已经成功将其合并到主分支 SeaBIOS。因此，下面的实验中我们使用其主分支。</description>
+    </item>
+    
+  </channel>
+</rss>
