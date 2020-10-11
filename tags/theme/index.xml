@@ -5,19 +5,15 @@
     <link>https://kipjiang.github.io/tags/theme/</link>
     <description>Recent content in Theme on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
-    <lastBuildDate>Tue, 16 Jun 2020 22:01:13 +0800</lastBuildDate>
-    
-	<atom:link href="https://kipjiang.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language>
+    <copyright>[KipJiang](/) &amp;#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)</copyright>
+    <lastBuildDate>Tue, 16 Jun 2020 22:01:13 +0800</lastBuildDate><atom:link href="https://kipjiang.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Change to New Theme</title>
-      <link>https://kipjiang.github.io/post/2020/06/16/change-to-new-theme/</link>
+      <link>https://kipjiang.github.io/posts/2020/06/16/change-to-new-theme/</link>
       <pubDate>Tue, 16 Jun 2020 22:01:13 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/post/2020/06/16/change-to-new-theme/</guid>
+      <guid>https://kipjiang.github.io/posts/2020/06/16/change-to-new-theme/</guid>
       <description>Hugo Theme Diary I change my blog to a new hugo theme hugo-theme-diary which is pretty concise.
 To meet my taste I am adding some new features to it.
 You can switch to the new branch kipjiang to check the changes.
@@ -26,10 +22,10 @@ TODO List  Markdownify the copyright string. Display the theme info implicitly. 
     
     <item>
       <title>Hello Hugo</title>
-      <link>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</link>
+      <link>https://kipjiang.github.io/posts/2020/03/07/hello-hugo/</link>
       <pubDate>Sat, 07 Mar 2020 21:49:29 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</guid>
+      <guid>https://kipjiang.github.io/posts/2020/03/07/hello-hugo/</guid>
       <description>Hugo OneSentence  It is out of time.
  以前折腾过其他静态主页的生成器，像 hexo 和 Jekyll 等，都用来建过站点，但是从来没有正经写过文章。
 这段时间，使用 Hugo，参考 YihuiXie 和 山羊博客，通过移植 hugo-ivy，也写了一个 hugo 的主题 hugo-theme-OneSentence。

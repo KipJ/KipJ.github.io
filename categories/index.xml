@@ -5,13 +5,9 @@
     <link>https://kipjiang.github.io/categories/</link>
     <description>Recent content in Categories on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
-    <lastBuildDate>Sat, 11 Jul 2020 22:20:12 +0800</lastBuildDate>
-    
-	<atom:link href="https://kipjiang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language>
+    <copyright>[KipJiang](/) &amp;#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)</copyright>
+    <lastBuildDate>Sat, 11 Jul 2020 22:20:12 +0800</lastBuildDate><atom:link href="https://kipjiang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux</title>
       <link>https://kipjiang.github.io/categories/linux/</link>

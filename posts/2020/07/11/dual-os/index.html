@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.75.1" />
+
+  <title> Install Ubuntu as A Second OS |  Kip Jiang</title>
+  <meta name="description" content="Install Ubuntu 20.04 along with Windows 10">
+  <link rel="stylesheet" href="https://kipjiang.github.io/css/index.css">
+  <link rel="stylesheet" href="https://kipjiang.github.io/css/classes.css">
+  <link rel="canonical" href="https://kipjiang.github.io/posts/2020/07/11/dual-os/">
+  <link rel="alternate" type="application/rss+xml" href="" title="Kip Jiang">
+  
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="menus">
+  
+
+  <nav >
+    
+    <a href="/"> Home</a>
+    
+    <a href="/projects/"> Projects</a>
+    
+    <a href="/about/"> About</a>
+    
+  </nav>
+
+  <nav class="fontawesome">
+    
+    <a href="https://github.com/KipJiang" target="_blank">
+        <i title="GitHub" class="fab fa-github"></i>
+    </a>
+    
+    
+    <a href="https://kipjiang.github.io/index.xml" target="_blank">
+        <i title="RSS" class="fas fa-rss"></i>
+    </a>
+    
+  </nav>
+  
+  
+  <div class="hidden description">It's' Kip Jiang's Blog, who loves reading and running, and is interested in Linux and Cloud Computing.</div>
+  
+</header>
+
+<article id="article">
+  <header>
+  
+    <i class="fas fa-folder"></i>
+    
+    <a href="/categories/linux">Linux</a>
+    &nbsp;
+    
+  
+
+    <h1 style="text-align: center;" >Install Ubuntu as A Second OS</h1>
+    <div class="post-meta">
+    
+      <time datetime="2020-07-11T20:19:58&#43;08:00">July 11, 2020</time> &nbsp; 
+    
+
+    Kip Jiang &nbsp;
+
+    
+    
+      <i class="far fa-eye"></i>
+      <span id="/posts/2020/07/11/dual-os/" class="leancloud_visitors" data-flag-title="Install Ubuntu as A Second OS">
+          <span class="leancloud-visitors-count">  </span>
+      </span> &nbsp;
+    
+    
+
+    
+      <i class="far fa-clock"></i>
+      
+      
+      
+
+      
+      44 s
+      &nbsp;
+    
+    </div>
+  </header>
+
+  <h2 id="a-new-computer">A New Computer</h2>
+<p>I got a new Dell computer several weeks ago, which installed the Windows 10. The computer has 2 disks, a 120Gb SSD and a 1T HDD.</p>
+<p>I reserved 430G of HDD space and installed a ubuntu 20.04 as my second os, but I met some troubles  because of the new UEFI system.</p>
+<h2 id="deal-with-it">Deal with It</h2>
+<ul>
+<li>New Tool</li>
+</ul>
+<p>At the beginning, I used an old version of  <a href="https://cn.ultraiso.net/">UltraISO</a> to make the USB boot system, but the UEFI system even can not recognize it.</p>
+<p>I&rsquo;ve been stuck here for a long time and found a useful tool <a href="https://rufus.ie/">Rufus</a> that can deal with the UEFI firmware.</p>
+<ul>
+<li>Boot Loader</li>
+</ul>
+<p>The bootloader of ubuntu was installed in the UEFI partition where the Windows Boot Manager is located, although I chose to install it at the root partition of ubuntu during installation.</p>
+<p><img src="https://i.loli.net/2020/07/11/QjtcmVr3f2pRxUq.png" alt="install.png"></p>
+<ul>
+<li>More</li>
+</ul>
+<p>Finally, I learned that the UltraISO can also make USB boot media compatible with UEFI. 😂</p>
+<hr>
+<p>It wasted my whole day, really!</p>
+
+
+  
+  <footer>
+    <hr>
+    
+    <div class="post-tags">
+    
+      <i class="fas fa-tags"></i>
+      
+        <a href="/tags/ubuntu">Ubuntu</a>
+        &nbsp;
+      
+        <a href="/tags/windows">Windows</a>
+        &nbsp;
+      
+        <a href="/tags/uefi">UEFI</a>
+        &nbsp;
+      
+    
+    </div>
+  </footer>
+  
+
+  
+
+<div class="releated-post">
+  <h3>Related Posts</h3>
+  
+  <i class="fas fa-paperclip"></i>
+  <a href="/posts/2020/03/27/working-with-ubuntu-3rd/">Working with Ubuntu (3)</a>
+  <br>
+  
+  <i class="fas fa-paperclip"></i>
+  <a href="/posts/2020/02/20/working-with-ubuntu-2nd/">Working with Ubuntu (2)</a>
+  <br>
+  
+  <i class="fas fa-paperclip"></i>
+  <a href="/posts/2020/02/15/working-with-ubuntu-1st/">Working with Ubuntu (1)</a>
+  <br>
+  
+</div>
+
+
+  <div class="comments">
+
+
+
+  <div class="comments-item" >
+    
+    
+    
+    <div id="vcomments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <script type="text/javascript">
+      new Valine({
+          el: '#vcomments',
+          highlight: false,
+          lang: "en",
+          appId: "AhrO67kSBw2cdWp3AFKzjzI5-MdYXbMMI",
+          appKey: "RKBIhU7j518tpSUFbaWh8D2x",
+          placeholder: "Please leave your email to receive reply ......",
+          requiredFields: ["nick"],
+          avatar: "robohash",
+          visitor:  true ,
+          recordIP: true
+      });
+    </script>
+    <script>
+      if(window.location.hash){
+          var checkExist = setInterval(function() {
+             if ($(window.location.hash).length) {
+                $('html, body, article').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+                clearInterval(checkExist);
+             }
+          }, 100);
+      }
+    </script>
+  </div>
+
+</div>
+
+</article>
+
+
+
+  
+  
+  
+</body>
+<div class="foot">
+  
+  
+    &copy; 2019 - 2020 &#183; 
+    <a href="/">KipJiang</a> · Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
+    <a href="#"><i class="fas fa-chevron-up"></i></a>
+  
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-162425220-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  
+</div>
+
+<script src="/js/lazyload.min.js"></script>
+<script>
+  var lazyImage = new LazyLoad({
+    container: document.getElementById('article')
+  });
+</script>
+
+
+</html>

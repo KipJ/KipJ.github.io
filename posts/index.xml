@@ -5,19 +5,34 @@
     <link>https://kipjiang.github.io/posts/</link>
     <description>Recent content in Posts on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
-    <lastBuildDate>Sat, 11 Jul 2020 20:19:58 +0800</lastBuildDate>
-    
-	<atom:link href="https://kipjiang.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    
+    <language>en</language>
+    <copyright>[KipJiang](/) &amp;#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)</copyright>
+    <lastBuildDate>Sat, 11 Jul 2020 22:20:12 +0800</lastBuildDate><atom:link href="https://kipjiang.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Qv2ray in Ubunut</title>
+      <link>https://kipjiang.github.io/posts/2020/07/11/qv2ray-in-ubuntu/</link>
+      <pubDate>Sat, 11 Jul 2020 22:20:12 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/posts/2020/07/11/qv2ray-in-ubuntu/</guid>
+      <description>SSR 之前用的 VPS 到期，而重新搭建服务太麻烦，就直接购买别人已经搭建好的 SSR 服务。
+但是，服务商提供的小飞机 ShadowsocksR 不好用，我将它换成了 Qv2ray。
+已经使用几周，体验还不错。
+Qv2ray Qv2ray 运行在 v2ray 内核基础上，通过插件的形式提供对 SSR 的支持。
+Download Softwares 需要下载三样东西：
+  Qv2ray 客户端，我为 Ubuntu 下载的是 Qv2ray.v2.6.0.linux-x64.AppImage。AppImage 格式的文件，只需为其添加运行权限即可，免去安装各种依赖的痛苦。
+  v2ray-core 内核，我这里下载 v2ray-linux-64 v4.26.0.
+  QvPlugin-SSR 插件，下载 QvSSRPlugin.v2.0.0.linux-x64.so 正式版，其刚好适配 Qv2ray v2.6.0 正式版。
+  Configure Qv2ray  可执行权限  将 Qv2ray.v2.6.0.linux-x64.AppImage 放置在 ~/.config/qv2ray/ 路径下，并赋予其可执行权限：
+$ chmod +x Qv2ray.v2.6.0.linux-x64.AppImage  Add to Launcher  编辑应用配置文件：/usr/share/applications/qv2ray.desktop：
+$ sudo vim /usr/share/applications/qv2ray.desktop 配置如下：</description>
+    </item>
     
     <item>
       <title>Install Ubuntu as A Second OS</title>
-      <link>https://kipjiang.github.io/post/2020/07/11/dual-os/</link>
+      <link>https://kipjiang.github.io/posts/2020/07/11/dual-os/</link>
       <pubDate>Sat, 11 Jul 2020 20:19:58 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/post/2020/07/11/dual-os/</guid>
+      <guid>https://kipjiang.github.io/posts/2020/07/11/dual-os/</guid>
       <description>A New Computer I got a new Dell computer several weeks ago, which installed the Windows 10. The computer has 2 disks, a 120Gb SSD and a 1T HDD.
 I reserved 430G of HDD space and installed a ubuntu 20.04 as my second os, but I met some troubles because of the new UEFI system.
 Deal with It  New Tool  At the beginning, I used an old version of UltraISO to make the USB boot system, but the UEFI system even can not recognize it.</description>
@@ -25,10 +40,10 @@ Deal with It  New Tool  At the beginning, I used an old version of UltraISO to m
     
     <item>
       <title>Change to New Theme</title>
-      <link>https://kipjiang.github.io/post/2020/06/16/change-to-new-theme/</link>
+      <link>https://kipjiang.github.io/posts/2020/06/16/change-to-new-theme/</link>
       <pubDate>Tue, 16 Jun 2020 22:01:13 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/post/2020/06/16/change-to-new-theme/</guid>
+      <guid>https://kipjiang.github.io/posts/2020/06/16/change-to-new-theme/</guid>
       <description>Hugo Theme Diary I change my blog to a new hugo theme hugo-theme-diary which is pretty concise.
 To meet my taste I am adding some new features to it.
 You can switch to the new branch kipjiang to check the changes.
@@ -36,11 +51,54 @@ TODO List  Markdownify the copyright string. Display the theme info implicitly. 
     </item>
     
     <item>
+      <title>Jupyter Notebook on Remote Server</title>
+      <link>https://kipjiang.github.io/posts/2020/03/31/remote-jupyter-notebook/</link>
+      <pubDate>Tue, 31 Mar 2020 21:29:36 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/posts/2020/03/31/remote-jupyter-notebook/</guid>
+      <description>Install miniconda 参考 Working With Ubuntu (2)
+Configure Jypyter  Note: 通过 ssh 远程链接到服务器操作。
+  安装 jupyter notebook  $ conda install jupyter notebook  生成配置文件  $ jupyter notebook --generate-config Writing default config to: /home/kip/.jupyter/jupyter_notebook_config.py  通过 ipython 生成密码的 Hash  $ ipython Python 3.6.9 |Anaconda, Inc.| (default, Mar 31 2020, 19:07:31) Type &amp;#39;copyright&amp;#39;, &amp;#39;credits&amp;#39; or &amp;#39;license&amp;#39; for more information IPython 7.7.0 -- An enhanced Interactive Python. Type &amp;#39;?</description>
+    </item>
+    
+    <item>
+      <title>Working with Ubuntu (3)</title>
+      <link>https://kipjiang.github.io/posts/2020/03/27/working-with-ubuntu-3rd/</link>
+      <pubDate>Fri, 27 Mar 2020 19:33:47 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/posts/2020/03/27/working-with-ubuntu-3rd/</guid>
+      <description>如何在 Ubuntu 中安装一些日常使用的软件。
+ Browser Firefox Ubuntu 自带的 Firefox 的账号服务属于国际区，如果你之前是通过 Windows 安装的中文版 Firefox 并注册的账号，在从 Ubuntu 中登录会提示你账号不存在。
+你可以注册使用国际区的账号；也可以通过使用中文版的 Firefox 可执行文件替换 Ubuntu 默认的版本，从而达到登录中国区账号的目的。
+下面讲讲如何替换为中国区 Firefox。
+ 下载中国区 localized Firefox  点击 https://www.firefox.com.cn/download/，选择 「下载其他语言版本」 下载。
+替换可执行文件  将 /usr/lib 下的默认版本的 Firefox 备份
+# mv /usr/lib/firefox /usr/lib/firefox_bak 将下载的 localized 版解压，替换默认版本
+# tar -jxvf firefox-latest-x86_64.tar.bz2 # mv firefox/ /usr/lib/ 添加启动图标  但是，经上述操作后我们并不能从 「Favorites」中的图标启动 Firefox，需要将默认版本中的启动脚本拷贝过来
+# cp /usr/lib/firefox_bak/firefox.sh /usr/lib/firefox 这时，我们就可以点击图标，启动 Firefox 了。
+Chrome 有两种安装方式：（1）通过设置 apt 源的方式安装；（2）直接下载 .</description>
+    </item>
+    
+    <item>
+      <title>Virtual Machine with vTPM in Ubuntu</title>
+      <link>https://kipjiang.github.io/posts/2020/03/11/vms-with-vtpm-in-ubuntu/</link>
+      <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/posts/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
+      <description>Preparation  Reference Paper  Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.
+  Environment
+  Host: Ubuntu 18.04
+  Guest: Ubuntu 14.04
+  Source Code
+   seabios-tpm 2. libtpms 3. swtpm 4. qemu-tpm   Tree of Path  kip └── workspace ├── libtpms ├── qemu-tpm ├── seabios ├── swtpm └── test SeaBIOS SeaBIOS 包含 vTPM 支持的分支 seabios-tpm 最开始由 Stefan 维护，现在已经成功将其合并到主分支 SeaBIOS。因此，下面的实验中我们使用其主分支。</description>
+    </item>
+    
+    <item>
       <title>Hello Hugo</title>
-      <link>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</link>
+      <link>https://kipjiang.github.io/posts/2020/03/07/hello-hugo/</link>
       <pubDate>Sat, 07 Mar 2020 21:49:29 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/post/2020/03/07/hello-hugo/</guid>
+      <guid>https://kipjiang.github.io/posts/2020/03/07/hello-hugo/</guid>
       <description>Hugo OneSentence  It is out of time.
  以前折腾过其他静态主页的生成器，像 hexo 和 Jekyll 等，都用来建过站点，但是从来没有正经写过文章。
 这段时间，使用 Hugo，参考 YihuiXie 和 山羊博客，通过移植 hugo-ivy，也写了一个 hugo 的主题 hugo-theme-OneSentence。
@@ -58,6 +116,57 @@ jane-demo
   hugo-theme-even
 even-demo
   这个不是 olOwOlo 原本的那个 even 主题了，是我在看到 @nusr(Steve Xu) 的个人站 Brave New World 后，又从他改动的版本再作修改得到的，当然现在也没有再用了。</description>
+    </item>
+    
+    <item>
+      <title>Working with Ubuntu (2)</title>
+      <link>https://kipjiang.github.io/posts/2020/02/20/working-with-ubuntu-2nd/</link>
+      <pubDate>Thu, 20 Feb 2020 12:23:43 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/posts/2020/02/20/working-with-ubuntu-2nd/</guid>
+      <description>如何在 Ubuntu 中安装一些开发软件。
+ VScode  VSCode 的安装非常简单  $ sudo snap install --classic code code a622c65b from Visual Studio Code (vscode✓) installed 打开  $ code Sublime Text 3 Reference：Linux Package Manager Repositories
+ Install the GPG key:  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - Ensure apt is set up to work with https sources:  sudo apt-get install apt-transport-https Select the channel to use:  Stable</description>
+    </item>
+    
+    <item>
+      <title>Working with Ubuntu (1)</title>
+      <link>https://kipjiang.github.io/posts/2020/02/15/working-with-ubuntu-1st/</link>
+      <pubDate>Sat, 15 Feb 2020 09:49:43 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/posts/2020/02/15/working-with-ubuntu-1st/</guid>
+      <description>如何在 Ubuntu 中安装一些开发软件。
+ v2ray  下载并安装 v2ray 脚本  v2ray-core/release
+下载最新版的 v2ray Linux 压缩包，并通过脚本在本地安装
+$ curl https://github.com/v2ray/v2ray-core/releases/download/v4.22.1/v2ray-linux-64.zip $ curl -L -s https://install.direct/go.sh -o go.sh $ sudo su # bash go.sh --local ./v2ray-linux-64.zip 配置 Server  首先，你得有一台在境外的 VPS &amp;hellip;&amp;hellip;
+配置 Client  编辑配置文件：
+# vim /etc/v2ray/config.json 按如下示例配置：
+{ &amp;#34;inbounds&amp;#34;: [{ &amp;#34;port&amp;#34;: 1080, &amp;#34;listen&amp;#34;: &amp;#34;127.0.0.1&amp;#34;, &amp;#34;protocol&amp;#34;: &amp;#34;socks&amp;#34;, &amp;#34;tag&amp;#34;: &amp;#34;socks-inbound&amp;#34;, &amp;#34;settings&amp;#34;: { &amp;#34;auth&amp;#34;: &amp;#34;noauth&amp;#34;, &amp;#34;udp&amp;#34;: true, &amp;#34;ip&amp;#34;: &amp;#34;127.0.0.1&amp;#34; }, &amp;#34;sniffing&amp;#34;: { &amp;#34;enbale&amp;#34;: true, &amp;#34;destOverride&amp;#34;: [ &amp;#34;http&amp;#34;, &amp;#34;tls&amp;#34; ] } }], &amp;#34;outbounds&amp;#34;: [{ &amp;#34;protocol&amp;#34;: &amp;#34;vmess&amp;#34;, &amp;#34;settings&amp;#34;: { &amp;#34;vnext&amp;#34;: [{ &amp;#34;address&amp;#34;: &amp;#34;**.</description>
+    </item>
+    
+    <item>
+      <title>Visual Studio Code: Remote-SSH</title>
+      <link>https://kipjiang.github.io/posts/2019/11/07/vscode-remote-ssh/</link>
+      <pubDate>Thu, 07 Nov 2019 12:25:16 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/posts/2019/11/07/vscode-remote-ssh/</guid>
+      <description>  第一步当然是先在 VSCode 中安装 Remote-SSH 扩展啦
+  通过 WSL 生成公私钥对
+  $ ssh-keygen -t rsa -b 4096 通过 ssh 登录服务器，将生成的公钥文件的副本 id_rsa.tmp.pub 复制到路径 ~/.ssh/ 下，执行命令  $ cat id_rsa.tmp.pub &amp;gt;&amp;gt; authorized_keys $ chmod 600 authorized_keys Note：必须执行 chmod 600 authorized_keys 命令
+配置本地的 VSCode  编辑文件 C:\Users\&amp;lt;UserName&amp;gt;\.ssh\config，按如下格式配置：
+Host arbitrary-name-you-like HostName remote-host-ip Port remote-port User user-name-to-sign-in IdentityFile C:\Users\&amp;lt;UserName&amp;gt;\.ssh\id_rsa </description>
+    </item>
+    
+    <item>
+      <title>Display Git Branch Name in Bash</title>
+      <link>https://kipjiang.github.io/posts/2019/05/23/display-git-branch-name-in-bash/</link>
+      <pubDate>Thu, 23 May 2019 15:38:03 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/posts/2019/05/23/display-git-branch-name-in-bash/</guid>
+      <description>First  将脚本下载到 Home 目录  $ git clone https://github.com/KipJiang/git-aware-prompt.git ~/git-aware-prompt $ mv ~/git-aware-prompt ~/.git-aware-prompt 修改配置文件 .bashrc  $ vim ~/.bashrc 添加如下内容
+# source .git-aware-prompt export PS1=&amp;#34;\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ &amp;#34; export GITAWAREPROMPT=~/.git-aware-prompt source &amp;#34;${GITAWAREPROMPT}/main.sh&amp;#34; 使配置生效  $ source ~/.bashrc 效果  Ubuntu
+CentOS
+Second  编辑 ~/.bashrc，添加如下内容  # git branch function function git_branch { branch=&amp;#34;`git branch 2&amp;gt;/dev/null | grep &amp;#34;^\*&amp;#34; | sed -e &amp;#34;s/^\*\ //&amp;#34;`&amp;#34; if [ &amp;#34;${branch}&amp;#34; != &amp;#34;&amp;#34; ];then if [ &amp;#34;${branch}&amp;#34; = &amp;#34;(no branch)&amp;#34; ];then branch=&amp;#34;(`git rev-parse --short HEAD`.</description>
     </item>
     
   </channel>

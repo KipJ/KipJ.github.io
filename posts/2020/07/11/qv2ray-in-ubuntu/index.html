@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.75.1" />
+
+  <title> Install Qv2ray in Ubunut |  Kip Jiang</title>
+  <meta name="description" content="Enable SSR service of Qv2ray in Ubuntu20.04">
+  <link rel="stylesheet" href="https://kipjiang.github.io/css/index.css">
+  <link rel="stylesheet" href="https://kipjiang.github.io/css/classes.css">
+  <link rel="canonical" href="https://kipjiang.github.io/posts/2020/07/11/qv2ray-in-ubuntu/">
+  <link rel="alternate" type="application/rss+xml" href="" title="Kip Jiang">
+  
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="menus">
+  
+
+  <nav >
+    
+    <a href="/"> Home</a>
+    
+    <a href="/projects/"> Projects</a>
+    
+    <a href="/about/"> About</a>
+    
+  </nav>
+
+  <nav class="fontawesome">
+    
+    <a href="https://github.com/KipJiang" target="_blank">
+        <i title="GitHub" class="fab fa-github"></i>
+    </a>
+    
+    
+    <a href="https://kipjiang.github.io/index.xml" target="_blank">
+        <i title="RSS" class="fas fa-rss"></i>
+    </a>
+    
+  </nav>
+  
+  
+  <div class="hidden description">It's' Kip Jiang's Blog, who loves reading and running, and is interested in Linux and Cloud Computing.</div>
+  
+</header>
+
+<article id="article">
+  <header>
+  
+    <i class="fas fa-folder"></i>
+    
+    <a href="/categories/linux">Linux</a>
+    &nbsp;
+    
+  
+
+    <h1 style="text-align: center;" >Install Qv2ray in Ubunut</h1>
+    <div class="post-meta">
+    
+      <time datetime="2020-07-11T22:20:12&#43;08:00">July 11, 2020</time> &nbsp; 
+    
+
+    Rainer Chiang &nbsp;
+
+    
+    
+      <i class="far fa-eye"></i>
+      <span id="/posts/2020/07/11/qv2ray-in-ubuntu/" class="leancloud_visitors" data-flag-title="Install Qv2ray in Ubunut">
+          <span class="leancloud-visitors-count">  </span>
+      </span> &nbsp;
+    
+    
+
+    
+      <i class="far fa-clock"></i>
+      
+      
+      
+
+      
+        2 min
+      
+      39 s
+      &nbsp;
+    
+    </div>
+  </header>
+
+  <h2 id="ssr">SSR</h2>
+<p>之前用的 VPS 到期，而重新搭建服务太麻烦，就直接购买别人已经搭建好的 SSR 服务。</p>
+<p>但是，服务商提供的小飞机 ShadowsocksR 不好用，我将它换成了 <a href="https://qv2ray.github.io/">Qv2ray</a>。</p>
+<p>已经使用几周，体验还不错。</p>
+<h2 id="qv2ray">Qv2ray</h2>
+<p><a href="https://qv2ray.github.io/">Qv2ray</a> 运行在 <a href="https://www.v2ray.com/">v2ray</a> 内核基础上，通过插件的形式提供对 SSR 的支持。</p>
+<h3 id="download-softwares">Download Softwares</h3>
+<p>需要下载三样东西：</p>
+<ol>
+<li>
+<p><a href="https://github.com/Qv2ray/Qv2ray/releases">Qv2ray</a> 客户端，我为 Ubuntu 下载的是 <a href="https://github.com/Qv2ray/Qv2ray/releases/tag/v2.6.0">Qv2ray.v2.6.0.linux-x64.AppImage</a>。AppImage 格式的文件，只需为其添加运行权限即可，免去安装各种依赖的痛苦。</p>
+</li>
+<li>
+<p><a href="https://github.com/v2ray/v2ray-core/releases">v2ray-core</a> 内核，我这里下载 <a href="https://github.com/v2ray/v2ray-core/releases/tag/v4.26.0">v2ray-linux-64 v4.26.0</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/Qv2ray/QvPlugin-SSR">QvPlugin-SSR</a> 插件，下载 <a href="https://github.com/Qv2ray/QvPlugin-SSR/releases/tag/v2.0.0">QvSSRPlugin.v2.0.0.linux-x64.so</a> 正式版，其刚好适配 Qv2ray v2.6.0 正式版。</p>
+</li>
+</ol>
+<h3 id="configure-qv2ray">Configure Qv2ray</h3>
+<ul>
+<li>可执行权限</li>
+</ul>
+<p>将 Qv2ray.v2.6.0.linux-x64.AppImage 放置在 <code>~/.config/qv2ray/</code> 路径下，并赋予其可执行权限：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ chmod +x Qv2ray.v2.6.0.linux-x64.AppImage
+</code></pre></div><ul>
+<li>Add to Launcher</li>
+</ul>
+<p>编辑应用配置文件：<code>/usr/share/applications/qv2ray.desktop</code>：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo vim /usr/share/applications/qv2ray.desktop
+</code></pre></div><p>配置如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cfg" data-lang="cfg"><span style="color:#66d9ef">[Desktop Entry]</span>
+<span style="color:#a6e22e">Name</span><span style="color:#f92672">=</span><span style="color:#e6db74">Qv2ray</span>
+<span style="color:#a6e22e">Name[zh_CN]</span><span style="color:#f92672">=</span><span style="color:#e6db74">Qv2ray</span>
+<span style="color:#a6e22e">Comment</span><span style="color:#f92672">=</span><span style="color:#e6db74">VPN</span>
+<span style="color:#a6e22e">Comment[zh_CN]</span><span style="color:#f92672">=</span><span style="color:#e6db74">VPN</span>
+<span style="color:#a6e22e">Exec</span><span style="color:#f92672">=</span><span style="color:#e6db74">/home/kip/.config/qv2ray/Qv2ray.v2.6.0.linux-x64.AppImage</span>
+<span style="color:#a6e22e">Icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">/home/kip/.config/qv2ray/qv2ray.png</span>
+<span style="color:#a6e22e">Terminal</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span>
+<span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">Application</span>
+<span style="color:#a6e22e">Categories</span><span style="color:#f92672">=</span><span style="color:#e6db74">Application;VPN;</span>
+<span style="color:#a6e22e">Encoding</span><span style="color:#f92672">=</span><span style="color:#e6db74">UTF-8</span>
+<span style="color:#a6e22e">StartupNotify</span><span style="color:#f92672">=</span><span style="color:#e6db74">true</span>
+</code></pre></div><blockquote>
+<p>其中的 &lsquo;Icon&rsquo;，可以去其 GitHub 主页下载。</p>
+</blockquote>
+<p>保存退出后，就可以在 Dash 中搜索 qv2ray 并将之添加到快速启动栏。</p>
+<p><img src="https://i.loli.net/2020/07/12/gq4AlkJvpBxiWdU.png" alt="qv2ray-1.png"></p>
+<h3 id="configure-v2ray-core">Configure v2ray-core</h3>
+<p>将 v2ray-linux-64.zip 加压到 <code>~/.config/qv2ray/vcore/</code> 路径下，并在 「Preferences &ndash;&gt; Kernel Settings」下，点击 「Check V2ray Core Settings」 检查是否通过。</p>
+<p><img src="https://i.loli.net/2020/07/12/mTunoFz9SIdYseK.png" alt="v2ray-passed.png"></p>
+<h3 id="configure-ssr-plugin">Configure SSR Plugin</h3>
+<p>将插件 QvSSRPlugin.v2.0.0.linux-x64.so 复制到路径 <code>~/.config/qv2ray/plugins/</code> 下。</p>
+<p>重新启动 Qv2ray 客户端，点击 「Plugins」，可以看到 SSR 插件已经被识别到了。</p>
+<p><img src="https://i.loli.net/2020/07/12/UjZ5wRv27qnEfGI.png" alt="SSR.png"></p>
+<h3 id="add-subscription">Add Subscription</h3>
+<p>点击 Qv2ray 主界面的 「Groups/Subscription」，将你的订阅地址填入并点击更新。</p>
+<p><img src="https://i.loli.net/2020/07/12/xaYlULtcCKHZy2B.png" alt="subscription.png"></p>
+<p>待更新完成后，在主界面双击相应的节点，即可启动代理。</p>
+
+
+  
+  <footer>
+    <hr>
+    
+    <time datetime="2020-07-12T10:17:31&#43;08:00">
+      update @ July 12, 2020
+    </time>
+    <p></p>
+    
+    <div class="post-tags">
+    
+      <i class="fas fa-tags"></i>
+      
+        <a href="/tags/ubuntu">Ubuntu</a>
+        &nbsp;
+      
+        <a href="/tags/qv2ray">Qv2ray</a>
+        &nbsp;
+      
+        <a href="/tags/vpn">VPN</a>
+        &nbsp;
+      
+    
+    </div>
+  </footer>
+  
+
+  
+
+<div class="releated-post">
+  <h3>Related Posts</h3>
+  
+  <i class="fas fa-paperclip"></i>
+  <a href="/posts/2020/02/15/working-with-ubuntu-1st/">Working with Ubuntu (1)</a>
+  <br>
+  
+  <i class="fas fa-paperclip"></i>
+  <a href="/posts/2020/07/11/dual-os/">Install Ubuntu as A Second OS</a>
+  <br>
+  
+  <i class="fas fa-paperclip"></i>
+  <a href="/posts/2020/03/27/working-with-ubuntu-3rd/">Working with Ubuntu (3)</a>
+  <br>
+  
+  <i class="fas fa-paperclip"></i>
+  <a href="/posts/2020/02/20/working-with-ubuntu-2nd/">Working with Ubuntu (2)</a>
+  <br>
+  
+</div>
+
+
+  <div class="comments">
+
+
+
+  <div class="comments-item" >
+    
+    
+    
+    <div id="vcomments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <script type="text/javascript">
+      new Valine({
+          el: '#vcomments',
+          highlight: false,
+          lang: "en",
+          appId: "AhrO67kSBw2cdWp3AFKzjzI5-MdYXbMMI",
+          appKey: "RKBIhU7j518tpSUFbaWh8D2x",
+          placeholder: "Please leave your email to receive reply ......",
+          requiredFields: ["nick"],
+          avatar: "robohash",
+          visitor:  true ,
+          recordIP: true
+      });
+    </script>
+    <script>
+      if(window.location.hash){
+          var checkExist = setInterval(function() {
+             if ($(window.location.hash).length) {
+                $('html, body, article').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+                clearInterval(checkExist);
+             }
+          }, 100);
+      }
+    </script>
+  </div>
+
+</div>
+
+</article>
+
+
+
+  
+  
+  
+</body>
+<div class="foot">
+  
+  
+    &copy; 2019 - 2020 &#183; 
+    <a href="/">KipJiang</a> · Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
+    <a href="#"><i class="fas fa-chevron-up"></i></a>
+  
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-162425220-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  
+</div>
+
+<script src="/js/lazyload.min.js"></script>
+<script>
+  var lazyImage = new LazyLoad({
+    container: document.getElementById('article')
+  });
+</script>
+
+
+</html>

@@ -5,19 +5,15 @@
     <link>https://kipjiang.github.io/tags/qv2ray/</link>
     <description>Recent content in Qv2ray on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
-    <lastBuildDate>Sat, 11 Jul 2020 22:20:12 +0800</lastBuildDate>
-    
-	<atom:link href="https://kipjiang.github.io/tags/qv2ray/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language>
+    <copyright>[KipJiang](/) &amp;#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)</copyright>
+    <lastBuildDate>Sat, 11 Jul 2020 22:20:12 +0800</lastBuildDate><atom:link href="https://kipjiang.github.io/tags/qv2ray/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Qv2ray in Ubunut</title>
-      <link>https://kipjiang.github.io/note/2020/07/11/qv2ray-in-ubuntu/</link>
+      <link>https://kipjiang.github.io/posts/2020/07/11/qv2ray-in-ubuntu/</link>
       <pubDate>Sat, 11 Jul 2020 22:20:12 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/note/2020/07/11/qv2ray-in-ubuntu/</guid>
+      <guid>https://kipjiang.github.io/posts/2020/07/11/qv2ray-in-ubuntu/</guid>
       <description>SSR 之前用的 VPS 到期，而重新搭建服务太麻烦，就直接购买别人已经搭建好的 SSR 服务。
 但是，服务商提供的小飞机 ShadowsocksR 不好用，我将它换成了 Qv2ray。
 已经使用几周，体验还不错。

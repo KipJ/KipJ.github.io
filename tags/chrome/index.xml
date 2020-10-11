@@ -5,19 +5,15 @@
     <link>https://kipjiang.github.io/tags/chrome/</link>
     <description>Recent content in Chrome on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
-    <lastBuildDate>Fri, 27 Mar 2020 19:33:47 +0800</lastBuildDate>
-    
-	<atom:link href="https://kipjiang.github.io/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language>
+    <copyright>[KipJiang](/) &amp;#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)</copyright>
+    <lastBuildDate>Fri, 27 Mar 2020 19:33:47 +0800</lastBuildDate><atom:link href="https://kipjiang.github.io/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Working with Ubuntu (3)</title>
-      <link>https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</link>
+      <link>https://kipjiang.github.io/posts/2020/03/27/working-with-ubuntu-3rd/</link>
       <pubDate>Fri, 27 Mar 2020 19:33:47 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</guid>
+      <guid>https://kipjiang.github.io/posts/2020/03/27/working-with-ubuntu-3rd/</guid>
       <description>如何在 Ubuntu 中安装一些日常使用的软件。
  Browser Firefox Ubuntu 自带的 Firefox 的账号服务属于国际区，如果你之前是通过 Windows 安装的中文版 Firefox 并注册的账号，在从 Ubuntu 中登录会提示你账号不存在。
 你可以注册使用国际区的账号；也可以通过使用中文版的 Firefox 可执行文件替换 Ubuntu 默认的版本，从而达到登录中国区账号的目的。

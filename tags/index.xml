@@ -5,13 +5,9 @@
     <link>https://kipjiang.github.io/tags/</link>
     <description>Recent content in Tags on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
-    <lastBuildDate>Sat, 11 Jul 2020 22:20:12 +0800</lastBuildDate>
-    
-	<atom:link href="https://kipjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language>
+    <copyright>[KipJiang](/) &amp;#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)</copyright>
+    <lastBuildDate>Sat, 11 Jul 2020 22:20:12 +0800</lastBuildDate><atom:link href="https://kipjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Qv2ray</title>
       <link>https://kipjiang.github.io/tags/qv2ray/</link>

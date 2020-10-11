@@ -5,19 +5,15 @@
     <link>https://kipjiang.github.io/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on Kip Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2019-2020 &amp;#183; [Kip Jiang](/)</copyright>
-    <lastBuildDate>Sat, 11 Jul 2020 22:20:12 +0800</lastBuildDate>
-    
-	<atom:link href="https://kipjiang.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language>
+    <copyright>[KipJiang](/) &amp;#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)</copyright>
+    <lastBuildDate>Sat, 11 Jul 2020 22:20:12 +0800</lastBuildDate><atom:link href="https://kipjiang.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Qv2ray in Ubunut</title>
-      <link>https://kipjiang.github.io/note/2020/07/11/qv2ray-in-ubuntu/</link>
+      <link>https://kipjiang.github.io/posts/2020/07/11/qv2ray-in-ubuntu/</link>
       <pubDate>Sat, 11 Jul 2020 22:20:12 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/note/2020/07/11/qv2ray-in-ubuntu/</guid>
+      <guid>https://kipjiang.github.io/posts/2020/07/11/qv2ray-in-ubuntu/</guid>
       <description>SSR 之前用的 VPS 到期，而重新搭建服务太麻烦，就直接购买别人已经搭建好的 SSR 服务。
 但是，服务商提供的小飞机 ShadowsocksR 不好用，我将它换成了 Qv2ray。
 已经使用几周，体验还不错。
@@ -33,10 +29,10 @@ $ sudo vim /usr/share/applications/qv2ray.desktop 配置如下：</description>
     
     <item>
       <title>Install Ubuntu as A Second OS</title>
-      <link>https://kipjiang.github.io/post/2020/07/11/dual-os/</link>
+      <link>https://kipjiang.github.io/posts/2020/07/11/dual-os/</link>
       <pubDate>Sat, 11 Jul 2020 20:19:58 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/post/2020/07/11/dual-os/</guid>
+      <guid>https://kipjiang.github.io/posts/2020/07/11/dual-os/</guid>
       <description>A New Computer I got a new Dell computer several weeks ago, which installed the Windows 10. The computer has 2 disks, a 120Gb SSD and a 1T HDD.
 I reserved 430G of HDD space and installed a ubuntu 20.04 as my second os, but I met some troubles because of the new UEFI system.
 Deal with It  New Tool  At the beginning, I used an old version of UltraISO to make the USB boot system, but the UEFI system even can not recognize it.</description>
@@ -44,10 +40,10 @@ Deal with It  New Tool  At the beginning, I used an old version of UltraISO to m
     
     <item>
       <title>Working with Ubuntu (3)</title>
-      <link>https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</link>
+      <link>https://kipjiang.github.io/posts/2020/03/27/working-with-ubuntu-3rd/</link>
       <pubDate>Fri, 27 Mar 2020 19:33:47 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/note/2020/03/27/working-with-ubuntu-3rd/</guid>
+      <guid>https://kipjiang.github.io/posts/2020/03/27/working-with-ubuntu-3rd/</guid>
       <description>如何在 Ubuntu 中安装一些日常使用的软件。
  Browser Firefox Ubuntu 自带的 Firefox 的账号服务属于国际区，如果你之前是通过 Windows 安装的中文版 Firefox 并注册的账号，在从 Ubuntu 中登录会提示你账号不存在。
 你可以注册使用国际区的账号；也可以通过使用中文版的 Firefox 可执行文件替换 Ubuntu 默认的版本，从而达到登录中国区账号的目的。
@@ -62,10 +58,10 @@ Chrome 有两种安装方式：（1）通过设置 apt 源的方式安装；（2
     
     <item>
       <title>Working with Ubuntu (2)</title>
-      <link>https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</link>
+      <link>https://kipjiang.github.io/posts/2020/02/20/working-with-ubuntu-2nd/</link>
       <pubDate>Thu, 20 Feb 2020 12:23:43 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/</guid>
+      <guid>https://kipjiang.github.io/posts/2020/02/20/working-with-ubuntu-2nd/</guid>
       <description>如何在 Ubuntu 中安装一些开发软件。
  VScode  VSCode 的安装非常简单  $ sudo snap install --classic code code a622c65b from Visual Studio Code (vscode✓) installed 打开  $ code Sublime Text 3 Reference：Linux Package Manager Repositories
  Install the GPG key:  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - Ensure apt is set up to work with https sources:  sudo apt-get install apt-transport-https Select the channel to use:  Stable</description>
@@ -73,10 +69,10 @@ Chrome 有两种安装方式：（1）通过设置 apt 源的方式安装；（2
     
     <item>
       <title>Working with Ubuntu (1)</title>
-      <link>https://kipjiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</link>
+      <link>https://kipjiang.github.io/posts/2020/02/15/working-with-ubuntu-1st/</link>
       <pubDate>Sat, 15 Feb 2020 09:49:43 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/note/2020/02/15/working-with-ubuntu-1st/</guid>
+      <guid>https://kipjiang.github.io/posts/2020/02/15/working-with-ubuntu-1st/</guid>
       <description>如何在 Ubuntu 中安装一些开发软件。
  v2ray  下载并安装 v2ray 脚本  v2ray-core/release
 下载最新版的 v2ray Linux 压缩包，并通过脚本在本地安装
