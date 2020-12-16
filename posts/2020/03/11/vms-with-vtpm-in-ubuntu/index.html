@@ -7,8 +7,7 @@
 
   <title> Virtual Machine with vTPM in Ubuntu |  Kip Jiang</title>
   <meta name="description" content="Create VMs with vTPM using QEMU-KVM">
-  <link rel="stylesheet" href="https://kipjiang.github.io/css/index.css">
-  <link rel="stylesheet" href="https://kipjiang.github.io/css/classes.css">
+  <link rel="stylesheet" href="https://kipjiang.github.io/css/simpleness.css">
   <link rel="canonical" href="https://kipjiang.github.io/posts/2020/03/11/vms-with-vtpm-in-ubuntu/">
   <link rel="alternate" type="application/rss+xml" href="" title="Kip Jiang">
   
@@ -48,17 +47,10 @@
   
 </header>
 
-<article id="article">
+<article class="article">
   <header>
-  
-    <i class="fas fa-folder"></i>
-    
-    <a href="/categories/trusted-computing">Trusted Computing</a>
-    &nbsp;
-    
-  
-
     <h1 style="text-align: center;" >Virtual Machine with vTPM in Ubuntu</h1>
+
     <div class="post-meta">
     
       <time datetime="2020-03-11T20:34:44&#43;08:00">March 11, 2020</time> &nbsp; 
@@ -87,10 +79,40 @@
       6 s
       &nbsp;
     
+
+    
+      <i class="fas fa-folder"></i>
+      
+      <a href="/categories/trusted-computing">Trusted Computing</a>
+      &nbsp;
+      
+    
     </div>
   </header>
 
-  <h2 id="preparation">Preparation</h2>
+  
+  <div class="toc">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#preparation">Preparation</a></li>
+    <li><a href="#seabios">SeaBIOS</a></li>
+    <li><a href="#libtpms">libtpms</a></li>
+    <li><a href="#swtpm">swtpm</a></li>
+    <li><a href="#qemu-tpm">qemu-tpm</a></li>
+    <li><a href="#create-vm-with-vtpm">Create VM with vTPM</a>
+      <ul>
+        <li><a href="#vtpm-emulator">vTPM Emulator</a></li>
+        <li><a href="#guest-os">Guest OS</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>  
+  </div>
+   
+
+  <div class="text">
+    <h2 id="preparation">Preparation</h2>
 <ul>
 <li>Reference Paper</li>
 </ul>
@@ -415,18 +437,22 @@ VNC server running on 127.0.0.1:5900
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo apt install tss2
 </code></pre></div><p>不过 Ubuntu 14.04 并不支持 <code>tss2</code>， 可以在 Ubuntu 16.04 上尝试。</p>
 
+  </div>
 
-  
   <footer>
-    <hr>
+    <hr class="end-line">
+
     
-    <time datetime="2020-06-16T13:10:34&#43;08:00">
-      update @ June 16, 2020
-    </time>
-    <p></p>
+    <div class="post-lastmod">
+      <time datetime="2020-06-16T13:10:34&#43;08:00">
+        update @ June 16, 2020
+      </time>
+      <p></p>
+    </div>
+    
+
     
     <div class="post-tags">
-    
       <i class="fas fa-tags"></i>
       
         <a href="/tags/vtpm">vTPM</a>
@@ -438,19 +464,18 @@ VNC server running on 127.0.0.1:5900
         <a href="/tags/libtpms">Libtpms</a>
         &nbsp;
       
-    
     </div>
+    
+
+    
+    
   </footer>
-  
-
-  
-
 
   <div class="comments">
 
 
 
-  <div class="comments-item" >
+  <div class="comments-item comments-valine" >
     
     
     
@@ -488,10 +513,6 @@ VNC server running on 127.0.0.1:5900
 </article>
 
 
-
-  
-  
-  
 </body>
 <div class="foot">
   

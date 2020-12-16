@@ -7,8 +7,7 @@
 
   <title> Jupyter Notebook on Remote Server |  Kip Jiang</title>
   <meta name="description" content="Open the jupyter notebook running on server in local browser">
-  <link rel="stylesheet" href="https://kipjiang.github.io/css/index.css">
-  <link rel="stylesheet" href="https://kipjiang.github.io/css/classes.css">
+  <link rel="stylesheet" href="https://kipjiang.github.io/css/simpleness.css">
   <link rel="canonical" href="https://kipjiang.github.io/posts/2020/03/31/remote-jupyter-notebook/">
   <link rel="alternate" type="application/rss+xml" href="" title="Kip Jiang">
   
@@ -48,17 +47,10 @@
   
 </header>
 
-<article id="article">
+<article class="article">
   <header>
-  
-    <i class="fas fa-folder"></i>
-    
-    <a href="/categories/machine-learning">Machine Learning</a>
-    &nbsp;
-    
-  
-
     <h1 style="text-align: center;" >Jupyter Notebook on Remote Server</h1>
+
     <div class="post-meta">
     
       <time datetime="2020-03-31T21:29:36&#43;08:00">March 31, 2020</time> &nbsp; 
@@ -87,10 +79,21 @@
       56 s
       &nbsp;
     
+
+    
+      <i class="fas fa-folder"></i>
+      
+      <a href="/categories/machine-learning">Machine Learning</a>
+      &nbsp;
+      
+    
     </div>
   </header>
 
-  <h2 id="install-miniconda">Install miniconda</h2>
+   
+
+  <div class="text">
+    <h2 id="install-miniconda">Install miniconda</h2>
 <p>参考 <a href="https://KipJiang.github.io/note/2020/02/20/working-with-ubuntu-2nd/#miniconda">Working With Ubuntu (2)</a></p>
 <h2 id="configure-jypyter">Configure Jypyter</h2>
 <blockquote>
@@ -173,18 +176,22 @@ public <span style="color:#f92672">(</span>active<span style="color:#f92672">)</
 </code></pre></div><p>其中 <code>--ip=0.0.0.0</code> 表示 <code>jupyter notebook</code> 侦听所有的 IP 地址。</p>
 <p>但这也需要配置防火墙，开放 8888 端口。</p>
 
+  </div>
 
-  
   <footer>
-    <hr>
+    <hr class="end-line">
+
     
-    <time datetime="2020-06-16T11:44:36&#43;08:00">
-      update @ June 16, 2020
-    </time>
-    <p></p>
+    <div class="post-lastmod">
+      <time datetime="2020-06-16T11:44:36&#43;08:00">
+        update @ June 16, 2020
+      </time>
+      <p></p>
+    </div>
+    
+
     
     <div class="post-tags">
-    
       <i class="fas fa-tags"></i>
       
         <a href="/tags/jupyter">Jupyter</a>
@@ -193,28 +200,27 @@ public <span style="color:#f92672">(</span>active<span style="color:#f92672">)</
         <a href="/tags/miniconda">Miniconda</a>
         &nbsp;
       
-    
     </div>
+    
+
+    
+    
+    <div class="releated-posts">
+      <h3>Related Posts</h3>
+      
+      <i class="fas fa-paperclip"></i>
+      <a href="/posts/2020/02/20/working-with-ubuntu-2nd/">Working with Ubuntu (2)</a>
+      <br>
+      
+    </div>
+    
   </footer>
-  
-
-  
-
-<div class="releated-post">
-  <h3>Related Posts</h3>
-  
-  <i class="fas fa-paperclip"></i>
-  <a href="/posts/2020/02/20/working-with-ubuntu-2nd/">Working with Ubuntu (2)</a>
-  <br>
-  
-</div>
-
 
   <div class="comments">
 
 
 
-  <div class="comments-item" >
+  <div class="comments-item comments-valine" >
     
     
     
@@ -252,10 +258,6 @@ public <span style="color:#f92672">(</span>active<span style="color:#f92672">)</
 </article>
 
 
-
-  
-  
-  
 </body>
 <div class="foot">
   
