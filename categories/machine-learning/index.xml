@@ -16,7 +16,7 @@
       <guid>https://kipjiang.github.io/posts/2020/03/31/remote-jupyter-notebook/</guid>
       <description>Install miniconda 参考 Working With Ubuntu (2)
 Configure Jypyter  Note: 通过 ssh 远程链接到服务器操作。
-  安装 jupyter notebook  $ conda install jupyter notebook  生成配置文件  $ jupyter notebook --generate-config Writing default config to: /home/kip/.jupyter/jupyter_notebook_config.py  通过 ipython 生成密码的 Hash  $ ipython Python 3.6.9 |Anaconda, Inc.| (default, Mar 31 2020, 19:07:31) Type &amp;#39;copyright&amp;#39;, &amp;#39;credits&amp;#39; or &amp;#39;license&amp;#39; for more information IPython 7.7.0 -- An enhanced Interactive Python. Type &amp;#39;?</description>
+  安装 jupyter notebook  1  $ conda install jupyter notebook    生成配置文件  1 2  $ jupyter notebook --generate-config Writing default config to: /home/kip/.jupyter/jupyter_notebook_config.py    通过 ipython 生成密码的 Hash  1 2 3 4 5 6 7 8 9 10 11 12 13  $ ipython Python 3.6.9 |Anaconda, Inc.</description>
     </item>
     
   </channel>

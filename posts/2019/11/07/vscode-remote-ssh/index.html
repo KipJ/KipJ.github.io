@@ -74,7 +74,7 @@
       
 
       
-      41 s
+      45 s
       &nbsp;
     
 
@@ -91,31 +91,48 @@
    
 
   <div class="text">
-    <ol>
-<li>
-<p>第一步当然是先在 VSCode 中安装 <code>Remote-SSH</code> 扩展啦</p>
-</li>
-<li>
-<p>通过 WSL 生成公私钥对</p>
-</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span>
-</code></pre></div><ol start="3">
-<li>通过 ssh 登录服务器，将生成的公钥文件的副本 <code>id_rsa.tmp.pub</code> 复制到路径 <code>~/.ssh/</code> 下，执行命令</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cat id_rsa.tmp.pub &gt;&gt; authorized_keys
+    <p>第一步，当然是先在 VSCode 中安装 <code>Remote-SSH</code> 扩展啦。</p>
+<p>通过 WSL 生成公私钥对：</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>通过 ssh 登录服务器，将生成的公钥文件的副本 <code>id_rsa.tmp.pub</code> 复制到路径 <code>~/.ssh/</code> 下，执行命令：</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cat id_rsa.tmp.pub &gt;&gt; authorized_keys
 $ chmod <span style="color:#ae81ff">600</span> authorized_keys
-</code></pre></div><p><strong>Note</strong>：必须执行 <code>chmod 600 authorized_keys</code> 命令</p>
-<ol start="4">
-<li>配置本地的 VSCode</li>
-</ol>
-<p>编辑文件 <code>C:\Users\&lt;UserName&gt;\.ssh\config</code>，按如下格式配置：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cfg" data-lang="cfg"><span style="color:#a6e22e">Host arbitrary-name-you-like</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>Note:</strong> 必须执行 <code>chmod 600 authorized_keys</code> 命令</p>
+</blockquote>
+<p>配置本地的 VSCode，编辑文件 <code>C:\Users\&lt;UserName&gt;\.ssh\config</code>，按如下格式配置：</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cfg" data-lang="cfg"><span style="color:#a6e22e">Host arbitrary-name-you-like</span>
     <span style="color:#a6e22e">HostName remote-host-ip</span>
     <span style="color:#a6e22e">Port remote-port</span>
     <span style="color:#a6e22e">User user-name-to-sign-in</span>
     <span style="color:#a6e22e">IdentityFile C:\Users\&lt;UserName&gt;\.ssh\id_rsa</span>
-</code></pre></div>
+</code></pre></td></tr></table>
+</div>
+</div>
   </div>
 
   <footer>
@@ -193,7 +210,7 @@ $ chmod <span style="color:#ae81ff">600</span> authorized_keys
 <div class="foot">
   
   
-    &copy; 2019 - 2020 &#183; 
+    &copy; 2019 - 2021 &#183; 
     <a href="/">Kip Jiang</a> · Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
     <a href="#"><i class="fas fa-chevron-up"></i></a>
   

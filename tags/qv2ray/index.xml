@@ -23,8 +23,7 @@ Download Softwares 需要下载三样东西：
   v2ray-core 内核，我这里下载 v2ray-linux-64 v4.26.0.
   QvPlugin-SSR 插件，下载 QvSSRPlugin.v2.0.0.linux-x64.so 正式版，其刚好适配 Qv2ray v2.6.0 正式版。
   Configure Qv2ray  可执行权限  将 Qv2ray.v2.6.0.linux-x64.AppImage 放置在 ~/.config/qv2ray/ 路径下，并赋予其可执行权限：
-$ chmod +x Qv2ray.v2.6.0.linux-x64.AppImage  Add to Launcher  编辑应用配置文件：/usr/share/applications/qv2ray.desktop：
-$ sudo vim /usr/share/applications/qv2ray.desktop 配置如下：</description>
+1  $ chmod +x Qv2ray.v2.6.0.linux-x64.AppImage    Add to Launcher  编辑应用配置文件：/usr/share/applications/qv2ray.desktop：</description>
     </item>
     
   </channel>

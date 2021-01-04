@@ -76,7 +76,7 @@
       
         2 min
       
-      11 s
+      37 s
       &nbsp;
     
 
@@ -90,33 +90,106 @@
     </div>
   </header>
 
+  
+  <div class="toc">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装-v2ray">安装 v2ray</a></li>
+    <li><a href="#配置代理">配置代理</a>
+      <ul>
+        <li><a href="#仅配置浏览器代理">仅配置浏览器代理</a></li>
+        <li><a href="#全局代理">全局代理</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>  
+  </div>
    
 
   <div class="text">
     <blockquote>
-<p>如何在 Ubuntu 中安装一些开发软件。</p>
+<p>这个系列描述如何在 Ubuntu 中安装一些常用软件。</p>
 </blockquote>
-<h2 id="v2ray">v2ray</h2>
-<ol>
-<li>下载并安装 <code>v2ray</code> 脚本</li>
-</ol>
+<h2 id="安装-v2ray">安装 v2ray</h2>
+<p>下载并安装 <code>v2ray</code> 脚本：</p>
 <p><a href="https://github.com/v2ray/v2ray-core/releases">v2ray-core/release</a></p>
-<p>下载最新版的 <code>v2ray</code> Linux 压缩包，并通过脚本在本地安装</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl https://github.com/v2ray/v2ray-core/releases/download/v4.22.1/v2ray-linux-64.zip
+<p>下载最新版的 <code>v2ray</code> Linux 压缩包，并通过脚本在本地安装：</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl https://github.com/v2ray/v2ray-core/releases/download/v4.22.1/v2ray-linux-64.zip
 $ curl -L -s https://install.direct/go.sh -o go.sh
 $ sudo su
 <span style="color:#75715e"># bash go.sh --local ./v2ray-linux-64.zip</span>
-</code></pre></div><ol start="2">
-<li>配置 Server</li>
-</ol>
-<p>首先，你得有一台在境外的 VPS &hellip;&hellip;</p>
-<ol start="3">
-<li>配置 Client</li>
-</ol>
-<p>编辑配置文件：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># vim /etc/v2ray/config.json</span>
-</code></pre></div><p>按如下示例配置：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cfg" data-lang="cfg"><span style="color:#a6e22e">{</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>配置 Server，首先，你得有一台在境外的 VPS &hellip;&hellip; 233333 😂</p>
+<p>配置 Client，编辑配置文件：</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># vim /etc/v2ray/config.json</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>按如下示例配置：</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cfg" data-lang="cfg"><span style="color:#a6e22e">{</span>
   <span style="color:#a6e22e">&#34;inbounds&#34;: [{</span>
     <span style="color:#a6e22e">&#34;port&#34;: 1080,</span>
     <span style="color:#a6e22e">&#34;listen&#34;: &#34;127.0.0.1&#34;,</span>
@@ -162,29 +235,35 @@ $ sudo su
     <span style="color:#a6e22e">}]</span>
   <span style="color:#a6e22e">}</span>
 <span style="color:#a6e22e">}</span>
-</code></pre></div><ol start="4">
-<li>仅配置浏览器代理</li>
-</ol>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="配置代理">配置代理</h2>
+<h3 id="仅配置浏览器代理">仅配置浏览器代理</h3>
 <p>如果仅配置浏览器的代理，就只能通过浏览器访问外部网站，在命令行中依旧不能链接到外部。以 Firefox 为例，配置如下。</p>
 <p><img src="https://i.loli.net/2020/02/20/QcEm4HdrkSuTbMV.png" alt="firefox-proxy"></p>
-<ol start="5">
-<li>全局配置</li>
-</ol>
+<h3 id="全局代理">全局代理</h3>
 <p>进入系统设置，选择 「Network」，设置 「Network Proxy」。</p>
 <p><img src="https://i.loli.net/2020/02/20/zdhLEXNM1kR3Uey.png" alt="global-config"></p>
 <p>但仅仅上述配置，会使得所有流量都通过 VPS 后再去访问具体网站，在访问国内的网站时也会走一遍代理，导致访问较慢。</p>
-<ol start="6">
-<li>配置 PAC(Proxy Auto Config) 模式</li>
-</ol>
-<p>见 <a href="https://github.com/JinnLynn/genpac">GenPAC</a> 和 <a href="https://github.com/gfwlist/gfwlist">gfwlist</a> 项目</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ pip install genpac
+<p>可以通过 PAC(Proxy Auto Config) 模式配置路由规则。</p>
+<p>可以参考 <a href="https://github.com/JinnLynn/genpac">GenPAC</a> 和 <a href="https://github.com/gfwlist/gfwlist">gfwlist</a> 项目。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ pip install genpac
 
 $ sudo su
 // 从 gfwlist 生成代理信息为 SOCKS5 127.0.0.1:1080 的 PAC 文件
 <span style="color:#75715e"># genpac --format=pac --pac-proxy=&#34;SOCKS5 127.0.0.1:1080&#34; -o /etc/v2ray/autoproxy.pac</span>
-</code></pre></div><ol start="7">
-<li>可供参考文档</li>
-</ol>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>参考文档：</strong></p>
 <p><a href="https://www.v2ray.com/">v2ray</a> (需代理)<br>
 <a href="https://toutyrater.github.io/">V2Ray 配置指南</a> (需代理)<br>
 <a href="https://yuan.ga/v2ray-complete-tutorial/">V2Ray完全使用教程</a><br>
@@ -270,7 +349,7 @@ $ sudo su
 <div class="foot">
   
   
-    &copy; 2019 - 2020 &#183; 
+    &copy; 2019 - 2021 &#183; 
     <a href="/">Kip Jiang</a> · Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
     <a href="#"><i class="fas fa-chevron-up"></i></a>
   

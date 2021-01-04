@@ -14,9 +14,11 @@
       <pubDate>Thu, 20 Feb 2020 12:23:43 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/posts/2020/02/20/working-with-ubuntu-2nd/</guid>
-      <description>如何在 Ubuntu 中安装一些开发软件。
- VScode  VSCode 的安装非常简单  $ sudo snap install --classic code code a622c65b from Visual Studio Code (vscode✓) installed 打开  $ code Sublime Text 3 Reference：Linux Package Manager Repositories
- Install the GPG key:  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - Ensure apt is set up to work with https sources:  sudo apt-get install apt-transport-https Select the channel to use:  Stable</description>
+      <description>这个系列描述如何在 Ubuntu 中安装一些常用软件。
+ VScode VSCode 的安装非常简单
+1 2  $ sudo snap install --classic code code a622c65b from Visual Studio Code (vscode✓) installed   打开
+1  $ code   Sublime Text 3  Reference：Linux Package Manager Repositories  Install the GPG key:
+1  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -   Ensure apt is set up to work with https sources:</description>
     </item>
     
     <item>
@@ -25,11 +27,12 @@
       <pubDate>Thu, 07 Nov 2019 12:25:16 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/posts/2019/11/07/vscode-remote-ssh/</guid>
-      <description>  第一步当然是先在 VSCode 中安装 Remote-SSH 扩展啦
-  通过 WSL 生成公私钥对
-  $ ssh-keygen -t rsa -b 4096 通过 ssh 登录服务器，将生成的公钥文件的副本 id_rsa.tmp.pub 复制到路径 ~/.ssh/ 下，执行命令  $ cat id_rsa.tmp.pub &amp;gt;&amp;gt; authorized_keys $ chmod 600 authorized_keys Note：必须执行 chmod 600 authorized_keys 命令
-配置本地的 VSCode  编辑文件 C:\Users\&amp;lt;UserName&amp;gt;\.ssh\config，按如下格式配置：
-Host arbitrary-name-you-like HostName remote-host-ip Port remote-port User user-name-to-sign-in IdentityFile C:\Users\&amp;lt;UserName&amp;gt;\.ssh\id_rsa </description>
+      <description>第一步，当然是先在 VSCode 中安装 Remote-SSH 扩展啦。
+通过 WSL 生成公私钥对：
+1  $ ssh-keygen -t rsa -b 4096   通过 ssh 登录服务器，将生成的公钥文件的副本 id_rsa.tmp.pub 复制到路径 ~/.ssh/ 下，执行命令：
+1 2  $ cat id_rsa.tmp.pub &amp;gt;&amp;gt; authorized_keys $ chmod 600 authorized_keys    Note: 必须执行 chmod 600 authorized_keys 命令
+ 配置本地的 VSCode，编辑文件 C:\Users\&amp;lt;UserName&amp;gt;\.ssh\config，按如下格式配置：
+1 2 3 4 5  Host arbitrary-name-you-like HostName remote-host-ip Port remote-port User user-name-to-sign-in IdentityFile C:\Users\&amp;lt;UserName&amp;gt;\.ssh\id_rsa   </description>
     </item>
     
   </channel>

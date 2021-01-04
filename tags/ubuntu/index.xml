@@ -23,8 +23,7 @@ Download Softwares 需要下载三样东西：
   v2ray-core 内核，我这里下载 v2ray-linux-64 v4.26.0.
   QvPlugin-SSR 插件，下载 QvSSRPlugin.v2.0.0.linux-x64.so 正式版，其刚好适配 Qv2ray v2.6.0 正式版。
   Configure Qv2ray  可执行权限  将 Qv2ray.v2.6.0.linux-x64.AppImage 放置在 ~/.config/qv2ray/ 路径下，并赋予其可执行权限：
-$ chmod +x Qv2ray.v2.6.0.linux-x64.AppImage  Add to Launcher  编辑应用配置文件：/usr/share/applications/qv2ray.desktop：
-$ sudo vim /usr/share/applications/qv2ray.desktop 配置如下：</description>
+1  $ chmod +x Qv2ray.v2.6.0.linux-x64.AppImage    Add to Launcher  编辑应用配置文件：/usr/share/applications/qv2ray.desktop：</description>
     </item>
     
     <item>
@@ -44,16 +43,15 @@ Deal with It  New Tool  At the beginning, I used an old version of UltraISO to m
       <pubDate>Fri, 27 Mar 2020 19:33:47 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/posts/2020/03/27/working-with-ubuntu-3rd/</guid>
-      <description>如何在 Ubuntu 中安装一些日常使用的软件。
+      <description>这个系列描述如何在 Ubuntu 中安装一些常用软件。
  Browser Firefox Ubuntu 自带的 Firefox 的账号服务属于国际区，如果你之前是通过 Windows 安装的中文版 Firefox 并注册的账号，在从 Ubuntu 中登录会提示你账号不存在。
 你可以注册使用国际区的账号；也可以通过使用中文版的 Firefox 可执行文件替换 Ubuntu 默认的版本，从而达到登录中国区账号的目的。
 下面讲讲如何替换为中国区 Firefox。
  下载中国区 localized Firefox  点击 https://www.firefox.com.cn/download/，选择 「下载其他语言版本」 下载。
 替换可执行文件  将 /usr/lib 下的默认版本的 Firefox 备份
-# mv /usr/lib/firefox /usr/lib/firefox_bak 将下载的 localized 版解压，替换默认版本
-# tar -jxvf firefox-latest-x86_64.tar.bz2 # mv firefox/ /usr/lib/ 添加启动图标  但是，经上述操作后我们并不能从 「Favorites」中的图标启动 Firefox，需要将默认版本中的启动脚本拷贝过来
-# cp /usr/lib/firefox_bak/firefox.sh /usr/lib/firefox 这时，我们就可以点击图标，启动 Firefox 了。
-Chrome 有两种安装方式：（1）通过设置 apt 源的方式安装；（2）直接下载 .</description>
+1  # mv /usr/lib/firefox /usr/lib/firefox_bak   将下载的 localized 版解压，替换默认版本
+1 2  # tar -jxvf firefox-latest-x86_64.tar.bz2 # mv firefox/ /usr/lib/   添加启动图标  但是，经上述操作后我们并不能从 「Favorites」中的图标启动 Firefox，需要将默认版本中的启动脚本拷贝过来
+1  # cp /usr/lib/firefox_bak/firefox.</description>
     </item>
     
     <item>
@@ -62,9 +60,11 @@ Chrome 有两种安装方式：（1）通过设置 apt 源的方式安装；（2
       <pubDate>Thu, 20 Feb 2020 12:23:43 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/posts/2020/02/20/working-with-ubuntu-2nd/</guid>
-      <description>如何在 Ubuntu 中安装一些开发软件。
- VScode  VSCode 的安装非常简单  $ sudo snap install --classic code code a622c65b from Visual Studio Code (vscode✓) installed 打开  $ code Sublime Text 3 Reference：Linux Package Manager Repositories
- Install the GPG key:  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - Ensure apt is set up to work with https sources:  sudo apt-get install apt-transport-https Select the channel to use:  Stable</description>
+      <description>这个系列描述如何在 Ubuntu 中安装一些常用软件。
+ VScode VSCode 的安装非常简单
+1 2  $ sudo snap install --classic code code a622c65b from Visual Studio Code (vscode✓) installed   打开
+1  $ code   Sublime Text 3  Reference：Linux Package Manager Repositories  Install the GPG key:
+1  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -   Ensure apt is set up to work with https sources:</description>
     </item>
     
     <item>
@@ -73,13 +73,14 @@ Chrome 有两种安装方式：（1）通过设置 apt 源的方式安装；（2
       <pubDate>Sat, 15 Feb 2020 09:49:43 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/posts/2020/02/15/working-with-ubuntu-1st/</guid>
-      <description>如何在 Ubuntu 中安装一些开发软件。
- v2ray  下载并安装 v2ray 脚本  v2ray-core/release
-下载最新版的 v2ray Linux 压缩包，并通过脚本在本地安装
-$ curl https://github.com/v2ray/v2ray-core/releases/download/v4.22.1/v2ray-linux-64.zip $ curl -L -s https://install.direct/go.sh -o go.sh $ sudo su # bash go.sh --local ./v2ray-linux-64.zip 配置 Server  首先，你得有一台在境外的 VPS &amp;hellip;&amp;hellip;
-配置 Client  编辑配置文件：
-# vim /etc/v2ray/config.json 按如下示例配置：
-{ &amp;#34;inbounds&amp;#34;: [{ &amp;#34;port&amp;#34;: 1080, &amp;#34;listen&amp;#34;: &amp;#34;127.0.0.1&amp;#34;, &amp;#34;protocol&amp;#34;: &amp;#34;socks&amp;#34;, &amp;#34;tag&amp;#34;: &amp;#34;socks-inbound&amp;#34;, &amp;#34;settings&amp;#34;: { &amp;#34;auth&amp;#34;: &amp;#34;noauth&amp;#34;, &amp;#34;udp&amp;#34;: true, &amp;#34;ip&amp;#34;: &amp;#34;127.0.0.1&amp;#34; }, &amp;#34;sniffing&amp;#34;: { &amp;#34;enbale&amp;#34;: true, &amp;#34;destOverride&amp;#34;: [ &amp;#34;http&amp;#34;, &amp;#34;tls&amp;#34; ] } }], &amp;#34;outbounds&amp;#34;: [{ &amp;#34;protocol&amp;#34;: &amp;#34;vmess&amp;#34;, &amp;#34;settings&amp;#34;: { &amp;#34;vnext&amp;#34;: [{ &amp;#34;address&amp;#34;: &amp;#34;**.</description>
+      <description>这个系列描述如何在 Ubuntu 中安装一些常用软件。
+ 安装 v2ray 下载并安装 v2ray 脚本：
+v2ray-core/release
+下载最新版的 v2ray Linux 压缩包，并通过脚本在本地安装：
+1 2 3 4  $ curl https://github.com/v2ray/v2ray-core/releases/download/v4.22.1/v2ray-linux-64.zip $ curl -L -s https://install.direct/go.sh -o go.sh $ sudo su # bash go.sh --local ./v2ray-linux-64.zip   配置 Server，首先，你得有一台在境外的 VPS &amp;hellip;&amp;hellip; 233333 😂
+配置 Client，编辑配置文件：
+1  # vim /etc/v2ray/config.json   按如下示例配置：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46  { &amp;#34;inbounds&amp;#34;: [{ &amp;#34;port&amp;#34;: 1080, &amp;#34;listen&amp;#34;: &amp;#34;127.</description>
     </item>
     
   </channel>
