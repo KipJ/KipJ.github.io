@@ -76,7 +76,7 @@
       
         8 min
       
-      5 s
+      3 s
       &nbsp;
     
 
@@ -90,53 +90,34 @@
     </div>
   </header>
 
-  
-  <div class="toc">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#preparation">Preparation</a></li>
-    <li><a href="#seabios">SeaBIOS</a></li>
-    <li><a href="#libtpms">libtpms</a></li>
-    <li><a href="#swtpm">swtpm</a></li>
-    <li><a href="#qemu-tpm">qemu-tpm</a></li>
-    <li><a href="#create-vm-with-vtpm">Create VM with vTPM</a>
-      <ul>
-        <li><a href="#vtpm-emulator">vTPM Emulator</a></li>
-        <li><a href="#guest-os">Guest OS</a></li>
-      </ul>
-    </li>
-    <li><a href="#summary">Summary</a></li>
-  </ul>
-</nav>  
-  </div>
    
 
   <div class="text">
     <h2 id="preparation">Preparation</h2>
 <ul>
-<li>Reference Paper</li>
-</ul>
-<p><a href="/pdf/Scalable_Attestation-A_Step_toward_Secure_and_Trusted_Clouds_Stefan.pdf">Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.</a></p>
-<ul>
+<li>
+<p>Reference Paper</p>
+<p>Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering _ Berger, etc., 2015, March.
+<a href="https://s3-us-west-1.amazonaws.com/groupsioattachments/28784/31937493/50/0?AWSAccessKeyId=AKIAJECNKOVMCCU3ATNQ&amp;Expires=1609851195&amp;Signature=ETSegblLP7Lm%2F1FFU528FeHpWQI%3D&amp;response-content-disposition=inline%3B+filename%3D%2207331190.pdf%22">PDF</a></p>
+</li>
 <li>
 <p>Environment</p>
-</li>
-<li>
-<p>Host: <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/18.04/">Ubuntu 18.04</a></p>
-</li>
-<li>
-<p>Guest: <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/14.04/">Ubuntu 14.04</a></p>
+<ul>
+<li>Host: <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/18.04/">Ubuntu 18.04</a></li>
+<li>Guest: <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/14.04/">Ubuntu 14.04</a></li>
+</ul>
 </li>
 <li>
 <p>Source Code</p>
-</li>
-</ul>
 <ol>
-<li><a href="https://github.com/stefanberger/seabios-tpm">seabios-tpm</a> 2. <a href="https://github.com/stefanberger/libtpms">libtpms</a> 3. <a href="https://github.com/stefanberger/swtpm">swtpm</a> 4. <a href="https://github.com/stefanberger/qemu-tpm">qemu-tpm</a></li>
+<li><a href="https://github.com/stefanberger/seabios-tpm">seabios-tpm</a></li>
+<li><a href="https://github.com/stefanberger/libtpms">libtpms</a></li>
+<li><a href="https://github.com/stefanberger/swtpm">swtpm</a></li>
+<li><a href="https://github.com/stefanberger/qemu-tpm">qemu-tpm</a></li>
 </ol>
-<ul>
-<li>Tree of Path</li>
-</ul>
+</li>
+<li>
+<p>Tree of Path</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -157,7 +138,9 @@
   └── test
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="seabios">SeaBIOS</h2>
+</div></li>
+</ul>
+<h2 id="seabios">SeaBIOS</h2>
 <p>SeaBIOS 包含 vTPM 支持的分支 <a href="https://github.com/stefanberger/seabios-tpm">seabios-tpm</a> 最开始由 <a href="https://github.com/stefanberger">Stefan</a> 维护，现在已经成功将其合并到主分支 <a href="https://seabios.org/SeaBIOS">SeaBIOS</a>。因此，下面的实验中我们使用其主分支。</p>
 <ol>
 <li>下载</li>
@@ -260,11 +243,13 @@ lrwxrwxrwx  <span style="color:#ae81ff">1</span> root root    <span style="color
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git clone https://github.com/stefanberger/libtpms.git
 $ cd libtpms
-$ sudo apt-get -y install automake autoconf libtool gcc build-essential libssl-dev dh-exec pkg-config gawk
+$ sudo apt-get -y install automake autoconf libtool gcc build-essential <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>libssl-dev dh-exec pkg-config gawk
 $ ./autogen.sh --with-openssl --with-tpm2
 &lt;snip&gt;
 CFLAGS<span style="color:#f92672">=</span>-g -O2 -DUSE_OPENSSL_FUNCTIONS_SYMMETRIC<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DUSE_OPENSSL_FUNCTIONS_EC<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DUSE_OPENSSL_FUNCTIONS_ECDSA<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DUSE_OPENSSL_FUNCTIONS_RSA<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>  -Wall -Werror -Wreturn-type -Wsign-compare -Wno-self-assign
@@ -375,6 +360,7 @@ libtpms0_0.8.0~dev1_amd64.deb  libtpms-dev_0.8.0~dev1_amd64.deb  libtpms_0.8.0~d
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git clone https://github.com/stefanberger/swtpm.git
@@ -382,7 +368,8 @@ $ cd swtpm
 $ sudo su
 <span style="color:#75715e"># ln -s /dev/null /etc/systemd/system/trousers.service</span>
 <span style="color:#75715e"># exit</span>
-$ sudo apt-get -y install  libfuse-dev libglib2.0-dev libgmp-dev expect libtasn1-dev socat tpm-tools python3-twisted gnutls-dev gnutls-bin softhsm2 libseccomp-dev
+$ sudo apt-get -y install  libfuse-dev libglib2.0-dev libgmp-dev expect libtasn1-dev socat <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>tpm-tools python3-twisted gnutls-dev gnutls-bin softhsm2 libseccomp-dev
 </code></pre></td></tr></table>
 </div>
 </div><p><strong>Note:</strong> <code>trousers</code> 是 TPM1.2 的依赖软件，<code>tpm-tools</code> 是 TPM2.0 的依赖软件，Ubuntu 默认安装 <code>tpm-tools</code> 必须先安装 <code>trousers</code>。如果你不需要模拟 TPM1.2，这便不是必须的。Stefan 提了 report，不过社区并没有回应。</p>
@@ -466,7 +453,7 @@ $ sudo apt-get -y install  libfuse-dev libglib2.0-dev libgmp-dev expect libtasn1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ dpkg-buildpackage -us -uc -j<span style="color:#66d9ef">$(</span>nproc<span style="color:#66d9ef">)</span>
-&lt;snip
+&lt;snip&gt;
 make  check-TESTS
 make<span style="color:#f92672">[</span>4<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/kip/workspace/swtpm/tests&#39;</span>
 make<span style="color:#f92672">[</span>5<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/kip/workspace/swtpm/tests&#39;</span>
@@ -556,9 +543,11 @@ swtpm_0.3.0-1_amd64.deb  swtpm-dev_0.3.0-1_amd64.deb  swtpm-libs_0.3.0-1_amd64.d
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo dpkg -i swtpm_0.3.0-1_amd64.deb swtpm-dev_0.3.0-1_amd64.deb swtpm-libs_0.3.0-1_amd64.deb swtpm-tools_0.3.0-1_amd64.deb
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo dpkg -i swtpm_0.3.0-1_amd64.deb swtpm-dev_0.3.0-1_amd64.deb swtpm-libs_0.3.0-1_amd64.deb <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>swtpm-tools_0.3.0-1_amd64.deb
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="qemu-tpm">qemu-tpm</h2>
@@ -584,7 +573,7 @@ $ cd qemu-tpm
 $ mkdir build
 $ cd build
 $ ../configure --enable-debug --enable-tpm --enable-kvm --enable-vnc --target-list<span style="color:#f92672">=</span>x86_64-softmmu
-&lt;snip
+&lt;snip&gt;
 TCG support       yes
 TCG debug enabled yes
 TCG interpreter   no

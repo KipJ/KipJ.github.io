@@ -14,7 +14,8 @@
       <pubDate>Tue, 16 Jun 2020 22:01:13 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/posts/2020/06/16/change-to-new-theme/</guid>
-      <description>Hugo Theme Diary I change my blog to a new hugo theme hugo-theme-diary which is pretty concise.
+      <description>This post is abandoned.
+ Hugo Theme Diary I change my blog to a new hugo theme hugo-theme-diary which is pretty concise.
 To meet my taste I am adding some new features to it.
 You can switch to the new branch kipjiang to check the changes.
 TODO List  Markdownify the copyright string. Display the theme info implicitly. Add some common Font Awesome icons to sidebar. Enable the visitor counter leancloud-visitor of valine and move the enablevaline to params.</description>
@@ -38,7 +39,6 @@ jane-demo
   主题 Jane 是 贤民 制作的主题，它对各种 shortcode 的支持都比较完善。
 虽然，我已经不再使用这个主题了，但是我还是会常常去看下贤民的个人网站 贤民的比特记忆。
 贤民说他是丽江白沙一个国际青年旅舍的掌柜，但和我印象中的掌柜却不太一样。他经常码代码、学英语、读书爬上，开心的和来自五湖四海的游客交流。
-而我，一直困在一个地方，逃脱不得，这种自由是我向往却不可及的。
 也许，哪天闲下来了或者逃离这种困境了，我会专程去丽江看看他。
   hugo-theme-even
 even-demo

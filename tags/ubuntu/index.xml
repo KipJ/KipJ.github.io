@@ -34,7 +34,7 @@ Download Softwares 需要下载三样东西：
       <guid>https://kipjiang.github.io/posts/2020/07/11/dual-os/</guid>
       <description>A New Computer I got a new Dell computer several weeks ago, which installed the Windows 10. The computer has 2 disks, a 120Gb SSD and a 1T HDD.
 I reserved 430G of HDD space and installed a ubuntu 20.04 as my second os, but I met some troubles because of the new UEFI system.
-Deal with It  New Tool  At the beginning, I used an old version of UltraISO to make the USB boot system, but the UEFI system even can not recognize it.</description>
+Deal with It New Tool At the beginning, I used an old version of UltraISO to make the USB boot system, but the UEFI system even can not recognize it.</description>
     </item>
     
     <item>

@@ -74,7 +74,7 @@
       
 
       
-      44 s
+      43 s
       &nbsp;
     
 
@@ -95,28 +95,29 @@
 <p>I got a new Dell computer several weeks ago, which installed the Windows 10. The computer has 2 disks, a 120Gb SSD and a 1T HDD.</p>
 <p>I reserved 430G of HDD space and installed a ubuntu 20.04 as my second os, but I met some troubles  because of the new UEFI system.</p>
 <h2 id="deal-with-it">Deal with It</h2>
-<ul>
-<li>New Tool</li>
-</ul>
+<h3 id="new-tool">New Tool</h3>
 <p>At the beginning, I used an old version of  <a href="https://cn.ultraiso.net/">UltraISO</a> to make the USB boot system, but the UEFI system even can not recognize it.</p>
 <p>I&rsquo;ve been stuck here for a long time and found a useful tool <a href="https://rufus.ie/">Rufus</a> that can deal with the UEFI firmware.</p>
-<ul>
-<li>Boot Loader</li>
-</ul>
+<h3 id="boot-loader">Boot Loader</h3>
 <p>The bootloader of ubuntu was installed in the UEFI partition where the Windows Boot Manager is located, although I chose to install it at the root partition of ubuntu during installation.</p>
 <p><img src="https://i.loli.net/2020/07/11/QjtcmVr3f2pRxUq.png" alt="install.png"></p>
-<ul>
-<li>More</li>
-</ul>
 <p>Finally, I learned that the UltraISO can also make USB boot media compatible with UEFI. 😂</p>
-<hr>
+<blockquote>
 <p>It wasted my whole day, really!</p>
+</blockquote>
 
   </div>
 
   <footer>
     <hr class="end-line">
 
+    
+    <div class="post-lastmod">
+      <time datetime="2021-01-05T21:01:01&#43;08:00">
+        update @ January 05, 2021
+      </time>
+      <p></p>
+    </div>
     
 
     

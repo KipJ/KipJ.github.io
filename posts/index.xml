@@ -34,7 +34,7 @@ Download Softwares 需要下载三样东西：
       <guid>https://kipjiang.github.io/posts/2020/07/11/dual-os/</guid>
       <description>A New Computer I got a new Dell computer several weeks ago, which installed the Windows 10. The computer has 2 disks, a 120Gb SSD and a 1T HDD.
 I reserved 430G of HDD space and installed a ubuntu 20.04 as my second os, but I met some troubles because of the new UEFI system.
-Deal with It  New Tool  At the beginning, I used an old version of UltraISO to make the USB boot system, but the UEFI system even can not recognize it.</description>
+Deal with It New Tool At the beginning, I used an old version of UltraISO to make the USB boot system, but the UEFI system even can not recognize it.</description>
     </item>
     
     <item>
@@ -43,7 +43,8 @@ Deal with It  New Tool  At the beginning, I used an old version of UltraISO to m
       <pubDate>Tue, 16 Jun 2020 22:01:13 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/posts/2020/06/16/change-to-new-theme/</guid>
-      <description>Hugo Theme Diary I change my blog to a new hugo theme hugo-theme-diary which is pretty concise.
+      <description>This post is abandoned.
+ Hugo Theme Diary I change my blog to a new hugo theme hugo-theme-diary which is pretty concise.
 To meet my taste I am adding some new features to it.
 You can switch to the new branch kipjiang to check the changes.
 TODO List  Markdownify the copyright string. Display the theme info implicitly. Add some common Font Awesome icons to sidebar. Enable the visitor counter leancloud-visitor of valine and move the enablevaline to params.</description>
@@ -83,12 +84,12 @@ Configure Jypyter  Note: 通过 ssh 远程链接到服务器操作。
       <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/posts/2020/03/11/vms-with-vtpm-in-ubuntu/</guid>
-      <description>Preparation  Reference Paper  Berger, S., Goldman, K., Pendarakis, D., Safford, D., Valdez, E. and Zohar, M., 2015, March. Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering (pp. 185-194). IEEE.
+      <description>Preparation   Reference Paper
+Scalable attestation: A step toward secure and trusted clouds. In 2015 IEEE International Conference on Cloud Engineering _ Berger, etc., 2015, March. PDF
   Environment
-  Host: Ubuntu 18.04
-  Guest: Ubuntu 14.04
-  Source Code
-   seabios-tpm 2. libtpms 3. swtpm 4. qemu-tpm   Tree of Path  1 2 3 4 5 6 7  kip └── workspace ├── libtpms ├── qemu-tpm ├── seabios ├── swtpm └── test   SeaBIOS SeaBIOS 包含 vTPM 支持的分支 seabios-tpm 最开始由 Stefan 维护，现在已经成功将其合并到主分支 SeaBIOS。因此，下面的实验中我们使用其主分支。</description>
+ Host: Ubuntu 18.04 Guest: Ubuntu 14.04    Source Code
+ seabios-tpm libtpms swtpm qemu-tpm    Tree of Path
+1 2 3 4 5 6 7  kip └── workspace ├── libtpms ├── qemu-tpm ├── seabios ├── swtpm └── test     SeaBIOS SeaBIOS 包含 vTPM 支持的分支 seabios-tpm 最开始由 Stefan 维护，现在已经成功将其合并到主分支 SeaBIOS。因此，下面的实验中我们使用其主分支。</description>
     </item>
     
     <item>
@@ -109,7 +110,6 @@ jane-demo
   主题 Jane 是 贤民 制作的主题，它对各种 shortcode 的支持都比较完善。
 虽然，我已经不再使用这个主题了，但是我还是会常常去看下贤民的个人网站 贤民的比特记忆。
 贤民说他是丽江白沙一个国际青年旅舍的掌柜，但和我印象中的掌柜却不太一样。他经常码代码、学英语、读书爬上，开心的和来自五湖四海的游客交流。
-而我，一直困在一个地方，逃脱不得，这种自由是我向往却不可及的。
 也许，哪天闲下来了或者逃离这种困境了，我会专程去丽江看看他。
   hugo-theme-even
 even-demo
