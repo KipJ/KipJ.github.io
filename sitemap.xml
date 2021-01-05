@@ -3,6 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kipjiang.github.io/categories/</loc>
+    <lastmod>2021-01-05T21:21:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/container/</loc>
+    <lastmod>2021-01-05T21:21:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/categories/docker/</loc>
+    <lastmod>2021-01-05T21:21:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/</loc>
+    <lastmod>2021-01-05T21:21:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/posts/</loc>
+    <lastmod>2021-01-05T21:21:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/priviledged/</loc>
+    <lastmod>2021-01-05T21:21:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/posts/2021/01/05/privileged-docker-container/</loc>
+    <lastmod>2021-01-05T21:21:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/</loc>
+    <lastmod>2021-01-05T21:21:15+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kipjiang.github.io/about/</loc>
     <lastmod>2021-01-05T20:25:58+05:30</lastmod>
   </url>
@@ -13,18 +53,8 @@
   </url>
   
   <url>
-    <loc>https://kipjiang.github.io/categories/</loc>
-    <lastmod>2021-01-05T21:01:01+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kipjiang.github.io/posts/2020/07/11/qv2ray-in-ubuntu/</loc>
     <lastmod>2020-07-12T10:17:31+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kipjiang.github.io/</loc>
-    <lastmod>2021-01-05T21:01:01+08:00</lastmod>
   </url>
   
   <url>
@@ -33,18 +63,8 @@
   </url>
   
   <url>
-    <loc>https://kipjiang.github.io/posts/</loc>
-    <lastmod>2021-01-05T21:01:01+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kipjiang.github.io/tags/qv2ray/</loc>
     <lastmod>2020-07-12T10:17:31+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kipjiang.github.io/tags/</loc>
-    <lastmod>2021-01-05T21:01:01+08:00</lastmod>
   </url>
   
   <url>
