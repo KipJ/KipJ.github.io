@@ -7,22 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>[Kip Jiang](/) &amp;#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)</copyright>
-    <lastBuildDate>Tue, 05 Jan 2021 21:21:15 +0800</lastBuildDate><atom:link href="https://kipjiang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Jan 2021 20:31:15 +0800</lastBuildDate><atom:link href="https://kipjiang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux</title>
+      <link>https://kipjiang.github.io/categories/linux/</link>
+      <pubDate>Wed, 06 Jan 2021 20:31:15 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Docker</title>
       <link>https://kipjiang.github.io/categories/docker/</link>
       <pubDate>Tue, 05 Jan 2021 21:21:15 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/categories/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://kipjiang.github.io/categories/linux/</link>
-      <pubDate>Sat, 11 Jul 2020 22:20:12 +0800</pubDate>
-      
-      <guid>https://kipjiang.github.io/categories/linux/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bridge on Kip Jiang</title>
+    <link>https://kipjiang.github.io/tags/bridge/</link>
+    <description>Recent content in Bridge on Kip Jiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>[Kip Jiang](/) &amp;#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)</copyright>
+    <lastBuildDate>Wed, 06 Jan 2021 20:31:15 +0800</lastBuildDate><atom:link href="https://kipjiang.github.io/tags/bridge/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure Bridge Net for CentOS7</title>
+      <link>https://kipjiang.github.io/posts/2021/01/06/configure-bridge-net-for-centos7/</link>
+      <pubDate>Wed, 06 Jan 2021 20:31:15 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/posts/2021/01/06/configure-bridge-net-for-centos7/</guid>
+      <description>我有一台安装了 CentOS7 的主机，但它只有一个网卡。现在想为这台主机上的虚拟机配置独立的 IP，从而其他主机可以直接连接到虚拟机。
+可以为使用 brctl 命令为主机配置一个网桥，然后将网卡设置为混杂工作模式即可实现上述功能。
+也可以直接编辑生成网桥的配置文件，下面是生成网桥 br0 的配置文件示例。
+首先，通过 ifconfig 命令查看主机的网口名字，我的是 p4p1，一般通用的是 ens32 或者 eth0等。
+1 2 3  $ ifconfig p4p1: flags=4163&amp;lt;UP,BROADCAST,RUNNING,MULTICAST&amp;gt; mtu 1500 &amp;lt;snip&amp;gt;   接着，进入目录 /etc/sysconfig/network-scripts，生成 br0 的配置文件。
+1 2 3 4 5 6 7 8 9 10 11 12  $ sudo vim ifcfg-br0 TYPE=Bridge BOOTPROTO=static IPADDR=aaa.bbb.ccc.242 GATEWAY=aaa.bbb.ccc.254 DNS1=xxx.yyy.zzz.36 DNS2=xxx.yyy.zzz.39 ONBOOT=yes PREFIX=25 DEFROUTE=yes NAME=br0 DEVICE=br0   然后，编辑网口配置文件，绑定网桥。只需在最后添加网桥名即可。
+1 2 3  $ sudo vim ifcfg-p4p1 &amp;lt;snip&amp;gt; BRIDGE=br0   最后，重启网络服务：</description>
+    </item>
+    
+  </channel>
+</rss>

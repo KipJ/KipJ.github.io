@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.75.1" />
+
+  <title> Configure Bridge Net for CentOS7 |  Kip Jiang</title>
+  <meta name="description" content="Configure Bridge Net for CentOS7">
+  <link rel="stylesheet" href="https://kipjiang.github.io/css/simpleness.css">
+  <link rel="canonical" href="https://kipjiang.github.io/posts/2021/01/06/configure-bridge-net-for-centos7/">
+  <link rel="alternate" type="application/rss+xml" href="" title="Kip Jiang">
+  
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="menus">
+  
+
+  <nav >
+    
+    <a href="/"> Home</a>
+    
+    <a href="/projects/"> Projects</a>
+    
+    <a href="/about/"> About</a>
+    
+  </nav>
+
+  <nav class="fontawesome">
+    
+    <a href="https://github.com/KipJiang" target="_blank">
+        <i title="GitHub" class="fab fa-github"></i>
+    </a>
+    
+    
+    <a href="https://kipjiang.github.io/index.xml" target="_blank">
+        <i title="RSS" class="fas fa-rss"></i>
+    </a>
+    
+  </nav>
+  
+  
+  <div class="hidden description">It's' Kip Jiang's Blog, who loves reading and running, and is interested in Linux and Cloud Computing.</div>
+  
+</header>
+
+<article class="article">
+  <header>
+    <h1 style="text-align: center;" >Configure Bridge Net for CentOS7</h1>
+
+    <div class="post-meta">
+    
+      <time datetime="2021-01-06T20:31:15&#43;08:00">January 06, 2021</time> &nbsp; 
+    
+
+    Kip Jiang &nbsp;
+
+    
+    
+      <i class="far fa-eye"></i>
+      <span id="/posts/2021/01/06/configure-bridge-net-for-centos7/" class="leancloud_visitors" data-flag-title="Configure Bridge Net for CentOS7">
+          <span class="leancloud-visitors-count">  </span>
+      </span> &nbsp;
+    
+    
+
+    
+      <i class="far fa-clock"></i>
+      
+      
+      
+
+      
+        1 min
+      
+      26 s
+      &nbsp;
+    
+
+    
+      <i class="fas fa-folder"></i>
+      
+      <a href="/categories/linux">Linux</a>
+      &nbsp;
+      
+    
+    </div>
+  </header>
+
+   
+
+  <div class="text">
+    <p>我有一台安装了 CentOS7 的主机，但它只有一个网卡。现在想为这台主机上的虚拟机配置独立的 IP，从而其他主机可以直接连接到虚拟机。</p>
+<p>可以为使用 <code>brctl</code> 命令为主机配置一个网桥，然后将网卡设置为混杂工作模式即可实现上述功能。</p>
+<p>也可以直接编辑生成网桥的配置文件，下面是生成网桥 <code>br0</code> 的配置文件示例。</p>
+<p>首先，通过 <code>ifconfig</code> 命令查看主机的网口名字，我的是 <code>p4p1</code>，一般通用的是 <code>ens32</code> 或者 <code>eth0</code>等。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ ifconfig
+p4p1: flags<span style="color:#f92672">=</span>4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu <span style="color:#ae81ff">1500</span>
+&lt;snip&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>接着，进入目录 <code>/etc/sysconfig/network-scripts</code>，生成 <code>br0</code> 的配置文件。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo vim ifcfg-br0
+TYPE<span style="color:#f92672">=</span>Bridge
+BOOTPROTO<span style="color:#f92672">=</span>static
+IPADDR<span style="color:#f92672">=</span>aaa.bbb.ccc.242
+GATEWAY<span style="color:#f92672">=</span>aaa.bbb.ccc.254
+DNS1<span style="color:#f92672">=</span>xxx.yyy.zzz.36
+DNS2<span style="color:#f92672">=</span>xxx.yyy.zzz.39
+ONBOOT<span style="color:#f92672">=</span>yes
+PREFIX<span style="color:#f92672">=</span><span style="color:#ae81ff">25</span>
+DEFROUTE<span style="color:#f92672">=</span>yes
+NAME<span style="color:#f92672">=</span>br0
+DEVICE<span style="color:#f92672">=</span>br0
+</code></pre></td></tr></table>
+</div>
+</div><p>然后，编辑网口配置文件，绑定网桥。只需在最后添加网桥名即可。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo vim ifcfg-p4p1
+&lt;snip&gt;
+BRIDGE<span style="color:#f92672">=</span>br0
+</code></pre></td></tr></table>
+</div>
+</div><p>最后，重启网络服务：</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo systemctl restart network.service
+</code></pre></td></tr></table>
+</div>
+</div><p>以上 ↑</p>
+
+  </div>
+
+  <footer>
+    <hr class="end-line">
+
+    
+    <div class="post-lastmod">
+      <time datetime="2021-01-07T15:03:15&#43;08:00">
+        update @ January 07, 2021
+      </time>
+      <p></p>
+    </div>
+    
+
+    
+    <div class="post-tags">
+      <i class="fas fa-tags"></i>
+      
+        <a href="/tags/centos7">CentOS7</a>
+        &nbsp;
+      
+        <a href="/tags/bridge">Bridge</a>
+        &nbsp;
+      
+    </div>
+    
+
+    
+    
+  </footer>
+
+  <div class="comments">
+
+
+
+  <div class="comments-item comments-valine" >
+    
+    
+    
+    <div id="vcomments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <script type="text/javascript">
+      new Valine({
+          el: '#vcomments',
+          highlight: false,
+          lang: "en",
+          appId: "AhrO67kSBw2cdWp3AFKzjzI5-MdYXbMMI",
+          appKey: "RKBIhU7j518tpSUFbaWh8D2x",
+          placeholder: "Please leave your email to receive reply ......",
+          requiredFields: ["nick","mail"],
+          avatar: "robohash",
+          visitor:  true ,
+          recordIP: true
+      });
+    </script>
+    <script>
+      if(window.location.hash){
+          var checkExist = setInterval(function() {
+             if ($(window.location.hash).length) {
+                $('html, body, article').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+                clearInterval(checkExist);
+             }
+          }, 100);
+      }
+    </script>
+  </div>
+
+</div>
+
+</article>
+
+
+</body>
+<div class="foot">
+  
+  
+    &copy; 2019 - 2021 &#183; 
+    <a href="/">Kip Jiang</a> · Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
+    <a href="#"><i class="fas fa-chevron-up"></i></a>
+  
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-162425220-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  
+</div>
+
+<script src="/js/lazyload.min.js"></script>
+<script>
+  var lazyImage = new LazyLoad({
+    container: document.getElementById('article')
+  });
+</script>
+
+
+</html>
