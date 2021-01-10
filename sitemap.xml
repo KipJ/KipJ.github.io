@@ -3,12 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kipjiang.github.io/tags/bridge/</loc>
-    <lastmod>2021-01-07T15:03:15+08:00</lastmod>
+    <loc>https://kipjiang.github.io/categories/</loc>
+    <lastmod>2021-01-10T16:28:29+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kipjiang.github.io/categories/</loc>
+    <loc>https://kipjiang.github.io/posts/2021/01/10/connect-remote-virtual-machines-through-vnc/</loc>
+    <lastmod>2021-01-10T16:28:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/</loc>
+    <lastmod>2021-01-10T16:28:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/categories/linux/</loc>
+    <lastmod>2021-01-10T16:28:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/posts/</loc>
+    <lastmod>2021-01-10T16:28:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/remote/</loc>
+    <lastmod>2021-01-10T16:28:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/</loc>
+    <lastmod>2021-01-10T16:28:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/ubuntu-20.04/</loc>
+    <lastmod>2021-01-10T16:28:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/virt-install/</loc>
+    <lastmod>2021-01-10T16:28:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/virtual-machine/</loc>
+    <lastmod>2021-01-10T16:28:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/vms/</loc>
+    <lastmod>2021-01-10T16:28:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/vnc/</loc>
+    <lastmod>2021-01-10T16:28:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kipjiang.github.io/tags/bridge/</loc>
     <lastmod>2021-01-07T15:03:15+08:00</lastmod>
   </url>
   
@@ -19,26 +74,6 @@
   
   <url>
     <loc>https://kipjiang.github.io/posts/2021/01/06/configure-bridge-net-for-centos7/</loc>
-    <lastmod>2021-01-07T15:03:15+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kipjiang.github.io/</loc>
-    <lastmod>2021-01-07T15:03:15+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kipjiang.github.io/categories/linux/</loc>
-    <lastmod>2021-01-07T15:03:15+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kipjiang.github.io/posts/</loc>
-    <lastmod>2021-01-07T15:03:15+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kipjiang.github.io/tags/</loc>
     <lastmod>2021-01-07T15:03:15+08:00</lastmod>
   </url>
   
