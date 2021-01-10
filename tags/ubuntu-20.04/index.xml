@@ -9,11 +9,11 @@
     <copyright>[Kip Jiang](/) &amp;#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)</copyright>
     <lastBuildDate>Sun, 10 Jan 2021 16:28:29 +0800</lastBuildDate><atom:link href="https://kipjiang.github.io/tags/ubuntu-20.04/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Connect Remote Virtual Machines through VNC</title>
-      <link>https://kipjiang.github.io/posts/2021/01/10/connect-remote-virtual-machines-through-vnc/</link>
+      <title>Connect Remote KVM Virtual Machines through VNC</title>
+      <link>https://kipjiang.github.io/posts/2021/01/10/connect-remote-kvm-virtual-machines-through-vnc/</link>
       <pubDate>Sun, 10 Jan 2021 16:28:29 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/posts/2021/01/10/connect-remote-virtual-machines-through-vnc/</guid>
+      <guid>https://kipjiang.github.io/posts/2021/01/10/connect-remote-kvm-virtual-machines-through-vnc/</guid>
       <description>安装虚拟机 在 CentOS7 上使用 virt-install 安装，则虚拟机后续都可以通过 VNC 远程访问。
 1 2 3 4 5  $ virt-install --name ubuntu-20.04 --ram 2048 --vcpus=4 \ --accelerate --noautoconsole \ --disk path=/home/kip/test/ubuntu-20.04.qcow2,format=qcow2,size=50,bus=virtio \ --cdrom /home/kip/Downloads/ubuntu-20.04.1-desktop-amd64.iso \ --graphics vnc,password=123456,port=5902,listen=0.0.0.0   远程访问 VNC 在另一台 Win10 主机上，VNC Viewer 通过 cent-ip:2 就可以访问这台虚拟机。
 虚拟机操作系统的安装过程，即可以通过此方式完成。

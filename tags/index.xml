@@ -9,11 +9,20 @@
     <copyright>[Kip Jiang](/) &amp;#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)</copyright>
     <lastBuildDate>Sun, 10 Jan 2021 16:28:29 +0800</lastBuildDate><atom:link href="https://kipjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Remote</title>
-      <link>https://kipjiang.github.io/tags/remote/</link>
+      <title>KVM</title>
+      <link>https://kipjiang.github.io/tags/kvm/</link>
       <pubDate>Sun, 10 Jan 2021 16:28:29 +0800</pubDate>
       
-      <guid>https://kipjiang.github.io/tags/remote/</guid>
+      <guid>https://kipjiang.github.io/tags/kvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QEMU</title>
+      <link>https://kipjiang.github.io/tags/qemu/</link>
+      <pubDate>Sun, 10 Jan 2021 16:28:29 +0800</pubDate>
+      
+      <guid>https://kipjiang.github.io/tags/qemu/</guid>
       <description></description>
     </item>
     
@@ -41,15 +50,6 @@
       <pubDate>Sun, 10 Jan 2021 16:28:29 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/tags/virtual-machine/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VMs</title>
-      <link>https://kipjiang.github.io/tags/vms/</link>
-      <pubDate>Sun, 10 Jan 2021 16:28:29 +0800</pubDate>
-      
-      <guid>https://kipjiang.github.io/tags/vms/</guid>
       <description></description>
     </item>
     
@@ -185,15 +185,6 @@
       <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
       
       <guid>https://kipjiang.github.io/tags/libtpms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>QEMU</title>
-      <link>https://kipjiang.github.io/tags/qemu/</link>
-      <pubDate>Wed, 11 Mar 2020 20:34:44 +0800</pubDate>
-      
-      <guid>https://kipjiang.github.io/tags/qemu/</guid>
       <description></description>
     </item>
     
