@@ -201,7 +201,7 @@ $ mv ~/git-aware-prompt ~/.git-aware-prompt
 <span style="color:#a6e22e">parse_git_branch() {</span>
      <span style="color:#a6e22e">git branch 2&gt; /dev/null | sed -e &#39;/^[^*]/d&#39; -e &#39;s/* \(.*\)/ (\1)/&#39;</span>
 <span style="color:#a6e22e">}</span>
-<span style="color:#a6e22e">export PS1</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ &#34;</span>
+<span style="color:#a6e22e">export PS1</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;\u@\h:\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ &#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>使配置生效</p>
@@ -221,8 +221,8 @@ $ mv ~/git-aware-prompt ~/.git-aware-prompt
 
     
     <div class="post-lastmod">
-      <time datetime="2021-01-04T22:40:00&#43;08:00">
-        update @ January 04, 2021
+      <time datetime="2021-01-30T10:19:00&#43;08:00">
+        update @ January 30, 2021
       </time>
       <p></p>
     </div>
