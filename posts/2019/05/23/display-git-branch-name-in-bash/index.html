@@ -74,7 +74,7 @@
       
 
       
-      57 s
+      56 s
       &nbsp;
     
 
@@ -199,7 +199,7 @@ $ mv ~/git-aware-prompt ~/.git-aware-prompt
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cfg" data-lang="cfg"><span style="color:#75715e"># git branch function</span>
 <span style="color:#a6e22e">parse_git_branch() {</span>
-     <span style="color:#a6e22e">git branch 2&gt; /dev/null | sed -e &#39;/^[^*]/d&#39; -e &#39;s/* \(.*\)/ (\1)/&#39;</span>
+     <span style="color:#a6e22e">git branch 2&gt; /dev/null | sed -e &#39;/^[^*]/d&#39; -e &#39;s/ *\(.*\)/(\1)/&#39;</span>
 <span style="color:#a6e22e">}</span>
 <span style="color:#a6e22e">export PS1</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;\u@\h:\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ &#34;</span>
 </code></pre></td></tr></table>
